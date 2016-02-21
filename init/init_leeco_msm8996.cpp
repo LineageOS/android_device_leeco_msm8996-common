@@ -31,6 +31,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
+#define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
+#include <sys/_system_properties.h>
 
 #include "vendor_init.h"
 #include "property_service.h"
@@ -38,6 +40,17 @@
 #include "util.h"
 
 #define DEVINFO_FILE "/dev/block/bootdevice/by-name/devinfo"
+
+void property_override(char const prop[], char const value[])
+{
+    prop_info *pi;
+
+    pi = (prop_info*) __system_property_find(prop);
+    if (pi)
+        __system_property_update(pi, value, strlen(value));
+    else
+        __system_property_add(prop, strlen(prop), value, strlen(value));
+}
 
 static int read_file2(const char *fname, char *data, int max_size)
 {
@@ -148,7 +161,7 @@ void vendor_load_properties() {
     if (isLEX720)
     {
         // This is LEX720
-        property_set("ro.product.model", "LEX720");
+        property_override("ro.product.model", "LEX720");
         property_set("persist.data.iwlan.enable", "false");
         // Dual SIM
         property_set("persist.radio.multisim.config", "dsds");
@@ -160,7 +173,7 @@ void vendor_load_properties() {
     else if (isLEX727)
     {
         // This is LEX727
-        property_set("ro.product.model", "LEX727");
+        property_override("ro.product.model", "LEX727");
         property_set("persist.data.iwlan.enable", "true");
         // Single SIM
         property_set("persist.radio.multisim.config", "NA");
@@ -172,16 +185,16 @@ void vendor_load_properties() {
     else if (isLEX820)
     {
         // This is LEX820
-        property_set("ro.product.model", "LEX820");
+        property_override("ro.product.model", "LEX820");
     }
     else if (isLEX829)
     {
         // This is LEX829
-        property_set("ro.product.model", "LEX829");
+        property_override("ro.product.model", "LEX829");
     }
     else
     {
-        property_set("ro.product.model", "UNKNOWN");
+        property_override("ro.product.model", "UNKNOWN");
     }
 
     // Common properties
