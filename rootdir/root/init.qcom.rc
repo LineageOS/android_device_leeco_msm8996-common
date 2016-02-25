@@ -68,7 +68,8 @@ on late-fs
     write /sys/block/dm-1/queue/read_ahead_kb 2048
 
 on fs
-    wait /dev/block/bootdevice
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
     mount_all fstab.qcom
 
 on early-boot
