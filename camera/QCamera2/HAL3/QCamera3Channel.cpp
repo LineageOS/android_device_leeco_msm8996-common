@@ -43,7 +43,7 @@
 #include "QCamera3Channel.h"
 #include "QCamera3HWI.h"
 #include "QCameraTrace.h"
-
+#include "QCameraFormat.h"
 extern "C" {
 #include "mm_camera_dbg.h"
 }
@@ -638,10 +638,14 @@ cam_format_t QCamera3Channel::getStreamDefaultFormat(cam_stream_type_t type)
             if (pFormat == 1) {
                 streamFormat = CAM_FORMAT_YUV_420_NV12_UBWC;
             } else {
-                streamFormat = CAM_FORMAT_YUV_420_NV12_VENUS;
+                /* Changed to macro to ensure format sent to gralloc for preview
+                is also changed if the preview format is changed at camera HAL */
+                streamFormat = PREVIEW_STREAM_FORMAT;
             }
         } else {
-            streamFormat = CAM_FORMAT_YUV_420_NV12_VENUS;
+            /* Changed to macro to ensure format sent to gralloc for preview
+            is also changed if the preview format is changed at camera HAL */
+            streamFormat = PREVIEW_STREAM_FORMAT;
         }
         break;
     case CAM_STREAM_TYPE_VIDEO:
@@ -668,7 +672,9 @@ cam_format_t QCamera3Channel::getStreamDefaultFormat(cam_stream_type_t type)
         streamFormat = CAM_FORMAT_YUV_420_NV21;
         break;
     case CAM_STREAM_TYPE_CALLBACK:
-        streamFormat = CAM_FORMAT_YUV_420_NV21;
+        /* Changed to macro to ensure format sent to gralloc for callback
+        is also changed if the preview format is changed at camera HAL */
+        streamFormat = CALLBACK_STREAM_FORMAT;
         break;
     case CAM_STREAM_TYPE_RAW:
         streamFormat = CAM_FORMAT_BAYER_MIPI_RAW_10BPP_GBRG;
