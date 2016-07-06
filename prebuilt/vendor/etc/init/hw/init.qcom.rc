@@ -55,6 +55,8 @@ on init
     chown root system /sys/fs/cgroup/memory/bg/tasks
     chmod 0660 /sys/fs/cgroup/memory/bg/tasks
 
+    write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
+
 on fs
     mount_all /vendor/etc/fstab.qcom
 
