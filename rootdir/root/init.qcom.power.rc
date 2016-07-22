@@ -18,8 +18,9 @@ on boot
     chmod 0664 /dev/cpuset/camera-daemon/tasks
 
     # EAS: Set default schedTune value for foreground/top-app (only affects EAS)
-    write /dev/stune/foreground/schedtune.boost 1
+    write /dev/stune/foreground/schedtune.prefer_idle 1
     write /dev/stune/top-app/schedtune.boost 10
+    write /dev/stune/top-app/schedtune.prefer_idle 1
 
     # HMP: Enable sched boost (no effect on EAS)
     write /proc/sys/kernel/sched_boost 1
