@@ -14,3 +14,6 @@ genfscon sysfs /devices/soc/soc:qcom,bcl/power_supply                   u:object
 genfscon sysfs /devices/soc/qpnp-smbcharger-17/power_supply/le_ab/type  u:object_r:sysfs_batteryinfo:s0
 
 genfscon sysfs /devices/soc/9300000.qcom,lpass/subsys3/name            u:object_r:sysfs_ssr:s0
+
+# Touchpanel
+genfscon proc /touchpanel    u:object_r:proc_touchpanel:s0
