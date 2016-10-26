@@ -27,6 +27,9 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+# Set shared touchpanel nodes ownership (these are proc_symlinks to the real sysfs nodes)
+chown -LR system.system /proc/touchpanel
+
 target=`getprop ro.board.platform`
 low_ram=`getprop ro.config.low_ram`
 if [ -f /sys/devices/soc0/soc_id ]; then
