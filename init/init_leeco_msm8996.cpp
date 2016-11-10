@@ -81,6 +81,7 @@ void init_alarm_boot_properties()
     char const *power_off_alarm_file = "/persist/alarm/powerOffAlarmSet";
     char boot_reason[16];
     char power_off_alarm[16];
+    std::string tmp = property_get("ro.boot.alarmboot");
 
     if(read_file2(boot_reason_file, boot_reason, sizeof(boot_reason))
          && read_file2(power_off_alarm_file, power_off_alarm, sizeof(power_off_alarm))) {
@@ -111,7 +112,8 @@ void init_alarm_boot_properties()
             property_set("ro.boot.bootreason", "smpl");
             property_set("ro.alarm_boot", "false");
         }
-        else if (boot_reason[0] == '3' && power_off_alarm[0] == '1'){
+        else if (boot_reason[0] == '3' || tmp == "true"
+                && power_off_alarm[0] == '1'){
             property_set("ro.boot.bootreason", "rtc");
             property_set("ro.alarm_boot", "true");
         }
