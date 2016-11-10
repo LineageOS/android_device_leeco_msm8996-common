@@ -83,6 +83,7 @@ void init_alarm_boot_properties()
 {
     char const *boot_reason_file = "/proc/sys/kernel/boot_reason";
     std::string boot_reason;
+    std::string reboot_reason = property_get("ro.boot.alarmboot");
 
     if (read_file(boot_reason_file, &boot_reason)) {
         /*
@@ -112,7 +113,7 @@ void init_alarm_boot_properties()
             property_set("ro.boot.bootreason", "smpl");
             property_set("ro.alarm_boot", "false");
         }
-        else if (Trim(boot_reason) == "3"){
+        else if (Trim(boot_reason) == "3"  || reboot_reason == "true") {
             property_set("ro.alarm_boot", "true");
         }
         else if (Trim(boot_reason) == "4") {
