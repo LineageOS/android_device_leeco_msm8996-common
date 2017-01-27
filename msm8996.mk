@@ -186,6 +186,10 @@ PRODUCT_PACKAGES += \
     ebtables \
     ethertypes
 
+# Libshims
+PRODUCT_PACKAGES += \
+    libshims_ims
+
 # Lights
 PRODUCT_PACKAGES += \
     lights.msm8996
