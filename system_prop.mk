@@ -168,7 +168,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.oem.dump=0 \
     persist.radio.hw_mbn_update=0 \
     persist.radio.sw_mbn_update=0 \
-    persist.radio.start_ota_daemon=1
+    persist.radio.start_ota_daemon=1 \
+    persist.data.iwlan.enable=true
 
 #default SAR mode 0:off/1:on
 PRODUCT_PROPERTY_OVERRIDES += \

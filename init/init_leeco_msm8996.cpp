@@ -162,7 +162,6 @@ void vendor_load_properties() {
     {
         // This is LEX720
         property_override("ro.product.model", "LEX720");
-        property_set("persist.data.iwlan.enable", "false");
         // Dual SIM
         property_set("persist.radio.multisim.config", "dsds");
         // Disable VoLTE
@@ -174,7 +173,6 @@ void vendor_load_properties() {
     {
         // This is LEX727
         property_override("ro.product.model", "LEX727");
-        property_set("persist.data.iwlan.enable", "true");
         // Single SIM
         property_set("persist.radio.multisim.config", "NA");
         // Enable VoLTE
