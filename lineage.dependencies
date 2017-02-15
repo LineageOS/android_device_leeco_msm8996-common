@@ -1,0 +1,10 @@
+[
+ {
+   "repository": "android_kernel_leeco_msm8996",
+   "target_path": "kernel/leeco/msm8996"
+ },
+ {
+   "repository": "android_external_stlport",
+   "target_path": "external/stlport"
+ }
+]
