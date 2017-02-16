@@ -36,6 +36,41 @@
     },
     {
       "key": {
+        "uuid": "fa5d592f_e4507660",
+        "filename": "lineage.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 2681
+      },
+      "writtenOn": "2017-02-16T11:36:00Z",
+      "side": 1,
+      "message": "Actually - is this file even needed? I think the msm8996.mk file is what is actually used",
+      "parentUuid": "fa5d592f_d9d79fbe",
+      "revId": "20f88fb5443fc3bc4be4379a27dcf434f3f8d4ee",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa5d592f_c44d72c6",
+        "filename": "msm8996.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 2681
+      },
+      "writtenOn": "2017-02-16T11:36:00Z",
+      "side": 1,
+      "message": "zl1 specific here",
+      "revId": "20f88fb5443fc3bc4be4379a27dcf434f3f8d4ee",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa5d592f_b9e4ebac",
         "filename": "msm8996.mk",
         "patchSetId": 2
