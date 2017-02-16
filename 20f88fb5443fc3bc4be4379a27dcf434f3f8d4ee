@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa5d592f_f9da63e8",
+        "filename": "lineage.dependencies",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2681
+      },
+      "writtenOn": "2017-02-16T11:29:39Z",
+      "side": 1,
+      "message": "x2 doesn\u0027t have NFC - should these be a dependency of common or just zl1?",
+      "revId": "20f88fb5443fc3bc4be4379a27dcf434f3f8d4ee",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa5d592f_d9d79fbe",
+        "filename": "lineage.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 2681
+      },
+      "writtenOn": "2017-02-16T11:29:39Z",
+      "side": 1,
+      "message": "zl1 specific stuff here",
+      "revId": "20f88fb5443fc3bc4be4379a27dcf434f3f8d4ee",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa5d592f_b9e4ebac",
+        "filename": "msm8996.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 2681
+      },
+      "writtenOn": "2017-02-16T11:29:39Z",
+      "side": 1,
+      "message": "nfc again - maybe a build flag to opt-out?\nLeeco may be coming out with another 8996 which is rumored to have NFC",
+      "revId": "20f88fb5443fc3bc4be4379a27dcf434f3f8d4ee",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa5d592f_99e1279d",
+        "filename": "msm8996.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 2681
+      },
+      "writtenOn": "2017-02-16T11:29:39Z",
+      "side": 1,
+      "message": "Note to self- check that this config doesnt need changes for x2",
+      "revId": "20f88fb5443fc3bc4be4379a27dcf434f3f8d4ee",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
