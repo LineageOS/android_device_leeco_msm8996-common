@@ -23,4 +23,9 @@ LOCAL_SHARED_LIBRARIES := liblog libcutils
 LOCAL_MODULE := lights.$(TARGET_BOARD_PLATFORM)
 LOCAL_MODULE_TAGS := optional
 
+# x2 uses a wled backlight
+ifeq ($(filter x2, $(TARGET_DEVICE)), x2)
+LOCAL_CFLAGS += -DUSE_WLED
+endif
+
 include $(BUILD_SHARED_LIBRARY)

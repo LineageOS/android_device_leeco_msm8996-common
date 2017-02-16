@@ -50,10 +50,23 @@ char const*const GREEN_LED_FILE
 char const*const BLUE_LED_FILE
         = "/sys/class/leds/blue/brightness";
 
+#ifdef USE_WLED
+// x2 uses a wled backlight
+char const*const LCD_FILE
+        = "/sys/class/leds/wled/brightness";
+
+// Hardcoding the wled max brightness
+#define WLED_MAX_BRIGHTNESS 4095
+#define STANDARD_MAX_BRIGHTNESS 255.0
+
+#else
+
 char const*const LCD_FILE
         = "/sys/class/leds/lcd-backlight/brightness";
 
-const char*const BUTTONS_FILE
+#endif
+
+char const*const BUTTONS_FILE
         = "/sys/class/leds/button-backlight/brightness";
 
 char const*const RED_DUTY_PCTS_FILE
@@ -192,6 +205,11 @@ set_light_backlight(struct light_device_t* dev,
 {
     int err = 0;
     int brightness = rgb_to_brightness(state);
+
+#ifdef USE_WLED
+    // Scale the brightness to the wled range
+    brightness = (brightness / STANDARD_MAX_BRIGHTNESS) * WLED_MAX_BRIGHTNESS;
+#endif
 
     pthread_mutex_lock(&g_lock);
     ALOGV("%s: brightness=%d", __func__, brightness);
