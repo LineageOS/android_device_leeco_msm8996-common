@@ -121,7 +121,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #enable Apical AD
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qcom.ad=1 \
-    ro.qcom.ad.calib.data="/system/etc/ad_calib_le_zl1.cfg" \
     ro.qcom.ad.sensortype=3
 
 # Perf
