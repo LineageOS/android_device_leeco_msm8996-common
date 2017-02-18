@@ -1,0 +1,2 @@
+/sys/remote/enable                     u:object_r:consumer_ir_device:s0
+/dev/ttyHSL1                           u:object_r:consumer_ir_device:s0
