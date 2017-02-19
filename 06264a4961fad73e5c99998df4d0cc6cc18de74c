@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa5d592f_9631e90d",
+        "filename": "msm8996.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 2681
+      },
+      "writtenOn": "2017-02-19T17:33:14Z",
+      "side": 0,
+      "message": "Lets not remove Gello",
+      "revId": "06264a4961fad73e5c99998df4d0cc6cc18de74c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
