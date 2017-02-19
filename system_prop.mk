@@ -78,7 +78,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.imglib.fddsp=1 \
     persist.camera.llc=1 \
     persist.camera.llnoise=1 \
-    camera.hal1.packagelist="com.skype.raider,com.whatsapp,com.tencent.mm,com.google.android.GoogleCamera"
 
 # Display power reduction (FOSS)
 PRODUCT_PROPERTY_OVERRIDES += \
