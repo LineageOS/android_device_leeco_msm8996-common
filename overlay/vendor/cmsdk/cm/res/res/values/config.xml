@@ -32,7 +32,7 @@
 
     <!-- Corresponds to color balance level of zero, this is the native
          display temperature -->
-    <integer name="config_dayColorTemperature">8000</integer>
+    <integer name="config_dayColorTemperature">6500</integer>
     <integer name="config_nightColorTemperature">5000</integer>
 
     <!-- For high brightness mode -->
