@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa5d592f_3fe44a0c",
+        "filename": "msm8996.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 523
+      },
+      "writtenOn": "2017-02-22T18:56:54Z",
+      "side": 1,
+      "message": "see here",
+      "revId": "1765581e3ad6cf5ef8e63298e0a9979aa94ed96b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa5d592f_1ff186cd",
+        "filename": "msm8996.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 523
+      },
+      "writtenOn": "2017-02-22T18:56:54Z",
+      "side": 1,
+      "message": "see here",
+      "revId": "1765581e3ad6cf5ef8e63298e0a9979aa94ed96b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa5d592f_ffed92f0",
+        "filename": "msm8996.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 523
+      },
+      "writtenOn": "2017-02-22T18:56:54Z",
+      "side": 1,
+      "message": "should be removed",
+      "revId": "1765581e3ad6cf5ef8e63298e0a9979aa94ed96b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa5d592f_dfbacee0",
+        "filename": "msm8996.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 523
+      },
+      "writtenOn": "2017-02-22T18:56:54Z",
+      "side": 1,
+      "message": "should be removed",
+      "revId": "1765581e3ad6cf5ef8e63298e0a9979aa94ed96b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
