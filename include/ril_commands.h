@@ -152,24 +152,5 @@
     {RIL_REQUEST_GET_ACTIVITY_INFO, dispatchVoid, responseActivityData},
     {RIL_REQUEST_SIM_GET_ATR, dispatchInts, responseString},
     {RIL_REQUEST_CAF_SIM_OPEN_CHANNEL_WITH_P2, dispatchOpenChannelWithP2, responseInts},
-    {RIL_REQUEST_FACTORY_MODE_NV_PROCESS, dispatchInts, responseVoid}, 
-    //TongJing.Shi@EXP.DataComm.Phone, 2013.08.31, Modify for
-    {RIL_REQUEST_FACTORY_MODE_MODEM_GPIO,  dispatchInts, responseVoid},
-    //DuYuanHua@OnLineRD.AirService.RIL, 2012/09/26, Add for EngineerMode
-    {RIL_REQUEST_GET_BAND_MODE, dispatchVoid, responseInts},
-    //Zhengpeng.Tan@OnlineRD.AirService.Module, 2013/11/15, Add for report nv_restore when bootup	
-    {RIL_REQUEST_REPORT_BOOTUPNVRESTOR_STATE,  dispatchVoid, responseVoid},
-    //Wenlong.Cai@OnlineRD.AirService.Module, 2013/12/09, Add for get rffe device information
-    {RIL_REQUEST_GET_RFFE_DEV_INFO,  dispatchInts, responseInts},
-    //zhunn@OnLineRD.AirService.Framework, 2013/02/19, add for skip RIL_REQUEST_OEM_BASE+6
     {0, NULL, NULL},
     {RIL_REQUEST_SET_MAX_TRANSMIT_POWER, dispatchSetMaxTransmitPower, responseVoid},
-    //dengql@OnLineRD.AirService.RIL, 2012/09/26, Add for NFC E-wallet
-    {RIL_REQUEST_SIM_TRANSMIT_BASIC, dispatchSIM_IO, responseSIM_IO},
-    {0, NULL, NULL},
-    {0, NULL, NULL},
-    {RIL_REQUEST_SIM_TRANSMIT_CHANNEL, dispatchSIM_IO, responseSIM_IO},
-    {RIL_REQUEST_GO_TO_ERROR_FATAL, dispatchVoid, responseVoid},
-    {RIL_REQUEST_GET_MDM_BASEBAND, dispatchVoid, responseString},
-    //yangli@OnlineRD.AirService.Module, 2014/09/22, Add for set only tdd-lte
-    {RIL_REQUEST_SET_TDD_LTE, dispatchInts, responseVoid},
