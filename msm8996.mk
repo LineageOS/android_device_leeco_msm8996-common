@@ -219,7 +219,8 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     rmnetcli \
     libxml2 \
-    libprotobuf-cpp-full
+    libprotobuf-cpp-full \
+    liblog_shim
 
 # stlport required for Camera blobs
 PRODUCT_PACKAGES += \
