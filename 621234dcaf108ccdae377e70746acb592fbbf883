@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa5d592f_7b3e47ba",
+        "filename": "sepolicy/charger_monitor.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2681
+      },
+      "writtenOn": "2017-02-28T14:50:44Z",
+      "side": 0,
+      "message": "Testing if this whole file can be removed now",
+      "revId": "621234dcaf108ccdae377e70746acb592fbbf883",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
