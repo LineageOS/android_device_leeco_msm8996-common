@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE=msm8996-common
+DEVICE_COMMON=msm8996-common
 VENDOR=leeco
 
 # Load extractutils and do some sanity checks
@@ -50,9 +50,16 @@ else
   fi
 fi
 
-# Initialize the helper
+# Initialize the helper for common
+setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true
+
+extract "$MY_DIR"/proprietary-files-qc-perf.txt "$SRC"
+
+extract "$MY_DIR"/proprietary-files-qc.txt "$SRC"
+
+# Initialize the helper for device
 setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT"
 
-extract "$MY_DIR"/proprietary-files.txt "$SRC"
+extract "$MY_DIR"/../$DEVICE/proprietary-files.txt "$SRC"
 
 "$MY_DIR"/setup-makefiles.sh
