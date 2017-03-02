@@ -19,7 +19,7 @@
 set -e
 
 # Required!
-DEVICE=msm8996-common
+DEVICE_COMMON=msm8996-common
 VENDOR=leeco
 
 # Load extractutils and do some sanity checks
@@ -36,13 +36,28 @@ fi
 . "$HELPER"
 
 # Initialize the helper
+setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true
+
+# Copyright headers and guards
+write_headers "zl1 x2"
+
+# Common QC blobs
+write_makefiles "$MY_DIR"/proprietary-files-qc.txt
+
+# QC Perf blobs
+write_makefiles "$MY_DIR"/proprietary-files-qc-perf.txt
+
+# We are done with common
+write_footers
+
+# Initialize the helper for device
 setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT"
 
 # Copyright headers and guards
 write_headers
 
-# The blobs
-write_makefiles "$MY_DIR"/proprietary-files.txt
+# The device blobs
+write_makefiles "$MY_DIR"/../$DEVICE/proprietary-files.txt
 
-# We are done!
+# We are done with device
 write_footers
