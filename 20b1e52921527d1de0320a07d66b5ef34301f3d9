@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa5d592f_37efb820",
+        "filename": "consumerir/consumerir.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2017-03-03T17:49:23Z",
+      "side": 1,
+      "message": "I\u0027m not sure if you guys need this. It was needed because Samsung\u0027s older kernel driver\u0027s weren\u0027t up to spec, but it could be causing breakage for you guys. easy way to check is to see whether or not IR works at all (with a camera), and see if anything shows up. If it is sending something, removing this might fix the breakage with the patterns.",
+      "revId": "20b1e52921527d1de0320a07d66b5ef34301f3d9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa5d592f_57ea2c10",
+        "filename": "consumerir/include/leeco_consumerir.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2017-03-03T17:49:23Z",
+      "side": 1,
+      "message": "What is this needed for? Seems unused",
+      "revId": "20b1e52921527d1de0320a07d66b5ef34301f3d9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
