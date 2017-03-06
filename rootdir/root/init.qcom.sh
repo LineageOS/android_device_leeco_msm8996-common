@@ -316,9 +316,7 @@ fi
 rm -rf /data/misc/radio/modem_config
 mkdir /data/misc/radio/modem_config
 chmod 770 /data/misc/radio/modem_config
-#ifdef VENDOR_EDIT
-# modify the source path to /system/etc/firmware/mbn_ota/ , hanqingpu, 20151119
-cp -r /system/etc/firmware/mbn_ota/* /data/misc/radio/modem_config
-#endif /*VENDOR_EDIT*/
+# Always copy over carrier MBNs
+cp -r /system/etc/firmware/modem_pr/* /data/misc/radio/modem_config/mcfg_sw
 chown -hR radio.radio /data/misc/radio/modem_config
 echo 1 > /data/misc/radio/copy_complete
