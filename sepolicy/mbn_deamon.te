@@ -1,0 +1,10 @@
+type mbn_daemon, domain;
+type mbn_daemon_exec, exec_type, file_type;
+
+init_daemon_domain(mbn_daemon)
+
+allow mbn_daemon self:socket { create getopt ioctl read write };
+allow mbn_daemon qmuxd:unix_stream_socket connectto;
+allow mbn_daemon persist_file:file { read getattr open };
+allow mbn_daemon qmuxd_socket:dir { add_name remove_name search write };
+allow mbn_daemon qmuxd_socket:sock_file { create setattr write };

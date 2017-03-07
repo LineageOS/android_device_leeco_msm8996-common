@@ -1288,6 +1288,12 @@ service qcom-sh /system/bin/sh /init.qcom.sh
     user root
     oneshot
 
+service mbn-daemon /system/bin/mbn_daemon -U
+    class main
+    user root
+    group radio cache inet misc audio log qcom_diag
+    oneshot
+
 on property:persist.sys.le_fast_chrg_enable=1
     write /sys/class/power_supply/le_ab/le_quick_charge_mode 0
 
