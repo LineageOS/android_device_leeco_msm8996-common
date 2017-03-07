@@ -1210,6 +1210,12 @@ service adctl /system/bin/ad_controller --enable-ad
     oneshot
     disabled
 
+service mbn-daemon /system/bin/mbn_daemon -U
+    class main
+    user root
+    group radio cache inet misc audio log qcom_diag
+    oneshot
+
 on property:persist.sys.le_fast_chrg_enable=1
     write /sys/class/power_supply/le_ab/le_quick_charge_mode 0
 
