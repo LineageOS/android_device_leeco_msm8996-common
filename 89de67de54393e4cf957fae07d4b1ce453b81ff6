@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da6255ed_fdcdaf87",
+        "filename": "sepolicy/init.te",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2681
+      },
+      "writtenOn": "2017-03-08T18:39:47Z",
+      "side": 1,
+      "message": "Empty file, can be removed",
+      "revId": "89de67de54393e4cf957fae07d4b1ce453b81ff6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
