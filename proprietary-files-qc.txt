@@ -461,3 +461,7 @@ vendor/lib/mediadrm/libwvdrmengine.so
 # Wifi
 bin/cnss-daemon
 bin/cnss_diag
+
+# MBN daemon
+bin/mbn_daemon
+bin/mbn_daemon_test
