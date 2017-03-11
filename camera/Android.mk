@@ -23,15 +23,3 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 
 include $(BUILD_SHARED_LIBRARY)
-
-
-include $(CLEAR_VARS)
-
-LOCAL_SRC_FILES := cameraservice_shim.cpp
-LOCAL_MODULE := libcameraservice_shim
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_32_BIT_ONLY := true
-LOCAL_SHARED_LIBRARIES := libgui libui libcamera_client
-
-include $(BUILD_SHARED_LIBRARY)
