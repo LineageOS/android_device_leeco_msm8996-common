@@ -2,6 +2,10 @@ on boot
     # Bring up CPUs
     trigger init-cpus
 
+    # Set permissions by node reads by dumpstate
+    chmod 0644 /sys/devices/system/cpu/present
+    chmod 0644 /sys/devices/system/cpu/online
+
     # Update cpusets now that CPUs are up
     write /dev/cpuset/foreground/cpus 0-3
     write /dev/cpuset/foreground/boost/cpus 0-3
@@ -147,6 +151,10 @@ on property:dev.bootcomplete=1
     write /dev/cpuset/foreground/cpus 0-2
     write /dev/cpuset/background/cpus 0
     write /dev/cpuset/system-background/cpus 0-2
+
+    # Set permissions for dumpstate nodes
+    chmod 0644 /d/rpm_stats
+    chmod 0644 /d/dpm_master_stats
 
 on property:init.svc.recovery=running
     trigger enable-low-power
