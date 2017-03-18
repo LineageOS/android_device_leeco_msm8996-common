@@ -1,0 +1,2 @@
+allow logd unlabeled:dir { search };
+allow logd self:capability { dac_override };
