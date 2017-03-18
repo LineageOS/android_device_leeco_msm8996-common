@@ -5,6 +5,8 @@ init_daemon_domain(mbn_daemon)
 
 allow mbn_daemon self:socket { create getopt ioctl read write };
 allow mbn_daemon qmuxd:unix_stream_socket connectto;
-allow mbn_daemon persist_file:file { read getattr open };
+allow mbn_daemon persist_file:file { rw_file_perms };
 allow mbn_daemon qmuxd_socket:dir { add_name remove_name search write };
 allow mbn_daemon qmuxd_socket:sock_file { create setattr write };
+allow mbn_daemon diag_device:chr_file { rw_file_perms };
+allow mbn_daemon sysfs:file { r_file_perms };
