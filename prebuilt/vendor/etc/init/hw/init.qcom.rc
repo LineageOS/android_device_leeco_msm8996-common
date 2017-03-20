@@ -514,12 +514,6 @@ service thermal-engine /vendor/bin/thermal-engine -c ${sys.qcom.thermalcfg:-/ven
     group system root diag
     writepid /dev/cpuset/system-background/tasks
 
-service time_daemon /vendor/bin/time_daemon
-   class late_start
-   user root
-   group root
-   writepid /dev/cpuset/system-background/tasks
-
 service adsprpcd /vendor/bin/adsprpcd
    class main
    user media
@@ -766,6 +760,12 @@ service vendor.ril-daemon2 /vendor/bin/hw/rild -c 2
 
 on property:persist.radio.multisim.config=dsds
     enable vendor.ril-daemon2
+
+service time_daemon /vendor/bin/time_daemon
+    class main
+    user root
+    group root
+    writepid /dev/cpuset/system-background/tasks
 
 service charger_monitor /system/bin/charger_monitor
     user root
