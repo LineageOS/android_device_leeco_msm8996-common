@@ -120,6 +120,8 @@ bin/qseecomd
 vendor/bin/qseeproxydaemon
 vendor/lib/libQSEEComAPI.so
 vendor/lib/liboemcrypto.so
+vendor/lib/libavenhancements.so
+vendor/lib64/libavenhancements.so
 vendor/lib64/lib-sec-disp.so
 vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so
