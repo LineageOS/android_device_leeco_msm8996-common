@@ -135,6 +135,9 @@ vendor/lib64/librpmb.so
 vendor/lib64/libsecureui.so
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libssd.so
+vendor/lib64/libDRPlugin.so
+vendor/lib64/libdrplugin_client.so
+
 
 # Gatekeeper
 vendor/lib/hw/gatekeeper.msm8996.so
@@ -147,7 +150,9 @@ bin/xtwifi-client
 bin/xtwifi-inet-agent
 etc/permissions/com.qti.location.sdk.xml
 etc/permissions/com.qualcomm.location.xml
+etc/permissions/izat.xt.srv.xml
 framework/com.qti.location.sdk.jar
+framework/izat.xt.srv.jar
 -lib/libloc_api_v02.so
 -lib64/libloc_api_v02.so
 lib/libloc_ds_api.so
@@ -434,8 +439,6 @@ vendor/lib64/sensors.oem.so
 vendor/lib64/sensors.ssc.so
 
 # Sensors
-lib/libsensorservice.so
-lib64/libsensorservice.so
 lib/hw/sensors.msm8996.so
 lib64/hw/sensors.msm8996.so
 
