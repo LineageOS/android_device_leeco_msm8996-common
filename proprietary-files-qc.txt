@@ -135,9 +135,6 @@ vendor/lib64/librpmb.so
 vendor/lib64/libsecureui.so
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libssd.so
-vendor/lib64/libDRPlugin.so
-vendor/lib64/libdrplugin_client.so
-
 
 # Gatekeeper
 vendor/lib/hw/gatekeeper.msm8996.so
@@ -153,12 +150,9 @@ etc/permissions/com.qualcomm.location.xml
 etc/permissions/izat.xt.srv.xml
 framework/com.qti.location.sdk.jar
 framework/izat.xt.srv.jar
--lib/libloc_api_v02.so
 -lib64/libloc_api_v02.so
-lib/libloc_ds_api.so
 lib64/libloc_ds_api.so
 -priv-app/com.qualcomm.location/com.qualcomm.location.apk
--priv-app/xtra_t_app/xtra_t_app.apk|e451268f4e7e6b245a7eaf2a1ece15920449640a
 vendor/bin/slim_daemon
 vendor/lib/hw/flp.default.so
 vendor/lib/libalarmservice_jni.so
@@ -182,6 +176,9 @@ vendor/lib64/libasn1cper.so
 vendor/lib64/libasn1crt.so
 vendor/lib64/libasn1crtx.so
 vendor/lib64/libdataitems.so
+vendor/lib64/libdrplugin_client.so
+vendor/lib64/libDRPlugin.so
+vendor/lib64/libevent_observer.so
 vendor/lib64/libflp.so
 vendor/lib64/libgdtap.so
 vendor/lib64/libgeofence.so
@@ -201,13 +198,13 @@ vendor/lib64/libxtadapter.so
 vendor/lib64/libxtwifi_ulp_adaptor.so
 
 # Graphics
+vendor/lib/hw/vulkan.msm8996.so
 vendor/lib/egl/eglSubDriverAndroid.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
 vendor/lib/egl/libGLESv2_adreno.so
 vendor/lib/egl/libQTapGLES.so
 vendor/lib/egl/libq3dtools_adreno.so
-vendor/lib/egl/libq3dtools_esx.so
 vendor/lib/libC2D2.so
 vendor/lib/libCB.so
 vendor/lib/libOpenCL.so
@@ -219,18 +216,21 @@ vendor/lib/libc2d30_bltlib.so
 vendor/lib/libgsl.so
 vendor/lib/libllvm-glnext.so
 vendor/lib/libllvm-qcom.so
+vendor/lib/libllvm-qgl.so
+vendor/lib/libmm-disp-apis.so
+vendor/lib/libmm-qdcm.so
 vendor/lib/libmmQSM.so
 vendor/lib/librs_adreno.so
 vendor/lib/librs_adreno_sha1.so
 vendor/lib/libsd_sdk_display.so
-vendor/lib/libsdm-disp-apis.so
+-vendor/lib/libsdm-disp-apis.so
+vendor/lib64/hw/vulkan.msm8996.so
 vendor/lib64/egl/eglSubDriverAndroid.so
 vendor/lib64/egl/libEGL_adreno.so
 vendor/lib64/egl/libGLESv1_CM_adreno.so
 vendor/lib64/egl/libGLESv2_adreno.so
 vendor/lib64/egl/libQTapGLES.so
 vendor/lib64/egl/libq3dtools_adreno.so
-vendor/lib64/egl/libq3dtools_esx.so
 vendor/lib64/libC2D2.so
 vendor/lib64/libCB.so
 vendor/lib64/libOpenCL.so
@@ -242,6 +242,7 @@ vendor/lib64/libc2d30_bltlib.so
 vendor/lib64/libgsl.so
 vendor/lib64/libllvm-glnext.so
 vendor/lib64/libllvm-qcom.so
+vendor/lib64/libllvm-qgl.so
 vendor/lib64/libmm-disp-apis.so
 vendor/lib64/libmm-qdcm.so
 vendor/lib64/libmmQSM.so
@@ -251,7 +252,7 @@ vendor/lib64/libscalar.so
 vendor/lib64/libsd_sdk_display.so
 vendor/lib64/libsdm-color.so
 vendor/lib64/libsdm-diag.so
-vendor/lib64/libsdm-disp-apis.so
+-vendor/lib64/libsdm-disp-apis.so
 vendor/lib64/libsdmextension.so
 vendor/lib64/libuiblur.so|4b3fabf5ded7c4af531abde681676fc5e9248494
 
@@ -394,7 +395,7 @@ bin/imsdatadaemon
 bin/imsqmidaemon
 lib64/libimscamera_jni.so
 lib64/libimsmedia_jni.so
--priv-app/ims/ims.apk
+-vendor/app/ims/ims.apk
 -vendor/app/imssettings/imssettings.apk
 vendor/lib64/lib-dplmedia.so
 vendor/lib64/lib-ims-rcscmjni.so
@@ -438,10 +439,6 @@ vendor/lib64/sensors.hal.tof.so
 vendor/lib64/sensors.oem.so
 vendor/lib64/sensors.ssc.so
 
-# Sensors
-lib/hw/sensors.msm8996.so
-lib64/hw/sensors.msm8996.so
-
 # Thermal
 etc/thermal-engine.conf
 vendor/bin/thermal-engine
@@ -458,11 +455,8 @@ vendor/lib/libTimeService.so
 vendor/lib64/libTimeService.so
 
 # Widevine
-vendor/lib/libwvdrm_L1.so
-vendor/lib/libWVStreamControlAPI_L1.so
-vendor/lib/libwvdrm_L3.so
 vendor/lib/libWVStreamControlAPI_L3.so
-vendor/lib/libcppf.so
+vendor/lib/libwvdrm_L3.so
 vendor/lib/mediadrm/libwvdrmengine.so
 vendor/firmware/widevine.b00
 vendor/firmware/widevine.b01
@@ -471,6 +465,7 @@ vendor/firmware/widevine.b03
 vendor/firmware/widevine.b04
 vendor/firmware/widevine.b05
 vendor/firmware/widevine.b06
+vendor/firmware/widevine.mbn
 vendor/firmware/widevine.mdt
 
 # Wifi
