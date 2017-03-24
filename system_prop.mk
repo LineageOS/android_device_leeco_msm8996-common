@@ -111,13 +111,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.gralloc.enable_fb_ubwc=1 \
     dev.pm.dyn_samplingrate=1 \
     persist.demo.hdmirotationlock=false \
-    ro.opengles.version=196609 \
     persist.debug.wfd.enable=1 \
     persist.sys.wfd.virtual=0 \
     sdm.perf_hint_window=50 \
     persist.hwc.enable_vds=1 \
     sdm.debug.disable_rotator_split=1 \
     ro.persist.qcapb = 1
+
+# OpenGLES
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opengles.version=196610
 
 #enable Apical AD
 PRODUCT_PROPERTY_OVERRIDES += \
