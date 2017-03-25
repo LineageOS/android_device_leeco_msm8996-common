@@ -280,6 +280,9 @@ on boot
     chmod 660 /sys/class/leds/red/start_idx
     chmod 660 /sys/class/leds/green/start_idx
     chmod 660 /sys/class/leds/blue/start_idx
+    chmod 660 /sys/class/leds/red/blink
+    chmod 660 /sys/class/leds/green/blink
+    chmod 660 /sys/class/leds/blue/blink
     chmod 660 /sys/class/leds/rgb/rgb_blink
 
 
