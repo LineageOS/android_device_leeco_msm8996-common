@@ -2702,14 +2702,16 @@ QCameraMemory *QCamera2HardwareInterface::allocateStreamBuf(
         {
             if (isNoDisplayMode()) {
                 mem = new QCameraStreamMemory(mGetMemory,
+                        mCallbackCookie,
                         bCachedMem,
                         (bPoolMem) ? &m_memoryPool : NULL,
                         stream_type);
             } else {
                 cam_dimension_t dim;
                 int minFPS, maxFPS;
-                QCameraGrallocMemory *grallocMemory =
-                    new QCameraGrallocMemory(mGetMemory);
+                QCameraGrallocMemory *grallocMemory = NULL;
+
+                grallocMemory = new QCameraGrallocMemory(mGetMemory, mCallbackCookie);
 
                 mParameters.getStreamDimension(stream_type, dim);
                 /* we are interested only in maxfps here */
@@ -2745,12 +2747,12 @@ QCameraMemory *QCamera2HardwareInterface::allocateStreamBuf(
     case CAM_STREAM_TYPE_POSTVIEW:
         {
             if (isNoDisplayMode() || isPreviewRestartEnabled()) {
-                mem = new QCameraStreamMemory(mGetMemory, bCachedMem);
+                mem = new QCameraStreamMemory(mGetMemory, mCallbackCookie, bCachedMem);
             } else {
                 cam_dimension_t dim;
                 int minFPS, maxFPS;
                 QCameraGrallocMemory *grallocMemory =
-                        new QCameraGrallocMemory(mGetMemory);
+                        new QCameraGrallocMemory(mGetMemory, mCallbackCookie);
 
                 mParameters.getStreamDimension(stream_type, dim);
                 /* we are interested only in maxfps here */
@@ -2769,6 +2771,7 @@ QCameraMemory *QCamera2HardwareInterface::allocateStreamBuf(
     case CAM_STREAM_TYPE_RAW:
     case CAM_STREAM_TYPE_OFFLINE_PROC:
         mem = new QCameraStreamMemory(mGetMemory,
+                mCallbackCookie,
                 bCachedMem,
                 (bPoolMem) ? &m_memoryPool : NULL,
                 stream_type);
@@ -2810,7 +2813,7 @@ QCameraMemory *QCamera2HardwareInterface::allocateStreamBuf(
             QCameraVideoMemory *videoMemory = NULL;
             if (mParameters.getVideoBatchSize()) {
                 videoMemory = new QCameraVideoMemory(
-                        mGetMemory, FALSE, QCAMERA_MEM_TYPE_BATCH);
+                        mGetMemory, mCallbackCookie, FALSE, QCAMERA_MEM_TYPE_BATCH);
                 if (videoMemory == NULL) {
                     LOGE("Out of memory for video batching obj");
                     return NULL;
@@ -2829,7 +2832,7 @@ QCameraMemory *QCamera2HardwareInterface::allocateStreamBuf(
                 }
             } else {
                 videoMemory =
-                        new QCameraVideoMemory(mGetMemory, bCachedMem);
+                        new QCameraVideoMemory(mGetMemory, mCallbackCookie, bCachedMem);
                 if (videoMemory == NULL) {
                     LOGE("Out of memory for video obj");
                     return NULL;
@@ -2848,6 +2851,7 @@ QCameraMemory *QCamera2HardwareInterface::allocateStreamBuf(
         break;
     case CAM_STREAM_TYPE_CALLBACK:
         mem = new QCameraStreamMemory(mGetMemory,
+                mCallbackCookie,
                 bCachedMem,
                 (bPoolMem) ? &m_memoryPool : NULL,
                 stream_type);
@@ -3161,7 +3165,7 @@ QCameraMemory *QCamera2HardwareInterface::allocateStreamUserBuf(
     switch (streamInfo->stream_type) {
     case CAM_STREAM_TYPE_VIDEO: {
         QCameraVideoMemory *video_mem = new QCameraVideoMemory(
-                mGetMemory, FALSE, QCAMERA_MEM_TYPE_BATCH);
+                mGetMemory, mCallbackCookie, FALSE, QCAMERA_MEM_TYPE_BATCH);
         if (video_mem == NULL) {
             LOGE("Out of memory for video obj");
             return NULL;
