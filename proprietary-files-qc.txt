@@ -8,6 +8,7 @@ vendor/lib/libfastcvadsp_stub.so
 vendor/lib/libfastcvopt.so
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
+vendor/lib64/libfastcvadsp_stub.so
 
 # ADSP modules
 vendor/lib/rfsa/adsp/libadsp_hvx_add_constant.so
@@ -277,9 +278,6 @@ vendor/lib/libOmxQcelp13Dec.so
 vendor/lib/libOmxVideoDSMode.so
 vendor/lib/libvpphvx.so
 vendor/lib/libvqzip.so
-vendor/lib64/libOmxAacDec.so
-vendor/lib64/libOmxEvrcDec.so
-vendor/lib64/libOmxQcelp13Dec.so
 
 # Network
 -priv-app/QtiTetherService/QtiTetherService.apk
