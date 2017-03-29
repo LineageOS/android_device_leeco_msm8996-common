@@ -199,7 +199,6 @@ TARGET_USES_INTERACTION_BOOST := true
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_leeco
 
 #RECOVERY_VARIANT := twrp
-BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/prebuilt/vendor/etc/fstab.qcom
 
 ifeq ($(RECOVERY_VARIANT),twrp)
