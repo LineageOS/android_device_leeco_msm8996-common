@@ -34,6 +34,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sdk.audio.fluencetype=fluence \
     persist.audio.fluence.voicecall=true \
     persist.audio.fluence.voicerec=true \
+    persist.audio.fluence.audiorec=true \
     persist.audio.fluence.speaker=true \
     tunnel.audio.encode=false \
     media.aac_51_output_enabled=true \
