@@ -33,6 +33,7 @@
 #include <errno.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/stat.h>
 
 #include "utils.h"
 #include "list.h"
@@ -41,6 +42,8 @@
 
 #define LOG_TAG "QCOM PowerHAL"
 #include <utils/Log.h>
+
+#define INTERACTION_BOOST
 
 char scaling_gov_path[4][80] ={
     "sys/devices/system/cpu/cpu0/cpufreq/scaling_governor",
@@ -216,9 +219,41 @@ void interaction(int duration, int num_args, int opt_list[])
 #endif
 }
 
+int interaction_with_handle(int lock_handle, int duration, int num_args, int opt_list[]) 
+{
+#ifdef INTERACTION_BOOST
+    if (duration < 0 || num_args < 1 || opt_list[0] == NULL)
+        return 0;
+
+    if (qcopt_handle) {
+        if (perf_lock_acq) {
+            lock_handle = perf_lock_acq(lock_handle, duration, opt_list, num_args);
+            if (lock_handle == -1)
+                ALOGE("Failed to acquire lock.");
+        }
+    }
+    return lock_handle;
+#endif
+    return 0;
+}
+
+void release_request(int lock_handle) {
+    if (qcopt_handle && perf_lock_rel)
+        perf_lock_rel(lock_handle);
+}
+
 void perform_hint_action(int hint_id, int resource_values[], int num_resources)
 {
     if (qcopt_handle) {
+        struct hint_data temp_hint_data = {
+            .hint_id = hint_id
+        };
+        struct list_node *found_node = find_node(&active_hint_list_head,
+                                                 &temp_hint_data);
+        if (found_node) {
+            ALOGE("hint ID %d already active", hint_id);
+            return;
+        }
         if (perf_lock_acq) {
             /* Acquire an indefinite lock for the requested resources. */
             int lock_handle = perf_lock_acq(0, 0, resource_values,
@@ -281,7 +316,7 @@ void undo_hint_action(int hint_id)
 
                 if (found_hint_data) {
                     if (perf_lock_rel(found_hint_data->perflock_handle) == -1)
-                        ALOGE("Perflock release failed.");
+                        ALOGE("Perflock release failed: %d", hint_id);
                 }
 
                 if (found_node->data) {
@@ -290,8 +325,9 @@ void undo_hint_action(int hint_id)
                 }
 
                 remove_list_node(&active_hint_list_head, found_node);
+                ALOGV("Undo of hint ID %d succeeded", hint_id);
             } else {
-                ALOGE("Invalid hint ID.");
+                ALOGE("Invalid hint ID: %d", hint_id);
             }
         }
     }

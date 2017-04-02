@@ -29,8 +29,14 @@
 
 #include <cutils/properties.h>
 
+extern int launch_handle;
+extern int launch_mode;
+extern int sustained_performance_mode;
+extern int vr_mode;
+
 int sysfs_read(char *path, char *s, int num_bytes);
 int sysfs_write(char *path, char *s);
+int sysfs_get_size_in_bytes(char *path);
 int get_scaling_governor(char governor[], int size);
 int get_scaling_governor_check_cores(char governor[], int size,int core_num);
 
@@ -41,3 +47,5 @@ void unvote_ondemand_sdf_low();
 void perform_hint_action(int hint_id, int resource_values[],
     int num_resources);
 void undo_hint_action(int hint_id);
+void release_request(int lock_handle);
+int interaction_with_handle(int lock_handle, int duration, int num_args, int opt_list[]);
