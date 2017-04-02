@@ -221,7 +221,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.msm8996
+    power.qcom
 
 # QMI
 PRODUCT_PACKAGES += \
