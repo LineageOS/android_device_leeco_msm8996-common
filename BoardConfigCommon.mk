@@ -126,7 +126,10 @@ TARGET_PROVIDES_POWERHAL := true
 BOARD_HAL_STATIC_LIBRARIES := libdumpstate.msm8996
 
 # CM Hardware
-BOARD_HARDWARE_CLASS += $(PLATFORM_PATH)/cmhw
+BOARD_HARDWARE_CLASS += \
+    hardware/cyanogen/cmhw \
+    $(PLATFORM_PATH)/cmhw
+BOARD_USES_CYANOGEN_HARDWARE := true
 
 # CNE and DPM
 TARGET_LDPRELOAD := libNimsWrap.so
