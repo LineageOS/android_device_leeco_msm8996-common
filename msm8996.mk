@@ -116,9 +116,12 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap \
+    Snap 
+
+# Shims
+PRODUCT_PACKAGES += \
     libcamera_shim \
-    libstlport
+    libshims_camera
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
