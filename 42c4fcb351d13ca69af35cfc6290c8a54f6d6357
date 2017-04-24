@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a486d77_46307456",
+        "filename": "rootdir/root/init.qcom.power.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 3962
+      },
+      "writtenOn": "2017-04-24T06:51:22Z",
+      "side": 1,
+      "message": "I wouldn\u0027t recommend using 0-2 without EAS, thats gonna end up being a bit laggy",
+      "range": {
+        "startLine": 137,
+        "startChar": 4,
+        "endLine": 142,
+        "endChar": 48
+      },
+      "revId": "42c4fcb351d13ca69af35cfc6290c8a54f6d6357",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
