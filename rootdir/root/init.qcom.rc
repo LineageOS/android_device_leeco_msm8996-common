@@ -47,6 +47,13 @@ on init
     # Support legacy paths
     symlink /sdcard /storage/sdcard0
 
+    # Create cgroup mount point for memory
+    mkdir /sys/fs/cgroup/memory/bg 0750 root system
+    write /sys/fs/cgroup/memory/bg/memory.swappiness 140
+    write /sys/fs/cgroup/memory/bg/memory.move_charge_at_immigrate 1
+    chown root system /sys/fs/cgroup/memory/bg/tasks
+    chmod 0660 /sys/fs/cgroup/memory/bg/tasks
+
 on fs
     wait /dev/block/bootdevice
     mount_all fstab.qcom
@@ -440,11 +447,10 @@ on post-fs-data
     mkdir /data/misc/SelfHost/Running/ 2750 system shell
     mkdir /data/misc/SelfHost/socket/ 2770 system system
 
-    # Create PERFD deamon related dirs
-    mkdir /data/misc/perfd 0755 root system
-    chmod 2755 /data/misc/perfd
+    #Create PERFD deamon related dirs
     mkdir /data/system/perfd 0770 root system
     chmod 2770 /data/system/perfd
+    rm /data/system/perfd/default_values
     start perfd
 
     # NFC local data and nfcee xml storage
@@ -507,7 +513,7 @@ service qseecomd /system/bin/qseecomd
    group root
    writepid /dev/cpuset/system-background/tasks
 
-service perfd /vendor/bin/perfd
+service perfd /system/vendor/bin/perfd
    class main
    user root
    group root readproc
@@ -1173,7 +1179,7 @@ service vm_bms /system/bin/vm_bms
     disabled
 
 service msm_irqbalance /system/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
-    class main
+    class core
     user root
     group root
     disabled
