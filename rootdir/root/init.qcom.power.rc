@@ -4,6 +4,7 @@ on boot
     write /dev/cpuset/foreground/boost/cpus 0-3
     write /dev/cpuset/background/cpus 0-3
     write /dev/cpuset/system-background/cpus 0-3
+    write /dev/cpuset/top-app/cpus 0-3
 
     # add a cpuset for the camera daemon
     # we want all cores for camera
@@ -43,7 +44,7 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis 79000
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 307200
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/ignore_hispeed_on_notif 1
-    #write /sys/devices/system/cpu/cpu0/cpufreq/interactive/enable_prediction 1
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/enable_prediction 1
 
     # Online CPU2
     write /sys/devices/system/cpu/cpu2/online 1
@@ -62,7 +63,7 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/max_freq_hysteresis 79000
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 307200
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/ignore_hispeed_on_notif 1
-    #write /sys/devices/system/cpu/cpu2/cpufreq/interactive/enable_prediction 1
+    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/enable_prediction 1
 
     # Re-enable thermal and BCL hotplug
     write /sys/module/msm_thermal/core_control/enabled 1
@@ -77,7 +78,7 @@ on enable-low-power
 
     # Setting b.L scheduler parameters
     write /proc/sys/kernel/sched_boost 0
-    #write /proc/sys/kernel/sched_downmigrate 90
+    write /proc/sys/kernel/sched_downmigrate 90
     write /proc/sys/kernel/sched_upmigrate 95
     write /proc/sys/kernel/sched_freq_inc_notify 400000
     write /proc/sys/kernel/sched_freq_dec_notify 400000
