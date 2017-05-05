@@ -38,6 +38,9 @@ on early-init
     symlink /data/tombstones /tombstones
     mkdir /dsp 0771 media media
 
+    # Setup zram options
+    write /sys/block/zram0/comp_algorithm lz4
+
 on init
     export LD_SHIM_LIBS "/system/lib/hw/camera.msm8996.so|libcamera_shim.so:/system/bin/mm-qcamera-daemon|qcamera-daemon_shim.so"
 
