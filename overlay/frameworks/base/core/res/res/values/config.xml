@@ -307,4 +307,8 @@
 
     <!-- Enable blur support -->
     <!-- bool name="config_ui_blur_enabled">true</bool -->
+
+    <!-- Shutdown if the battery temperature exceeds (this value * 0.1) Celsius. -->
+    <integer name="config_shutdownBatteryTemperature">680</integer>
+
 </resources>
