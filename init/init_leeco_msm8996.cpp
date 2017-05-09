@@ -123,7 +123,7 @@ void init_alarm_boot_properties()
 
 void vendor_load_properties() {
     char device[PROP_VALUE_MAX];
-    int isLEX720 = 0, isLEX727 = 0, isLEX820 = 0, isLEX829 = 0;
+    int isLEX720 = 0, isLEX727 = 0, isLEX820 = 0, isLEX822, isLEX829 = 0;
 
     if (read_file2(DEVINFO_FILE, device, sizeof(device)))
     {
@@ -173,6 +173,18 @@ void vendor_load_properties() {
     {
         // This is LEX820
         property_set("ro.product.model", "LEX820");
+        property_set("persist.data.iwlan.enable", "false");
+        // Dual SIM
+        property_set("persist.radio.multisim.config", "dsds");
+        // Disable VoLTE
+        property_set("persist.radio.cs_srv_type", "1");
+        property_set("persist.radio.calls.on.ims", "0");
+        property_set("persist.radio.jbims", "0");
+    }
+    else if (isLEX822)
+    {
+        // This is LEX820
+        property_set("ro.product.model", "LEX822");
         property_set("persist.data.iwlan.enable", "false");
         // Dual SIM
         property_set("persist.radio.multisim.config", "dsds");
