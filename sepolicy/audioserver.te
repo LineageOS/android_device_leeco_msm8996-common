@@ -1,1 +1,7 @@
 allow audioserver persist_file:file { r_file_perms };
+# communicate with perfd
+allow audioserver perfd:unix_stream_socket connectto;
+allow audioserver mpctl_data_file:dir search;
+allow audioserver mpctl_data_file:sock_file write;
+allow audioserver mpctl_socket:dir search;
+allow audioserver mpctl_socket:sock_file write;

@@ -25,7 +25,6 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-import init.qcom.power.rc
 import init.qcom.usb.rc
 import init.device.rc
 
@@ -37,6 +36,13 @@ on early-init
     mkdir /bt_firmware 0771 system system
     symlink /data/tombstones /tombstones
     mkdir /dsp 0771 media media
+
+on charger
+    write /sys/devices/system/cpu/cpu2/online 0
+    write /sys/devices/system/cpu/cpu3/online 0
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "powersave"
+    write /sys/module/lpm_levels/parameters/sleep_disabled 0
+    wait /dev/block/bootdevice
 
 on init
     export LD_SHIM_LIBS "/system/lib/hw/camera.msm8996.so|libcamera_shim.so:/system/bin/mm-qcamera-daemon|qcamera-daemon_shim.so"
@@ -76,6 +82,30 @@ on early-boot
     write /sys/kernel/boot_slpi/boot 1
 
 on boot
+    # Bring up CPUs
+    exec - root root system -- /system/bin/init.power.sh
+
+    # Set permissions by node reads by dumpstate
+    chmod 0644 /sys/devices/system/cpu/present
+    chmod 0644 /sys/devices/system/cpu/online
+
+    # set default schedTune value for foreground/top-app (only affects EAS)
+    write /dev/stune/foreground/schedtune.prefer_idle 1
+    write /dev/stune/top-app/schedtune.boost 0
+    write /dev/stune/top-app/schedtune.prefer_idle 1
+
+    # Enable sched boost
+    write /proc/sys/kernel/sched_boost 1
+
+    start rmt_storage
+    start rfs_access
+    # access permission for secure touch
+    chmod 0660 /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/secure_touch_enable
+    chmod 0440 /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/secure_touch
+    chown system drmrpc /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/secure_touch_enable
+    chown system drmrpc /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/secure_touch
+    write /sys/devices/soc/75ba000.i2c/i2c-12/12-0020/input/input0/update_fw 1
+
     # Secure touch
     chmod 0660 /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/secure_touch_enable
     chmod 0440 /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/secure_touch
@@ -448,6 +478,7 @@ on post-fs-data
     mkdir /data/misc/SelfHost/socket/ 2770 system system
 
     #Create PERFD deamon related dirs
+    setprop ro.min_freq_0 384000
     mkdir /data/system/perfd 0770 root system
     chmod 2770 /data/system/perfd
     rm /data/system/perfd/default_values
@@ -472,6 +503,13 @@ on post-fs-data
     write /data/misc/radio/db_check_done 0
     chown radio radio /data/misc/radio/db_check_done
     chmod 0660 /data/misc/radio/db_check_done
+
+    chown system system /sys/class/kgsl/kgsl-3d0/devfreq/max_freq
+    chmod 0660 /sys/class/kgsl/kgsl-3d0/devfreq/max_freq
+    chown system system /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
+    chmod 0660 /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
+    chown system system /sys/class/devfreq/soc:qcom,gpubw/min_freq
+    chmod 0660 /sys/class/devfreq/soc:qcom,gpubw/min_freq
 
 # start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
@@ -512,6 +550,20 @@ service qseecomd /system/bin/qseecomd
    user root
    group root
    writepid /dev/cpuset/system-background/tasks
+
+service energy-awareness /system/bin/energy-awareness
+    class main
+    user root
+    group system
+    oneshot
+
+service iop /system/bin/iop
+    class main
+    user root
+    group root
+    disabled
+    socket iop seqpacket 0666 root system
+    writepid /dev/cpuset/system-background/tasks
 
 service perfd /system/vendor/bin/perfd
    class main
@@ -1243,3 +1295,32 @@ on property:persist.sys.le_fast_chrg_enable=1
 
 on property:persist.sys.le_fast_chrg_enable=0
     write /sys/class/power_supply/le_ab/le_quick_charge_mode 1
+
+on configure-cpuset
+    # Update foreground and background cpusets
+    write /dev/cpuset/foreground/cpus 0-2
+    write /dev/cpuset/foreground/boost/cpus 0-2
+    write /dev/cpuset/background/cpus 0
+    write /dev/cpuset/system-background/cpus 0-2
+    write /dev/cpuset/top-app/cpus 0-3
+
+    # Add a cpuset for the camera daemon
+    # we want all cores for camera
+    mkdir /dev/cpuset/camera-daemon
+    write /dev/cpuset/camera-daemon/cpus 0-3
+    write /dev/cpuset/camera-daemon/mems 0
+    chown system system /dev/cpuset/camera-daemon
+    chown system system /dev/cpuset/camera-daemon/tasks
+    chmod 0664 /dev/cpuset/camera-daemon/tasks
+
+on property:sys.boot_completed=1
+    # Disable boosting
+    write /proc/sys/kernel/sched_boost 0
+    trigger configure-cpuset
+    # Set BFQ I/O scheduler
+    setprop sys.io.scheduler "bfq"
+    # Set idle GPU to 133 Mhz
+    write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 6
+    # Set permissions for dumpstate nodes
+    chmod 0644 /d/rpm_stats
+    chmod 0644 /d/dpm_master_stats

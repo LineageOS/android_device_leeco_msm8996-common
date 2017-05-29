@@ -1,1 +1,7 @@
 allow cameraserver sysfs:file { write };
+# communicate with perfd
+allow cameraserver perfd:unix_stream_socket connectto;
+allow cameraserver mpctl_data_file:dir search;
+allow cameraserver mpctl_data_file:sock_file write;
+allow cameraserver mpctl_socket:dir search;
+allow cameraserver mpctl_socket:sock_file write;

@@ -1,1 +1,4 @@
-allow init debugfs:file { rw_file_perms };
+allow init debugfs:file rw_file_perms;
+allow init sensors_data_file:dir mounton;
+allow init persist_drm_file:dir mounton;
+allow init proc_kernel_sched:file rw_file_perms;

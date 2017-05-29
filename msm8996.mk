@@ -223,6 +223,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.msm8996
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/bin/init.power.sh:system/bin/init.power.sh
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson

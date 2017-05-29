@@ -5,3 +5,12 @@
 /sys/devices/virtual/timed_output/vibrator/vtg_max              u:object_r:sysfs_vibrator:s0
 /sys/devices/virtual/timed_output/vibrator/vtg_min              u:object_r:sysfs_vibrator:s0
 /sys/devices/virtual/timed_output/vibrator/vtg_default          u:object_r:sysfs_vibrator:s0
+
+# CPU tunable for EAS
+/sys/devices/system/cpu/cpu[0-3]/cpufreq/schedutil(/.*)?            u:object_r:sysfs_devices_system_cpu:s0
+
+# Init
+/system/bin/init\.power\.sh                                         u:object_r:init_power_exec:s0
+
+# Power management
+/sys/module/lpm_levels/parameters(/.*)?                             u:object_r:sysfs_power_management:s0

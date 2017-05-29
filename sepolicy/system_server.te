@@ -4,3 +4,10 @@ allow system_server proc_touchpanel:file rw_file_perms;
 allow system_server sensors_persist_file:file r_file_perms;
 allow system_server sensors_persist_file:dir search;
 allow system_server sysfs_vibrator:file rw_file_perms;
+
+# communicate with perfd
+allow system_server perfd:unix_stream_socket connectto;
+allow system_server mpctl_data_file:dir search;
+allow system_server mpctl_data_file:sock_file write;
+allow system_server mpctl_socket:dir search;
+allow system_server mpctl_socket:sock_file write;
