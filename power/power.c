@@ -449,10 +449,10 @@ static void power_hint(struct power_module *module, power_hint_t hint,
             pthread_mutex_unlock(&s_interaction_lock);
 
             // Scheduler is EAS.
-            if (true || strncmp(governor, SCHED_GOVERNOR, strlen(SCHED_GOVERNOR)) == 0) {
-                // Setting the value of foreground schedtune boost to 50 and
+            if (strncmp(governor, SCHED_GOVERNOR, strlen(SCHED_GOVERNOR)) == 0) {
+                // Setting the value of foreground schedtune boost to 10 and
                 // scaling_min_freq to 1100MHz.
-                int resources[] = {0x40800000, 1100, 0x40800100, 1100, 0x42C0C000, 0x32, 0x41800000, 0x33};
+                int resources[] = {0x40800000, 1100, 0x40800100, 1100, 0x42C0C000, 0x10, 0x41800000, 0x33};
                 interaction(duration, sizeof(resources)/sizeof(resources[0]), resources);
             } else { // Scheduler is HMP.
                 int resources[] = {0x41800000, 0x33, 0x40800000, 1000, 0x40800100, 1000, 0x40C00000, 0x1};
@@ -799,6 +799,17 @@ static int get_platform_low_power_stats(struct power_module *module,
     return 0;
 }
 
+void set_feature(struct power_module *module, feature_t feature, int state)
+{
+    char tmp_str[NODE_MAX];
+#ifdef TAP_TO_WAKE_NODE
+    if (feature == POWER_FEATURE_DOUBLE_TAP_TO_WAKE) {
+        snprintf(tmp_str, NODE_MAX, "%d", state);
+        sysfs_write(TAP_TO_WAKE_NODE, tmp_str);
+    }
+#endif
+}
+
 struct power_module HAL_MODULE_INFO_SYM = {
     .common = {
         .tag = HARDWARE_MODULE_TAG,
@@ -815,5 +826,6 @@ struct power_module HAL_MODULE_INFO_SYM = {
     .setInteractive = set_interactive,
     .get_number_of_platform_modes = get_number_of_platform_modes,
     .get_platform_low_power_stats = get_platform_low_power_stats,
-    .get_voter_list = get_voter_list
+    .get_voter_list = get_voter_list,
+    .setFeature = set_feature
 };
