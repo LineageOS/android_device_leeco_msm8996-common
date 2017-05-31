@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa82b9bf_13039010",
+        "filename": "rootdir/root/init.qcom.power.rc",
+        "patchSetId": 2
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2017-05-31T19:42:53Z",
+      "side": 1,
+      "message": "Duplicated.",
+      "range": {
+        "startLine": 102,
+        "startChar": 4,
+        "endLine": 102,
+        "endChar": 45
+      },
+      "revId": "5cc729b04e1f0521ed4acc2cbeee69e814a37af9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa82b9bf_f305cc14",
+        "filename": "rootdir/root/init.qcom.power.rc",
+        "patchSetId": 2
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2017-05-31T19:42:53Z",
+      "side": 1,
+      "message": "This is duplicated.",
+      "range": {
+        "startLine": 161,
+        "startChar": 0,
+        "endLine": 167,
+        "endChar": 39
+      },
+      "revId": "5cc729b04e1f0521ed4acc2cbeee69e814a37af9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
