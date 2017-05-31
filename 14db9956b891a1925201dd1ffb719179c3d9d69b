@@ -1,0 +1,188 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa82b9bf_1074e6fb",
+        "filename": "rootdir/root/init.qcom.power.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2017-05-31T07:52:34Z",
+      "side": 1,
+      "message": "I forgot to remove this. Will do it on Mi5Devs\u0027 tree.",
+      "range": {
+        "startLine": 120,
+        "startChar": 4,
+        "endLine": 120,
+        "endChar": 78
+      },
+      "revId": "14db9956b891a1925201dd1ffb719179c3d9d69b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa82b9bf_b0609a36",
+        "filename": "rootdir/root/init.qcom.power.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2017-05-31T07:52:34Z",
+      "side": 1,
+      "message": "It may be better to emphasise that this is only HMP-related.",
+      "range": {
+        "startLine": 139,
+        "startChar": 4,
+        "endLine": 147,
+        "endChar": 51
+      },
+      "revId": "14db9956b891a1925201dd1ffb719179c3d9d69b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa82b9bf_d0651e46",
+        "filename": "rootdir/root/init.qcom.power.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2017-05-31T07:52:34Z",
+      "side": 1,
+      "message": "Google doesn\u0027t enable IO prefetcher on marlin. Don\u0027t know if we should follow them or not.",
+      "range": {
+        "startLine": 174,
+        "startChar": 0,
+        "endLine": 175,
+        "endChar": 13
+      },
+      "revId": "14db9956b891a1925201dd1ffb719179c3d9d69b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa82b9bf_905f9672",
+        "filename": "rootdir/root/init.qcom.power.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2017-05-31T07:52:34Z",
+      "side": 1,
+      "message": "If you want this service here like I did long ago, you should remove it from init.qcom.rc script.",
+      "range": {
+        "startLine": 194,
+        "startChar": 0,
+        "endLine": 194,
+        "endChar": 24
+      },
+      "revId": "14db9956b891a1925201dd1ffb719179c3d9d69b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa82b9bf_30548a53",
+        "filename": "rootdir/root/init.qcom.power.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2017-05-31T07:52:34Z",
+      "side": 1,
+      "message": "If you want this service here like I did long ago, you should remove it from init.qcom.rc script.",
+      "range": {
+        "startLine": 200,
+        "startChar": 0,
+        "endLine": 200,
+        "endChar": 53
+      },
+      "revId": "14db9956b891a1925201dd1ffb719179c3d9d69b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa82b9bf_104b86b1",
+        "filename": "rootdir/root/init.qcom.power.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2017-05-31T07:52:34Z",
+      "side": 1,
+      "message": "This is Xiaomi\u0027s specific deamon for HVDCP.",
+      "range": {
+        "startLine": 206,
+        "startChar": 0,
+        "endLine": 206,
+        "endChar": 41
+      },
+      "revId": "14db9956b891a1925201dd1ffb719179c3d9d69b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa82b9bf_50510e61",
+        "filename": "rootdir/root/init.qcom.power.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2017-05-31T07:52:34Z",
+      "side": 1,
+      "message": "If you want this service here like I did long ago, you should remove it from init.qcom.rc script.",
+      "range": {
+        "startLine": 211,
+        "startChar": 0,
+        "endLine": 211,
+        "endChar": 27
+      },
+      "revId": "14db9956b891a1925201dd1ffb719179c3d9d69b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa82b9bf_f04dc2c5",
+        "filename": "rootdir/root/init.qcom.power.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2017-05-31T07:52:34Z",
+      "side": 1,
+      "message": "If you want this service here like I did long ago, you should remove it from init.qcom.rc script.",
+      "range": {
+        "startLine": 219,
+        "startChar": 0,
+        "endLine": 219,
+        "endChar": 38
+      },
+      "revId": "14db9956b891a1925201dd1ffb719179c3d9d69b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
