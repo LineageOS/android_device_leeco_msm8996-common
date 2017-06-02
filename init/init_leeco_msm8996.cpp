@@ -173,25 +173,11 @@ void vendor_load_properties() {
     {
         // This is LEX820
         property_set("ro.product.model", "LEX820");
-        property_set("persist.data.iwlan.enable", "false");
-        // Dual SIM
-        property_set("persist.radio.multisim.config", "dsds");
-        // Disable VoLTE
-        property_set("persist.radio.cs_srv_type", "1");
-        property_set("persist.radio.calls.on.ims", "0");
-        property_set("persist.radio.jbims", "0");
     }
     else if (isLEX829)
     {
         // This is LEX829
         property_set("ro.product.model", "LEX829");
-        property_set("persist.data.iwlan.enable", "true");
-        // Dual SIM
-        property_set("persist.radio.multisim.config", "dsds");
-        // Enable VoLTE
-        property_set("persist.radio.cs_srv_type", "0");
-        property_set("persist.radio.calls.on.ims", "true");
-        property_set("persist.radio.jbims", "true");
     }
     else
     {
