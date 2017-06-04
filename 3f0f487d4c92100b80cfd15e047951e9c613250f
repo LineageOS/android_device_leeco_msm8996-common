@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "da87b5cf_c0c79363",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 6753
+      },
+      "writtenOn": "2017-06-04T23:55:45Z",
+      "side": 0,
+      "message": "if you drop this aren\u0027t we then building the qcom common power hal and not ours?",
+      "revId": "3f0f487d4c92100b80cfd15e047951e9c613250f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa82b9bf_b0bc1a6e",
         "filename": "rootdir/root/init.qcom.power.rc",
         "patchSetId": 1
