@@ -1,0 +1,3 @@
+allow netd remotecontrol_app:fd use;
+allow netd remotecontrol_app:tcp_socket { read write };
+allow netd remotecontrol_app:tcp_socket getopt;

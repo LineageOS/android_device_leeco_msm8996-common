@@ -38,3 +38,7 @@
 /system/bin/wcnss_filter                                                 u:object_r:wcnss_filter_exec:s0
 
 /data/misc/tloc(/.*)?                                                    u:object_r:tlocd_data_file:s0
+
+/sys/remote/enable                     u:object_r:sysfs_ir_enable:s0
+/dev/ttyHSL1                           u:object_r:consumer_ir_device:s0
+
