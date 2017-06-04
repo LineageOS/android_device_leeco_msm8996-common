@@ -1,0 +1,5 @@
+# IR
+-app/LetvRemoteControl/LetvRemoteControl.apk
+-app/UEIQuicksetSDKLeTV/UEIQuicksetSDKLeTV.apk
+etc/UEISettings
+etc/init.uei.sh
