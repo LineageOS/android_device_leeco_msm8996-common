@@ -1,0 +1,13 @@
+type quicksetsdk_app, domain;
+app_domain(quicksetsdk_app)
+
+allow quicksetsdk_app activity_service:service_manager find;
+allow quicksetsdk_app connectivity_service:service_manager find;
+allow quicksetsdk_app display_service:service_manager find;
+allow quicksetsdk_app network_management_service:service_manager find;
+
+allow quicksetsdk_app consumer_ir_device:chr_file { rw_file_perms };
+
+# /data/data/com.uei.quicksetsdk.letv/files/libserial_port.so
+# /data/data/com.uei.quicksetsdk.letv/files/libqs_jni.so
+allow quicksetsdk_app app_data_file:file { execute };

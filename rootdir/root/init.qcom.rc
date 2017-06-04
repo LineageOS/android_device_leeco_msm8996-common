@@ -578,6 +578,10 @@ on boot
     chmod 660 /sys/class/leds/green/start_idx
     chmod 660 /sys/class/leds/blue/start_idx
 
+    # Quickset IR
+    chown system system /sys/remote/enable
+    chmod 0666 /sys/remote/enable
+
     # Don't reset entire SoC on individual subsystem crash
     write /sys/bus/msm_subsys/devices/subsys0/restart_level "related"
     write /sys/bus/msm_subsys/devices/subsys1/restart_level "related"
