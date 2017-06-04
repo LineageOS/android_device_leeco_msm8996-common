@@ -1,0 +1,2 @@
+user=_app seinfo=platform name=com.letv.android.remotecontrol domain=remotecontrol_app type=app_data_file
+user=_app seinfo=platform name=com.uei.quicksetsdk.letv domain=quicksetsdk_app type=app_data_file
