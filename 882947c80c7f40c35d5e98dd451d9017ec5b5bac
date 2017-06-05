@@ -16,6 +16,24 @@
       "revId": "882947c80c7f40c35d5e98dd451d9017ec5b5bac",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da87b5cf_fe735813",
+        "filename": "power/Android.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 2681
+      },
+      "writtenOn": "2017-06-05T11:48:13Z",
+      "side": 1,
+      "message": "Whoops, nope. Pulling the double-tap patch out, will have a new patch set in a few",
+      "parentUuid": "da87b5cf_e0c41761",
+      "revId": "882947c80c7f40c35d5e98dd451d9017ec5b5bac",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }

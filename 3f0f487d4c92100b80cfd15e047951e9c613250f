@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "da87b5cf_de769406",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 2681
+      },
+      "writtenOn": "2017-06-05T11:48:13Z",
+      "side": 0,
+      "message": "I double checked by adding a #error in the powerhal, and it is being built",
+      "parentUuid": "da87b5cf_c0c79363",
+      "revId": "3f0f487d4c92100b80cfd15e047951e9c613250f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa82b9bf_b0bc1a6e",
         "filename": "rootdir/root/init.qcom.power.rc",
         "patchSetId": 1
