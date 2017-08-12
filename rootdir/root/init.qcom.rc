@@ -45,7 +45,7 @@ on init
     export LD_SHIM_LIBS "/system/lib/hw/camera.msm8996.so|libcamera_shim.so:/system/bin/mm-qcamera-daemon|qcamera-daemon_shim.so"
 
     # Set permissions for persist partition
-    mkdir /persist 0771 system system
+    mkdir /persist 0771 root system
 
     # Support legacy paths
     symlink /sdcard /storage/sdcard0
@@ -70,6 +70,7 @@ on late-fs
 on fs
     wait /dev/block/bootdevice
     mount_all fstab.qcom
+    swapon_all fstab.qcom
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
@@ -84,6 +85,8 @@ on early-boot
     write /sys/kernel/boot_slpi/boot 1
 
 on boot
+    start rmt_storage
+    start rfs_access
     # Secure touch
     chmod 0660 /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/secure_touch_enable
     chmod 0440 /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/secure_touch
@@ -183,12 +186,6 @@ on boot
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/device/extldo
     chmod 0660 /sys/class/rfkill/rfkill0/device/extldo
 
-    mkdir /persist/drm 0770 system system
-    mkdir /persist/bluetooth 0770 bluetooth bluetooth
-
-    # Create NETMGR daemon socket area
-    mkdir /dev/socket/netmgr 0750 radio radio
-
     # Create QMUX deamon socket area
     mkdir /dev/socket/qmux_radio 0770 radio radio
     chmod 2770 /dev/socket/qmux_radio
@@ -198,6 +195,15 @@ on boot
     chmod 2770 /dev/socket/qmux_bluetooth
     mkdir /dev/socket/qmux_gps 0770 gps gps
     chmod 2770 /dev/socket/qmux_gps
+
+    mkdir /persist/drm 0770 system system
+    mkdir /persist/bluetooth 0770 bluetooth bluetooth
+    mkdir /persist/misc 0770 system system
+    mkdir /persist/alarm 0770 system system
+    mkdir /persist/time 0770 system system
+
+    #Create NETMGR daemon socket area
+    mkdir /dev/socket/netmgr 0750 radio radio
 
     # Remove SUID bit for iproute2 ip tool
     chmod 0755 /system/bin/ip
@@ -378,6 +384,10 @@ on post-fs-data
     mkdir /data/misc/port_bridge 0770 radio radio
     chmod 0770 /data/misc/port_bridge
 
+    #create netmgr log dir
+    mkdir /data/misc/netmgr 0770 radio radio
+    chmod 0770 /data/misc/netmgr
+
     # Create the directories used by CnE subsystem
     mkdir /data/connectivity 0771 system system
     chown system system /data/connectivity
@@ -404,7 +414,7 @@ on post-fs-data
 
     # Mounting of persist is moved to 'on emmc-fs' and 'on fs' sections
     # We chown/chmod /persist again so because mount is run as root + defaults
-    chown system system /persist
+    chown root system /persist
     chmod 0771 /persist
     chmod 0664 /sys/devices/platform/msm_sdcc.1/polling
     chmod 0664 /sys/devices/platform/msm_sdcc.2/polling
@@ -489,14 +499,6 @@ on post-fs-data
     chown radio radio /data/misc/radio/db_check_done
     chmod 0660 /data/misc/radio/db_check_done
 
-on property:sys.boot_completed=1
-    # end boot time fs tune
-    write /sys/block/sda/queue/read_ahead_kb 128
-    write /sys/block/sda/queue/nr_requests 128
-    write /sys/block/dm-0/queue/read_ahead_kb 128
-    write /sys/block/dm-1/queue/read_ahead_kb 128
-    write /sys/block/sda/queue/iostats 1
-
 # start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
@@ -513,13 +515,14 @@ service fingerprintd /system/bin/fingerprintd
 
 # start up peripheral manager
 service per_mgr /system/bin/pm-service
-    class late_start
+    class core
     user system
-    group system net_raw
+    group system
+    ioprio rt 4
     writepid /dev/cpuset/system-background/tasks
 
 service per_proxy /system/bin/pm-proxy
-    class late_start
+    class core
     user system
     group system
     disabled
@@ -552,6 +555,9 @@ service thermal-engine /system/vendor/bin/thermal-engine
    socket thermal-recv-client stream 0660 system system
    socket thermal-recv-passive-client stream 0666 system system
    group root
+   socket thermal-send-client stream 0666 system system
+   socket thermal-recv-client stream 0660 system system
+   socket thermal-recv-passive-client stream 0666 system system
    writepid /dev/cpuset/system-background/tasks
 
 service time_daemon /system/bin/time_daemon
@@ -585,16 +591,16 @@ service imsqmidaemon /system/bin/imsqmidaemon
     class main
     user system
     socket ims_qmid stream 0660 system radio
-    group radio net_raw log diag
+    group radio log diag
     writepid /dev/cpuset/system-background/tasks
 
 service imsdatadaemon /system/bin/imsdatadaemon
     class main
     user system
     socket ims_datad stream 0660 system radio
-    group system wifi radio inet net_raw log diag net_admin
-    writepid /dev/cpuset/system-background/tasks
+    group system wifi radio inet log diag
     disabled
+    writepid /dev/cpuset/system-background/tasks
 
 service pd_mapper /system/vendor/bin/pd-mapper
     class core
@@ -614,15 +620,15 @@ service ims_rtp_daemon /system/bin/ims_rtp_daemon
     class main
     user system
     socket ims_rtpd stream 0660 system radio
-    group radio net_raw diag inet log
+    group radio diag inet log
     disabled
 
 service imscmservice /system/bin/imscmservice
     class main
     user system
-    group radio net_raw diag diag log
-    writepid /dev/cpuset/system-background/tasks
+    group radio diag inet log
     disabled
+    writepid /dev/cpuset/system-background/tasks
 
 on property:sys.ims.DATA_DAEMON_STATUS=1
     start ims_rtp_daemon
@@ -705,6 +711,18 @@ service ss_ramdump /system/bin/subsystem_ramdump
     group system
     disabled
 
+on property:persist.sys.ssr.enable_debug=*
+    write /sys/module/subsystem_restart/parameters/enable_debug ${persist.sys.ssr.enable_debug}
+
+on property:persist.sys.mba_boot_timeout=*
+    write /sys/module/pil_msa/parameters/pbl_mba_boot_timeout_ms ${persist.sys.mba_boot_timeout}
+
+on property:persist.sys.modem_auth_timeout=*
+    write /sys/module/pil_msa/parameters/modem_auth_timeout_ms ${persist.sys.modem_auth_timeout}
+
+on property:persist.sys.pil_proxy_timeout=*
+    write /sys/module/peripheral_loader/parameters/proxy_timeout_ms ${persist.sys.pil_proxy_timeout}
+
 on property:persist.sys.ssr.restart_level=*
     start ssr_setup
 
@@ -718,9 +736,14 @@ on property:persist.sys.ssr.enable_ramdumps=0
 
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
-    # Reset the read_ahead_kb to 512
-    write /sys/block/dm-0/queue/read_ahead_kb 512
-
+    # end boot time fs tune
+    write /sys/block/sda/queue/read_ahead_kb 128
+    write /sys/block/sda/queue/nr_requests 128
+    write /sys/block/dm-0/queue/read_ahead_kb 128
+    write /sys/block/dm-1/queue/read_ahead_kb 128
+    write /sys/block/sda/queue/iostats 1
+    # WDSP FW boot sysfs node used by STHAL
+    chown media audio /sys/kernel/wdsp0/boot
     # CPE fw_name used by sound trigger HAL
     chown media audio /sys/kernel/wcd_cpe0/fw_name
 
@@ -763,6 +786,7 @@ on property:bluetooth.startbtsnoop=false
 on property:vold.decrypt=trigger_restart_framework
     start config_bt_addr
     start config_bluetooth
+    start wcnss-service
 
 on property:persist.env.fastdorm.enabled=true
     setprop persist.radio.data_no_toggle 1
@@ -770,12 +794,12 @@ on property:persist.env.fastdorm.enabled=true
 service cnd /system/bin/cnd
     class main
     socket cnd stream 660 root inet
-    group root
     writepid /dev/cpuset/system-background/tasks
 
 service dpmd /system/bin/dpmd
     class late_start
     socket dpmd stream 660 root system
+    group system readproc
     writepid /dev/cpuset/system-background/tasks
 
 service irsc_util /system/bin/irsc_util "/etc/sec_config"
@@ -790,7 +814,7 @@ service rmt_storage /system/bin/rmt_storage
     writepid /dev/cpuset/system-background/tasks
 
 service tftp_server /system/bin/tftp_server
-    class main
+    class core
     user root
     writepid /dev/cpuset/system-background/tasks
 
@@ -803,7 +827,7 @@ on property:wc_transport.start_hci=false
 service start_hci_filter /system/bin/wcnss_filter
     class late_start
     user bluetooth
-    group bluetooth qcom_diag
+    group bluetooth qcom_diag system wakelock
     disabled
 
 service config_bt_addr /system/bin/btnvtool -O
@@ -878,6 +902,13 @@ service btsnoop /system/bin/btsnoop
     disabled
     oneshot
 
+service bt_logger /system/bin/bt_logger
+    user bluetooth
+    group bluetooth net_bt_admin sdcard_rw sdcard_r media_rw
+    class late_start
+    disabled
+    oneshot
+
 service ftmd /system/bin/logwrapper /system/bin/ftmdaemon
     class late_start
     user root
@@ -890,6 +921,13 @@ service bridgemgrd /system/bin/bridgemgrd
     user radio
     group radio qcom_diag
     disabled
+
+service port-bridge /system/bin/port-bridge
+    class main
+    user radio system
+    group radio system inet
+    disabled
+    oneshot
 
 service qmiproxy /system/bin/qmiproxy
     class main
@@ -947,37 +985,12 @@ on property:ro.data.large_tcp_window_size=true
 on property:sys.sysctl.tcp_adv_win_scale=*
     write /proc/sys/net/ipv4/tcp_adv_win_scale ${sys.sysctl.tcp_adv_win_scale}
 
-service btwlancoex /system/bin/sh /system/etc/init.qcom.coex.sh
-    class late_start
-    user bluetooth
-    group bluetooth net_bt_admin inet net_admin net_raw
-    disabled
-    oneshot
-
-service amp_init /system/bin/amploader -i
-    class late_start
-    user root
-    disabled
-    oneshot
-
-service amp_load /system/bin/amploader -l 7000
-    class late_start
-    user root
-    disabled
-    oneshot
-
-service amp_unload /system/bin/amploader -u
-    class late_start
-    user root
-    disabled
-    oneshot
-
 service p2p_supplicant /system/bin/wpa_supplicant \
     -ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf \
     -I/system/etc/wifi/p2p_supplicant_overlay.conf -N \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
     -I/system/etc/wifi/wpa_supplicant_overlay.conf \
-    -O/data/misc/wifi/sockets -puse_p2p_group_interface=1 \
+    -O/data/misc/wifi/sockets -puse_p2p_group_interface=1 -dd \
     -e/data/misc/wifi/entropy.bin -g@android:wpa_wlan0
 #   we will start as root and wpa_supplicant will switch to user wifi
 #   after setting up the capabilities required for WEXT
@@ -991,7 +1004,7 @@ service p2p_supplicant /system/bin/wpa_supplicant \
 service wpa_supplicant /system/bin/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
     -I/system/etc/wifi/wpa_supplicant_overlay.conf \
-    -O/data/misc/wifi/sockets \
+    -O/data/misc/wifi/sockets -dd \
     -e/data/misc/wifi/entropy.bin -g@android:wpa_wlan0
 #   we will start as root and wpa_supplicant will switch to user wifi
 #   after setting up the capabilities required for WEXT
@@ -1023,9 +1036,9 @@ service ptt_ffbm /system/bin/ptt_socket_app -f -d
     oneshot
 
 service cnss_diag /system/bin/cnss_diag -q -f
-    class main
-    user root
-    group root
+    class late_start
+    user system
+    group system wifi inet net_admin sdcard_rw media_rw diag
     #ifdef VENDOR_EDIT
     # cnss diag cause power consumption bigger sometimes, so disable it until solve it
     disabled
@@ -1034,11 +1047,16 @@ service cnss_diag /system/bin/cnss_diag -q -f
 
 service cnss-daemon /system/bin/cnss-daemon -n -l
     class late_start
+    user system
+    group system inet net_admin wifi
+
+on property:sys.shutdown.requested=*
+    stop cnss-daemon
 
 service loc_launcher /system/bin/loc_launcher
     # loc_launcher will start as root and set its uid to gps
     class late_start
-    group gps inet net_raw qcom_diag net_admin wifi
+    group gps inet qcom_diag wifi
     writepid /dev/cpuset/system-background/tasks
 
 service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
@@ -1069,7 +1087,7 @@ service atfwd /system/bin/ATFWD-daemon
     user system
     group system radio
 
-service hostapd /system/bin/hostapd /data/hostapd/hostapd.conf
+service hostapd /system/bin/hostapd -dd /data/hostapd/hostapd.conf
     class late_start
     user root
     group root
@@ -1108,7 +1126,7 @@ service ril-daemon /system/bin/rild
     socket sap_uim_socket1 stream 660 bluetooth bluetooth
     socket rild-debug stream 660 radio system
     user root
-    group radio cache inet misc audio sdcard_r sdcard_rw qcom_diag diag log net_raw
+    group radio cache inet misc audio sdcard_r sdcard_rw qcom_diag diag log readproc wakelock net_raw
 
 service ril-daemon2 /system/bin/rild -c 2
     class main
@@ -1116,7 +1134,7 @@ service ril-daemon2 /system/bin/rild -c 2
     socket rild-debug2 stream 660 radio system
     user root
 #VENDOR_EDIT chenzhongping add net_raw group for rild
-    group radio cache inet misc audio sdcard_r sdcard_rw qcom_diag diag log net_raw
+    group radio cache inet misc audio sdcard_r sdcard_rw qcom_diag diag log readproc wakelock net_raw
 
 service usb_uicc_enable /system/bin/sh /system/etc/init.qcom.uicc.sh
     class late_start
@@ -1150,7 +1168,7 @@ service hcidump /system/bin/sh /system/etc/hcidump.sh
 
 service charger /sbin/healthd -c
     class charger
-    group log
+    group system graphics
     seclabel u:r:healthd:s0
     writepid /dev/cpuset/system-background/tasks
 
@@ -1186,7 +1204,7 @@ on property:sys.qbcharger.enable=true
 on property:sys.qbcharger.enable=false
     stop qbcharger
 
-service diag_mdlog_start /system/bin/diag_mdlog -c
+service diag_mdlog_start /system/bin/diag_mdlog
     class late_start
     user shell
     group system qcom_diag sdcard_rw sdcard_r media_rw
@@ -1206,7 +1224,7 @@ service vm_bms /system/bin/vm_bms
     disabled
 
 service msm_irqbalance /system/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
-    class main
+    class core
     user root
     group root
     disabled
