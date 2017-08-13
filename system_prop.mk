@@ -169,16 +169,23 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.hw_mbn_update=0 \
     persist.radio.sw_mbn_update=0 \
     persist.radio.start_ota_daemon=1 \
-    persist.data.iwlan.enable=true
+    persist.data.iwlan.enable=true \
+    persist.radio.VT_ENABLE=1 \
+    persist.radio.REVERSE_QMI=0 \
+    persist.radio.ROTATION_ENABLE=1 \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=1
 
 #default SAR mode 0:off/1:on
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.sar_mode=1
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.cs_srv_type=1 \
-    persist.radio.calls.on.ims=0 \
-    persist.radio.jbims=0 \
+    persist.radio.cs_srv_type=0 \
+    persist.radio.calls.on.ims=true \
+    persist.radio.jbims=true \
+    persist.rcs.supported=1 \
+    persist.radio.domain.ps=false \
     persist.radio.csvt.enabled=false \
     persist.radio.rat_on=combine \
     persist.radio.mt_sms_ack=20 \
