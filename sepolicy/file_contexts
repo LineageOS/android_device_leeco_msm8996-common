@@ -5,3 +5,5 @@
 /sys/devices/virtual/timed_output/vibrator/vtg_max              u:object_r:sysfs_vibrator:s0
 /sys/devices/virtual/timed_output/vibrator/vtg_min              u:object_r:sysfs_vibrator:s0
 /sys/devices/virtual/timed_output/vibrator/vtg_default          u:object_r:sysfs_vibrator:s0
+
+/data/misc/netmgr(/.*)?                                         u:object_r:net_data_file:s0
