@@ -1,1 +1,2 @@
 allow tlocd diag_device:chr_file { rw_file_perms };
+get_prop(tlocd, diag_prop);
