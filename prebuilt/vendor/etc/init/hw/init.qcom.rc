@@ -740,6 +740,12 @@ service time_daemon /vendor/bin/time_daemon
     group root
     writepid /dev/cpuset/system-background/tasks
 
+service power_off_alarm /vendor/bin/power_off_alarm
+    class core
+    group system
+    disabled
+    oneshot
+
 service qcom-sh /vendor/bin/init.qcom.sh
     class late_start
     user root
