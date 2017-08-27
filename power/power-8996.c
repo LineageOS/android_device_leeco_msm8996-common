@@ -313,10 +313,12 @@ int power_hint_override(struct power_module *module, power_hint_t hint, void *da
         MIN_FREQ_BIG_CORE_0, 0x3E8,
     };
 
+/*
     if (hint == POWER_HINT_SET_PROFILE) {
         set_power_profile(*(int32_t *)data);
         return HINT_HANDLED;
     }
+*/
 
     /* Skip other hints in power save mode */
     if (current_power_profile == PROFILE_POWER_SAVE)
@@ -357,6 +359,7 @@ int power_hint_override(struct power_module *module, power_hint_t hint, void *da
         return HINT_HANDLED;
     }
 
+/*
     if (hint == POWER_HINT_CPU_BOOST) {
         duration = *(int32_t *)data / 1000;
         if (duration > 0) {
@@ -365,6 +368,7 @@ int power_hint_override(struct power_module *module, power_hint_t hint, void *da
             return HINT_HANDLED;
         }
     }
+*/
 
     if (hint == POWER_HINT_VIDEO_ENCODE)
         return process_video_encode_hint(data);
