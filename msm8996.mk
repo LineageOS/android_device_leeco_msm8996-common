@@ -176,8 +176,8 @@ PRODUCT_PACKAGES += \
     libjni_livedisplay
 
 # Doze mode
-PRODUCT_PACKAGES += \
-    Doze
+#PRODUCT_PACKAGES += \
+#    Doze
 
 # DRM
 PRODUCT_PACKAGES += \
