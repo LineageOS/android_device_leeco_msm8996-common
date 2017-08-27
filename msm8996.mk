@@ -182,8 +182,8 @@ PRODUCT_PACKAGES += \
     libjni_livedisplay
 
 # Doze mode
-PRODUCT_PACKAGES += \
-    Doze
+#PRODUCT_PACKAGES += \
+#    Doze
 
 # For android_filesystem_config.h
 PRODUCT_PACKAGES += \
