@@ -568,13 +568,13 @@ service imsqmidaemon /system/bin/imsqmidaemon
     group radio net_raw log diag
     writepid /dev/cpuset/system-background/tasks
 
-service imsdatadaemon /system/bin/imsdatadaemon
-    class main
-    user system
-    socket ims_datad stream 0660 system radio
-    group system wifi radio inet net_raw log diag net_admin
-    writepid /dev/cpuset/system-background/tasks
-    disabled
+#service imsdatadaemon /system/bin/imsdatadaemon
+#    class main
+#    user system
+#    socket ims_datad stream 0660 system radio
+#    group system wifi radio inet net_raw log diag net_admin
+#    writepid /dev/cpuset/system-background/tasks
+#    disabled
 
 service pd_mapper /system/vendor/bin/pd-mapper
     class core
@@ -587,8 +587,8 @@ on property:persist.sys.pd_enable=1
 on property:persist.sys.pd_enable=0
     write /sys/class/service_locator/service_locator_status 0
 
-on property:sys.ims.QMI_DAEMON_STATUS=1
-    start imsdatadaemon
+#on property:sys.ims.QMI_DAEMON_STATUS=1
+#    start imsdatadaemon
 
 service ims_rtp_daemon /system/bin/ims_rtp_daemon
     class main
@@ -747,16 +747,16 @@ on property:vold.decrypt=trigger_restart_framework
 on property:persist.env.fastdorm.enabled=true
     setprop persist.radio.data_no_toggle 1
 
-service cnd /system/bin/cnd
-    class main
-    socket cnd stream 660 root inet
-    group root
-    writepid /dev/cpuset/system-background/tasks
+#service cnd /system/bin/cnd
+#    class main
+#    socket cnd stream 660 root inet
+#    group root
+#    writepid /dev/cpuset/system-background/tasks
 
-service dpmd /system/bin/dpmd
-    class late_start
-    socket dpmd stream 660 root system
-    writepid /dev/cpuset/system-background/tasks
+#service dpmd /system/bin/dpmd
+#    class late_start
+#    socket dpmd stream 660 root system
+#    writepid /dev/cpuset/system-background/tasks
 
 service irsc_util /system/bin/irsc_util "/etc/sec_config"
     class core
