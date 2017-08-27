@@ -116,8 +116,8 @@ PRODUCT_COPY_FILES += \
     external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml
 
 # Bluetooth
-#PRODUCT_PACKAGES += \
-#    android.hardware.bluetooth@1.0-impl
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -182,6 +182,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/lowi.conf:system/etc/lowi.conf \
     $(LOCAL_PATH)/gps/etc/sap.conf:system/etc/sap.conf \
     $(LOCAL_PATH)/gps/etc/xtwifi.conf:system/etc/xtwifi.conf
+
+# HIDL
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml
 
 # IRQ
 PRODUCT_COPY_FILES += \
@@ -265,6 +269,7 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
     ipacm \
     ipacm-diag \
     IPACM_cfg.xml \
