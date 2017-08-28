@@ -883,10 +883,10 @@ service qmuxd /system/bin/qmuxd
     group radio audio bluetooth gps nfc qcom_diag
     writepid /dev/cpuset/system-background/tasks
 
-service netmgrd /system/bin/netmgrd
-    class main
-    group radio system
-    writepid /dev/cpuset/system-background/tasks
+#service netmgrd /system/bin/netmgrd
+#    class main
+#    group radio system
+#    writepid /dev/cpuset/system-background/tasks
 
 service ipacm-diag /system/bin/ipacm-diag
     class main
