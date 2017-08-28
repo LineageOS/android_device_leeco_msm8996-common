@@ -568,13 +568,13 @@ service imsqmidaemon /system/bin/imsqmidaemon
     group radio net_raw log diag
     writepid /dev/cpuset/system-background/tasks
 
-service imsdatadaemon /system/bin/imsdatadaemon
-    class main
-    user system
-    socket ims_datad stream 0660 system radio
-    group system wifi radio inet net_raw log diag net_admin
-    writepid /dev/cpuset/system-background/tasks
-    disabled
+#service imsdatadaemon /system/bin/imsdatadaemon
+#    class main
+#    user system
+#    socket ims_datad stream 0660 system radio
+#    group system wifi radio inet net_raw log diag net_admin
+#    writepid /dev/cpuset/system-background/tasks
+#    disabled
 
 service pd_mapper /system/vendor/bin/pd-mapper
     class core
@@ -747,16 +747,16 @@ on property:vold.decrypt=trigger_restart_framework
 on property:persist.env.fastdorm.enabled=true
     setprop persist.radio.data_no_toggle 1
 
-service cnd /system/bin/cnd
-    class main
-    socket cnd stream 660 root inet
-    group root
-    writepid /dev/cpuset/system-background/tasks
+#service cnd /system/bin/cnd
+#    class main
+#    socket cnd stream 660 root inet
+#    group root
+#    writepid /dev/cpuset/system-background/tasks
 
-service dpmd /system/bin/dpmd
-    class late_start
-    socket dpmd stream 660 root system
-    writepid /dev/cpuset/system-background/tasks
+#service dpmd /system/bin/dpmd
+#    class late_start
+#    socket dpmd stream 660 root system
+#    writepid /dev/cpuset/system-background/tasks
 
 service irsc_util /system/bin/irsc_util "/etc/sec_config"
     class core
@@ -769,10 +769,10 @@ service rmt_storage /system/bin/rmt_storage
     group system
     writepid /dev/cpuset/system-background/tasks
 
-service tftp_server /system/bin/tftp_server
-    class main
-    user root
-    writepid /dev/cpuset/system-background/tasks
+#service tftp_server /system/bin/tftp_server
+#    class main
+#    user root
+#    writepid /dev/cpuset/system-background/tasks
 
 on property:wc_transport.start_hci=true
     start start_hci_filter
@@ -883,10 +883,10 @@ service qmuxd /system/bin/qmuxd
     group radio audio bluetooth gps nfc qcom_diag
     writepid /dev/cpuset/system-background/tasks
 
-service netmgrd /system/bin/netmgrd
-    class main
-    group radio system
-    writepid /dev/cpuset/system-background/tasks
+#service netmgrd /system/bin/netmgrd
+#    class main
+#    group radio system
+#    writepid /dev/cpuset/system-background/tasks
 
 service ipacm-diag /system/bin/ipacm-diag
     class main
