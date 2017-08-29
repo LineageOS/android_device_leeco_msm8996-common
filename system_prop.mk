@@ -120,6 +120,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     sdm.debug.disable_rotator_split=1 \
     ro.persist.qcapb = 1
 
+# NEED TO FIX THE ROOT CAUSE OF
+# Backpressure trigger, skipping transaction & refresh!
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.disable_backpressure=1
+
 # OpenGLES
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196610
