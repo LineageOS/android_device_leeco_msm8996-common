@@ -82,11 +82,13 @@ static int read_file2(const char *fname, char *data, int max_size)
 void init_alarm_boot_properties()
 {
     char const *boot_reason_file = "/proc/sys/kernel/boot_reason";
+    char const *power_off_alarm_file = "/persist/alarm/powerOffAlarmSet";
     std::string boot_reason;
+    std::string power_off_alarm;
     std::string reboot_reason = property_get("ro.boot.alarmboot");
 
-    if (read_file(boot_reason_file, &boot_reason)) {
-        /*
+    if (read_file(boot_reason_file, &boot_reason)
+            && read_file(power_off_alarm_file, &power_off_alarm)) {        /*
          * Setup ro.alarm_boot value to true when it is RTC triggered boot up
          * For existing PMIC chips, the following mapping applies
          * for the value of boot_reason:
@@ -113,7 +115,8 @@ void init_alarm_boot_properties()
             property_set("ro.boot.bootreason", "smpl");
             property_set("ro.alarm_boot", "false");
         }
-        else if (Trim(boot_reason) == "3"  || reboot_reason == "true") {
+        else if ((Trim(boot_reason) == "3"  || reboot_reason == "true")
+                  && Trim(power_off_alarm) == "1") {
             property_set("ro.alarm_boot", "true");
         }
         else if (Trim(boot_reason) == "4") {
