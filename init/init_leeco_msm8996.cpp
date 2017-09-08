@@ -34,10 +34,14 @@
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 
+#include <android-base/strings.h>
+
 #include "vendor_init.h"
 #include "property_service.h"
 #include "log.h"
 #include "util.h"
+
+using android::base::Trim;
 
 #define DEVINFO_FILE "/dev/block/bootdevice/by-name/devinfo"
 
@@ -77,10 +81,10 @@ static int read_file2(const char *fname, char *data, int max_size)
 
 void init_alarm_boot_properties()
 {
-    char const *alarm_file = "/proc/sys/kernel/boot_reason";
-    char buf[64];
+    char const *boot_reason_file = "/proc/sys/kernel/boot_reason";
+    std::string boot_reason;
 
-    if(read_file2(alarm_file, buf, sizeof(buf))) {
+    if (read_file(boot_reason_file, &boot_reason)) {
         /*
          * Setup ro.alarm_boot value to true when it is RTC triggered boot up
          * For existing PMIC chips, the following mapping applies
@@ -96,38 +100,38 @@ void init_alarm_boot_properties()
          * 7 -> CBLPWR_N pin toggled (for external power supply)
          * 8 -> KPDPWR_N pin toggled (power key pressed)
          */
-        if (buf[0] == '0') {
+        if (Trim(boot_reason) =="0") {
             property_set("ro.boot.bootreason", "invalid");
             property_set("ro.alarm_boot", "false");
         }
-        else if (buf[0] == '1') {
+        else if (Trim(boot_reason) == "1") {
             property_set("ro.boot.bootreason", "hard_reset");
             property_set("ro.alarm_boot", "false");
         }
-        else if (buf[0] == '2') {
+        else if (Trim(boot_reason) == "2") {
             property_set("ro.boot.bootreason", "smpl");
             property_set("ro.alarm_boot", "false");
         }
-        else if (buf[0] == '3'){
+        else if (Trim(boot_reason) == "3"){
             property_set("ro.alarm_boot", "true");
         }
-        else if (buf[0] == '4') {
+        else if (Trim(boot_reason) == "4") {
             property_set("ro.boot.bootreason", "dc_chg");
             property_set("ro.alarm_boot", "false");
         }
-        else if (buf[0] == '5') {
+        else if (Trim(boot_reason) == "5") {
             property_set("ro.boot.bootreason", "usb_chg");
             property_set("ro.alarm_boot", "false");
         }
-        else if (buf[0] == '6') {
+        else if (Trim(boot_reason) == "6") {
             property_set("ro.boot.bootreason", "pon1");
             property_set("ro.alarm_boot", "false");
         }
-        else if (buf[0] == '7') {
+        else if (Trim(boot_reason) == "7") {
             property_set("ro.boot.bootreason", "cblpwr");
             property_set("ro.alarm_boot", "false");
         }
-        else if (buf[0] == '8') {
+        else if (Trim(boot_reason) == "8") {
             property_set("ro.boot.bootreason", "kpdpwr");
             property_set("ro.alarm_boot", "false");
         }
