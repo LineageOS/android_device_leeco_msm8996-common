@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9b7fc3a9_c81b1c7c",
+        "filename": "init/init_leeco_msm8996.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2017-09-08T17:23:43Z",
+      "side": 1,
+      "message": "1 is not enough?",
+      "range": {
+        "startLine": 82,
+        "startChar": 21,
+        "endLine": 82,
+        "endChar": 23
+      },
+      "revId": "608348b85a7c67001aa1dfd67b57e3a8a45f5a92",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4137f7cf_f4326dc9",
+        "filename": "init/init_leeco_msm8996.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2017-09-08T17:23:43Z",
+      "side": 1,
+      "message": "same",
+      "range": {
+        "startLine": 83,
+        "startChar": 25,
+        "endLine": 83,
+        "endChar": 27
+      },
+      "revId": "608348b85a7c67001aa1dfd67b57e3a8a45f5a92",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
