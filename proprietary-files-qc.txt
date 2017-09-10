@@ -65,7 +65,7 @@ vendor/lib/libbtnv.so
 vendor/lib64/libbtnv.so
 
 # CNE
-bin/cnd
+bin/cnd|37b4cafc4ebfe3e6b46dd1d79d308c51e7f3920a
 etc/cne/SwimConfig.xml
 etc/cne/andsfCne.xml
 etc/cne/wqeclient/profile1.xml
@@ -102,10 +102,11 @@ vendor/lib/libcneqmiutils.so
 vendor/lib/libvendorconn.so
 vendor/lib/libwqe.so
 vendor/lib/libxml.so
-vendor/lib64/libcne.so
-vendor/lib64/libcneapiclient.so
+vendor/lib64/libcne.so|54e80e1cb24945ec87b2fdf7f0541a6faa643ef5
+vendor/lib64/libcneapiclient.so|2992bca7d57c6f59156039b948ac959c40ea45e8
 vendor/lib64/libcneconn.so
 vendor/lib64/libcneqmiutils.so
+vendor/lib64/libprotobuf-cpp-lgcy.so|196013f7f1a84dfb0efdb736dd661b615ef4c5ae
 vendor/lib64/libvendorconn.so
 vendor/lib64/libwqe.so
 vendor/lib64/libxml.so
