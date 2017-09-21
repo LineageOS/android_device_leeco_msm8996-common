@@ -661,7 +661,7 @@ service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqb
 service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
     class main
     user root
-    group root
+    group system wakelock
     seclabel u:r:hvdcp:s0
 
 service vendor.charger /vendor/bin/charger
