@@ -52,7 +52,7 @@
         <version>1.0</version>
         <interface>
             <name>IGatekeeper</name>
-            <instance>msm8998</instance>
+            <instance>msm8996</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -61,7 +61,7 @@
         <version>2.0</version>
         <interface>
             <name>IAllocator</name>
-            <instance>msm8998</instance>
+            <instance>msm8996</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -79,7 +79,7 @@
         <version>2.1</version>
         <interface>
             <name>IComposer</name>
-            <instance>msm8998</instance>
+            <instance>msm8996</instance>
         </interface>
     </hal>
 <!--
@@ -99,7 +99,7 @@
         <version>3.0</version>
         <interface>
             <name>IKeymasterDevice</name>
-            <instance>msm8998</instance>
+            <instance>msm8996</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -108,7 +108,7 @@
         <version>2.0</version>
         <interface>
             <name>ILight</name>
-            <instance>msm8998</instance>
+            <instance>msm8996</instance>
         </interface>
     </hal>
      <hal format="hidl">
@@ -130,7 +130,7 @@
         <version>1.0</version>
         <interface>
             <name>IMemtrack</name>
-            <instance>msm8998</instance>
+            <instance>msm8996</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -139,7 +139,7 @@
         <version>1.0</version>
         <interface>
             <name>IPower</name>
-            <instance>msm8998</instance>
+            <instance>msm8996</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -157,7 +157,7 @@
         <version>1.0</version>
         <interface>
             <name>ISensors</name>
-            <instance>msm8998</instance>
+            <instance>msm8996</instance>
         </interface>
     </hal>
     <hal format="hidl">
