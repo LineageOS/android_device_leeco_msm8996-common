@@ -26,7 +26,6 @@
             <instance>default</instance>
         </interface>
     </hal>
-<!--
     <hal format="hidl">
         <name>android.hardware.bluetooth</name>
         <transport>hwbinder</transport>
@@ -36,7 +35,15 @@
             <instance>default</instance>
         </interface>
     </hal>
--->
+    <hal format="hidl">
+        <name>android.hardware.broadcastradio</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IBroadcastRadioFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl">
         <name>android.hardware.configstore</name>
         <transport>hwbinder</transport>
@@ -47,12 +54,36 @@
         </interface>
     </hal>
     <hal format="hidl">
+        <name>android.hardware.drm</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ICryptoFactory</name>
+            <instance>widevine</instance>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IDrmFactory</name>
+            <instance>widevine</instance>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
         <name>android.hardware.gatekeeper</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>IGatekeeper</name>
-            <instance>msm8996</instance>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.gnss</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IGnss</name>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -61,7 +92,7 @@
         <version>2.0</version>
         <interface>
             <name>IAllocator</name>
-            <instance>msm8996</instance>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -79,27 +110,16 @@
         <version>2.1</version>
         <interface>
             <name>IComposer</name>
-            <instance>msm8996</instance>
+            <instance>default</instance>
         </interface>
     </hal>
-<!--
-    <hal format="hidl">
-        <name>android.hardware.ir</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IConsumerIr</name>
-            <instance>msm8996</instance>
-        </interface>
-    </hal>
--->
     <hal format="hidl">
         <name>android.hardware.keymaster</name>
         <transport>hwbinder</transport>
         <version>3.0</version>
         <interface>
             <name>IKeymasterDevice</name>
-            <instance>msm8996</instance>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -108,7 +128,7 @@
         <version>2.0</version>
         <interface>
             <name>ILight</name>
-            <instance>msm8996</instance>
+            <instance>default</instance>
         </interface>
     </hal>
      <hal format="hidl">
@@ -130,7 +150,7 @@
         <version>1.0</version>
         <interface>
             <name>IMemtrack</name>
-            <instance>msm8996</instance>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -139,7 +159,7 @@
         <version>1.0</version>
         <interface>
             <name>IPower</name>
-            <instance>msm8996</instance>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -157,7 +177,16 @@
         <version>1.0</version>
         <interface>
             <name>ISensors</name>
-            <instance>msm8996</instance>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.thermal</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IThermal</name>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
