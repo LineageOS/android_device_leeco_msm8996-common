@@ -121,7 +121,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/aanc_tuning_mixer.txt:$(TARGET_COPY_OUT_VENDOR)/etc/aanc_tuning_mixer.txt \
     $(LOCAL_PATH)/audio/audio_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy.conf \
-    $(LOCAL_PATH)/audio/audio_output_policy.conf:$(TARGET_COPY_OUT_VENDOR)/vendor/etc/audio_output_policy.conf \
+    $(LOCAL_PATH)/audio/audio_output_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_output_policy.conf \
     $(LOCAL_PATH)/audio/audio_platform_info_i2s.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_i2s.xml \
     $(LOCAL_PATH)/audio/listen_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/listen_platform_info.xml \
     $(LOCAL_PATH)/audio/sound_trigger_mixer_paths_wcd9330.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths_wcd9330.xml \
@@ -164,8 +164,11 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-impl \
+    android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.configstore@1.0-service \
     android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service \
     copybit.msm8996 \
     gralloc.msm8996 \
     hwcomposer.msm8996 \
@@ -184,6 +187,11 @@ PRODUCT_PACKAGES += \
 # Doze mode
 #PRODUCT_PACKAGES += \
 #    Doze
+
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl \
+    android.hardware.drm@1.0-service \
 
 # For android_filesystem_config.h
 PRODUCT_PACKAGES += \
@@ -284,6 +292,7 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    android.hardware.broadcastradio@1.0-impl \
     librmnetctl \
     rmnetcli \
     libxml2 \
@@ -298,6 +307,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
     sensors.msm8996
+
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0-impl \
 
 # USB
 PRODUCT_PACKAGES += \
