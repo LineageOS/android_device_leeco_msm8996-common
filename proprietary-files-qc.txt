@@ -1,5 +1,5 @@
 # ADSP
-bin/adsprpcd
+vendor/bin/adsprpcd
 vendor/lib/libadsp_default_listener.so
 vendor/lib/libadsp_hvx_callback_skel.so
 vendor/lib/libadsp_hvx_stub.so
@@ -107,7 +107,7 @@ vendor/lib64/libxml.so
 -vendor/lib/com.quicinc.cne.server@2.0.so
 
 # DRM
-bin/qseecomd
+vendor/bin/qseecomd
 vendor/bin/qseeproxydaemon
 vendor/lib/libQSEEComAPI.so
 vendor/lib/liboemcrypto.so
@@ -132,7 +132,7 @@ vendor/lib/hw/gatekeeper.msm8996.so
 vendor/lib64/hw/gatekeeper.msm8996.so
 
 # GPS
-bin/loc_launcher
+vendor/bin/loc_launcher
 etc/permissions/com.qti.location.sdk.xml
 etc/permissions/com.qualcomm.location.xml
 etc/permissions/com.qualcomm.location.vzw_library.xml
@@ -274,8 +274,8 @@ bin/energy-awareness
 bin/msm_irqbalance
 
 # Peripheral manager
-bin/pm-proxy
-bin/pm-service
+vendor/bin/pm-proxy
+vendor/bin/pm-service
 vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
 
@@ -287,7 +287,7 @@ vendor/bin/mm-pp-dpps
 vendor/lib64/libdisp-aba.so
 
 # QMI
-bin/irsc_util
+vendor/bin/irsc_util
 etc/permissions/qti_permissions.xml
 vendor/bin/pd-mapper
 vendor/lib/libdiag.so
@@ -336,12 +336,13 @@ vendor/lib64/libsmemlog.so
 -app/fastdormancy/fastdormancy.apk
 -app/QtiTelephonyService/QtiTelephonyService.apk
 -app/shutdownlistener/shutdownlistener.apk
-bin/ipacm-diag
-bin/netmgrd
+vendor/bin/ipacm
+vendor/bin/ipacm-diag
+vendor/bin/netmgrd
 bin/qmuxd
 bin/radish
-bin/rmt_storage
-bin/tftp_server
+vendor/bin/rmt_storage
+vendor/bin/tftp_server
 etc/data/dsi_config.xml
 etc/data/netmgr_config.xml
 etc/data/qmi_config.xml
@@ -376,10 +377,10 @@ vendor/lib64/libsystem_health_mon.so
 vendor/qcril.db
 
 # Radio - IMS
-bin/ims_rtp_daemon
-bin/imscmservice
-bin/imsdatadaemon
-bin/imsqmidaemon
+vendor/bin/ims_rtp_daemon
+vendor/bin/imsrcsd
+vendor/bin/imsdatadaemon
+vendor/bin/imsqmidaemon
 -vendor/app/ims/ims.apk
 -vendor/app/imssettings/imssettings.apk
 vendor/lib64/lib-dplmedia.so
@@ -407,7 +408,7 @@ vendor/lib64/librcc.so
 vendor/lib64/libvoice-svc.so
 
 # Sensors
-bin/sensors.qcom
+vendor/bin/sensors.qcom
 vendor/lib/hw/activity_recognition.msm8996.so
 vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
@@ -435,7 +436,7 @@ vendor/lib64/libthermalioctl.so
 
 # Time services
 -app/TimeService/TimeService.apk
-bin/time_daemon
+vendor/bin/time_daemon
 -vendor/lib/libtime_genoff.so
 vendor/lib/libTimeService.so
 -vendor/lib64/libtime_genoff.so
