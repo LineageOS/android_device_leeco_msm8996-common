@@ -241,7 +241,7 @@ TW_INCLUDE_NTFS_3G := true
 #TWRP_EVENT_LOGGING := true
 else
 USE_CLANG_PLATFORM_BUILD := true
-TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/root/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/recovery/fstab.qcom
 endif
 
 # SELinux
