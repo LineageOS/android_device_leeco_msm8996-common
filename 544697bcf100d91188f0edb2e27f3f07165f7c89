@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ca1fce8_73ecdc11",
+        "filename": "proprietary-files-qc.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 353,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2017-10-03T12:58:51Z",
+      "side": 1,
+      "message": "prebuilt?",
+      "range": {
+        "startLine": 353,
+        "startChar": 14,
+        "endLine": 353,
+        "endChar": 18
+      },
+      "revId": "544697bcf100d91188f0edb2e27f3f07165f7c89",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
