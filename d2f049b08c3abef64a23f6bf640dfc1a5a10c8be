@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "935f8915_bf42c18c",
+        "filename": "manifest.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 3962
+      },
+      "writtenOn": "2017-10-07T17:44:39Z",
+      "side": 1,
+      "message": "Eek, leave this 2.1",
+      "range": {
+        "startLine": 23,
+        "startChar": 8,
+        "endLine": 23,
+        "endChar": 30
+      },
+      "revId": "d2f049b08c3abef64a23f6bf640dfc1a5a10c8be",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
