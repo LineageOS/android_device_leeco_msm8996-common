@@ -408,6 +408,8 @@ on post-fs-data
     # Create ipacm log dir
     mkdir /data/vendor/ipa 0770 radio radio
     chmod 0770 /data/vendor/ipa
+    # legacy
+    mkdir /data/misc/ipa 0700 net_admin net_admin
 
     # Create the directories used by CnE subsystem
     mkdir /data/connectivity 0771 system system
