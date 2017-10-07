@@ -309,50 +309,39 @@ vendor/lib/libdisp-aba.so
 vendor/lib64/libdisp-aba.so
 
 # QMI
-bin/qmuxd
-bin/radish
-vendor/bin/irsc_util
-etc/data/qmi_config.xml
 etc/permissions/qti_permissions.xml
-vendor/bin/pd-mapper
+vendor/bin/irsc_util
 vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
 vendor/lib/libdsutils.so
 vendor/lib/libidl.so
 vendor/lib/libqcci_legacy.so
-vendor/lib/libqcmaputils.so
 vendor/lib/libqdi.so
 vendor/lib/libqdp.so
-vendor/lib/libqmi.so
 vendor/lib/libqmi_cci.so
-vendor/lib/libqmi_client_helper.so|35cea8da7c963ac2fe1bbfdebf4893b9aee1dcf2
+vendor/lib/libqmi_client_helper.so
 vendor/lib/libqmi_client_qmux.so
 vendor/lib/libqmi_common_so.so
 vendor/lib/libqmi_csi.so
 vendor/lib/libqmi_encdec.so
+vendor/lib/libqmi.so
 vendor/lib/libqmiservices.so
-vendor/lib/libqti-wl.so
-vendor/lib/libquipc_os_api.so
 vendor/lib/libsmemlog.so
-vendor/lib/libvqzip.so
 vendor/lib64/libdiag.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/libdsutils.so
 vendor/lib64/libidl.so
 vendor/lib64/libqcci_legacy.so
-vendor/lib64/libqcmaputils.so
 vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
-vendor/lib64/libqmi.so
 vendor/lib64/libqmi_cci.so
-vendor/lib64/libqmi_client_helper.so|eedd0f9da9fddeacca5b9f8083de378cda367491
+vendor/lib64/libqmi_client_helper.so
 vendor/lib64/libqmi_client_qmux.so
 vendor/lib64/libqmi_common_so.so
 vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_encdec.so
+vendor/lib64/libqmi.so
 vendor/lib64/libqmiservices.so
-vendor/lib64/libqti-wl.so
-vendor/lib64/libquipc_os_api.so
 vendor/lib64/libsmemlog.so
 
 # Radio
