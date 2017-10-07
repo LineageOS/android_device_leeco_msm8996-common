@@ -151,8 +151,10 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap \
-    libstlport
+    camera.device@1.0-impl.legacy \
+    camera.device@3.2-impl \
+    android.hardware.camera.provider@2.4-impl.legacy \
+    Snap
 
 # Shims
 PRODUCT_PACKAGES += \
