@@ -62,6 +62,10 @@ bin/wcnss_filter
 vendor/lib/libbtnv.so
 vendor/lib64/libbtnv.so
 
+# Camera
+vendor/lib/libstlport.so
+vendor/lib64/libstlport.so
+
 # CNE
 etc/permissions/com.quicinc.cne.xml
 -framework/com.quicinc.cne.jar
