@@ -1,3 +1,6 @@
+[AID_QTI_DIAG]
+value:2901
+
 [system/bin/qmuxd]
 mode: 0700
 user: AID_RADIO
