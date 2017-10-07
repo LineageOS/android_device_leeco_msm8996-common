@@ -23,7 +23,7 @@
         <version>2.1</version>
         <interface>
             <name>IBiometricsFingerprint</name>
-            <instance>default</instance>
+            <instance>msm8996</instance>
         </interface>
     </hal>
 <!--
