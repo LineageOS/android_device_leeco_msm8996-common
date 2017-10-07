@@ -1,3 +1,6 @@
+[AID_QTI_DIAG]
+value:2901
+
 [system/bin/qmuxd]
 mode: 0700
 user: AID_RADIO
@@ -45,3 +48,9 @@ mode: 0755
 user: AID_BLUETOOTH
 group: AID_BLUETOOTH
 caps: BLOCK_SUSPEND
+
+[system/vendor/lib/libmmcamera_ppeiscore.so]
+mode: 0644
+user: AID_CAMERA
+group: AID_SYSTEM
+caps: 0
