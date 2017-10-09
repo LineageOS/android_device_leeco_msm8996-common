@@ -436,7 +436,8 @@ vendor/bin/sensors.qcom
 vendor/lib/hw/activity_recognition.msm8996.so
 vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
-vendor/lib/libsensor_test.so
+vendor/lib/libsensor_thresh.so
+vendor/lib/libsensor_user_cal.so
 vendor/lib/sensors.oem.so
 vendor/lib/sensors.ssc.so
 vendor/lib/test_suite_all_modules.so
@@ -446,7 +447,8 @@ vendor/lib/test_suite_vfe.so
 vendor/lib64/hw/activity_recognition.msm8996.so
 vendor/lib64/libsensor1.so
 vendor/lib64/libsensor_reg.so
-vendor/lib64/libsensor_test.so
+vendor/lib64/libsensor_thresh.so
+vendor/lib64/libsensor_user_cal.so
 vendor/lib64/sensors.hal.tof.so
 vendor/lib64/sensors.oem.so
 vendor/lib64/sensors.ssc.so
