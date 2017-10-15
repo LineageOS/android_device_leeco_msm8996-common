@@ -128,12 +128,6 @@ BOARD_FLASH_BLOCK_SIZE := 262144
 # Power
 BOARD_HAL_STATIC_LIBRARIES := libdumpstate.msm8996
 
-# CM Hardware
-BOARD_HARDWARE_CLASS += \
-    hardware/cyanogen/cmhw \
-    $(PLATFORM_PATH)/cmhw
-BOARD_USES_CYANOGEN_HARDWARE := true
-
 # CNE and DPM
 BOARD_USES_QCNE := true
 
