@@ -539,7 +539,7 @@ on property:sys.boot_completed=1
 # start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
-    user root
+    user camera
     group camera system inet input graphics
     writepid /dev/cpuset/system-background/tasks
 
