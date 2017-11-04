@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "be94a841_113df6a6",
+        "filename": "proprietary-files-qc.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 471,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2017-11-04T10:14:01Z",
+      "side": 1,
+      "message": "This doesn\u0027t need to be blobbed.",
+      "range": {
+        "startLine": 470,
+        "startChar": 0,
+        "endLine": 471,
+        "endChar": 47
+      },
+      "revId": "399bb72d457b48777c631d7485f1ae39d7b351cc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9d8cd405_909be773",
+        "filename": "proprietary-files-qc.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 482,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2017-11-04T10:14:01Z",
+      "side": 1,
+      "message": "This is built from source.",
+      "range": {
+        "startLine": 482,
+        "startChar": 0,
+        "endLine": 482,
+        "endChar": 43
+      },
+      "revId": "399bb72d457b48777c631d7485f1ae39d7b351cc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
