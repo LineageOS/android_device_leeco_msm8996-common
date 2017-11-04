@@ -467,9 +467,25 @@ vendor/lib/libTimeService.so
 vendor/lib64/libTimeService.so
 
 # Widevine
+etc/permissions/com.google.widevine.software.drm.xml
+-framework/com.google.widevine.software.drm.jar
+vendor/bin/hw/android.hardware.drm@1.0-service.widevine
+vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc
+vendor/lib/libdrm.so
+vendor/lib/libdrmfs.so
+vendor/lib/libdrmtime.so
+vendor/lib/libdrmutils.so
+vendor/lib/libtzdrmgenprov.so
+vendor/lib/libwvhidl.so
 vendor/lib/libWVStreamControlAPI_L3.so
 vendor/lib/libwvdrm_L3.so
+vendor/lib/mediadrm/libdrmclearkeyplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib64/libdrm.so
+vendor/lib64/libdrmutils.so
+vendor/lib64/libtzdrmgenprov.so
+vendor/lib64/mediadrm/libdrmclearkeyplugin.so
+vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/firmware/widevine.b00
 vendor/firmware/widevine.b01
 vendor/firmware/widevine.b02
