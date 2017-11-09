@@ -21,7 +21,8 @@ LOCAL_SHARED_LIBRARIES := \
 LOCAL_C_INCLUDES += \
     system/core/include \
     system/core/base/include \
-    system/media/camera/include
+    system/media/camera/include \
+    frameworks/native/libs/nativebase/include
 
 LOCAL_32_BIT_ONLY := true
 #LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
