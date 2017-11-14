@@ -19,7 +19,7 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
-    <bool name="config_intrusiveBatteryLed">true</bool>
+    <!-- <bool name="config_intrusiveBatteryLed">true</bool> -->
 
     <!-- Control the behavior when the user long presses the app switch button.
             0 - Nothing
@@ -31,8 +31,8 @@
          This needs to match the constants in
          policy/src/com/android/internal/policy/impl/PhoneWindowManager.java
     -->
-    <integer name="config_longPressOnAppSwitchBehavior">1</integer>
+    <!-- <integer name="config_longPressOnAppSwitchBehavior">1</integer> -->
 
     <!-- Enable adjusting the button backlight -->
-    <bool name="config_deviceHasVariableButtonBrightness">true</bool>
+    <!-- <bool name="config_deviceHasVariableButtonBrightness">true</bool> -->
 </resources>
