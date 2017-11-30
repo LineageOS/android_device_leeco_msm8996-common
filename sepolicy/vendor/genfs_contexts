@@ -24,3 +24,6 @@ genfscon sysfs /devices/soc/2080000.qcom,mss/subsys5/name               u:object
 
 # Touchpanel
 genfscon proc /touchpanel    u:object_r:proc_touchpanel:s0
+
+# USB
+genfscon sysfs /devices/soc/6a00000.ssusb/6a00000.dwc3/gadget/lun0/     u:object_r:sysfs_android_usb:s0
