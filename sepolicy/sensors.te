@@ -1,0 +1,1 @@
+allow sensors diag_prop:file { r_file_perms };
