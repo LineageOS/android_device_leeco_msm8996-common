@@ -1,0 +1,6 @@
+allow cameraserver sysfs:file { write };
+
+allow cameraserver mpctl_data_file:dir search;
+allow cameraserver mpctl_data_file:sock_file write;
+allow cameraserver mpctl_socket:dir search;
+allow cameraserver mpctl_socket:sock_file write;
