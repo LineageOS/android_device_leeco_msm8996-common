@@ -1,0 +1,1 @@
+allow cnd self:capability { dac_override chown fsetid };

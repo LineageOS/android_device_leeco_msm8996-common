@@ -1,0 +1,2 @@
+allow ueventd vfat:dir { r_dir_perms };
+allow ueventd vfat:file { r_file_perms };
