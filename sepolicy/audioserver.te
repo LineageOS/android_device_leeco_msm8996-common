@@ -1,2 +1,0 @@
-allow audioserver persist_file:file { r_file_perms };
-set_prop(audioserver, diag_prop);

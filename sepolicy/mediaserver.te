@@ -1,2 +1,0 @@
-allow mediaserver persist_file:dir { r_dir_perms };
-allow mediaserver persist_file:file { r_file_perms };

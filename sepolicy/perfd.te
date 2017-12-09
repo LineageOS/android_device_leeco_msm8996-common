@@ -1,3 +1,0 @@
-allow perfd system_server:file write;
-
-allow perfd mpctl_data_file:dir create_dir_perms;
