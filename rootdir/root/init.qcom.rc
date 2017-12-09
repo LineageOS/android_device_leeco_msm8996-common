@@ -67,9 +67,19 @@ on late-fs
     write /sys/block/dm-0/queue/read_ahead_kb 2048
     write /sys/block/dm-1/queue/read_ahead_kb 2048
 
+    # Restorecon
+    restorecon_recursive /persist/rfs/
+    restorecon_recursive /persist/sensors/
+    restorecon_recursive /persist/data/fingerprint/
+    restorecon_recursive /proc/touchpanel/
+
+    restorecon /sys/kernel/debug/rmt_storage/rmts
+
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    restorecon_recursive /dev/block/platform/soc/${ro.boot.bootdevice}
+
     mount_all fstab.qcom
 
 on early-boot
@@ -95,6 +105,7 @@ on boot
     # Touchscreen
     chown system system /sys/devices/soc/75ba000.i2c/i2c-12/12-0020/input/input2/0dbutton
     chmod 0666 /sys/devices/soc/75ba000.i2c/i2c-12/12-0020/input/input2/0dbutton
+
     chown system system /proc/touchpanel/capacitive_keys_enable
     chmod 0666 /proc/touchpanel/capacitive_keys_enable
 
@@ -493,7 +504,7 @@ on post-fs-data
     mkdir /data/system/perfd 0770 root system
     chmod 2770 /data/system/perfd
     rm /data/system/perfd/default_values
-    start perfd
+    #start perfd
 
     # NFC local data and nfcee xml storage
     mkdir /data/nfc 0770 nfc nfc
@@ -690,6 +701,7 @@ service tlocd /system/bin/tloc_daemon
     class late_start
     user system
     group drmrpc gps net_raw
+    seclabel u:r:tlocd:s0
 
 service energy-awareness /system/bin/energy-awareness
     class main
@@ -814,6 +826,7 @@ service start_hci_filter /system/bin/wcnss_filter
     class late_start
     user bluetooth
     group bluetooth oem_2901
+    seclabel u:r:bluetooth:s0
     disabled
 
 service config_bt_addr /system/bin/btnvtool -O
@@ -833,12 +846,6 @@ service hci_filter_root /system/bin/wcnss_filter
     user bluetooth
     group bluetooth oem_2901 system
     disabled
-
-service config_bt_addr /system/bin/btnvtool -O
-    class core
-    user bluetooth
-    group bluetooth radio
-    oneshot
 
 service config_bluetooth /system/bin/sh /system/etc/init.qcom.bt.sh "onboot"
     class core
@@ -956,24 +963,6 @@ service btwlancoex /system/bin/sh /system/etc/init.qcom.coex.sh
     disabled
     oneshot
 
-service amp_init /system/bin/amploader -i
-    class late_start
-    user root
-    disabled
-    oneshot
-
-service amp_load /system/bin/amploader -l 7000
-    class late_start
-    user root
-    disabled
-    oneshot
-
-service amp_unload /system/bin/amploader -u
-    class late_start
-    user root
-    disabled
-    oneshot
-
 service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     -ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf \
     -I/system/etc/wifi/p2p_supplicant_overlay.conf -N \
@@ -1010,18 +999,18 @@ service ptt_ffbm /system/bin/ptt_socket_app -f -d
     disabled
     oneshot
 
-service cnss_diag /system/bin/cnss_diag -q -f
-    class main
-    user root
-    group root
-    #ifdef VENDOR_EDIT
-    # cnss diag cause power consumption bigger sometimes, so disable it until solve it
-    disabled
-    #endif
-    oneshot
+#service cnss_diag /system/bin/cnss_diag -q -f
+#    class main
+#    user root
+#    group root
+#    #ifdef VENDOR_EDIT
+#    # cnss diag cause power consumption bigger sometimes, so disable it until solve it
+#    disabled
+#    #endif
+#    oneshot
 
-service cnss-daemon /system/bin/cnss-daemon -n -l
-    class late_start
+#service cnss-daemon /system/bin/cnss-daemon -n -l
+#    class late_start
 
 service loc_launcher /vendor/bin/loc_launcher
     # loc_launcher will start as root and set its uid to gps
@@ -1190,25 +1179,25 @@ service msm_irqbalance /system/bin/msm_irqbalance -f /system/vendor/etc/msm_irqb
     writepid /dev/cpuset/system-background/tasks
 
 # Coresight early boot service
-service cs-early-boot /system/bin/sh /persist/coresight/qdss.agent.sh early-boot /system/etc/init.qcom.debug.sh
-    class core
-    user root
-    oneshot
+#service cs-early-boot /system/bin/sh /persist/coresight/qdss.agent.sh early-boot /system/etc/init.qcom.debug.sh
+#    class core
+#    user root
+#    oneshot
 
 # Coresight post boot servive
-service cs-post-boot /system/bin/sh /persist/coresight/qdss.agent.sh
-    user root
-    disabled
-    oneshot
+#service cs-post-boot /system/bin/sh /persist/coresight/qdss.agent.sh
+#    user root
+#    disabled
+#    oneshot
 
-on property:sys.boot_completed=1
-    start cs-post-boot
+#on property:sys.boot_completed=1
+#    start cs-post-boot
 
-on property:sys.dbg.coresight.enable=1
-    write /persist/coresight/enable 1
+#on property:sys.dbg.coresight.enable=1
+#    write /persist/coresight/enable 1
 
-on property:sys.dbg.coresight.enable=0
-    write /persist/coresight/enable 0
+#on property:sys.dbg.coresight.enable=0
+#    write /persist/coresight/enable 0
 
 service qseeproxydaemon /vendor/bin/qseeproxydaemon
     class late_start

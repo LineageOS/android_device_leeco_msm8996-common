@@ -1,0 +1,15 @@
+allow init block_device:lnk_file { relabelfrom };
+
+allow init gpt_block_device:lnk_file { relabelto };
+allow init modem_efs_partition_device:lnk_file { relabelto };
+allow init mba_debug_dev:lnk_file { relabelto };
+allow init recovery_block_device:lnk_file { relabelto };
+allow init dip_device:lnk_file { relabelto };
+allow init rpmb_device:lnk_file { relabelto };
+allow init userdata_block_device:lnk_file { relabelto };
+allow init frp_block_device:lnk_file { relabelto };
+allow init misc_block_device:lnk_file { relabelto };
+
+allow init servicemanager:binder { call };
+
+allow init touchpanel_file:lnk_file { setattr };
