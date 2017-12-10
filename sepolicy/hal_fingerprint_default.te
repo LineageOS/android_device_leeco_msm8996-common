@@ -1,0 +1,2 @@
+allow hal_fingerprint_default fingerprintd_service:service_manager { find };
+allow hal_fingerprint_default servicemanager:binder { call transfer };
