@@ -19,6 +19,7 @@
 /system/bin/ifaa_daemon                                                  u:object_r:ifaa_daemon_exec:s0
 /system/bin/mm-qcamera-daemon                                            u:object_r:mm-qcamerad_exec:s0
 /system/bin/msm_irqbalance                                               u:object_r:msm_irqbalanced_exec:s0
+/system/bin/ppd                                                          u:object_r:ppd_exec:s0
 /system/bin/ssr_setup                                                    u:object_r:ssr_setup_exec:s0
 
 /data/misc/ipa(/.*)?                                                     u:object_r:ipacm_data_file:s0
