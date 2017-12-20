@@ -31,15 +31,18 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <android-base/logging.h>
+#include <android-base/properties.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 
-#include "vendor_init.h"
 #include "property_service.h"
-#include "log.h"
-#include "util.h"
+#include "vendor_init.h"
 
 #define DEVINFO_FILE "/dev/block/bootdevice/by-name/devinfo"
+
+namespace android {
+namespace init {
 
 void property_override(char const prop[], char const value[])
 {
@@ -207,3 +210,6 @@ void vendor_load_properties() {
 
     init_alarm_boot_properties();
 }
+
+}  // namespace init
+}  // namespace android
