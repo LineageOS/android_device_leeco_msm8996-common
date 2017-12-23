@@ -1,4 +1,0 @@
-init_daemon_domain(tlocd)
-
-#allow tlocd self:socket { ioctl };
-allow tlocd ion_device:chr_file { read open ioctl };
