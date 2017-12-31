@@ -77,7 +77,7 @@ void property_override_dual(const std::string& system_prop, const std::string& v
 void init_target_properties()
 {
     std::string device;
-    int unknownDevice = 1;
+    bool unknownDevice = true;
 
     if (ReadFileToString(DEVINFO_FILE, &device)) {
         LOG(INFO) << "DEVINFO: " << device;
@@ -92,7 +92,7 @@ void init_target_properties()
             property_set("ro.telephony.default_network", "10,10");
             // Power profile
             property_set("ro.power_profile.override", "power_profile_zl0");
-            unknownDevice = 0;
+            unknownDevice = false;
         }
         else if (!strncmp(device.c_str(), "le_zl1_oversea", 14)) {
             // This is LEX727
@@ -105,7 +105,7 @@ void init_target_properties()
             property_set("ro.telephony.default_network", "10");
             // NFC
             property_set("persist.nfc.smartcard.config", "SIM1,eSE1");
-            unknownDevice = 0;
+            unknownDevice = false;
         }
         else if (!strncmp(device.c_str(), "le_zl1", 6)) {
             // This is LEX720
@@ -117,7 +117,7 @@ void init_target_properties()
             property_set("ro.telephony.default_network", "10,10");
             // NFC
             property_set("persist.nfc.smartcard.config", "SIM1,SIM2,eSE1");
-            unknownDevice = 0;
+            unknownDevice = false;
         }
         else if (!strncmp(device.c_str(), "le_x2_na_oversea", 16)) {
             // This is LEX829
@@ -127,7 +127,7 @@ void init_target_properties()
             // Dual SIM
             property_set("persist.radio.multisim.config", "dsds");
             property_set("ro.telephony.default_network", "10,10");
-            unknownDevice = 0;
+            unknownDevice = false;
         }
         else if (!strncmp(device.c_str(), "le_x2_india", 11)) {
             // This is LEX821
@@ -137,7 +137,7 @@ void init_target_properties()
             // Dual SIM
             property_set("persist.radio.multisim.config", "dsds");
             property_set("ro.telephony.default_network", "10,10");
-            unknownDevice = 0;
+            unknownDevice = false;
         }
         else if (!strncmp(device.c_str(), "le_x2", 5)) {
             // This is LEX820
@@ -147,7 +147,7 @@ void init_target_properties()
             // Dual SIM
             property_set("persist.radio.multisim.config", "dsds");
             property_set("ro.telephony.default_network", "10,10");
-            unknownDevice = 0;
+            unknownDevice = false;
         }
     }
     else {
