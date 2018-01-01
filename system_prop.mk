@@ -4,6 +4,8 @@
 
 # system props for the MM modules
 PRODUCT_PROPERTY_OVERRIDES += \
+    audio.deep_buffer.media=true \
+    media.aac_51_output_enabled=true \
     media.stagefright.enable-player=true \
     media.stagefright.enable-http=true \
     media.stagefright.enable-aac=true \
@@ -30,34 +32,32 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.qc.sdk.audio.ssr=false \
     persist.audio.ssr.3mic=false \
-    ro.qc.sdk.audio.fluencetype=fluence \
-    persist.audio.fluence.voicecall=true \
-    persist.audio.fluence.voicerec=true \
-    persist.audio.fluence.audiorec=false \
-    persist.audio.fluence.speaker=true \
-    tunnel.audio.encode=false \
-    media.aac_51_output_enabled=true \
-    audio.heap.size.multiplier=7 \
-    audio.offload.buffer.size.kb=64 \
-    audio.offload.video=true \
-    audio.offload.pcm.16bit.enable=true \
-    audio.offload.pcm.24bit.enable=true \
-    audio.offload.track.enable=false \
-    audio.deep_buffer.media=true \
-    use.voice.path.for.pcm.voip=true \
-    audio.offload.multiaac.enable=true \
-    audio.offload.gapless.enabled=true \
-    audio.safx.pbe.enabled=true \
-    audio.parser.ip.buffer.size=262144 \
-    audio.dolby.ds2.enabled=false \
-    audio.dolby.ds2.hardbypass=false \
-    audio.offload.passthrough=false \
-    audio.offload.multiple.enabled=true \
-    audio.offload.min.duration.secs=30 \
     af.fast_track_multiplier=1 \
-    audio_hal.period_size=192
+    audio.heap.size.multiplier=7 \
+    ro.vendor.audio.sdk.fluencetype=fluence \
+    ro.vendor.audio.sdk.ssr=false \
+    vendor.audio_hal.period_size=192 \
+    vendor.audio.tunnel.encode=false \
+    vendor.voice.path.for.pcm.voip=true \
+    persist.vendor.audio.fluence.voicecall=true \
+    persist.vendor.audio.fluence.voicerec=true \
+    persist.vendor.audio.fluence.audiorec=false \
+    persist.vendor.audio.fluence.speaker=true \
+    vendor.audio.offload.buffer.size.kb=64 \
+    vendor.audio.offload.video=true \
+    vendor.audio.offload.pcm.16bit.enable=true \
+    vendor.audio.offload.pcm.24bit.enable=true \
+    vendor.audio.offload.track.enable=false \
+    vendor.audio.offload.multiaac.enable=true \
+    vendor.audio.offload.gapless.enabled=true \
+    vendor.audio.offload.passthrough=false \
+    vendor.audio.offload.multiple.enabled=true \
+    vendor.audio.offload.min.duration.secs=30 \
+    vendor.audio.safx.pbe.enabled=true \
+    vendor.audio.parser.ip.buffer.size=262144 \
+    vendor.audio.dolby.ds2.enabled=false \
+    vendor.audio.dolby.ds2.hardbypass=false
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -184,18 +184,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.sar_mode=1
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.cs_srv_type=0 \
     persist.radio.calls.on.ims=true \
     persist.radio.jbims=true \
     persist.rcs.supported=1 \
     persist.radio.domain.ps=false \
     persist.radio.csvt.enabled=false \
-    persist.radio.rat_on=combine \
-    persist.radio.mt_sms_ack=20 \
-    persist.radio.ignore_dom_time=5 \
-    persist.radio.force_on_dc=true \
-    persist.radio.flexmap_type=none \
-    persist.radio.facnotsup_as_nonw=1
+    persist.vendor.radio.cs_srv_type=0 \
+    persist.vendor.radio.rat_on=combine \
+    persist.vendor.radio.mt_sms_ack=20 \
+    persist.vendor.radio.ignore_dom_time=5 \
+    persist.vendor.radio.force_on_dc=true \
+    persist.vendor.radio.facnotsup_as_nonw=1
 
 # RmNet Data
 PRODUCT_PROPERTY_OVERRIDES += \
