@@ -345,7 +345,6 @@ vendor/lib64/libsmemlog.so
 # Radio
 -app/QtiTelephonyService/QtiTelephonyService.apk
 vendor/bin/hw/rild
-vendor/bin/ipacm-diag
 vendor/bin/netmgrd
 vendor/bin/rmt_storage
 vendor/bin/tftp_server
