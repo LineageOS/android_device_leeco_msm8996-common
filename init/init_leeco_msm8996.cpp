@@ -82,10 +82,14 @@ void init_target_properties()
 
         if (!strncmp(device.c_str(), "le_zl0_whole_netcom", 19)) {
             // This is LEX722
+            property_override("ro.product.device", "le_zl0");
             property_override("ro.product.model", "LEX722");
+            property_override("ro.product.name", "LePro3 Elite");
             property_set("persist.data.iwlan.enable", "false");
             // Dual SIM
             property_set("persist.radio.multisim.config", "dsds");
+            // Power profile
+            property_set("ro.power_profile.override", "power_profile_zl0");
             unknownDevice = 0;
         }
         else if (!strncmp(device.c_str(), "le_zl1_oversea", 14)) {
