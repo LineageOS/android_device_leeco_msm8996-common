@@ -195,8 +195,8 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0-java
 
 # Doze mode
-#PRODUCT_PACKAGES += \
-#    Doze
+PRODUCT_PACKAGES += \
+    Doze
 
 # DRM
 PRODUCT_PACKAGES += \
