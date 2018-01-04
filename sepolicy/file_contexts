@@ -4,13 +4,19 @@
 /dev/block/sdf5                                                          u:object_r:modem_efs_partition_device:s0
 /dev/block/sde7                                                          u:object_r:modem_efs_partition_device:s0
 
-/sys/kernel/debug/rmt_storage/rmts                                       u:object_r:qti_debugfs:s0
-
 /persist/rfs(/.*)?                                                       u:object_r:rfs_file:s0
 
 # executables
 /system/vendor/bin/fidoca                                                u:object_r:fidoca_exec:s0
 /system/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.0-service-custom u:object_r:hal_fingerprint_default_exec:s0
+
+# ril
+/system/vendor/radio/qcril_database/qcril.db                             u:object_r:nv_data_file:s0
+
+# data
+/data/vendor/nfc(/.*)?                                                   u:object_r:nfc_data_file:s0
+
+/sys/devices/soc/75ba000.i2c/i2c-12/12-0020/input/input2/0dbutton        u:object_r:touchpanel_file:s0
 
 # legacy
 /system/bin/ATFWD-daemon                                                 u:object_r:atfwd_exec:s0
@@ -21,7 +27,6 @@
 /system/bin/msm_irqbalance                                               u:object_r:msm_irqbalanced_exec:s0
 /system/bin/ppd                                                          u:object_r:ppd_exec:s0
 /system/bin/ssr_setup                                                    u:object_r:ssr_setup_exec:s0
+/system/bin/tloc_daemon                                                  u:object_r:tlocd_exec:s0
 
-/data/misc/ipa(/.*)?                                                     u:object_r:ipacm_data_file:s0
-
-/sys/devices/soc/75ba000.i2c/i2c-12/12-0020/input/input2/0dbutton        u:object_r:touchpanel_file:s0
+/data/misc/tloc(/.*)?                                                    u:object_r:tlocd_data_file:s0

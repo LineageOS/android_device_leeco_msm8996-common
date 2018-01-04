@@ -106,6 +106,7 @@ on boot
     chown system system /sys/devices/soc/75ba000.i2c/i2c-12/12-0020/input/input2/0dbutton
     chmod 0666 /sys/devices/soc/75ba000.i2c/i2c-12/12-0020/input/input2/0dbutton
 
+    restorecon /proc/touchpanel/capacitive_keys_enable
     chown system system /proc/touchpanel/capacitive_keys_enable
     chmod 0666 /proc/touchpanel/capacitive_keys_enable
 
@@ -794,6 +795,7 @@ service config_bt_addr /system/bin/btnvtool -O
     user bluetooth
     group bluetooth radio
     oneshot
+    seclabel u:r:btnvtool:s0
 
 on property:wc_transport.start_root=true
     start hci_filter_root

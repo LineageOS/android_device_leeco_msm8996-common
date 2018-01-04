@@ -5,3 +5,7 @@ allow servicemanager mdtpdaemon:process { getattr };
 allow servicemanager hal_fingerprint_default:process { getattr };
 allow servicemanager hal_fingerprint_default:dir { search };
 allow servicemanager hal_fingerprint_default:file { r_file_perms };
+
+allow servicemanager fidoca:process { getattr };
+allow servicemanager fidoca:dir { search };
+allow servicemanager fidoca:file { r_file_perms };
