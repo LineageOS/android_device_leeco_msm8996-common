@@ -680,7 +680,6 @@ service tlocd /system/bin/tloc_daemon
     class late_start
     user system
     group drmrpc gps net_raw
-    seclabel u:r:tlocd:s0
 
 service energy-awareness /system/bin/energy-awareness
     class main
@@ -794,6 +793,7 @@ service config_bt_addr /system/bin/btnvtool -O
     user bluetooth
     group bluetooth radio
     oneshot
+    seclabel u:r:btnvtool:s0
 
 on property:wc_transport.start_root=true
     start hci_filter_root
@@ -868,9 +868,6 @@ service cnss_diag /system/bin/cnss_diag -q -f
     # cnss diag cause power consumption bigger sometimes, so disable it until solve it
     disabled
 
-#service cnss-daemon /system/bin/cnss-daemon -n -l
-#    class late_start
-
 service loc_launcher /vendor/bin/loc_launcher
     # loc_launcher will start as root and set its uid to gps
     class late_start
@@ -936,46 +933,17 @@ service msm_irqbalance /system/bin/msm_irqbalance -f /system/vendor/etc/msm_irqb
     disabled
     writepid /dev/cpuset/system-background/tasks
 
-# Coresight early boot service
-#service cs-early-boot /system/bin/sh /persist/coresight/qdss.agent.sh early-boot /system/etc/init.qcom.debug.sh
-#    class core
-#    user root
-#    oneshot
-
-# Coresight post boot servive
-#service cs-post-boot /system/bin/sh /persist/coresight/qdss.agent.sh
-#    user root
-#    disabled
-#    oneshot
-
-#on property:sys.boot_completed=1
-#    start cs-post-boot
-
-#on property:sys.dbg.coresight.enable=1
-#    write /persist/coresight/enable 1
-
-#on property:sys.dbg.coresight.enable=0
-#    write /persist/coresight/enable 0
-
 service qseeproxydaemon /vendor/bin/qseeproxydaemon
     class late_start
     user system
     group system
     writepid /dev/cpuset/system-background/tasks
 
-service ifaa_daemon /system/bin/ifaa_daemon
-    class main
-    socket ifaa_daemon stream 666 system system
-
-service fidoca /vendor/bin/fidoca
-    class late_start
-    user system
-    group system
-
 service qcom-sh /system/bin/sh /init.qcom.sh
     class late_start
     user root
     oneshot
+    seclabel u:r:qti_init_shell:s0
 
 on property:persist.sys.le_fast_chrg_enable=1
     write /sys/class/power_supply/le_ab/le_quick_charge_mode 0
