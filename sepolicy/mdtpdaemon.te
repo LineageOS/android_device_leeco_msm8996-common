@@ -1,1 +1,3 @@
 allow mdtpdaemon servicemanager:binder { call transfer };
+
+add_service(mdtpdaemon, mdtpdaemon_service);

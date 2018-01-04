@@ -1,1 +1,1 @@
-android.vendor.fido.IFidoDaemon       u:object_r:fidoca_service:s0
+android.hardware.fingerprint.IFingerprintCustomDaemon       u:object_r:fingerprintd_custom_service:s0
