@@ -1,4 +1,6 @@
-allow system_server proc_touchpanel:dir search;
+allow system_server proc:dir search;
 allow system_server touchpanel_file:file rw_file_perms;
 
 get_prop(system_server, alarm_boot_prop)
+
+allow system_server persist_file:dir { write };

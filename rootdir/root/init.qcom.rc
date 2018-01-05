@@ -67,20 +67,15 @@ on late-fs
     write /sys/block/dm-0/queue/read_ahead_kb 2048
     write /sys/block/dm-1/queue/read_ahead_kb 2048
 
-    # Restorecon
-    restorecon_recursive /persist/rfs/
-    restorecon_recursive /persist/sensors/
-    restorecon_recursive /persist/data/fingerprint/
-    restorecon_recursive /proc/touchpanel/
-
-    restorecon /sys/kernel/debug/rmt_storage/rmts
-
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
     restorecon_recursive /dev/block/platform/soc/${ro.boot.bootdevice}
 
     mount_all fstab.qcom
+
+    # Restorecon
+    restorecon_recursive /persist
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
