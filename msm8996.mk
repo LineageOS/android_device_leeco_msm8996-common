@@ -156,7 +156,6 @@ PRODUCT_PACKAGES += \
     camera.device@3.2-impl \
     camera.msm8996 \
     libshims_camera \
-    libshims_camera_client \
     libshims_qcamera-daemon \
     Snap
 
