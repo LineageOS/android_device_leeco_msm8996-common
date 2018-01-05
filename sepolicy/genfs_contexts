@@ -1,5 +1,3 @@
-genfscon proc /touchpanel              u:object_r:proc_touchpanel:s0
-
 genfscon debugfs /rmt_storage/rmts     u:object_r:qti_debugfs:s0
 
 genfscon debugfs /msm_core             u:object_r:qti_debugfs:s0

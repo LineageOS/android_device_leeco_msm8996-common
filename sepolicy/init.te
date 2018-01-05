@@ -10,7 +10,12 @@ allow init userdata_block_device:lnk_file { relabelto };
 allow init frp_block_device:lnk_file { relabelto };
 allow init misc_block_device:lnk_file { relabelto };
 allow init cache_block_device:lnk_file { relabelto };
+allow init persist_block_device:lnk_file { relabelto };
 
 allow init servicemanager:binder { call };
 
 allow init touchpanel_file:lnk_file { setattr };
+allow init proc:lnk_file { setattr };
+
+#allow init firmware_file:dir { create setattr };
+#allow init bt_firmware_file:dir { create setattr };

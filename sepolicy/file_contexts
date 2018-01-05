@@ -1,10 +1,18 @@
+# ssd
 /dev/block/sda1                                                          u:object_r:ssd_device:s0
+# modemst1
 /dev/block/sdf1                                                          u:object_r:modem_efs_partition_device:s0
+# modemst2
 /dev/block/sdf3                                                          u:object_r:modem_efs_partition_device:s0
+# fsc
 /dev/block/sdf5                                                          u:object_r:modem_efs_partition_device:s0
+# fsg
 /dev/block/sde7                                                          u:object_r:modem_efs_partition_device:s0
+# persist
+/dev/block/sda2                                                          u:object_r:persist_block_device:s0
 
-/persist/rfs(/.*)?                                                       u:object_r:rfs_file:s0
+# data
+/data/vendor/nfc(/.*)?                                                   u:object_r:nfc_data_file:s0
 
 # executables
 /system/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.0-service-custom u:object_r:hal_fingerprint_default_exec:s0
@@ -12,8 +20,8 @@
 # ril
 /system/vendor/radio/qcril_database/qcril.db                             u:object_r:nv_data_file:s0
 
-# data
-/data/vendor/nfc(/.*)?                                                   u:object_r:nfc_data_file:s0
+# persist
+/persist/rfs(/.*)?                                                       u:object_r:rfs_file:s0
 
 # sysfs
 /sys/devices/soc/75ba000.i2c/i2c-12/12-0020/input/input2/0dbutton        u:object_r:touchpanel_file:s0
