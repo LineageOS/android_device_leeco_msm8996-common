@@ -19,3 +19,8 @@ allow init proc:lnk_file { setattr };
 
 #allow init firmware_file:dir { create setattr };
 #allow init bt_firmware_file:dir { create setattr };
+
+# Requied to load shim libs
+allow init cameraserver:process { noatsecure };
+allow init hal_camera:process { noatsecure };
+allow init mm-qcamerad:process { noatsecure };
