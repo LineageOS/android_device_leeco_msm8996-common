@@ -780,7 +780,7 @@ service start_hci_filter /system/bin/wcnss_filter
     class late_start
     user bluetooth
     group bluetooth oem_2901
-    seclabel u:r:bluetooth:s0
+    seclabel u:r:wcnss_filter:s0
     disabled
 
 service config_bt_addr /system/bin/btnvtool -O
@@ -800,6 +800,7 @@ service hci_filter_root /system/bin/wcnss_filter
     class late_start
     user bluetooth
     group bluetooth oem_2901 system
+    seclabel u:r:wcnss_filter:s0
     disabled
 
 service ftmd /system/bin/logwrapper /system/bin/ftmdaemon

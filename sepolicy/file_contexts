@@ -35,5 +35,6 @@
 /system/bin/ppd                                                          u:object_r:ppd_exec:s0
 /system/bin/ssr_setup                                                    u:object_r:ssr_setup_exec:s0
 /system/bin/tloc_daemon                                                  u:object_r:tlocd_exec:s0
+/system/bin/wcnss_filter                                                 u:object_r:wcnss_filter_exec:s0
 
 /data/misc/tloc(/.*)?                                                    u:object_r:tlocd_data_file:s0
