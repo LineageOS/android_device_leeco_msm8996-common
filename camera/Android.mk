@@ -1,4 +1,5 @@
 LOCAL_PATH := $(call my-dir)
+
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
@@ -25,7 +26,6 @@ LOCAL_C_INCLUDES += \
     frameworks/native/libs/nativebase/include
 
 LOCAL_32_BIT_ONLY := true
-#LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
 LOCAL_MODULE_RELATIVE_PATH := hw
 
 LOCAL_MODULE := camera.$(TARGET_BOARD_PLATFORM)
