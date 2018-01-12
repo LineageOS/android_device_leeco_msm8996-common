@@ -122,7 +122,23 @@ void init_target_properties()
         }
         else if (!strncmp(device.c_str(), "le_x2_na_oversea", 16)) {
             // This is LEX829
-            property_override_dual("ro.product.model", "ro.vendor.product.model", "LEX829");
+            property_override_dual("ro.product.device", "ro.vendor.product.device", "le_x2_na");
+            property_override_dual("ro.product.model", "ro.vendor.product.model", "Le X829");
+            property_override_dual("ro.product.name", "ro.vendor.product.name", "LeMax2_NA");
+            property_override("ro.build.description", "le_x2_na-user 6.0.1 FIXNAOP5802011301S eng.letv.20161130.172052.wechatpay release-keys");
+            property_override("ro.build.fingerprint", "LeEco/LeMax2_NA/le_x2_na:6.0.1/FIXNAOP5802011301S/letv11301725:user/release-keys");
+            // Dual SIM
+            property_set("persist.radio.multisim.config", "dsds");
+            // NFC
+            property_set("persist.nfc.smartcard.config", "SIM1,SIM2,eSE1");
+            unknownDevice = 0;
+        }
+        else if (!strncmp(device.c_str(), "le_x2_india", 11)) {
+            // This is LEX821
+            property_override_dual("ro.product.brand", "ro.vendor.product.brand", "Letv");
+            property_override_dual("ro.product.model", "ro.vendor.product.model", "Le X821");
+            property_override("ro.build.description", "le_x2-user 6.0.1 FGXOSOP5801910121S eng.letv.20161012.010150.wechatpay release-keys");
+            property_override("ro.build.fingerprint", "Letv/LeMax2_WW/le_x2:6.0.1/FGXOSOP5801910121S/letv10120105:user/release-keys");
             // Dual SIM
             property_set("persist.radio.multisim.config", "dsds");
             // NFC
@@ -131,7 +147,7 @@ void init_target_properties()
         }
         else if (!strncmp(device.c_str(), "le_x2", 5)) {
             // This is LEX820
-            property_override_dual("ro.product.model", "ro.vendor.product.model", "LEX820");
+            property_override_dual("ro.product.model", "ro.vendor.product.model", "Le X820");
             // Dual SIM
             property_set("persist.radio.multisim.config", "dsds");
             // NFC
