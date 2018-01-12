@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -126,6 +127,7 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_leeco_msm8996
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_SYSTEMIMAGE_PARTITION_TYPE := ext4
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
 BOARD_FLASH_BLOCK_SIZE := 262144
 
@@ -188,9 +190,6 @@ TARGET_PROVIDES_KEYMASTER := true
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
-
-# Media
-TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
 # RIL
 TARGET_RIL_VARIANT := caf
