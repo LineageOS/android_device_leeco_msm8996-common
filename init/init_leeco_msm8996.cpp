@@ -127,6 +127,13 @@ void init_target_properties()
             property_set("persist.radio.multisim.config", "dsds");
             unknownDevice = 0;
         }
+        else if (!strncmp(device.c_str(), "le_x2_india", 11)) {
+            // This is LEX821
+            property_override("ro.product.model", "LEX821");
+            // Dual SIM
+            property_set("persist.radio.multisim.config", "dsds");
+            unknownDevice = 0;
+        }
     }
     else {
         LOG(ERROR) << "Unable to read DEVINFO from " << DEVINFO_FILE;
