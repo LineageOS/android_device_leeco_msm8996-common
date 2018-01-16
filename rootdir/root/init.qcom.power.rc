@@ -162,5 +162,11 @@ on property:dev.bootcomplete=1
     chmod 0644 /d/rpm_stats
     chmod 0644 /d/dpm_master_stats
 
+    # VM
+    write /proc/sys/vm/dirty_background_ratio 20
+    write /proc/sys/vm/dirty_expire_centisecs 100
+    write /proc/sys/vm/swappiness 5
+    write /proc/sys/vm/vfs_cache_pressure 60
+
 on property:init.svc.recovery=running
     trigger enable-low-power
