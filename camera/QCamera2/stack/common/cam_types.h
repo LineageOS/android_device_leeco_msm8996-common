@@ -51,7 +51,7 @@
 #define CEILING4(X)  (((X) + 0x0003) & 0xFFFC)
 #define CEILING2(X)  (((X) + 0x0001) & 0xFFFE)
 
-#define MAX_ZOOMS_CNT 91
+#define MAX_ZOOMS_CNT 71
 #define MAX_SIZES_CNT 40
 #define MAX_EXP_BRACKETING_LENGTH 32
 #define MAX_ROI 10
@@ -2087,7 +2087,11 @@ typedef enum {
     /* Manual White balance gains */
     CAM_INTF_PARM_WB_MANUAL,
     /* Offline Data Overwrite */
-    CAM_INTF_PARM_HW_DATA_OVERWRITE,
+    //CAM_INTF_PARM_HW_DATA_OVERWRITE,
+    LEECO_RESERVED_PARAM_1,
+    LEECO_RESERVED_PARAM_2,
+    LEECO_RESERVED_PARAM_3,
+    LEECO_RESERVED_PARAM_4,
     /* IMG LIB reprocess debug section */
     CAM_INTF_META_IMGLIB, /* cam_intf_meta_imglib_t */
     /* OEM specific parameters */
@@ -2158,7 +2162,7 @@ typedef enum {
     /* Param for enabling instant aec*/
     CAM_INTF_PARM_INSTANT_AEC,
     /* Param for tracking previous reprocessing activity */
-    CAM_INTF_META_REPROCESS_FLAGS,
+    CAM_INTF_META_REPROCESS_FLAGS, /* 226 */
     CAM_INTF_PARM_MAX
 } cam_intf_parm_type_t;
 
