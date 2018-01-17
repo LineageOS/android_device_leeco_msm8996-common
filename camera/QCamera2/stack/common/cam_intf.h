@@ -586,7 +586,7 @@ typedef struct {
 } cam_stream_img_prop_t;
 
 typedef struct {
-    uint8_t enableStream; /*0 – stop and 1-start */
+    uint8_t enableStream; /*0 stop and 1-start */
 } cam_request_frames;
 
 typedef struct {
@@ -756,6 +756,7 @@ typedef struct {
     INCLUDE(CAM_INTF_META_FACE_DETECTION,               cam_face_detection_data_t,      1);
     INCLUDE(CAM_INTF_META_FACE_RECOG,                   cam_face_recog_data_t,          1);
     INCLUDE(CAM_INTF_META_FACE_BLINK,                   cam_face_blink_data_t,          1);
+    volatile char leeco_reserved_1[2];
     INCLUDE(CAM_INTF_META_FACE_GAZE,                    cam_face_gaze_data_t,           1);
     INCLUDE(CAM_INTF_META_FACE_SMILE,                   cam_face_smile_data_t,          1);
     INCLUDE(CAM_INTF_META_FACE_LANDMARK,                cam_face_landmarks_data_t,      1);
@@ -824,6 +825,7 @@ typedef struct {
     INCLUDE(CAM_INTF_META_SCENE_FLICKER,                uint32_t,                    1);
     INCLUDE(CAM_INTF_META_SENSOR_EXPOSURE_TIME,         int64_t,                     1);
     INCLUDE(CAM_INTF_META_SENSOR_FRAME_DURATION,        int64_t,                     1);
+    INCLUDE(LEECO_RESERVED_PARAM_2,                     char,                       32);
     INCLUDE(CAM_INTF_META_SENSOR_SENSITIVITY,           int32_t,                     1);
     INCLUDE(CAM_INTF_META_ISP_SENSITIVITY ,             int32_t,                     1);
     INCLUDE(CAM_INTF_META_SENSOR_TIMESTAMP,             int64_t,                     1);
@@ -879,6 +881,7 @@ typedef struct {
     INCLUDE(CAM_INTF_PARM_QUERY_FLASH4SNAP,             int32_t,                     1);
     INCLUDE(CAM_INTF_PARM_EXPOSURE,                     int32_t,                     1);
     INCLUDE(CAM_INTF_PARM_SHARPNESS,                    int32_t,                     1);
+    INCLUDE(LEECO_RESERVED_PARAM_1,                     char,                       16);
     INCLUDE(CAM_INTF_PARM_CONTRAST,                     int32_t,                     1);
     INCLUDE(CAM_INTF_PARM_SATURATION,                   int32_t,                     1);
     INCLUDE(CAM_INTF_PARM_BRIGHTNESS,                   int32_t,                     1);
@@ -962,7 +965,7 @@ typedef struct {
     INCLUDE(CAM_INTF_PARM_CAC,                          cam_aberration_mode_t,       1);
     INCLUDE(CAM_INTF_META_NEUTRAL_COL_POINT,            cam_neutral_col_point_t,     1);
     INCLUDE(CAM_INTF_PARM_ROTATION,                     cam_rotation_info_t,         1);
-    INCLUDE(CAM_INTF_PARM_HW_DATA_OVERWRITE,            cam_hw_data_overwrite_t,     1);
+    //INCLUDE(CAM_INTF_PARM_HW_DATA_OVERWRITE,            cam_hw_data_overwrite_t,     1);
     INCLUDE(CAM_INTF_META_IMGLIB,                       cam_intf_meta_imglib_t,      1);
     INCLUDE(CAM_INTF_PARM_CAPTURE_FRAME_CONFIG,         cam_capture_frame_config_t,  1);
     INCLUDE(CAM_INTF_PARM_CUSTOM,                       custom_parm_buffer_t,        1);
