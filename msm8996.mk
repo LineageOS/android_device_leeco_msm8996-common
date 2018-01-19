@@ -356,6 +356,10 @@ PRODUCT_PACKAGES += \
     hs20-osu-client \
     WCNSS_wlan_dictionary.dat
 
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \
     $(LOCAL_PATH)/wifi/hostapd.conf:system/etc/hostapd/hostapd_default.conf \
