@@ -687,7 +687,7 @@ service tlocd /system/bin/tloc_daemon
     user system
     group drmrpc gps net_raw
 
-service energy-awareness /system/bin/energy-awareness
+service energy-awareness /system/vendor/bin/energy-awareness
     class main
     user root
     group system
@@ -786,7 +786,7 @@ service start_hci_filter /system/bin/wcnss_filter
     seclabel u:r:wcnss_filter:s0
     disabled
 
-service config_bt_addr /system/bin/btnvtool -O
+service config_bt_addr /system/vendor/bin/btnvtool -O
     class core
     user bluetooth
     group bluetooth radio
@@ -859,7 +859,7 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     disabled
     oneshot
 
-service cnss_diag /system/bin/cnss_diag -q -f
+service cnss_diag /system/vendor/bin/cnss_diag -q -f
     class main
     user root
     group root
