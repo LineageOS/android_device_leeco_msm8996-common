@@ -1,1 +1,1 @@
-allow cnd self:capability { dac_override chown fsetid };
+allow cnd self:capability { dac_override chown fsetid net_raw };
