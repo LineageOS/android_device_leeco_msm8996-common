@@ -387,6 +387,12 @@ on post-fs-data
     # Create directory for TZ Apps
     mkdir /data/misc/qsee 0770 system system
 
+    # Create directory for apps access via QTEEConnector
+    mkdir /data/vendor/qtee 0770 system system
+
+    # Create directory for voiceprint
+    mkdir /data/misc/qvop 0771 system system
+
     # Create folder for mm-qcamera-daemon
     mkdir /data/misc/camera 0770 camera camera
 
@@ -687,7 +693,7 @@ service tlocd /system/bin/tloc_daemon
     user system
     group drmrpc gps net_raw
 
-service energy-awareness /system/bin/energy-awareness
+service energy-awareness /system/vendor/bin/energy-awareness
     class main
     user root
     group system
@@ -698,13 +704,12 @@ service mdtpd /system/vendor/bin/mdtpd
     user root
     group system radio drmrpc
 
-service iop /system/bin/iop
+service iop /system/vendor/bin/iop
     class main
     user root
     group root
     disabled
     socket iop seqpacket 0666 root system
-    writepid /dev/cpuset/system-background/tasks
 
 service ssr_setup /system/bin/ssr_setup
     oneshot
@@ -779,14 +784,14 @@ on property:wc_transport.start_hci=true
 on property:wc_transport.start_hci=false
     stop start_hci_filter
 
-service start_hci_filter /system/bin/wcnss_filter
+service start_hci_filter /system/vendor/bin/wcnss_filter
     class late_start
     user bluetooth
-    group bluetooth oem_2901
+    group bluetooth diag system wakelock
     seclabel u:r:wcnss_filter:s0
     disabled
 
-service config_bt_addr /system/bin/btnvtool -O
+service config_bt_addr /system/vendor/bin/btnvtool -O
     class core
     user bluetooth
     group bluetooth radio
@@ -813,19 +818,32 @@ service ftmd /system/bin/logwrapper /system/bin/ftmdaemon
     disabled
     oneshot
 
-service netmgrd /vendor/bin/netmgrd
+service netmgrd /system/vendor/bin/netmgrd
     class main
     user root
     group root wifi wakelock radio inet
     writepid /dev/cpuset/system-background/tasks
 
-service qti /vendor/bin/qti
+service ipacm-diag /system/vendor/bin/ipacm-diag
+    class main
+    user radio
+    socket ipacm_log_file dgram 660 radio radio
+    group radio diag
+    disabled
+
+service ipacm /system/vendor/bin/ipacm
+    class main
+    user radio
+    group radio inet
+    disabled
+
+service qti /system/vendor/bin/qti
     class main
     user radio
     group radio oem_2901 usb
     writepid /dev/cpuset/system-background/tasks
 
-service sensors /vendor/bin/sensors.qcom
+service sensors /system/vendor/bin/sensors.qcom
     class core
     user root
     group root
@@ -859,7 +877,7 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     disabled
     oneshot
 
-service cnss_diag /system/bin/cnss_diag -q -f
+service cnss_diag /system/vendor/bin/cnss_diag -q -f
     class main
     user root
     group root
@@ -867,11 +885,18 @@ service cnss_diag /system/bin/cnss_diag -q -f
     # cnss diag cause power consumption bigger sometimes, so disable it until solve it
     disabled
 
+service cnss-daemon /system/vendor/bin/cnss-daemon -n -l
+    class late_start
+    user system
+    group system inet net_admin wifi
+
+on property:sys.shutdown.requested=*
+stop cnss-daemon
+
 service loc_launcher /vendor/bin/loc_launcher
     # loc_launcher will start as root and set its uid to gps
     class late_start
     group gps inet diag wifi
-    writepid /dev/cpuset/system-background/tasks
 
 on property:crypto.driver.load=1
     insmod /system/lib/modules/qce.ko
