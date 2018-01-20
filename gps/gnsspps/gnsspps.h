@@ -1,4 +1,4 @@
-/* Copyright (c) 2017, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2011-2015, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -9,7 +9,7 @@
  *       copyright notice, this list of conditions and the following
  *       disclaimer in the documentation and/or other materials provided
  *       with the distribution.
- *     * Neither the name of The Linux Foundation, nor the names of its
+ *     * Neither the name of The Linux Foundatoin, nor the names of its
  *       contributors may be used to endorse or promote products derived
  *       from this software without specific prior written permission.
  *
@@ -24,48 +24,22 @@
  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
  * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- *
  */
-#ifndef XTRA_SYSTEM_STATUS_OBS_H
-#define XTRA_SYSTEM_STATUS_OBS_H
+#ifndef _GNSSPPS_H
+#define _GNSSPPS_H
 
-#include <cinttypes>
-#include <MsgTask.h>
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-using namespace std;
-using loc_core::IOsObserver;
-using loc_core::IDataItemObserver;
-using loc_core::IDataItemCore;
+/*  opens the device and fetches from PPS source */
+int initPPS(char *devname);
+/* updates the fine time stamp */
+int getPPS(struct timespec *current_ts, struct timespec *current_boottime, struct timespec *last_boottime);
+/* stops fetching and closes the device */
+void deInitPPS();
 
-
-class XtraSystemStatusObserver : public IDataItemObserver {
-public :
-    // constructor & destructor
-    inline XtraSystemStatusObserver(IOsObserver* sysStatObs, const MsgTask* msgTask):
-            mSystemStatusObsrvr(sysStatObs), mMsgTask(msgTask) {
-        subscribe(true);
-    }
-    inline XtraSystemStatusObserver() {};
-    inline virtual ~XtraSystemStatusObserver() { subscribe(false); }
-
-    // IDataItemObserver overrides
-    inline virtual void getName(string& name);
-    virtual void notify(const list<IDataItemCore*>& dlist);
-
-    bool updateLockStatus(uint32_t lock);
-    bool updateConnectionStatus(bool connected, uint32_t type);
-    bool updateTac(const string& tac);
-    bool updateMccMnc(const string& mccmnc);
-    inline const MsgTask* getMsgTask() { return mMsgTask; }
-    void subscribe(bool yes);
-
-private:
-    int createSocket();
-    void closeSocket(const int32_t socketFd);
-    bool sendEvent(const stringstream& event);
-    IOsObserver*    mSystemStatusObsrvr;
-    const MsgTask* mMsgTask;
-
-};
-
+#ifdef __cplusplus
+}
+#endif
 #endif
