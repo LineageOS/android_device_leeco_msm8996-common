@@ -396,6 +396,8 @@ on post-fs-data
     # Create folder for mm-qcamera-daemon
     mkdir /data/misc/camera 0770 camera camera
 
+    start qcamerasvr
+
     mkdir /data/media 0770 media_rw media_rw
     chown media_rw media_rw /data/media
 
