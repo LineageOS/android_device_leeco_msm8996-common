@@ -561,6 +561,8 @@ on post-fs-data
     chown wifi wifi /sys/module/wlan/parameters/fwpath
 
 on property:sys.boot_completed=1
+    restart cameraserver
+
     write /dev/kmsg "Boot completed "
 
     # end boot time fs tune
