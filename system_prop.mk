@@ -111,8 +111,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=1 \
     debug.egl.hw=1 \
     debug.gralloc.enable_fb_ubwc=1 \
-    persist.camera.preview.ubwc=0 \
-    persist.camera.video.ubwc=0 \
     dev.pm.dyn_samplingrate=1 \
     persist.demo.hdmirotationlock=false \
     persist.debug.wfd.enable=1 \
@@ -120,7 +118,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     sdm.perf_hint_window=50 \
     persist.hwc.enable_vds=1 \
     sdm.debug.disable_rotator_split=1 \
-    ro.persist.qcapb=1
+    ro.persist.qcapb = 1
 
 # OpenGLES
 PRODUCT_PROPERTY_OVERRIDES += \
