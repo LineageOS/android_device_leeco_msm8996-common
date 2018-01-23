@@ -34,16 +34,6 @@ vendor/lib/rfsa/adsp/libscveT2T_skel.so|d0e36fe8d0bafa4848823fd0186212e58f88084c
 vendor/lib/rfsa/adsp/libscveTextReco_skel.so|c2852313b59cc4b2a002acf6081feaa1f6435154
 vendor/lib/rfsa/adsp/us-syncproximity.so|136ec0bae527f7fc81a18f8bf42526219b1bd480
 
-# ANT+
-lib/com.qualcomm.qti.ant@1.0.so
--lib/libantradio.so
-lib64/com.qualcomm.qti.ant@1.0.so
--lib64/libantradio.so
-vendor/lib/com.qualcomm.qti.ant@1.0_vendor.so
-vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so
-vendor/lib64/com.qualcomm.qti.ant@1.0_vendor.so
-vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
-
 # Audio
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so|034a5cf03cccfb22e415832c7d6a043dc52d98c0
