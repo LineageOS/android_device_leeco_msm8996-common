@@ -1,0 +1,1 @@
+allow qseeproxy servicemanager:binder { call transfer };

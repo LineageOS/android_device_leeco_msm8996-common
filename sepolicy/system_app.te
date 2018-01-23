@@ -1,1 +1,3 @@
 allow system_app time_daemon:unix_stream_socket { connectto };
+
+allow system_app qemu_hw_mainkeys_prop:file read;

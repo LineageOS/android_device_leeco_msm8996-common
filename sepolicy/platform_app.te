@@ -1,0 +1,2 @@
+allow platform_app qemu_hw_mainkeys_prop:file { read open getattr };
+
