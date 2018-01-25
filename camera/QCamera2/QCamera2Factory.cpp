@@ -579,7 +579,7 @@ int QCamera2Factory::setTorchMode(const char* camera_id, bool on)
         retVal = flash.initFlash(cameraIdInt);
 
         if (retVal == 0) {
-            retVal = flash.setFlashMode(cameraIdInt, on);
+            retVal = flash.setFlashMode(cameraIdInt, on, LED_DUAL);
             if ((retVal == 0) && (mCallbacks != NULL)) {
                 mCallbacks->torch_mode_status_change(mCallbacks,
                         camera_id,
@@ -591,7 +591,7 @@ int QCamera2Factory::setTorchMode(const char* camera_id, bool on)
         }
     } else {
         cameraIdInt = static_cast<int>(cameraIdLong);
-        retVal = flash.setFlashMode(cameraIdInt, on);
+        retVal = flash.setFlashMode(cameraIdInt, on, LED_DUAL);
 
         if (retVal == 0) {
             retVal = flash.deinitFlash(cameraIdInt);
