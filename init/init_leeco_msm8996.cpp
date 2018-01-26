@@ -174,6 +174,7 @@ void vendor_load_properties() {
     {
         // This is LEX720
         property_override("ro.product.model", "LEX720");
+        property_override("ro.product.name", "ZL1_CN");
         property_set("persist.data.iwlan.enable", "false");
         // Dual SIM
         property_set("persist.radio.multisim.config", "dsds");
@@ -181,15 +182,24 @@ void vendor_load_properties() {
     else if (isLEX722)
     {
         // This is LEX722
+        property_override("ro.product.device", "le_zl0");
         property_override("ro.product.model", "LEX722");
+        property_override("ro.product.name", "ZL1_CN");
         property_set("persist.data.iwlan.enable", "false");
         // Dual SIM
         property_set("persist.radio.multisim.config", "dsds");
+        // Power profile
+        property_set("ro.power_profile.override", "power_profile_zl0");
+        // Fingerprint
+        property_override("ro.build.description", "le_zl0-user 6.0.1 WIXCNFN5802001232S eng.letv.20170123.152935 release-keys");
+        property_override("ro.build.fingerprint", "LeEco/ZL1_CN/le_zl0:6.0.1/WIXCNFN5802001232S/letv01231534:user/release-keys");
+  
     }
     else if (isLEX727)
     {
         // This is LEX727
         property_override("ro.product.model", "LEX727");
+        property_override("ro.product.name", "ZL1_NA");
         property_set("persist.data.iwlan.enable", "true");
         // Single SIM
         property_set("persist.radio.multisim.config", "NA");
