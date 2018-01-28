@@ -774,6 +774,12 @@ on property:ro.bluetooth.ftm_enabled=true
 on property:vold.decrypt=trigger_reset_main
     stop audio-hal-2-0
 
+on property:vold.decrypt=trigger_shutdown_framework
+    stop audio-hal-2-0
+
+on property:vold.decrypt=trigger_restart_min_framework
+    start audio-hal-2-0
+
 on property:vold.decrypt=trigger_restart_framework
     start audio-hal-2-0
     start config_bt_addr
