@@ -221,3 +221,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Fastcharge
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.le_fast_chrg_enable=1
+
+# Volte
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.VT_HYBRID_ENABLE=1 \
+    persist.dbg.wfc_avail_ovr=1
