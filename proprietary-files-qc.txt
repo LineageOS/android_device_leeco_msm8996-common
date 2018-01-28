@@ -530,6 +530,8 @@ vendor/lib64/lib-rtpcommon.so
 vendor/lib64/lib-rtpcore.so
 vendor/lib64/lib-rtpdaemoninterface.so
 vendor/lib64/lib-rtpsl.so
+vendor/lib64/libimscamera_jni.so
+vendor/lib64/libimsmedia_jni.so
 vendor/lib64/vendor.qti.hardware.radio.ims@1.0_vendor.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
