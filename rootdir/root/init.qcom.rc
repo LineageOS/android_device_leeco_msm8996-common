@@ -771,7 +771,11 @@ on property:bluetooth.dun.status=stopped
 on property:ro.bluetooth.ftm_enabled=true
     start ftmd
 
+on property:vold.decrypt=trigger_reset_main
+    stop audio-hal-2-0
+
 on property:vold.decrypt=trigger_restart_framework
+    start audio-hal-2-0
     start config_bt_addr
 
 on property:persist.env.fastdorm.enabled=true
