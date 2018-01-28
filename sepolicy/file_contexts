@@ -38,3 +38,5 @@
 /system/bin/wcnss_filter                                                 u:object_r:wcnss_filter_exec:s0
 
 /data/misc/tloc(/.*)?                                                    u:object_r:tlocd_data_file:s0
+
+/data/system_de/[0-9]+/spblob(/.*)?                                      u:object_r:crypto_file:s0
