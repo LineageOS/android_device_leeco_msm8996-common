@@ -315,4 +315,7 @@
 
     <!-- Enable blur support -->
     <!-- bool name="config_ui_blur_enabled">true</bool -->
+
+    <string name="config_ims_package">org.codeaurora.ims</string>
+    <bool name="config_dynamic_bind_ims">true</bool>
 </resources>
