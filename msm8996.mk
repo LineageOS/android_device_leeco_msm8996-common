@@ -15,6 +15,9 @@
 # limitations under the License.
 #
 
+# LeEco msm8996 devices launched with M
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
