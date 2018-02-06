@@ -469,7 +469,6 @@ on post-fs-data
     mkdir /data/system/perfd 0770 root system
     chmod 2770 /data/system/perfd
     rm /data/system/perfd/default_values
-    start perfd
 
     # NFC local data and nfcee xml storage
     mkdir /data/nfc 0770 nfc nfc
@@ -542,9 +541,7 @@ service qseecomd /system/bin/qseecomd
 service perfd /system/vendor/bin/perfd
    class main
    user root
-   group root readproc
-   disabled
-   socket perfd seqpacket 0666 root system
+   group root system
    writepid /dev/cpuset/system-background/tasks
 
 service thermal-engine /system/vendor/bin/thermal-engine
