@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eea9f511_87d241c4",
+        "filename": "sepolicy/platform_app.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 523
+      },
+      "writtenOn": "2018-02-07T18:16:13Z",
+      "side": 1,
+      "message": "get_prop(platform_app, qemu_hw_mainkeys_prop)",
+      "range": {
+        "startLine": 1,
+        "startChar": 47,
+        "endLine": 1,
+        "endChar": 48
+      },
+      "revId": "a915d847fac2ff73060e2b19531a6f9f00459baf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "14af8071_925105fb",
+        "filename": "sepolicy/qseeproxy.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 523
+      },
+      "writtenOn": "2018-02-07T18:16:13Z",
+      "side": 1,
+      "message": "binder_call(qseeproxy, servicemanager)",
+      "range": {
+        "startLine": 1,
+        "startChar": 45,
+        "endLine": 1,
+        "endChar": 53
+      },
+      "revId": "a915d847fac2ff73060e2b19531a6f9f00459baf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ce726cc_977e9a2d",
+        "filename": "sepolicy/servicemanager.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 523
+      },
+      "writtenOn": "2018-02-07T18:16:13Z",
+      "side": 1,
+      "message": "r_file_perms",
+      "range": {
+        "startLine": 10,
+        "startChar": 48,
+        "endLine": 10,
+        "endChar": 55
+      },
+      "revId": "a915d847fac2ff73060e2b19531a6f9f00459baf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "58cd4193_9f123c32",
+        "filename": "sepolicy/system_app.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 523
+      },
+      "writtenOn": "2018-02-07T18:16:13Z",
+      "side": 1,
+      "message": "get_prop(system_app, qemu_hw_mainkeys_prop)",
+      "range": {
+        "startLine": 3,
+        "startChar": 17,
+        "endLine": 3,
+        "endChar": 38
+      },
+      "revId": "a915d847fac2ff73060e2b19531a6f9f00459baf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "57e0fb74_7de02cda",
+        "filename": "sepolicy/untrusted_app.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 523
+      },
+      "writtenOn": "2018-02-07T18:16:13Z",
+      "side": 1,
+      "message": "get_prop(untrusted_app, camera_prop)",
+      "range": {
+        "startLine": 1,
+        "startChar": 6,
+        "endLine": 1,
+        "endChar": 31
+      },
+      "revId": "a915d847fac2ff73060e2b19531a6f9f00459baf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
