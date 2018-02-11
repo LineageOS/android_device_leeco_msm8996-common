@@ -182,7 +182,9 @@ PRODUCT_PACKAGES += \
     libhwc2on1adapter \
     libgenlock \
     liboverlay \
-    libtinyxml
+    libtinyxml \
+    libqdMetaData \
+    libqdMetaData.system
 
 PRODUCT_PACKAGES += \
     vendor.display.color@1.0-service \
@@ -202,6 +204,7 @@ PRODUCT_PACKAGES += \
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
+    android.hidl.manager@1.0 \
     android.hidl.manager@1.0-java
 
 # Doze mode
