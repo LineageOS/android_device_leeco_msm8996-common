@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ec20e67b_dba03a5a",
+        "filename": "sepolicy/priv_app.te",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2018-02-12T07:54:55Z",
+      "side": 1,
+      "message": "This should be reverted.\n\nSee:\nhttps://review.lineageos.org/#/c/205618/",
+      "revId": "02506edaa4e42434c745e584bc81cd64d0807d8f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
