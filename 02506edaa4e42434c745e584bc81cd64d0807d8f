@@ -16,6 +16,24 @@
       "revId": "02506edaa4e42434c745e584bc81cd64d0807d8f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8a9b8747_8c7dae8a",
+        "filename": "sepolicy/priv_app.te",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-02-12T08:54:27Z",
+      "side": 1,
+      "message": "More than that, that commit shouldn\u0027t have been squashed here in the first place...",
+      "parentUuid": "ec20e67b_dba03a5a",
+      "revId": "02506edaa4e42434c745e584bc81cd64d0807d8f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
