@@ -38,7 +38,7 @@
     <bool name="config_intrusiveNotificationLed">true</bool>
 
     <!-- Enable Night display, which requires HWC 2.0. -->
-    <bool name="config_nightDisplayAvailable">true</bool>
+    <bool name="config_nightDisplayAvailable">false</bool>
 
     <!-- Vibrator pattern for feedback about a long screen/key press -->
     <integer-array name="config_longPressVibePattern">
