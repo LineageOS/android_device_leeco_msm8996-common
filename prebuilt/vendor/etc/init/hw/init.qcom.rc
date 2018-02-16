@@ -727,6 +727,8 @@ on property:vold.decrypt=trigger_restart_min_framework
     start audio-hal-2-0
 
 on property:vold.decrypt=trigger_restart_framework
+    stop camera-provider-2-4
+    start camera-provider-2-4
     start audio-hal-2-0
 
 on property:persist.env.fastdorm.enabled=true
