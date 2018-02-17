@@ -102,6 +102,9 @@ void init_target_properties()
             property_set("persist.data.iwlan.enable", "true");
             // Single SIM
             property_set("persist.radio.multisim.config", "NA");
+            // Fingerprint
+            property_override("ro.build.description", "le_zl1-user 6.0.1 WEXNAOP5802101261S eng.letv.20170126.120318 release-keys");
+            property_override("ro.build.fingerprint", "LeEco/ZL1_NA/le_zl1:6.0.1/WEXNAOP5802101261S/letv01261206:user/release-keys");
             unknownDevice = 0;
         }
         else if (!strncmp(device.c_str(), "le_zl1", 6)) {
@@ -111,6 +114,9 @@ void init_target_properties()
             property_set("persist.data.iwlan.enable", "false");
             // Dual SIM
             property_set("persist.radio.multisim.config", "dsds");
+            // Fingerprint
+            property_override("ro.build.description", "le_zl1-user 6.0.1 WEXNAOP5802101261S eng.letv.20170126.120318 release-keys");
+            property_override("ro.build.fingerprint", "LeEco/ZL1_NA/le_zl1:6.0.1/WEXNAOP5802101261S/letv01261206:user/release-keys");
             unknownDevice = 0;
         }
         else if (!strncmp(device.c_str(), "le_x2_na_oversea", 16)) {
