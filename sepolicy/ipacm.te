@@ -1,0 +1,2 @@
+allow ipacm-diag property_socket:sock_file { write };
+allow ipacm-diag init:unix_stream_socket { connectto };
