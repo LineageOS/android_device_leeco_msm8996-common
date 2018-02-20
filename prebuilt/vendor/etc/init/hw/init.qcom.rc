@@ -858,7 +858,8 @@ on property:sys.powerctl=*
 
 service loc_launcher /vendor/bin/loc_launcher
     class late_start
-    group gps inet diag wifi
+    user gps
+    group gps
     writepid /dev/cpuset/system-background/tasks
 
 on property:crypto.driver.load=1
