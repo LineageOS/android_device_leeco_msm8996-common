@@ -17,6 +17,10 @@
 # executables
 /system/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.0-service-custom u:object_r:hal_fingerprint_default_exec:s0
 
+# ir
+/sys/remote/enable                                                       u:object_r:consumer_ir_device:s0
+/dev/ttyHSL1                                                             u:object_r:consumer_ir_device:s0
+
 # ril
 /system/vendor/radio/qcril_database/qcril.db                             u:object_r:nv_data_file:s0
 
