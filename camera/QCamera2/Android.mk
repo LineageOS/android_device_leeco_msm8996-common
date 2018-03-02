@@ -30,6 +30,10 @@ LOCAL_SRC_FILES += \
 
 LOCAL_CFLAGS := -Wall -Wextra -Werror
 
+ifeq ($(TARGET_DEVICE), x2)
+LOCAL_CFLAGS += -DNO_SYSFS_FLASH
+endif
+
 #HAL 1.0 source
 
 ifeq ($(TARGET_SUPPORT_HAL1),false)
