@@ -47,9 +47,6 @@ on charger
     start thermal-engine
 
 on enable-low-power
-    # Set GPU idle frequency to 133 MHz
-    write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 6
-
     # Disable thermal hotplug to switch governor
     write /sys/module/msm_thermal/core_control/enabled 0
 
