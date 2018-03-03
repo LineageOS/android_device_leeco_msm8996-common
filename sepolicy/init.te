@@ -19,4 +19,3 @@ allow init proc:lnk_file { setattr };
 
 #allow init firmware_file:dir { create setattr };
 #allow init bt_firmware_file:dir { create setattr };
-
