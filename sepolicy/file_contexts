@@ -15,6 +15,7 @@
 /data/vendor/nfc(/.*)?                                                   u:object_r:nfc_data_file:s0
 
 # executables
+/system/bin/hvdcp_opti                                                   u:object_r:hvdcp_opti_exec:s0
 /system/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.0-service-custom u:object_r:hal_fingerprint_default_exec:s0
 
 # ril
