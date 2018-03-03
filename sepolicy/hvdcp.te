@@ -1,0 +1,2 @@
+allow hvdcp self:capability { dac_override };
+allow hvdcp sysfs_battery_supply:dir { write };
