@@ -1,0 +1,9 @@
+type hvdcp_opti, domain;
+type hvdcp_opti_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(hvdcp_opti)
+allow hvdcp_opti system_file:file {execute_no_trans};
+allow init init:capability2 {block_suspend};
+allow init init:netlink_kobject_uevent_socket {create setopt bind read};
+allow hvdcp_opti hvdcp_opti:capability{setgid};
+allow hvdcp_opti kmsg_device:chr_file {write};
