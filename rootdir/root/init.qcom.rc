@@ -1024,6 +1024,21 @@ service qcom-sh /system/bin/sh /init.qcom.sh
     oneshot
     seclabel u:r:qti_init_shell:s0
 
+service hvdcp_opti /system/bin/hvdcp_opti
+    class main
+    user root
+    group root
+
+on charger
+    write /sys/devices/system/cpu/cpu2/online 0
+    write /sys/devices/system/cpu/cpu3/online 0
+    write /sys/module/lpm_levels/parameters/sleep_disabled 0
+    wait /dev/block/bootdevice
+    mount_all charger.fstab.qcom
+    wait /dev/block/bootdevice/by-name/system
+    mount ext4 /dev/block/bootdevice/by-name/system /system ro barrier=1
+    start hvdcp_opti
+
 on property:persist.sys.le_fast_chrg_enable=1
     write /sys/class/power_supply/le_ab/le_quick_charge_mode 0
 
