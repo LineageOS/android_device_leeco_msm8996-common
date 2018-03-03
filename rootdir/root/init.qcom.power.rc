@@ -1,3 +1,14 @@
+on charger
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    mount ext4 /dev/block/bootdevice/by-name/system /system ro barrier=1
+    write /sys/devices/system/cpu/cpu1/online 0
+    write /sys/devices/system/cpu/cpu2/online 0
+    write /sys/devices/system/cpu/cpu3/online 0
+    write /sys/module/msm_thermal/core_control/cpus_offlined 14
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "powersave"
+    write /sys/module/lpm_levels/parameters/sleep_disabled 0
+
 on boot
     # Bring up CPUs
     trigger init-cpus
@@ -117,14 +128,6 @@ on class_start:late_start
 
     # Starting io prefetcher service
     start iop
-
-on charger
-    write /sys/devices/system/cpu/cpu1/online 0
-    write /sys/devices/system/cpu/cpu2/online 0
-    write /sys/devices/system/cpu/cpu3/online 0
-    write /sys/module/msm_thermal/core_control/cpus_offlined 14
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "powersave"
-    write /sys/module/lpm_levels/parameters/sleep_disabled 0
 
 on property:dev.bootcomplete=1
     setprop sys.io.scheduler "bfq"

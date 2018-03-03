@@ -115,6 +115,7 @@ BOARD_QTI_CAMERA_32BIT_ONLY := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
+# Before enabling lineage charger you have to fix it!
 WITH_LINEAGE_CHARGER := false
 
 # Init
