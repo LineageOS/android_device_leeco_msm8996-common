@@ -101,7 +101,7 @@ void init_target_properties()
             property_override("ro.product.name", "ZL1_NA");
             property_set("persist.data.iwlan.enable", "true");
             // Single SIM
-            property_set("persist.radio.multisim.config", "NA");
+            property_set("persist.radio.multisim.config", "none");
             // Fingerprint
             property_override("ro.build.description", "le_zl1-user 6.0.1 WEXNAOP5802101261S eng.letv.20170126.120318 release-keys");
             property_override("ro.build.fingerprint", "LeEco/ZL1_NA/le_zl1:6.0.1/WEXNAOP5802101261S/letv01261206:user/release-keys");
