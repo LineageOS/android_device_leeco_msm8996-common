@@ -29,6 +29,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     vidc.debug.perf.mode=2
 
+# AANC
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.audio.aanc.enable=true
+
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.ssr.3mic=false \
