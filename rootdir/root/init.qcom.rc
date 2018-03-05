@@ -988,6 +988,10 @@ service ril-daemon2 /vendor/bin/hw/rild -c 2
     user radio
     group radio cache inet misc audio log readproc wakelock oem_2901 net_raw
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
+    disabled
+
+on property:persist.radio.multisim.config=dsds
+    start ril-daemon2
 
 service charger /charger
     class charger
