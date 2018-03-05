@@ -102,6 +102,8 @@ void init_target_properties()
             property_set("persist.data.iwlan.enable", "true");
             // Single SIM
             property_set("persist.radio.multisim.config", "none");
+            // NFC
+            property_set("persist.nfc.smartcard.config", "SIM1,eSE1");
             // Fingerprint
             property_override("ro.build.description", "le_zl1-user 6.0.1 WEXNAOP5802101261S eng.letv.20170126.120318 release-keys");
             property_override("ro.build.fingerprint", "LeEco/ZL1_NA/le_zl1:6.0.1/WEXNAOP5802101261S/letv01261206:user/release-keys");
@@ -114,6 +116,8 @@ void init_target_properties()
             property_set("persist.data.iwlan.enable", "false");
             // Dual SIM
             property_set("persist.radio.multisim.config", "dsds");
+            // NFC
+            property_set("persist.nfc.smartcard.config", "SIM1,SIM2,eSE1");
             // Fingerprint
             property_override("ro.build.description", "le_zl1-user 6.0.1 WEXNAOP5802101261S eng.letv.20170126.120318 release-keys");
             property_override("ro.build.fingerprint", "LeEco/ZL1_NA/le_zl1:6.0.1/WEXNAOP5802101261S/letv01261206:user/release-keys");
@@ -124,6 +128,8 @@ void init_target_properties()
             property_override("ro.product.model", "LEX829");
             // Dual SIM
             property_set("persist.radio.multisim.config", "dsds");
+            // NFC
+            property_set("persist.nfc.smartcard.config", "SIM1,SIM2,eSE1");
             unknownDevice = 0;
         }
         else if (!strncmp(device.c_str(), "le_x2", 5)) {
@@ -131,6 +137,8 @@ void init_target_properties()
             property_override("ro.product.model", "LEX820");
             // Dual SIM
             property_set("persist.radio.multisim.config", "dsds");
+            // NFC
+            property_set("persist.nfc.smartcard.config", "SIM1,SIM2,eSE1");
             unknownDevice = 0;
         }
     }
