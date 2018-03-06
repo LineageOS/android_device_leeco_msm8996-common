@@ -101,7 +101,7 @@ void init_target_properties()
             property_override("ro.product.name", "ZL1_NA");
             property_set("persist.data.iwlan.enable", "true");
             // Single SIM
-            property_set("persist.radio.multisim.config", "none");
+            property_set("persist.radio.multisim.config", "NA");
             // NFC
             property_set("persist.nfc.smartcard.config", "SIM1,eSE1");
             // Fingerprint
