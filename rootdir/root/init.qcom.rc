@@ -990,7 +990,7 @@ service ril-daemon2 /vendor/bin/hw/rild -c 2
     disabled
 
 on property:persist.radio.multisim.config=dsds
-    start ril-daemon2
+    enable ril-daemon2
 
 service ssr_diag /system/bin/ssr_diag
     class late_start
