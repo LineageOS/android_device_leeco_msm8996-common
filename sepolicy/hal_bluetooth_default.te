@@ -1,1 +1,5 @@
 allow hal_bluetooth_default wcnss_filter:unix_stream_socket { connectto };
+
+# bt_fw_version.txt
+allow hal_bluetooth_default bluetooth_data_file:dir { r_dir_perms };
+allow hal_bluetooth_default bluetooth_data_file:file { rw_file_perms };
