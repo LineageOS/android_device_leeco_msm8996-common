@@ -3,3 +3,7 @@ allow mm-qcamerad permission_service:service_manager find;
 allow mm-qcamerad mpctl_socket:sock_file write;
 
 allow mm-qcamerad camera_data_file:sock_file { unlink create };
+allow mm-qcamerad camera_socket:sock_file { unlink };
+
+allow mm-qcamerad sysfs:file { r_file_perms };
+allow mm-qcamerad sysfs_graphics:file { r_file_perms };
