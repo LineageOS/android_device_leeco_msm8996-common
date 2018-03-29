@@ -143,6 +143,10 @@ PRODUCT_PACKAGES += \
     libshims_qcamera-daemon \
     Snap
 
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.camera.device@1.0 \
+    vendor.qti.hardware.camera.device@1.0_vendor
+
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
     cneapiclient \
