@@ -72,6 +72,9 @@ on fs
     mkdir /mnt/vendor/persist/time 0770 system system
     restorecon_recursive /mnt/vendor/persist
 
+    # for android.hardware.health@2.0-service.leeco_8996 cycle count backup
+    mkdir /persist/battery 0700 system system
+
     # Start HW service manager early
     start hwservicemanager
 
@@ -269,6 +272,11 @@ on post-fs-data
     start vendor.netmgrd
 
 on early-boot
+
+    # vendor.health-hal needs to be able to RW
+    chown system system /sys/devices/soc/qpnp-fg-18/cycle_counts_bins
+    # HardwareInfo needs to be able to read CC bins
+    chmod 644 /sys/devices/soc/qpnp-fg-18/cycle_counts_bins
     # Set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
 
