@@ -13,6 +13,21 @@ genfscon sysfs /devices/soc/soc:qcom,bcl/power_supply                   u:object
 
 genfscon sysfs /devices/soc/qpnp-smbcharger-17/power_supply/le_ab/type  u:object_r:sysfs_batteryinfo:s0
 
+genfscon sysfs /devices/soc/7600000.hsusb/power_supply                u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/soc/75b5000.i2c/i2c-7/7-0022/power_supply     u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/soc/msm-bcl-15/power_supply                   u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/soc/qpnp-fg-18                                u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/soc/qpnp-smbcharger-17/power_supply           u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/soc/qpnp-smbcharger-17/power_supply/battery/system_temp_level u:object_r:sysfs_batteryinfo:s0
+# genfscon sysfs /devices/soc/608000.qcom,pcie/pci0001:00/0001:00:00.0/0001:01:00.0/net/wlan0 u:object_r:sysfs_wifi:s0
+genfscon sysfs /devices/soc/624000.ufshc/host0/target0:0:0/0:0:0:0    u:object_r:sysfs_scsi_devices_0000:s0
+genfscon sysfs /devices/soc/624000.ufshc/host0/target0:0:0/0:0:0:1    u:object_r:sysfs_scsi_devices_other:s0
+genfscon sysfs /devices/soc/624000.ufshc/host0/target0:0:0/0:0:0:2    u:object_r:sysfs_scsi_devices_other:s0
+genfscon sysfs /devices/soc/624000.ufshc/host0/target0:0:0/0:0:0:3    u:object_r:sysfs_scsi_devices_other:s0
+genfscon sysfs /devices/soc/624000.ufshc/host0/target0:0:0/0:0:0:4    u:object_r:sysfs_scsi_devices_other:s0
+genfscon sysfs /devices/soc/624000.ufshc/host0/target0:0:0/0:0:0:5    u:object_r:sysfs_scsi_devices_other:s0
+genfscon sysfs /devices/soc/624000.ufshc/health                       u:object_r:sysfs_scsi_devices_0000:s0
+
 # Real-time clock
 genfscon sysfs /devices/soc/qpnp-rtc-8/rtc                              u:object_r:sysfs_rtc:s0
 
@@ -24,3 +39,6 @@ genfscon sysfs /devices/soc/6a00000.ssusb/6a00000.dwc3/gadget/lun0/     u:object
 
 # Touchpanel
 genfscon proc /touchpanel                                               u:object_r:proc_touchpanel:s0
+
+# debugfs
+genfscon debugfs /ufshcd0                  u:object_r:debugfs_ufs:s0
