@@ -72,6 +72,12 @@ void property_override(const std::string& name, const std::string& value)
     }
 }
 
+void property_override_dual(const std::string& system_prop, const std::string& vendor_prop, const std::string& value)
+{
+    property_override(system_prop, value);
+    property_override(vendor_prop, value);
+}
+
 void init_target_properties()
 {
     std::string device;
