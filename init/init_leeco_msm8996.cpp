@@ -88,8 +88,8 @@ void init_target_properties()
 
         if (!strncmp(device.c_str(), "le_zl0_whole_netcom", 19)) {
             // This is LEX722
-            property_override("ro.product.device", "le_zl0");
-            property_override("ro.product.model", "LEX722");
+            property_override_dual("ro.product.device", "ro.vendor.product.device", "le_zl0");
+            property_override_dual("ro.product.model", "ro.vendor.product.model", "LEX722");
             property_override("ro.product.name", "ZL1_CN");
             property_set("persist.data.iwlan.enable", "false");
             // Dual SIM
@@ -97,13 +97,13 @@ void init_target_properties()
             // Power profile
             property_set("ro.power_profile.override", "power_profile_zl0");
             // Fingerprint
-            property_override("ro.build.description", "le_zl0-user 6.0.1 WIXCNFN5802001232S eng.letv.20170123.152935 release-keys");
-            property_override("ro.build.fingerprint", "LeEco/ZL1_CN/le_zl0:6.0.1/WIXCNFN5802001232S/letv01231534:user/release-keys");
+            property_override_dual("ro.build.description", "ro.vendor.build.description", "le_zl0-user 6.0.1 WIXCNFN5802001232S eng.letv.20170123.152935 release-keys");
+            property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "LeEco/ZL1_CN/le_zl0:6.0.1/WIXCNFN5802001232S/letv01231534:user/release-keys");
             unknownDevice = 0;
         }
         else if (!strncmp(device.c_str(), "le_zl1_oversea", 14)) {
             // This is LEX727
-            property_override("ro.product.model", "LEX727");
+            property_override_dual("ro.product.model", "ro.vendor.product.model", "LEX727");
             property_override("ro.product.name", "ZL1_NA");
             property_set("persist.data.iwlan.enable", "true");
             // Single SIM
@@ -111,13 +111,13 @@ void init_target_properties()
             // NFC
             property_set("persist.nfc.smartcard.config", "SIM1,eSE1");
             // Fingerprint
-            property_override("ro.build.description", "le_zl1-user 6.0.1 WEXNAOP5802101261S eng.letv.20170126.120318 release-keys");
-            property_override("ro.build.fingerprint", "LeEco/ZL1_NA/le_zl1:6.0.1/WEXNAOP5802101261S/letv01261206:user/release-keys");
+            property_override_dual("ro.build.description", "ro.vendor.build.description", "le_zl1-user 6.0.1 WEXNAOP5802101261S eng.letv.20170126.120318 release-keys");
+            property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "LeEco/ZL1_NA/le_zl1:6.0.1/WEXNAOP5802101261S/letv01261206:user/release-keys");
             unknownDevice = 0;
         }
         else if (!strncmp(device.c_str(), "le_zl1", 6)) {
             // This is LEX720
-            property_override("ro.product.model", "LEX720");
+            property_override_dual("ro.product.model", "ro.vendor.product.model", "LEX720");
             property_override("ro.product.name", "ZL1_CN");
             property_set("persist.data.iwlan.enable", "false");
             // Dual SIM
@@ -125,13 +125,13 @@ void init_target_properties()
             // NFC
             property_set("persist.nfc.smartcard.config", "SIM1,SIM2,eSE1");
             // Fingerprint
-            property_override("ro.build.description", "le_zl1-user 6.0.1 WEXNAOP5802101261S eng.letv.20170126.120318 release-keys");
-            property_override("ro.build.fingerprint", "LeEco/ZL1_NA/le_zl1:6.0.1/WEXNAOP5802101261S/letv01261206:user/release-keys");
+            property_override_dual("ro.build.description", "ro.vendor.build.description", "le_zl1-user 6.0.1 WEXNAOP5802101261S eng.letv.20170126.120318 release-keys");
+            property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "LeEco/ZL1_NA/le_zl1:6.0.1/WEXNAOP5802101261S/letv01261206:user/release-keys");
             unknownDevice = 0;
         }
         else if (!strncmp(device.c_str(), "le_x2_na_oversea", 16)) {
             // This is LEX829
-            property_override("ro.product.model", "LEX829");
+            property_override_dual("ro.product.model", "ro.vendor.product.model", "LEX829");
             // Dual SIM
             property_set("persist.radio.multisim.config", "dsds");
             // NFC
@@ -140,7 +140,7 @@ void init_target_properties()
         }
         else if (!strncmp(device.c_str(), "le_x2", 5)) {
             // This is LEX820
-            property_override("ro.product.model", "LEX820");
+            property_override_dual("ro.product.model", "ro.vendor.product.model", "LEX820");
             // Dual SIM
             property_set("persist.radio.multisim.config", "dsds");
             // NFC
