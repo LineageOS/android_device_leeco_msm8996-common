@@ -34,7 +34,6 @@ LOCAL_COPY_HEADERS += ../common/cam_types.h
 LOCAL_C_INCLUDES := \
     $(LOCAL_PATH)/inc \
     $(LOCAL_PATH)/../common \
-    hardware/libhardware/include/hardware \
     $(call project-path-for,qcom-media)/mm-core/inc \
     system/media/camera/include \
 
@@ -51,8 +50,9 @@ LOCAL_SRC_FILES := $(MM_CAM_FILES)
 
 LOCAL_MODULE           := libmmcamera_interface
 
-LOCAL_SHARED_LIBRARIES := libdl libcutils liblog libutils
+LOCAL_SHARED_LIBRARIES := libdl libcutils liblog
 LOCAL_HEADER_LIBRARIES := libsystem_headers libhardware_headers
+LOCAL_HEADER_LIBRARIES += media_plugin_headers
 LOCAL_HEADER_LIBRARIES += generated_kernel_headers
 LOCAL_MODULE_TAGS := optional
 LOCAL_VENDOR_MODULE := true
