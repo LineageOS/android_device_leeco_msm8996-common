@@ -63,7 +63,7 @@ on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
 
-    mount_all fstab.qcom --early
+    mount_all fstab.qcom
 
     # Restorecon
     restorecon_recursive /persist
@@ -81,16 +81,6 @@ on late-fs
     write /sys/block/sda/queue/iosched/slice_idle 0
     write /sys/block/sda/queue/read_ahead_kb 2048
     write /sys/block/sda/queue/nr_requests 256
-
-    # Start services for bootanim
-    start surfaceflinger
-    start bootanim
-    start hwcomposer-2-1
-    start configstore-hal-1-0
-    start gralloc-2-0
-
-    # Mount RW partitions which need run fsck
-    mount_all fstab.qcom --late
 
 on post-fs
     write /dev/ipa 1
