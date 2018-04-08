@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "45539d5b_4df81980",
+        "filename": "msm8996.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-04-08T12:18:50Z",
+      "side": 1,
+      "message": "These tools are shipped globally.",
+      "range": {
+        "startLine": 209,
+        "startChar": 0,
+        "endLine": 212,
+        "endChar": 13
+      },
+      "revId": "bc3183639ffcd643c91e9e7189ea66d8cfbc8ec8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
