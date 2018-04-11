@@ -129,6 +129,15 @@ void init_target_properties()
             property_set("persist.nfc.smartcard.config", "SIM1,SIM2,eSE1");
             unknownDevice = 0;
         }
+        else if (!strncmp(device.c_str(), "le_x2_india", 11)) {
+            // This is LEX821
+            property_override_dual("ro.product.model", "ro.vendor.product.model", "LEX821");
+            // Dual SIM
+            property_set("persist.radio.multisim.config", "dsds");
+            // NFC
+            property_set("persist.nfc.smartcard.config", "SIM1,SIM2,eSE1");
+            unknownDevice = 0;
+        }
         else if (!strncmp(device.c_str(), "le_x2", 5)) {
             // This is LEX820
             property_override_dual("ro.product.model", "ro.vendor.product.model", "LEX820");
