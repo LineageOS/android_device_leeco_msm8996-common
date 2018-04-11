@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ad861434_537e89f0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 18394
+      },
+      "writtenOn": "2018-04-11T01:40:15Z",
+      "side": 1,
+      "message": "msm8996",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 3
+      },
+      "revId": "cfcb50e2b28114106f07aa751063eb4282ae76ff",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
