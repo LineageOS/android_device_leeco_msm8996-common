@@ -82,6 +82,16 @@ on late-fs
     write /sys/block/sda/queue/read_ahead_kb 2048
     write /sys/block/sda/queue/nr_requests 256
 
+    # Start services for bootanim
+    start surfaceflinger
+    start bootanim
+    start configstore-hal-1-0
+    start gralloc-2-0
+
+    # Hack to give sf a little bit time to come up
+    wait /for/surfaceflinger 2
+    start hwcomposer-2-1
+
 on post-fs
     write /dev/ipa 1
 
