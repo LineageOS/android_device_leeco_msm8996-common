@@ -107,8 +107,6 @@ void init_target_properties()
             // Single SIM
             property_set("persist.radio.multisim.config", "NA");
             property_set("ro.telephony.default_network", "10");
-            // NFC
-            property_set("persist.nfc.smartcard.config", "SIM1,eSE1");
             unknownDevice = 0;
         }
         else if (!strncmp(device.c_str(), "le_zl1", 6)) {
@@ -119,8 +117,6 @@ void init_target_properties()
             // Dual SIM
             property_set("persist.radio.multisim.config", "dsds");
             property_set("ro.telephony.default_network", "10,10");
-            // NFC
-            property_set("persist.nfc.smartcard.config", "SIM1,SIM2,eSE1");
             unknownDevice = 0;
         }
         else if (!strncmp(device.c_str(), "le_x2_na_oversea", 16)) {
