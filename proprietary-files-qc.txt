@@ -275,7 +275,6 @@ vendor/lib/libllvm-qgl.so|1d3c6e398505324d8fac9997c34e0a36c8ae5c18
 vendor/lib/libmm-disp-apis.so|111288b23bd2e68b4e01eb9b93959096ca5bbfcc
 vendor/lib/libmm-qdcm.so|0ca97b59682e297256d20116acc750472aeb00fd
 vendor/lib/libOpenCL.so|5dc66f1d3008e79c1a1b9483399423dbe737a773
-vendor/lib/libqseed3.so|9f93d730b8d2c44a9864aea18bca4f5eb1a11fe5
 vendor/lib/librs_adreno_sha1.so|14a760b6d06e3f6b8911b8f0c034ec91cce8a954
 vendor/lib/librs_adreno.so|ba45fb2ac5ea9f881eb54fda685d19752859893e
 vendor/lib/libRSDriver_adreno.so|2136ecfc36098b3d1ea6e83668c987bad92f32d4
@@ -298,7 +297,6 @@ vendor/lib64/libllvm-qgl.so|7b302d3923bcec768de104029db53038135b56dc
 vendor/lib64/libmm-disp-apis.so|5360bcf2c25fd1f97073302e2a80003479d41241
 vendor/lib64/libmm-qdcm.so|cf8b25a503a2727e7fb189e6c6c809568e769058
 vendor/lib64/libOpenCL.so|eae487ec35aa44b075ebbfc5b306387ca55f01bb
-vendor/lib64/libqseed3.so|e06822d342c84d6c5412325ad316c3578b04d793
 vendor/lib64/librs_adreno_sha1.so|f9a039d517869d0abc61ce168cac525e354c18b1
 vendor/lib64/librs_adreno.so|25a9a431fb34c32344f1b706224b46747667e130
 vendor/lib64/libRSDriver_adreno.so|17de89c1c3b5001dc354d20613d38a027ea8c851
@@ -480,14 +478,18 @@ lib64/libparam.so
 
 # Radio - MBN
 etc/firmware/mbn_ota/mcfg_sw_NoCDMA/mbn_ota.txt
+etc/firmware/mbn_ota/mcfg_sw_NoCDMA/mcfg_sw_Airtel-Commercial.mbn
 etc/firmware/mbn_ota/mcfg_sw_NoCDMA/mcfg_sw_CMCC_Volte_OpenMkt-Commercial.mbn
 etc/firmware/mbn_ota/mcfg_sw_NoCDMA/mcfg_sw_CU_OpenMkt-Commercial.mbn
 etc/firmware/mbn_ota/mcfg_sw_NoCDMA/mcfg_sw_EE-Commercial.mbn
+etc/firmware/mbn_ota/mcfg_sw_NoCDMA/mcfg_sw_Elisa-VoLTE.mbn
+etc/firmware/mbn_ota/mcfg_sw_NoCDMA/mcfg_sw_H3G-Commercial.mbn
 etc/firmware/mbn_ota/mcfg_sw_NoCDMA/mcfg_sw_MTNL_BSNL.mbn
 etc/firmware/mbn_ota/mcfg_sw_NoCDMA/mcfg_sw_OEM_NoCDMA-Commercial.mbn
 etc/firmware/mbn_ota/mcfg_sw_NoCDMA/mcfg_sw_OEM_Test-VoLTE.mbn
 etc/firmware/mbn_ota/mcfg_sw_NoCDMA/mcfg_sw_Reliance-Commercial.mbn
 etc/firmware/mbn_ota/mcfg_sw_NoCDMA/mcfg_sw_UK-VoLTE.mbn
+etc/firmware/mbn_ota/mcfg_sw_NoCDMA/mcfg_sw_Vodafone-Commercial.mbn
 etc/firmware/mbn_ota/mcfg_sw_NoCDMA/mcfg_sw_YTL-Commercial.mbn
 etc/firmware/mbn_ota/mcfg_sw/mbn_ota.txt
 etc/firmware/mbn_ota/mcfg_sw/mcfg_sw_ATT-VoLTE.mbn
