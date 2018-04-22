@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "28242708_901d3707",
+        "filename": "rootdir/root/fstab.qcom",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 8846
+      },
+      "writtenOn": "2018-04-22T00:14:03Z",
+      "side": 1,
+      "message": "Daniel, i think that \"length\u003d-16384\" is not needed anymore. Isn\u0027t the footer, automatically been added now?",
+      "range": {
+        "startLine": 12,
+        "startChar": 188,
+        "endLine": 12,
+        "endChar": 202
+      },
+      "revId": "a5f546ed56162b93636dbc63f3e581c8fbfae2bc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
