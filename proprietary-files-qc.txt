@@ -335,9 +335,9 @@ vendor/lib64/vendor.display.color@1.0_vendor.so|25c717f3004a5932dcbb2f55d5165c01
 vendor/lib64/vendor.display.postproc@1.0_vendor.so|503ef07fcfbbfcd8db096de79dfd822c8ada5e9b
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0_vendor.so|d101774878c0374ad805d964c3d00c71b44456d9
 
-# Graphics (Vulkan)
-vendor/lib/hw/vulkan.msm8996.so
-vendor/lib64/hw/vulkan.msm8996.so
+# Graphics (Vulkan) - Gemini - Xiaomi/gemini/gemini:8.0.0/OPR1.170623.032/8.4.10
+vendor/lib/hw/vulkan.msm8996.so|687dcae6111ce0edae9651b2fa5d237b29947663
+vendor/lib64/hw/vulkan.msm8996.so|a476cf24cac16baaf1f117b8a523a19de2d369b1
 
 # Keystore
 vendor/lib/hw/keystore.msm8996.so
