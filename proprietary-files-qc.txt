@@ -255,29 +255,7 @@ vendor/lib64/libxtadapter.so
 vendor/lib64/libxtwifi_ulp_adaptor.so
 vendor/lib64/vendor.qti.gnss@1.0_vendor.so
 
-# Graphics - OnePlus5 - 8.1.0/OPM1.171019.011/03242316
-vendor/lib64/egl/eglSubDriverAndroid.so|6036f54c30caba7ba10c93f85ce23116983ce154
-vendor/lib64/egl/libEGL_adreno.so|e127450904dd1038911fc3e1cbe03983f502ad73
-vendor/lib64/egl/libGLESv1_CM_adreno.so|ff4dca5b384ad81fccbd232e7754a21947750367
-vendor/lib64/egl/libGLESv2_adreno.so|32a8f2a618fa19171bcc0a2e47a752f4ab171561
-vendor/lib64/egl/libq3dtools_adreno.so|1fb1bbfbd9218a29658abdb28c471207cb14495e
-vendor/lib64/egl/libQTapGLES.so|e2637609dc31e63b3f639eb8267533f0fad7f00b
-vendor/lib64/libadreno_utils.so|5cd6524e4b228719af454287bb53ae26fe41d4cb
-vendor/lib64/libbccQTI.so|8acdaba4dec28c82a50d0c7b682e42dd571c02fb
-vendor/lib64/libC2D2.so|dbf7b1844b86299528da2381acb1e5a356f3aac4
-vendor/lib64/libc2d30_bltlib.so|1d86c51738f863087147a95714200c8e09fd6fba
-vendor/lib64/libc2d30-a5xx.so|5a764699243a690971030de5fce60678668a5f84
-vendor/lib64/libCB.so|e7ed2c681e40f14d6e78baced45f1c3985415f1c
-vendor/lib64/libgsl.so|899d9bf299cf5ed236fa4be3dcd00952d4be52be
-vendor/lib64/libllvm-glnext.so|185ce0e28b388cdea9d6270702eafc6246442e09
-vendor/lib64/libllvm-qcom.so|70a947836dc56872705d1ac5415c3248191e2443
-vendor/lib64/libllvm-qgl.so|300073dbfd27c9f7d604bc8e30adb8a189534a5d
-vendor/lib64/libmm-disp-apis.so|0e4fbb09309ceda84c7d2b51e2be0b26a756fed6
-vendor/lib64/libmm-qdcm.so|675b7aa425bcdd015567c479fd0a88caa6211df3
-vendor/lib64/libOpenCL.so|6fe6b63bf3fc8433d5205df4c9f9de6f405303f1
-vendor/lib64/librs_adreno_sha1.so|beb41931d70dcce84a38d67495163f6fb700dc27
-vendor/lib64/librs_adreno.so|2173ed506e08ced2896aae005778df5df9b9c58c
-vendor/lib64/libRSDriver_adreno.so|22decba37bcf5323f86dedcaf229b745a3479cbb
+# Graphics - OnePlus5/t - 8.1.0/OPM1.171019.011/04110359
 vendor/lib/egl/eglSubDriverAndroid.so|564cf9604f66dab52a82c4c3b68735c5ddfb7707
 vendor/lib/egl/libEGL_adreno.so|63315317baed42d3cd962d013cc568dff55819f9
 vendor/lib/egl/libGLESv1_CM_adreno.so|e21f5a00db83e3b41f7fdab876c84dabda0370aa
@@ -287,8 +265,8 @@ vendor/lib/egl/libQTapGLES.so|ca1c22bbacef6ecf84522e705a35bac988b3f2c0
 vendor/lib/libadreno_utils.so|4162e16d925b8a61241b3335722534a788bcc2d7
 vendor/lib/libbccQTI.so|70835c516cf1e1fa255c1df64c0d9d9050b32127
 vendor/lib/libC2D2.so|6a7d6321ede3118808d5b11e9beac2c395bbd3ce
-vendor/lib/libc2d30_bltlib.so|41835ea9867d999058b49c71aec65c787c211751
 vendor/lib/libc2d30-a5xx.so|889fefb613fae5355ff872145f7d46dae89bd844
+vendor/lib/libc2d30_bltlib.so|41835ea9867d999058b49c71aec65c787c211751
 vendor/lib/libCB.so|7eb8d2d4e690a94618beec229a4e34a555de2436
 vendor/lib/libgsl.so|b9e498487a3641ee8bd93cbb9be6846b8634341d
 vendor/lib/libllvm-glnext.so|d374854e174ad1bd835c90c0b64f9c4babb2f261
@@ -300,6 +278,28 @@ vendor/lib/libOpenCL.so|b8be71d0262045143ab494fa8b22573d5f07d1d7
 vendor/lib/librs_adreno_sha1.so|5ddc6661028182ce8e0ffec8aa5a3a20514e9e3c
 vendor/lib/librs_adreno.so|8c59f8fe525e6b7b80400c945a527bb75366f348
 vendor/lib/libRSDriver_adreno.so|fbaf6914b533f9f91d580d3e01f5cebabe611eac
+vendor/lib64/egl/eglSubDriverAndroid.so|6036f54c30caba7ba10c93f85ce23116983ce154
+vendor/lib64/egl/libEGL_adreno.so|e127450904dd1038911fc3e1cbe03983f502ad73
+vendor/lib64/egl/libGLESv1_CM_adreno.so|ff4dca5b384ad81fccbd232e7754a21947750367
+vendor/lib64/egl/libGLESv2_adreno.so|32a8f2a618fa19171bcc0a2e47a752f4ab171561
+vendor/lib64/egl/libq3dtools_adreno.so|1fb1bbfbd9218a29658abdb28c471207cb14495e
+vendor/lib64/egl/libQTapGLES.so|e2637609dc31e63b3f639eb8267533f0fad7f00b
+vendor/lib64/libadreno_utils.so|5cd6524e4b228719af454287bb53ae26fe41d4cb
+vendor/lib64/libbccQTI.so|8acdaba4dec28c82a50d0c7b682e42dd571c02fb
+vendor/lib64/libC2D2.so|dbf7b1844b86299528da2381acb1e5a356f3aac4
+vendor/lib64/libc2d30-a5xx.so|5a764699243a690971030de5fce60678668a5f84
+vendor/lib64/libc2d30_bltlib.so|1d86c51738f863087147a95714200c8e09fd6fba
+vendor/lib64/libCB.so|e7ed2c681e40f14d6e78baced45f1c3985415f1c
+vendor/lib64/libgsl.so|899d9bf299cf5ed236fa4be3dcd00952d4be52be
+vendor/lib64/libllvm-glnext.so|185ce0e28b388cdea9d6270702eafc6246442e09
+vendor/lib64/libllvm-qcom.so|70a947836dc56872705d1ac5415c3248191e2443
+vendor/lib64/libllvm-qgl.so|300073dbfd27c9f7d604bc8e30adb8a189534a5d
+vendor/lib64/libmm-disp-apis.so|0e4fbb09309ceda84c7d2b51e2be0b26a756fed6
+vendor/lib64/libmm-qdcm.so|675b7aa425bcdd015567c479fd0a88caa6211df3
+vendor/lib64/libOpenCL.so|6fe6b63bf3fc8433d5205df4c9f9de6f405303f1
+vendor/lib64/librs_adreno_sha1.so|beb41931d70dcce84a38d67495163f6fb700dc27
+vendor/lib64/librs_adreno.so|2173ed506e08ced2896aae005778df5df9b9c58c
+vendor/lib64/libRSDriver_adreno.so|22decba37bcf5323f86dedcaf229b745a3479cbb
 
 # Graphics - DRM - LA.UM.6.4.r1-07400-8x98.0
 vendor/lib/libsdedrm.so|e8b2700c95c94e79412049536c84e2d0b4ce58bd
@@ -349,39 +349,31 @@ vendor/lib/vendor.qti.voiceprint@1.0.so
 vendor/lib64/hw/sound_trigger.primary.msm8996.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 
-# Media - OnePlus5 - 8.1.0/OPM1.171019.011/03242316
--vendor/lib64/libgpustats.so|30cc7594268e7e0660e1f0b511a3dd0ddae99dec
-vendor/lib64/libI420colorconvert.so|f8d2cabbac1df9aa3ce9bfe62094386a72f80da9
-vendor/lib64/libmm-color-convertor.so|995341c31d6a55d17dc65bf353951bef716820a1
-vendor/lib64/libOmxAacDec.so|3137d87681a23d7da06a72719834bd360e6e9892
-vendor/lib64/libOmxAlacDec.so|d7e5fc1b0e07a63a0339b54374e1f2651328ed66
-vendor/lib64/libOmxAlacDecSw.so|ad019a724611f9d148bba0df27958562ce619fa5
-vendor/lib64/libOmxAmrDec.so|779a9fb151e50cb6e509970284366b94b527f5b1
-vendor/lib64/libOmxAmrwbplusDec.so|bfb7c622de41831f00b87b10c773f6ebce62e6f5
-vendor/lib64/libOmxApeDec.so|4fa0af93dea4a4393b423554ed09e385b7321b0d
-vendor/lib64/libOmxApeDecSw.so|358a8de484d53e28300e83797b64907700e1e4ec
-vendor/lib64/libOmxEvrcDec.so|b45297a9470ee51928b8453c0ab3fe824d28287a
-vendor/lib64/libOmxQcelp13Dec.so|30248019c2e94d77c6615d2801222c62e5cc6c40
-vendor/lib64/libOmxVpp.so|884ff0d07697395a1160e2e4f6a659c25411d410
-vendor/lib64/libOmxWmaDec.so|34663f7c3987540d45f8aba8f36eeb71a44fb910
-vendor/lib64/libvpplibrary.so|5715881f2177807c30064c825b6f9c626fa5b14a
+# Media - OnePlus5/t - 8.1.0/OPM1.171019.011/04110359
+lib/libmmosal.so|a2035241efc72fc7ea618b2479814c4b651f813f
+lib/vendor.qti.hardware.vpp@1.1.so|8626f3eec6ea7ac005e8414740d8c3e311d3d770
+lib64/libmmosal.so|e5d60a8167f1fc6d91f414b37cde22008ecbcc7d
+lib64/vendor.qti.hardware.vpp@1.1.so|05108a0c03bb94fdf299d20c09b54bde125e2b1b
 -vendor/lib/libgpustats.so|1023bd9198953a451fa4b60dab9b59719d9605d4
 vendor/lib/libI420colorconvert.so|d59331d482b0d9feef8ddb89ea4aaf6e6a9b9de7
 vendor/lib/libmm-color-convertor.so|6e1020d67a639834ad0964d018ef341fc8462138
-vendor/lib/libOmxAacDec.so|279316bb719851175546cb46645a9ea8c031f5e2
-vendor/lib/libOmxAlacDec.so|536a704adb6516fba8186f70c07f1b5e1d058a51
-vendor/lib/libOmxAlacDecSw.so|066f3c258b72d503ae9a5bddb0901b829934313e
-vendor/lib/libOmxAmrDec.so|7cf4ef3ec8c1af3efd7af7ec1b494a5f6394e500
-vendor/lib/libOmxAmrwbplusDec.so|e5e7986a93d42b98984221086c92c6318e2227a6
-vendor/lib/libOmxApeDec.so|cc6721a9fb9d5834e8483ba3924d59683f88053d
-vendor/lib/libOmxApeDecSw.so|148ca2b13d0e74eab67fcbc7fe6ff7a2eaee435e
+vendor/lib/libOmxAacDec.so|08150c314cc65ab378d4711ba7b96e0a78b257d6
 vendor/lib/libOmxEvrcDec.so|25b0097c93e8a931750366564badbdd3d920a237
 vendor/lib/libOmxQcelp13Dec.so|fb532543f29e8bd420b002f7d6506f6addc8d6c3
 vendor/lib/libOmxVideoDSMode.so|b7f780733418841121b8494db2be6e1df2f6aed8
-vendor/lib/libOmxVpp.so|ceda95e9ed1d60378e1c34e5a19bc29f0ef4bb12
-vendor/lib/libOmxWmaDec.so|d10a2f0eb2aab408e74e88e26567bac00ce8dee1
-vendor/lib/libvpplibrary.so|1c645c9fa12ba26294591739f533229d312920d3
+vendor/lib/libOmxVpp.so|ee5bbec107ef1153f6effc92ab9da1d6d3cad541
+vendor/lib/libvpphvx.so|ec450c4fb1652f8c726217bff0e38b3262908754
+vendor/lib/libvpplibrary.so|ea2ef4097a63a24cda5718a9f010da2c3d5fd96f
 vendor/lib/libvqzip.so|8c6f03805af0818e62deb117c1d704b59b8fe605
+-vendor/lib64/libgpustats.so|30cc7594268e7e0660e1f0b511a3dd0ddae99dec
+vendor/lib64/libI420colorconvert.so|f8d2cabbac1df9aa3ce9bfe62094386a72f80da9
+vendor/lib64/libmm-color-convertor.so|995341c31d6a55d17dc65bf353951bef716820a1
+vendor/lib64/libOmxAacDec.so|67ec09ed5626da822d31f2c66ec511ee45f2fb5d
+vendor/lib64/libOmxEvrcDec.so|b45297a9470ee51928b8453c0ab3fe824d28287a
+vendor/lib64/libOmxQcelp13Dec.so|30248019c2e94d77c6615d2801222c62e5cc6c40
+vendor/lib64/libOmxVpp.so|9ff42690e08977e6f278c09e9899d38067954e52
+vendor/lib64/libvpphvx.so|400927a9ad86bdf7c12d527b49c39c99861c11b0
+vendor/lib64/libvpplibrary.so|c6bd9c7bc058fb22334cf6e7efddc5220a016fd9
 
 # Perf
 vendor/bin/energy-awareness
@@ -393,15 +385,9 @@ vendor/bin/pm-service
 vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
 
-# Postprocessing - OnePlus5 - 8.1.0/OPM1.171019.011/03242316
+# Postprocessing - OnePlus5/t - 8.1.0/OPM1.171019.011/04110359
 vendor/bin/mm-pp-dpps|0a57a5c65f22efb8223a5a50743b9f75a93e3e6b
-vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
-vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc|69d9cbc54f8ac0a0fb010f92bfa7de5981d643cf
 vendor/lib64/libdisp-aba.so|118e99fbaabf0578402ea4e3020fc36481354617
-vendor/lib64/vendor.display.color@1.0_vendor.so|25c717f3004a5932dcbb2f55d5165c010f7eac1a
-vendor/lib64/vendor.display.postproc@1.0_vendor.so|503ef07fcfbbfcd8db096de79dfd822c8ada5e9b
-vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0_vendor.so|d101774878c0374ad805d964c3d00c71b44456d9
-vendor/lib/libdisp-aba.so|fbd220c8e9cde99e46bdfc9300caa49a53d66fb2
 
 # QMI
 etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
@@ -571,11 +557,11 @@ vendor/bin/thermal-engine
 -vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 
-# Time services
--vendor/app/TimeService/TimeService.apk
-vendor/bin/time_daemon
-vendor/lib64/libtime_genoff.so
-vendor/lib64/libTimeService.so
+# Time services - OnePlus5/T - 8.1.0/OPM1.171019.011/04110359
+-vendor/app/TimeService/TimeService.apk|80724e227b40a244f56bbfb02b9793074e22b3d5
+vendor/bin/time_daemon|84c5eb3ba680a56cc740dd8d0796de8ac9f8b283
+vendor/lib/libtime_genoff.so|e0773fb8eb0342889ae74be034357f1e12077e69
+vendor/lib64/libtime_genoff.so|7683a85cae9f17cd535e8960fceda1d6831074a0
 
 # Widevine
 vendor/lib/libWVStreamControlAPI_L3.so
