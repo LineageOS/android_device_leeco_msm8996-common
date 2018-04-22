@@ -571,11 +571,11 @@ vendor/bin/thermal-engine
 -vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 
-# Time services
--vendor/app/TimeService/TimeService.apk
-vendor/bin/time_daemon
-vendor/lib64/libtime_genoff.so
-vendor/lib64/libTimeService.so
+# Time services - OnePlus5 - 8.1.0/OPM1.171019.011/03242316
+-vendor/app/TimeService/TimeService.apk|1e3ff8c76300baf948b07486eb7268e9f307da25
+vendor/bin/time_daemon|87eab8da4de4c153a3341d0b6a10795c13723b58
+vendor/lib/libtime_genoff.so|e0773fb8eb0342889ae74be034357f1e12077e69
+vendor/lib64/libtime_genoff.so|7683a85cae9f17cd535e8960fceda1d6831074a0
 
 # Widevine
 vendor/lib/libWVStreamControlAPI_L3.so
