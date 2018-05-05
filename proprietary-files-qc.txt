@@ -535,7 +535,5 @@ vendor/firmware/widevine.b06|b3edf85b2966de96911297a3b639911ffcdc3584
 vendor/firmware/widevine.mbn|5356712b2a84690c04a8826a953364204eec9ff6
 vendor/firmware/widevine.mdt|f2850975428d8e1cf4faa91398422a64ef207825
 
-# Wifi
-bin/cnss-daemon:vendor/bin/cnss-daemon
-vendor/bin/cnss_diag
-vendor/lib64/vendor.qti.hardware.wifi.supplicant@1.0_vendor.so
+# Wifi - Gemini - 8.0.0/OPR1.170623.032/8.4.19
+vendor/bin/cnss-daemon
