@@ -574,7 +574,7 @@ on boot
     write /sys/bus/msm_subsys/devices/subsys5/restart_level "related"
 
 on property:sys.boot_completed=1
-    write /dev/kmsg "Boot completed "
+    write /dev/kmsg "Boot completed"
     # end boot time fs tune
     write /sys/block/sda/queue/read_ahead_kb 512
     write /sys/block/sda/queue/nr_requests 512
@@ -802,7 +802,7 @@ on property:persist.env.fastdorm.enabled=true
 service cnd /vendor/bin/cnd
     class main
     socket cnd stream 660 root inet
-    group root
+    group root wakelock
     writepid /dev/cpuset/system-background/tasks
 
 service dpmQmiMgr /system/vendor/bin/dpmQmiMgr
@@ -947,6 +947,7 @@ service loc_launcher /vendor/bin/loc_launcher
     # loc_launcher will start as root and set its uid to gps
     class late_start
     group gps inet diag wifi
+    writepid /dev/cpuset/system-background/tasks
 
 on property:crypto.driver.load=1
     insmod /system/lib/modules/qce.ko
@@ -1015,8 +1016,9 @@ service hvdcp_opti /vendor/bin/hvdcp_opti
 
 service charger /charger
     class charger
-    group system graphics
+    group system graphics log
     seclabel u:r:charger:s0
+    writepid /dev/cpuset/system-background/tasks
 
 on charger
     start hvdcp_opti
