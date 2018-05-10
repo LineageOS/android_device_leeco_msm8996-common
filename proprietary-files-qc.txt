@@ -57,18 +57,17 @@ vendor/lib64/soundfx/libqcbassboost.so
 vendor/lib64/soundfx/libqcreverb.so
 vendor/lib64/soundfx/libqcvirt.so
 
-# Bluetooth
--lib/com.qualcomm.qti.bluetooth_audio@1.0.so
--lib64/com.qualcomm.qti.bluetooth_audio@1.0.so
+# Bluetooth - BQ Bardock - 8.1.0/OPM1.171019.019/439
+bin/dun-server
 vendor/bin/btnvtool
 vendor/bin/hci_qcomm_init
 vendor/bin/wcnss_filter
-vendor/lib/com.qualcomm.qti.bluetooth_audio@1.0_vendor.so
 vendor/lib/libbtnv.so
-vendor/lib64/com.qualcomm.qti.bluetooth_audio@1.0_vendor.so
+vendor/lib64/libbtnv.so
+
+# Bluetooth (aptX)
 vendor/lib64/libaptX_encoder.so
 vendor/lib64/libaptXHD_encoder.so
-vendor/lib64/libbtnv.so
 
 # Camera
 vendor/lib/libstlport.so
@@ -535,7 +534,8 @@ vendor/firmware/widevine.b06|b3edf85b2966de96911297a3b639911ffcdc3584
 vendor/firmware/widevine.mbn|5356712b2a84690c04a8826a953364204eec9ff6
 vendor/firmware/widevine.mdt|f2850975428d8e1cf4faa91398422a64ef207825
 
-# Wifi
-bin/cnss-daemon:vendor/bin/cnss-daemon
+# Wi-Fi - BQ Bardock - 8.1.0/OPM1.171019.019/439
+bin/sigma_dut
+vendor/bin/fstman
+vendor/bin/cnss-daemon
 vendor/bin/cnss_diag
-vendor/lib64/vendor.qti.hardware.wifi.supplicant@1.0_vendor.so
