@@ -22,6 +22,30 @@
       "revId": "bfb888239b892a56ae2e3f7bdf2d07b584f259ca",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bce7dcfc_297e4404",
+        "filename": "rootdir/root/init.qcom.power.rc",
+        "patchSetId": 5
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 18873
+      },
+      "writtenOn": "2018-05-11T18:02:50Z",
+      "side": 1,
+      "message": "If non-zero, do not apply hispeed related\nlogic if frequency evaluation is triggered by scheduler notification.\nThis includes ignoring go_hispeed_load, hispeed_freq in frequency\nselection, and ignoring above_hispeed_delay that prevents frequency\nramp up. For evaluation triggered by timer, hispeed logic is still\nalways applied",
+      "parentUuid": "91a63edd_08d55e74",
+      "range": {
+        "startLine": 57,
+        "startChar": 83,
+        "endLine": 57,
+        "endChar": 84
+      },
+      "revId": "bfb888239b892a56ae2e3f7bdf2d07b584f259ca",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
