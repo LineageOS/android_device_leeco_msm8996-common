@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ad5233f2_3a029a78",
+        "filename": "rootdir/root/init.qcom.rc",
+        "patchSetId": 4
+      },
+      "lineNbr": 590,
+      "author": {
+        "id": 523
+      },
+      "writtenOn": "2018-05-11T10:50:16Z",
+      "side": 1,
+      "message": "doesn\u0027t exist on oreo",
+      "range": {
+        "startLine": 590,
+        "startChar": 8,
+        "endLine": 590,
+        "endChar": 20
+      },
+      "revId": "a1f0cd4ae83b765d89a35473b96f98324f8f6508",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
