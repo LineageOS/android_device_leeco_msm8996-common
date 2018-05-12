@@ -49,6 +49,14 @@ on init
     # Support legacy paths
     symlink /sdcard /storage/sdcard0
 
+    # QSEE rpmb listener need symlink for bootdevice
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
+    # Start qseecomd early as we mount /system early
+    # vold needs keymaster which needs qseecomd
+    start qseecomd
+
     # Create cgroup mount point for memory
     mkdir /sys/fs/cgroup/memory/bg 0750 root system
     write /sys/fs/cgroup/memory/bg/memory.swappiness 140
@@ -57,9 +65,6 @@ on init
     chmod 0660 /sys/fs/cgroup/memory/bg/tasks
 
 on fs
-    wait /dev/block/platform/soc/${ro.boot.bootdevice}
-    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
-
     mount_all /vendor/etc/fstab.qcom
 
     # Restorecon
@@ -67,10 +72,6 @@ on fs
 
     # Start HW service manager early
     start hwservicemanager
-
-    # qseecomd needs /dev/block/bootdevice
-    # vold needs keymaster that needs qseecomd
-    start qseecomd
 
 on late-fs
     # boot time fs tune
@@ -80,10 +81,10 @@ on late-fs
     write /sys/block/sda/queue/nr_requests 256
 
 on post-fs
-    write /dev/ipa 1
-
     # Wait qseecomd started
     wait_for_prop sys.listeners.registered true
+
+    write /dev/ipa 1
 
 on post-fs-data
     # msm specific files that need to be created on /data
