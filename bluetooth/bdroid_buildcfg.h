@@ -21,7 +21,26 @@
 
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
-#define BTM_DEF_LOCAL_NAME   "LePro 3"
+
+#include <cutils/properties.h>
+#include <string.h>
+static inline const char *BtmGetDefaultName()
+{
+    char product_device[PROPERTY_VALUE_MAX];
+    property_get("ro.product.device", product_device, "");
+
+    if (strcmp(product_device, "le_zl0") == 0)
+        return "LePro 3";
+    if (strcmp(product_device, "le_zl1") == 0)
+        return "LePro 3";
+    if (strcmp(product_device, "le_x2") == 0)
+        return "Le Max 2";
+
+    // Fallback to ro.product.model
+    return "";
+}
+
+#define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
 #define BLUETOOTH_QTI_SW TRUE
 // Disables read remote device feature
 #define MAX_ACL_CONNECTIONS   16
