@@ -99,6 +99,7 @@ USE_XML_AUDIO_POLICY_CONF := 1
 TARGET_LD_SHIM_LIBS := /system/vendor/lib/libmmcamera_ppeiscore.so|libshims_camera.so:/system/bin/mm-qcamera-daemon|libshims_qcamera-daemon.so
 
 # Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(PLATFORM_PATH)/bluetooth
 BOARD_HAS_QCA_BT_ROME := true
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
