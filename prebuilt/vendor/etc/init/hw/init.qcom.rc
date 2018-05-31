@@ -867,8 +867,8 @@ service cnss-daemon /vendor/bin/cnss-daemon -n -l
     user system
     group system inet net_admin wifi
 
-on property:sys.shutdown.requested=*
-stop cnss-daemon
+on property:sys.powerctl=*
+    stop cnss-daemon
 
 service loc_launcher /vendor/bin/loc_launcher
     # loc_launcher will start as root and set its uid to gps
