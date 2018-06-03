@@ -147,4 +147,33 @@ $(BT_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(BT_FIRMWARE_SYMLINKS)
 
+###########################################################
+## Commands for copying files
+###########################################################
+
+# Define a rule to create a symlink.  For use via $(eval).
+# $(1): symlink target
+# $(2): symlink file name
+define create-symlink
+$(2):
+	@echo "Symbolic link: $2 -> $1"
+	mkdir -p $(dir $2)
+	rm -rf $2
+	ln -sf $1 $2
+endef
+
+# -----------------------------------------------------------------
+# Define rules to create BOARD_SYSTEM_EXTRA_SYMLINKS defined by
+# the product. Very similar in role to the ramdisk board-defined
+# symlinks created in system/core/rootdir/Android.mk.
+# BOARD_SYSTEM_EXTRA_SYMLINKS is a list of <target>:<link_name>.
+ifdef BOARD_VENDOR_EXTRA_SYMLINKS
+   $(foreach pair, $(BOARD_VENDOR_EXTRA_SYMLINKS), \
+     $(eval target := $(call word-colon,1,$(pair))) \
+     $(eval link_name := $(call word-colon,2,$(pair))) \
+     $(eval full_link_name := $(call append-path,$(PRODUCT_OUT)/$(TARGET_COPY_OUT_VENDOR),$(link_name))) \
+     $(eval $(call create-symlink,$(target),$(full_link_name))) \
+     $(eval ALL_DEFAULT_INSTALLED_MODULES += $(full_link_name)))
+endif
+
 endif
