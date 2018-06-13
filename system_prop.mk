@@ -43,7 +43,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.audio.sdk.ssr=false \
     vendor.audio.dolby.ds2.enabled=false \
     vendor.audio.dolby.ds2.hardbypass=false
+    vendor.audio.flac.sw.decoder.24bit=true \
     vendor.audio_hal.period_size=192 \
+    vendor.audio.hw.aac.encoder=true \
     vendor.audio.offload.buffer.size.kb=64 \
     vendor.audio.offload.gapless.enabled=true \
     vendor.audio.offload.multiaac.enable=true \
@@ -51,10 +53,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.offload.passthrough=false \
     vendor.audio.offload.pcm.16bit.enable=true \
     vendor.audio.offload.pcm.24bit.enable=true \
+    vendor.audio.offload.pstimeout.secs=3 \
     vendor.audio.offload.track.enable=false \
     vendor.audio.parser.ip.buffer.size=262144 \
     vendor.audio.safx.pbe.enabled=true \
     vendor.audio.tunnel.encode=false \
+    vendor.audio.use.sw.alac.decoder=true \
+    vendor.audio.use.sw.ape.decoder=true \
     vendor.voice.path.for.pcm.voip=true
 
 # Bluetooth
