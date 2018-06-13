@@ -76,9 +76,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Display (Qualcomm Assertive Display)
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.qualcomm.cabl=2 \
     ro.qcom.ad=1 \
-    ro.qcom.ad.sensortype=3
+    ro.qcom.ad.sensortype=3 \
+    ro.vendor.display.cabl=2
 
 # DPM
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -98,21 +98,21 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
-   debug.egl.hw=1 \
-   debug.gralloc.enable_fb_ubwc=1 \
-   vendor.gralloc.disable_wb_ubwc=1 \
-   persist.debug.wfd.enable=1 \
-   persist.sys.wfd.nohdcp=1 \
-   debug.sf.enable_hwc_vds=1 \
-   debug.sf.hw=1 \
-   dev.pm.dyn_samplingrate=1 \
-   persist.demo.hdmirotationlock=false \
-   persist.hwc.enable_vds=1 \
-   persist.sys.wfd.virtual=0 \
-   ro.persist.qcapb=1 \
-   sdm.debug.disable_rotator_split=1 \
-   sdm.debug.disable_skip_validate=1 \
-   sdm.perf_hint_window=50
+    debug.egl.hw=1 \
+    debug.sf.enable_hwc_vds=1 \
+    debug.sf.hw=1 \
+    dev.pm.dyn_samplingrate=1 \
+    persist.debug.wfd.enable=1 \
+    persist.demo.hdmirotationlock=false \
+    persist.hwc.enable_vds=1 \
+    persist.sys.wfd.nohdcp=1 \
+    persist.sys.wfd.virtual=0 \
+    ro.persist.qcapb=1 \
+    vendor.display.disable_rotator_split=1 \
+    vendor.display.disable_skip_validate=1 \
+    vendor.display.enable_default_color_mode=1 \
+    vendor.display.perf_hint_window=50 \
+    vendor.gralloc.disable_wb_ubwc=1 \
 
 # Graphics (OpenGLES)
 PRODUCT_PROPERTY_OVERRIDES += \
