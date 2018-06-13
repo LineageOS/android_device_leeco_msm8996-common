@@ -5,7 +5,6 @@
 # system props for the MM modules
 PRODUCT_PROPERTY_OVERRIDES += \
     audio.deep_buffer.media=true \
-    media.aac_51_output_enabled=true \
     media.stagefright.enable-player=true \
     media.stagefright.enable-http=true \
     media.stagefright.enable-aac=true \
@@ -31,32 +30,32 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.audio.ssr.3mic=false \
     af.fast_track_multiplier=1 \
     audio.heap.size.multiplier=7 \
-    ro.vendor.audio.sdk.ssr=false \
-    vendor.audio_hal.period_size=192 \
-    vendor.audio.tunnel.encode=false \
-    vendor.voice.path.for.pcm.voip=true \
-    ro.vendor.audio.sdk.fluencetype=fluence \
-    persist.vendor.audio.fluence.voicecall=true \
-    persist.vendor.audio.fluence.voicerec=false \
+    audio.offload.min.duration.secs=30 \
+    audio.offload.video=true \
+    persist.audio.ssr.3mic=false \
     persist.vendor.audio.fluence.audiorec=false \
     persist.vendor.audio.fluence.speaker=true \
+    persist.vendor.audio.fluence.voicecall=true \
+    persist.vendor.audio.fluence.voicerec=false \
+    ro.vendor.audio.sdk.fluencetype=fluence \
+    ro.vendor.audio.sdk.ssr=false \
+    vendor.audio.dolby.ds2.enabled=false \
+    vendor.audio.dolby.ds2.hardbypass=false
+    vendor.audio_hal.period_size=192 \
     vendor.audio.offload.buffer.size.kb=64 \
-    vendor.audio.offload.video=true \
+    vendor.audio.offload.gapless.enabled=true \
+    vendor.audio.offload.multiaac.enable=true \
+    vendor.audio.offload.multiple.enabled=true \
+    vendor.audio.offload.passthrough=false \
     vendor.audio.offload.pcm.16bit.enable=true \
     vendor.audio.offload.pcm.24bit.enable=true \
     vendor.audio.offload.track.enable=false \
-    vendor.audio.offload.multiaac.enable=true \
-    vendor.audio.offload.gapless.enabled=true \
-    vendor.audio.offload.passthrough=false \
-    vendor.audio.offload.multiple.enabled=true \
-    vendor.audio.offload.min.duration.secs=30 \
-    vendor.audio.safx.pbe.enabled=true \
     vendor.audio.parser.ip.buffer.size=262144 \
-    vendor.audio.dolby.ds2.enabled=false \
-    vendor.audio.dolby.ds2.hardbypass=false
+    vendor.audio.safx.pbe.enabled=true \
+    vendor.audio.tunnel.encode=false \
+    vendor.voice.path.for.pcm.voip=true
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
