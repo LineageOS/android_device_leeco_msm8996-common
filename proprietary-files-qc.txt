@@ -73,7 +73,7 @@ vendor/lib64/libaptXHD_encoder.so
 vendor/lib/libstlport.so
 vendor/lib64/libstlport.so
 
-# CNE - Gemini - 8.0.0/OPR1.170623.032/8.4.19
+# CNE - Gemini 8.0.0/OPR1.170623.032/8.5.24
 etc/cne/SwimConfig.xml
 etc/permissions/cneapiclient.xml
 etc/permissions/com.quicinc.cne.xml
@@ -191,7 +191,7 @@ vendor/lib/vendor.qti.hardware.qteeconnector@1.0_vendor.so
 vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0_vendor.so
 
-# IMS - Gemini - 8.0.0/OPR1.170623.032/8.4.19
+# IMS - Gemini 8.0.0/OPR1.170623.032/8.5.24
 -app/ims/ims.apk
 -app/uceShimService/uceShimService.apk
 etc/permissions/com.qualcomm.qti.imscmservice.xml
@@ -232,7 +232,7 @@ vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
 vendor/lib/hw/gatekeeper.msm8996.so
 vendor/lib64/hw/gatekeeper.msm8996.so
 
-# GPS - Gemini - 8.0.0/OPR1.170623.032/8.4.19
+# GPS - Gemini 8.0.0/OPR1.170623.032/8.5.24
 etc/permissions/com.qti.location.sdk.xml
 etc/permissions/com.qualcomm.location.xml
 etc/permissions/izat.xt.srv.xml
@@ -355,9 +355,9 @@ vendor/lib64/vendor.display.color@1.0_vendor.so|25c717f3004a5932dcbb2f55d5165c01
 vendor/lib64/vendor.display.postproc@1.0_vendor.so|503ef07fcfbbfcd8db096de79dfd822c8ada5e9b
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0_vendor.so|d101774878c0374ad805d964c3d00c71b44456d9
 
-# Graphics (Vulkan) - Gemini - Xiaomi/gemini/gemini:8.0.0/OPR1.170623.032/8.4.10
-vendor/lib/hw/vulkan.msm8996.so|687dcae6111ce0edae9651b2fa5d237b29947663
-vendor/lib64/hw/vulkan.msm8996.so|a476cf24cac16baaf1f117b8a523a19de2d369b1
+# Graphics (Vulkan) - Gemini 8.0.0/OPR1.170623.032/8.5.24
+vendor/lib/hw/vulkan.msm8996.so
+vendor/lib64/hw/vulkan.msm8996.so
 
 # Keystore
 vendor/lib/hw/keystore.msm8996.so
@@ -391,10 +391,6 @@ vendor/lib/libOmxWmaDec.so|44998108a6a1bc2d089a4e3d0de88cb210f2b7cc
 vendor/lib/libvpplibrary.so|da05a8f39c02b3b46d60ccec4ca76a80c64e3f8b
 vendor/lib/libvqzip.so|70451e720fb3d5697cf440432c430e3e39e0ad71
 
-# Perf
-vendor/bin/energy-awareness
-vendor/bin/msm_irqbalance
-
 # Peripheral manager
 vendor/bin/pm-proxy
 vendor/bin/pm-service
@@ -417,7 +413,7 @@ vendor/lib64/libdisp-aba.so|b48a88c875c910a9a5e8d75306cbf3b01e032d91
 vendor/lib64/vendor.display.postproc@1.0_vendor.so|503ef07fcfbbfcd8db096de79dfd822c8ada5e9b
 vendor/lib/libdisp-aba.so|a047b2562df0efcaf9821d1c27bd39e7f8339212
 
-# QMI - Gemini - 8.0.0/OPR1.170623.032/8.4.19
+# QMI - Gemini 8.0.0/OPR1.170623.032/8.5.24
 etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
 etc/permissions/qti_permissions.xml
 vendor/bin/irsc_util
@@ -457,7 +453,7 @@ vendor/lib/libsmemlog.so
 # QuickCharge
 vendor/bin/hvdcp_opti
 
-# RIL - Gemini - 8.0.0/OPR1.170623.032/8.4.19
+# RIL - Gemini 8.0.0/OPR1.170623.032/8.5.24
 -app/QtiTelephonyService/QtiTelephonyService.apk
 etc/permissions/qcrilhook.xml
 etc/permissions/telephonyservice.xml
@@ -513,18 +509,17 @@ vendor/lib64/sensors.hal.tof.so|eb19aa40617e50bd1efcc88cee9f5b0af34e7f11
 vendor/lib64/sensors.oem.so|08c12372d3331ee43cc0a3f48b88f21e45324f29
 vendor/lib64/sensors.ssc.so
 
-# Thermal
-vendor/etc/thermal-engine.conf
+# Thermal - Gemini 8.0.0/OPR1.170623.032/8.5.24
 vendor/bin/thermal-engine
--vendor/lib/libthermalclient.so
 -vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
+-vendor/lib/libthermalclient.so
 
-# Time services - OnePlus5/T - 8.1.0/OPM1.171019.011/04110359
--vendor/app/TimeService/TimeService.apk|80724e227b40a244f56bbfb02b9793074e22b3d5
-vendor/bin/time_daemon|84c5eb3ba680a56cc740dd8d0796de8ac9f8b283
-vendor/lib/libtime_genoff.so|e0773fb8eb0342889ae74be034357f1e12077e69
-vendor/lib64/libtime_genoff.so|7683a85cae9f17cd535e8960fceda1d6831074a0
+# Time services - Gemini 8.0.0/OPR1.170623.032/8.5.24
+-vendor/app/TimeService/TimeService.apk
+vendor/bin/time_daemon
+vendor/lib64/libtime_genoff.so
+vendor/lib/libtime_genoff.so
 
 # Widevine
 vendor/lib/libWVStreamControlAPI_L3.so
