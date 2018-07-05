@@ -437,8 +437,8 @@ vendor/lib/libperipheral_client.so|7e54351ec6cae4a302330671e247a2487e36ff15
 vendor/lib64/libperipheral_client.so|1a8db83ca35bb8f9e973cd6d988456d5e6696888
 
 # QMI - Gemini 8.0.0/OPR1.170623.032/8.5.24
-etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
-etc/permissions/qti_permissions.xml
+etc/permissions/qti_libpermissions.xml:vendor/etc/permissions/qti_libpermissions.xml
+etc/permissions/qti_permissions.xml:vendor/etc/permissions/qti_permissions.xml
 vendor/bin/irsc_util
 vendor/lib64/libdiag.so
 vendor/lib64/libdsi_netctrl.so

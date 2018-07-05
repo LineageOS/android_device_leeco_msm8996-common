@@ -7,7 +7,7 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-# http://www.apache.org/licenses/LICENSE-2.0
+#      http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -66,5 +66,13 @@ extract "$MY_DIR"/proprietary-files-qc.txt "$SRC" "$SECTION"
 setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" false "$CLEAN_VENDOR"
 
 extract "$MY_DIR"/../$DEVICE/proprietary-files.txt "$SRC" "$SECTION"
+
+COMMON_BLOB_ROOT="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE_COMMON"/proprietary
+
+#
+# Correct android.hidl.manager@1.0-java jar name
+#
+sed -i "s|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-java|g" \
+    "$COMMON_BLOB_ROOT"/vendor/etc/permissions/qti_libpermissions.xml
 
 "$MY_DIR"/setup-makefiles.sh
