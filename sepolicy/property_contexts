@@ -1,2 +1,5 @@
 persist.sys.diag.max.size          u:object_r:debug_prop:s0
+
+# radio
 oem.device.imeicache               u:object_r:qcom_ims_prop:s0
+sys.fake_bs_flag0                  u:object_r:system_radio_prop:s0
