@@ -2,3 +2,5 @@ allow init servicemanager:binder { call };
 
 allow init touchpanel_file:lnk_file { setattr };
 allow init proc:lnk_file { setattr };
+
+allow init ipa_dev:chr_file { rw_file_perms };
