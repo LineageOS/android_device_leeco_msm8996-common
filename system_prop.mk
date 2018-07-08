@@ -66,6 +66,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     bt.max.hfpclient.connections=1 \
     qcom.bluetooth.soc=rome \
+    ro.bluetooth.ftm_enabled=true \
     ro.bluetooth.wipower=true \
     ro.bluetooth.emb_wp_mode=true
 
