@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "408adabf_3c2c5199",
+        "filename": "msm8996.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 363,
+      "author": {
+        "id": 12537
+      },
+      "writtenOn": "2018-07-11T12:56:39Z",
+      "side": 1,
+      "message": "This needs to overwrite the stock thermal engine file though like in https://android.googlesource.com/device/google/marlin/+/android-8.1.0_r33/device-common.mk#410",
+      "revId": "ac7aab9ca0b0de46ffbaef954c1051cf81ded1e5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
