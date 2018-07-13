@@ -78,23 +78,6 @@ start_vm_bms()
 	fi
 }
 
-start_msm_irqbalance_8939()
-{
-	if [ -f /system/bin/msm_irqbalance ]; then
-		case "$platformid" in
-		    "239" | "294" | "295")
-			start msm_irqbalance;;
-		esac
-	fi
-}
-
-start_msm_irqbalance()
-{
-	if [ -f /system/bin/msm_irqbalance ]; then
-		start msm_irqbalance
-	fi
-}
-
 start_copying_prebuilt_qcril_db()
 {
     if [ -f /system/vendor/qcril.db -a ! -f /data/misc/radio/qcril.db ]; then
