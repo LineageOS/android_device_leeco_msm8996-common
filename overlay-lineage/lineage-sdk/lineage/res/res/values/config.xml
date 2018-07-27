@@ -22,10 +22,6 @@
     <integer name="config_proximityCheckTimeout">100</integer>
     <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool>
 
-    <!-- Disable this by default, since it's actually using the QC FOSS algorithm for
-         OLED displays and can cause a bit of discoloration. Reinvestigate after tuning -->
-    <bool name="config_defaultCABC">false</bool>
-
     <!-- Use default display mode -->
     <integer name="config_defaultLiveDisplayMode">0</integer>
 

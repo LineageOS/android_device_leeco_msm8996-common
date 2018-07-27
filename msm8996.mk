@@ -174,9 +174,6 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.1 \
     vendor.display.config@1.1_vendor
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/FOSSConfig.xml:system/etc/FOSSConfig.xml
-
 # Doze mode
 PRODUCT_PACKAGES += \
     Doze
