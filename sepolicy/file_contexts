@@ -17,13 +17,12 @@
 /sys/devices/soc/75ba000.i2c/i2c-12/12-0020/input/input2/0dbutton        u:object_r:touchpanel_file:s0
 
 # legacy
-/system/bin/ATFWD-daemon                                                 u:object_r:atfwd_exec:s0
-/system/bin/btnvtool                                                     u:object_r:btnvtool_exec:s0
-/system/bin/energy-awareness                                             u:object_r:energyawareness_exec:s0
+/vendor/bin/ATFWD-daemon                                                 u:object_r:atfwd_exec:s0
+/vendor/bin/energy-awareness                                            u:object_r:energyawareness_exec:s0
 /system/bin/mm-qcamera-daemon                                            u:object_r:mm-qcamerad_exec:s0
 /system/bin/ppd                                                          u:object_r:ppd_exec:s0
 /system/bin/ssr_setup                                                    u:object_r:ssr_setup_exec:s0
 /system/bin/tloc_daemon                                                  u:object_r:tlocd_exec:s0
-/system/bin/wcnss_filter                                                 u:object_r:wcnss_filter_exec:s0
+/vendor/bin/wcnss_filter                                                 u:object_r:wcnss_filter_exec:s0
 
 /data/misc/tloc(/.*)?                                                    u:object_r:tlocd_data_file:s0
