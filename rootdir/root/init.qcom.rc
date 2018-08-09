@@ -965,7 +965,7 @@ service charger_monitor /system/bin/charger_monitor
     group root
     disabled
 
-service qcom-sh /system/bin/sh /init.qcom.sh
+service qcom-sh /init.qcom.sh
     class late_start
     user root
     oneshot
