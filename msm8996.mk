@@ -63,6 +63,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
+
+# Vendor properties
+-include $(LOCAL_PATH)/vendor_prop.mk
+
 # Keylayouts
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/atmel_ts_key.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/atmel_ts_key.kl \
