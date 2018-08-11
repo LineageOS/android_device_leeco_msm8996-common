@@ -354,6 +354,9 @@ PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic \
     com.android.future.usb.accessory
 
+# Vendor properties
+-include $(LOCAL_PATH)/vendor_prop.mk
+
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
