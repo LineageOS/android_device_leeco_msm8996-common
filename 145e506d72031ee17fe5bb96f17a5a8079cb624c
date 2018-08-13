@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3ae02d6b_3c76dfb0",
+        "filename": "sepolicy/hal_drm_widevine.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 523
+      },
+      "writtenOn": "2018-08-13T17:43:00Z",
+      "side": 1,
+      "message": "widevine \u003c\u003e bluetooth ?",
+      "range": {
+        "startLine": 1,
+        "startChar": 6,
+        "endLine": 1,
+        "endChar": 27
+      },
+      "revId": "145e506d72031ee17fe5bb96f17a5a8079cb624c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
