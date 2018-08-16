@@ -70,10 +70,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.bluetooth.wipower=true \
     ro.bluetooth.emb_wp_mode=true
 
-# System property for cabl
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.qualcomm.cabl=2
-
 # Property for vendor specific library
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.gt_library=libqti-gt.so \
@@ -93,102 +89,79 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Data modules
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.use_data_netmgrd=true \
+    persist.data.iwlan.enable=true \
+    persist.data.mode=concurrent \
     persist.data.netmgrd.qos.enable=true \
-    persist.data.mode=concurrent
+    ro.use_data_netmgrd=true
 
-# GPS
+# Display (Qualcomm Assertive Display)
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.gps.qc_nlp_in_use=0 \
-    ro.gps.agps_provider=1
+    ro.qualcomm.cabl=2 \
+    ro.qcom.ad=1 \
+    ro.qcom.ad.sensortype=3
+
+# DRM
+PRODUCT_PROPERTY_OVERRIDES += \
+    drm.service.enabled=true
+
+# Fastcharge
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.le_fast_chrg_enable=1
+
+# FRP
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.frp.pst="/dev/block/bootdevice/by-name/frp"
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.hw=1 \
     debug.egl.hw=1 \
     debug.gralloc.enable_fb_ubwc=1 \
+    debug.sf.hw=1 \
     dev.pm.dyn_samplingrate=1 \
     persist.demo.hdmirotationlock=false \
-    persist.debug.wfd.enable=1 \
-    persist.sys.wfd.virtual=0 \
-    sdm.perf_hint_window=50 \
     persist.hwc.enable_vds=1 \
+    persist.sys.wfd.virtual=0 \
+    ro.persist.qcapb=1 \
     sdm.debug.disable_rotator_split=1 \
-    ro.persist.qcapb=1
+    sdm.perf_hint_window=50 \
 
 # OpenGLES
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196610
 
-#enable Apical AD
+# IMS
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.qcom.ad=1 \
-    ro.qcom.ad.sensortype=3
-
-# Perf
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.am.reschedule_service=true \
-    ro.vendor.extension_library=libqti-perfd-client.so \
-    ro.min_freq_0=307200 \
-    ro.min_freq_4=307200 \
-    ro.sys.fw.bg_apps_limit=60
-
-# QCOM
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.frp.pst="/dev/block/bootdevice/by-name/frp" \
-    drm.service.enabled=true
-
-# RIL
-PRODUCT_PROPERTY_OVERRIDES += \
-    rild.libpath="/vendor/lib64/libril-qc-qmi-1.so" \
-    persist.rild.nitz_plmn="" \
-    persist.rild.nitz_long_ons_0="" \
-    persist.rild.nitz_long_ons_1="" \
-    persist.rild.nitz_long_ons_2="" \
-    persist.rild.nitz_long_ons_3="" \
-    persist.rild.nitz_short_ons_0="" \
-    persist.rild.nitz_short_ons_1="" \
-    persist.rild.nitz_short_ons_2="" \
-    persist.rild.nitz_short_ons_3="" \
-    ril.subscription.types=NV,RUIM \
-    DEVICE_PROVISIONED=1 \
-    persist.volte_enalbed_by_hw=1 \
-    persist.radio.data_ltd_sys_ind=1 \
-    ro.telephony.default_network=10,10 \
-    telephony.lteOnCdmaDevice=1 \
-    ro.telephony.call_ring.multiple=false \
-    persist.radio.apm_sim_not_pwdn=1 \
-    persist.radio.custom_ecc=1 \
-    persist.radio.sib16_support=1 \
-    persist.data.qmi.adb_logmask=0 \
-    persist.net.doxlat=true \
-    persist.oem.dump=0 \
-    persist.radio.hw_mbn_update=0 \
-    persist.radio.sw_mbn_update=0 \
-    persist.radio.start_ota_daemon=0 \
-    persist.data.iwlan.enable=true \
-    persist.radio.VT_ENABLE=1 \
-    persist.radio.REVERSE_QMI=0 \
-    persist.radio.ROTATION_ENABLE=1 \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1
 
-#default SAR mode 0:off/1:on
+# Perf
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.sar_mode=1
+    ro.vendor.extension_library=libqti-perfd-client.so \
+    ro.vendor.qti.sys.fw.bg_apps_limit=60
 
+# RIL
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.calls.on.ims=true \
-    persist.radio.jbims=true \
-    persist.rcs.supported=1 \
-    persist.radio.domain.ps=false \
+    DEVICE_PROVISIONED=1 \
+    rild.libpath="/vendor/lib64/libril-qc-qmi-1.so" \
+    ril.subscription.types=NV,RUIM \
+    ro.telephony.call_ring.multiple=false \
+    ro.telephony.default_network=10,10 \
+    persist.data.qmi.adb_logmask=0 \
+    persist.net.doxlat=true \
+    persist.radio.apm_sim_not_pwdn=1 \
+    persist.radio.data_ltd_sys_ind=1 \
     persist.radio.csvt.enabled=false \
-    persist.vendor.radio.cs_srv_type=0 \
+    persist.radio.REVERSE_QMI=0 \
+    persist.radio.ROTATION_ENABLE=1 \
+    persist.rcs.supported=1 \
+    persist.vendor.radio.custom_ecc=1 \
+    persist.vendor.radio.facnotsup_as_nonw=1 \
+    persist.vendor.radio.force_on_dc=true \
+    persist.vendor.radio.ignore_dom_time=5 \
     persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.mt_sms_ack=20 \
-    persist.vendor.radio.ignore_dom_time=5 \
-    persist.vendor.radio.force_on_dc=true \
-    persist.vendor.radio.facnotsup_as_nonw=1
+    persist.vendor.radio.sib16_support=1 \
+    telephony.lteOnCdmaDevice=1 \
 
 # RmNet Data
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -214,11 +187,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.ssr.restart_level=ALL_ENABLE
 
-# Fastcharge
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.le_fast_chrg_enable=1
-
 # Volte
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.VT_HYBRID_ENABLE=1 \
+    persist.radio.VT_ENABLE=1 \
     persist.dbg.wfc_avail_ovr=1
