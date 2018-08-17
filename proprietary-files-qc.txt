@@ -148,45 +148,66 @@ vendor/lib/libdpmqmihal.so
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0_vendor.so
 vendor/lib64/libdpmqmihal.so
 
-# DRM
-vendor/bin/qseecomd
-vendor/lib/libcppf.so
-vendor/lib/libQSEEComAPI.so
-vendor/lib/libtzdrmgenprov.so
-vendor/lib64/lib-sec-disp.so
-vendor/lib64/libdrmfs.so
-vendor/lib64/libdrmtime.so
-vendor/lib64/libGPreqcancel_svc.so
-vendor/lib64/libGPreqcancel.so
-vendor/lib64/libqisl.so
-vendor/lib64/libQSEEComAPI.so
-vendor/lib64/librpmb.so
-vendor/lib64/libsecureui_svcsock.so
-vendor/lib64/libsecureui.so
-vendor/lib64/libSecureUILib.so
-vendor/lib64/libssd.so
-vendor/lib64/libStDrvInt.so
-vendor/lib64/libtzdrmgenprov.so
+# DRM - from OnePlus 5/t - 8.1.0/OPM1.171019.011/1807181208
+lib64/libGPTEE_system.so|69197769104a433a895cc6c742ec46d7bd4d6dbb
+lib/libGPTEE_system.so|4d5c7999a511729715a3b4e8a3c205b21dbb7ef1
+vendor/bin/qseecomd|760e9f3bd6d425cc9fc709745ddf3eb46a4ee6a3
+vendor/lib64/libGPTEE_vendor.so|bd57e244bb19edfb3dc2d858cc91008fbd48523a
+vendor/lib64/libGPreqcancel.so|9d128be83f279c4432e037886bba4a0b9040dd35
+vendor/lib64/libGPreqcancel_svc.so|b1f2ae2f0d0f3de4a7d3f992651a1212ee0c993c
+vendor/lib64/libQSEEComAPI.so|14ad39cf135fa2c64e67c155bd525931c527d232
+vendor/lib64/libSecureUILib.so|09066ec50a920606ae0e3307d4317d9f0762a280
+vendor/lib64/libStDrvInt.so|8b47ca63db3ae80a416451c14a03b68aef4ba4c6
+vendor/lib64/libdrmfs.so|acd6e59c6b5752d36b8b68a48d5127322f71cac9
+vendor/lib64/libdrmtime.so|9e7ccd3999c5c5407aeb7f92f4e5610e6da70817
+vendor/lib64/libqisl.so|4d99dd6d49b85aebc7d55b18f8783b3196973114
+vendor/lib64/librpmb.so|794e42357f161a917dcbc56e8acb1589fdc42706
+vendor/lib64/libsecureui.so|4c2fab3bac0596b925cac1ba4b693a73182beee5
+vendor/lib64/libsecureui_svcsock.so|861a0aa2eaa6e233084c4d691d0e0f790f892ae3
+vendor/lib64/libspl.so|bcc4eb3930bbeceb4598299f2ae6d0573ce8a75d
+vendor/lib64/libssd.so|f8b7d3b9c14052f6071821b4eabacede0b6d6ff6
+vendor/lib64/libtzdrmgenprov.so|513e5bf452dcc841216bb34501ffcabfce15e748
+vendor/lib/libGPTEE_vendor.so|e38bf1170e82911882469e30c0ad007b8b598ba2
+vendor/lib/libGPreqcancel.so|725a7e1e69a9f6f7ef2ad935679e4f2c52398eef
+vendor/lib/libGPreqcancel_svc.so|beb6babb5149f99bd9a114aa904f18c938a2b774
+vendor/lib/libQSEEComAPI.so|4dd079a981cf3b8d121ce27edce6757c4d6dff73
+vendor/lib/libSecureUILib.so|eb93ba55bbf84e06d420d8b6d6a34b03171541c2
+vendor/lib/libStDrvInt.so|5645d99300c12946d4bd98c5e184e4bcfa5a57aa
+vendor/lib/libdrmfs.so|4406068f037ab920754e690832a1ff6d70fcf5d6
+vendor/lib/libdrmtime.so|09f3388ec4a881da398567ba2e9a4510c3caa963
+vendor/lib/libqisl.so|e5f235683a6c6c660f674b4884802c757395a33f
+vendor/lib/librpmb.so|845d7d0cc5a2de00717da84a423dceb49c8161c9
+vendor/lib/libsecureui.so|9b2600b91f37c8836e2f709d14924aab7f2d6740
+vendor/lib/libsecureui_svcsock.so|8ac378c8532af382052ff4319da03909ce9993ec
+vendor/lib/libspl.so|501c6349fb217500a2735bbe548b00614e767cbb
+vendor/lib/libssd.so|2dcbbc51b0eb809de10944a8cd18bbbcda89746f
+vendor/lib/libtzdrmgenprov.so|9dce561baad589bffd038b7cb5e0e9f7598e0bfd
 
-# DRM - HDCP
-vendor/bin/hdcp1prov
-vendor/bin/hdcp2p2prov
-vendor/lib/libhdcp1prov.so
-vendor/lib/libhdcp2p2prov.so
-vendor/lib/libmm-hdcpmgr.so
-vendor/lib64/libhdcp1prov.so
-vendor/lib64/libhdcp2p2prov.so
-vendor/lib64/libmm-hdcpmgr.so
+# DRM - HDCP - from OnePlus 5/t - 8.1.0/OPM1.171019.011/1807181208
+vendor/bin/hdcp1prov|5bbd6c197f59de422f8113dc722eaaca234b217a
+vendor/bin/hdcp2p2prov|83ccc321e4bfd9052d81e9585505c621a729a19d
+vendor/lib64/libhdcp1prov.so|703163257c8291d8b3aac0c58a7234c96c57974e
+vendor/lib64/libhdcp2p2prov.so|0bd4d1f1caf79c887ef26bb63ffde6a9980fec58
+vendor/lib64/libwfdhdcpcp.so|bbdf1d451943ce67e55efc00beaa6a24adca576c
+vendor/lib64/libwfdmodulehdcpsession.so|b8d269ff426b0b8a0b5d1dd69c50d7f13747cec6
+vendor/lib/libhdcp1prov.so|bb140968b9a5474de2aff141bd6de9f2df0495fb
+vendor/lib/libhdcp2p2prov.so|382d1ebbd0ec0189aa7bf9bc39400e663bcc112a
+vendor/lib/libwfdhdcpcp.so|a3ecd01c3ca8519925e1656c411564e429804513
+vendor/lib/libwfdmodulehdcpsession.so|a675134223409580691d5df564470af655d1c9c4
 
-# DRM - Qualcomm Trusted Execution Enviornment
-lib/vendor.qti.hardware.qteeconnector@1.0.so
-lib64/vendor.qti.hardware.qteeconnector@1.0.so
-vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
-vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc
-vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
-vendor/lib/vendor.qti.hardware.qteeconnector@1.0_vendor.so
-vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.qteeconnector@1.0_vendor.so
+# DRM - Qualcomm Trusted Execution Enviornment - from OnePlus 5/t - 8.1.0/OPM1.171019.011/1807181208
+lib64/libQTEEConnector_system.so|6bc4fc401e54f30fe011df631a3b007f4d881895
+lib64/vendor.qti.hardware.qteeconnector@1.0.so|e422ba8439884ff001a8b1bdc6eeda85f04a8251
+lib/libQTEEConnector_system.so|f38794b679b3f2c1ff5335d80a90379063ab8798
+lib/vendor.qti.hardware.qteeconnector@1.0.so|ec8af6c2ca208b3931ba0a4f1fc01d52fdd224e0
+vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service|6f4420700d10fe6a5075ef90ae08b867dc1a5c89
+vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc|c966350ee67d3a7c73ca7184e3725264025d16f5
+vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|31b8be194c5d2aace067cdd6b22687dbc1f5f46a
+vendor/lib64/libQTEEConnector_vendor.so|eb34d8e292a13e1b242f318de66846ce794f0b2d
+vendor/lib64/vendor.qti.hardware.qteeconnector@1.0_vendor.so|2c1128a79b8164cb4ff705431497fa68d31e0fa3
+vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|6b892756e745b73d3f68ec660a3a0ba517689b42
+vendor/lib/libQTEEConnector_vendor.so|be869ca55f30fb7004fcd0952177e2968922f219
+vendor/lib/vendor.qti.hardware.qteeconnector@1.0_vendor.so|914748467e208e4a39a49986ce4e0d6ccbb31656
 
 # IMS - Gemini 8.0.0/OPR1.170623.032/8.5.24
 -app/ims/ims.apk
@@ -519,10 +540,18 @@ vendor/bin/time_daemon
 vendor/lib64/libtime_genoff.so
 vendor/lib/libtime_genoff.so
 
-# Widevine DRM - Marlin - 8.1.0 OPM1.171019.021 4565141
-vendor/bin/hw/android.hardware.drm@1.0-service.widevine|fd6e14710c196fdd4131afe2ce10c4a5be1b309c
+# TUI - from OnePlus 5/t - 8.1.0/OPM1.171019.011/1807181208
+lib/vendor.qti.hardware.tui_comm@1.0.so|ddf6d09cf52a774a6b0e68b254346ddc19d12ee3
+lib64/vendor.qti.hardware.tui_comm@1.0.so|25a83c067e5e62dd229ed2656d48a49dc210d0cf
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|86da521db0433035667beb1ab50c0448e9e6d4e2
+vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so|41bbbca4e2c109410093ed5335005237b392b44d
+vendor/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so|2edd50b2b4143baece26d572fecf9dc080c1a8fd
+
+# Widevine DRM - from OnePlus 5/t - 8.1.0/OPM1.171019.011/1807181208
+vendor/bin/hw/android.hardware.drm@1.0-service.widevine|f54f2a4fb4aaaa0fbabac1096fdf0957b7f93f1b
 vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc|51a3168a0dbc064d78ee11ca83614c0cd2e6daa5
-vendor/lib/libwvhidl.so|f7288f7a7ed6765bd1d80d639a0aeb0c31eda795
+vendor/lib/libwvhidl.so|ba7317da489980b8ef653f3dfd4107c3073edd0f
 
 # Widevine firmware - zl1 - 5.8.020s
 vendor/firmware/widevine.b00|e9613fee8d03b152dd66f667feb493775da995ca
