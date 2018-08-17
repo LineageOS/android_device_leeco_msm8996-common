@@ -834,10 +834,10 @@ service hci_filter_root /vendor/bin/wcnss_filter
     seclabel u:r:wcnss_filter:s0
     disabled
 
-service ftmd /system/bin/ftmdaemon
-    class late_start
+service ftmd /system/bin/ftmdaemon -n
+    class main
     user root
-    group bluetooth net_bt_admin misc oem_2901 net_bt
+    group bluetooth net_bt_admin misc net_bt_stack oem_2901 net_bt
     disabled
     oneshot
 
