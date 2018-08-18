@@ -553,16 +553,5 @@ vendor/bin/hw/android.hardware.drm@1.0-service.widevine|f54f2a4fb4aaaa0fbabac109
 vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc|51a3168a0dbc064d78ee11ca83614c0cd2e6daa5
 vendor/lib/libwvhidl.so|ba7317da489980b8ef653f3dfd4107c3073edd0f
 
-# Widevine firmware - zl1 - 5.8.020s
-vendor/firmware/widevine.b00|e9613fee8d03b152dd66f667feb493775da995ca
-vendor/firmware/widevine.b01|fa1d61219139f3e8b00e3385270c8f947f13b183
-vendor/firmware/widevine.b02|e0808c16f39c6871a145669b57261546b5332d41
-vendor/firmware/widevine.b03|bfb0635f0af502f92e163bac4a59eedf7e1373d9
-vendor/firmware/widevine.b04|1e3588d293f9ac32a007d46edc9e8bcc360d897a
-vendor/firmware/widevine.b05|e33e45e86a113960ee9f5177765a2e2600022309
-vendor/firmware/widevine.b06|b3edf85b2966de96911297a3b639911ffcdc3584
-vendor/firmware/widevine.mbn|5356712b2a84690c04a8826a953364204eec9ff6
-vendor/firmware/widevine.mdt|f2850975428d8e1cf4faa91398422a64ef207825
-
 # Wi-Fi - Gemini 8.0.0/OPR1.170623.032/8.5.24
 vendor/bin/cnss-daemon
