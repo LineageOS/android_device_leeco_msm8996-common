@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5b824bbe_3a93490d",
+        "filename": "system_prop.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2018-08-19T21:53:53Z",
+      "side": 1,
+      "message": "hmm, for this one should it be moved to init since LEX727 isn\u0027t dual sim?",
+      "revId": "82dcb6bc4702e5a50a8c5631a1a02ce3b4fdd89b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
