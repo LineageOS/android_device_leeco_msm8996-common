@@ -100,6 +100,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qcom.ad=1 \
     ro.qcom.ad.sensortype=3
 
+# DPM
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.dpm.feature=5
+
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
@@ -123,6 +127,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.wfd.virtual=0 \
     ro.persist.qcapb=1 \
     sdm.debug.disable_rotator_split=1 \
+    sdm.debug.disable_skip_validate=1 \
     sdm.perf_hint_window=50 \
 
 # OpenGLES
@@ -154,11 +159,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.REVERSE_QMI=0 \
     persist.radio.ROTATION_ENABLE=1 \
     persist.rcs.supported=1 \
+    persist.vendor.radio.cs_srv_type=1 \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.facnotsup_as_nonw=1 \
     persist.vendor.radio.force_on_dc=true \
     persist.vendor.radio.ignore_dom_time=5 \
     persist.vendor.radio.rat_on=combine \
+    persist.vendor.radio.redir_party_num=1 \
     persist.vendor.radio.mt_sms_ack=20 \
     persist.vendor.radio.sib16_support=1 \
     telephony.lteOnCdmaDevice=1 \
@@ -190,4 +197,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Volte
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.VT_ENABLE=1 \
+    persist.radio.VT_HYBRID_ENABLE=1 \
     persist.dbg.wfc_avail_ovr=1
