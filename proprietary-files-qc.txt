@@ -122,10 +122,9 @@ vendor/lib/libxml.so
 # DPM
 etc/dpm/dpm.conf
 etc/dpm/nsrm/NsrmConfiguration.xml
-etc/init/dpmd.rc
 etc/permissions/com.qti.dpmframework.xml
 etc/permissions/dpmapi.xml
-bin/dpmd
+vendor/bin/dpmd
 framework/com.qti.dpmframework.jar
 framework/dpmapi.jar
 framework/tcmclient.jar
