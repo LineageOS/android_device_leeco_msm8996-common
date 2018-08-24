@@ -256,3 +256,5 @@
 # misc permissions for force upgrade
 /dev/block/sda4 0660 system system
 
+# DeviceInfo
+/dev/block/sde21          0644   root       root
