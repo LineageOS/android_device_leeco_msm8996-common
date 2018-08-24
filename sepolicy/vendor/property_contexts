@@ -1,4 +1,4 @@
-persist.sys.diag.max.size          u:object_r:debug_prop:s0
+persist.sys.diag.max.size          u:object_r:diag_prop:s0
 
 # radio
 oem.device.imeicache               u:object_r:qcom_ims_prop:s0
