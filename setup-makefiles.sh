@@ -18,9 +18,7 @@
 
 set -e
 
-# Required!
-DEVICE_COMMON=msm8996-common
-VENDOR=leeco
+INITIAL_COPYRIGHT_YEAR=2016
 
 # Load extractutils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -42,22 +40,25 @@ setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true
 write_headers "zl1 x2"
 
 # Common QC blobs
-write_makefiles "$MY_DIR"/proprietary-files-qc.txt
+write_makefiles "$MY_DIR"/proprietary-files-qc.txt true
 
 # QC Perf blobs
-write_makefiles "$MY_DIR"/proprietary-files-qc-perf.txt
+write_makefiles "$MY_DIR"/proprietary-files-qc-perf.txt true
 
 # We are done with common
 write_footers
 
-# Initialize the helper for device
-setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT"
+if [ -s "$MY_DIR"/../$DEVICE/proprietary-files.txt ]; then
+    # Reinitialize the helper for device
+    INITIAL_COPYRIGHT_YEAR="$DEVICE_BRINGUP_YEAR"
+    setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" false
 
-# Copyright headers and guards
-write_headers
+    # Copyright headers and guards
+    write_headers
 
-# The device blobs
-write_makefiles "$MY_DIR"/../$DEVICE/proprietary-files.txt
+    # The standard device blobs
+    write_makefiles "$MY_DIR"/../$DEVICE/proprietary-files.txt true
 
-# We are done with device
-write_footers
+    # We are done!
+    write_footers
+fi
