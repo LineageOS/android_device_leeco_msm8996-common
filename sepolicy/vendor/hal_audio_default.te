@@ -1,0 +1,5 @@
+set_prop(hal_audio_default, diag_prop)
+
+type_transition hal_audio_default audio_data_file:sock_file audio_socket "aud_devi_arbi";
+
+allow hal_audio_default audio_socket:sock_file { create unlink write };
