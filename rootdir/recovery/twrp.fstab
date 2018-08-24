@@ -4,6 +4,7 @@
 /misc           emmc      /dev/block/bootdevice/by-name/misc
 
 /system         ext4      /dev/block/bootdevice/by-name/system
+/vendor         ext4      /dev/block/bootdevice/by-name/vendor
 /data           ext4      /dev/block/bootdevice/by-name/userdata             flags=encryptable=footer;length=-16384
 /cache          ext4      /dev/block/bootdevice/by-name/cache
 
