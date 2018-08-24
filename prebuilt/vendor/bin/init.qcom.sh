@@ -1,4 +1,4 @@
-#!/system/bin/sh
+#!/vendor/bin/sh
 # Copyright (c) 2009-2015, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -86,14 +86,6 @@ start_msm_irqbalance_8939()
 			start msm_irqbalance;;
 		esac
 	fi
-}
-
-start_copying_prebuilt_qcril_db()
-{
-    if [ -f /system/vendor/qcril.db -a ! -f /data/misc/radio/qcril.db ]; then
-        cp /system/vendor/qcril.db /data/misc/radio/qcril.db
-        chown -h radio.radio /data/misc/radio/qcril.db
-    fi
 }
 
 baseband=`getprop ro.baseband`

@@ -247,7 +247,7 @@
 /dev/hbtp_vm              0660   system     system
 
 # Add device block for FRP
-/dev/block/platform/soc/624000.ufshc/by-name/frp    0660   system     system
+/dev/block/platform/soc/624000.ufshc/by-name/frp         0660   system     system
 
 # add for phonecontrol security
 /dev/block/sdf9           0660   system     system
@@ -257,4 +257,4 @@
 /dev/block/sda4           0660   system     system
 
 # DeviceInfo
-/dev/block/sde21          0640   system     system
+/dev/block/platform/soc/624000.ufshc/by-name/devinfo     0640   system     system

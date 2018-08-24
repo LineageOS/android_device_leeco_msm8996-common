@@ -1,0 +1,7 @@
+typeattribute mm-qcamerad binder_in_vendor_violators;
+binder_use(mm-qcamerad);
+
+type_transition mm-qcamerad camera_data_file:sock_file camera_socket "cam_socket2";
+type_transition mm-qcamerad camera_data_file:sock_file camera_socket "cam_socket3";
+
+allow mm-qcamerad camera_socket:sock_file { create unlink write };

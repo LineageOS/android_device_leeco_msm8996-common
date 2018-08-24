@@ -1,0 +1,4 @@
+typeattribute mdtpdaemon binder_in_vendor_violators;
+binder_use(mdtpdaemon);
+
+add_service(mdtpdaemon, mdtpdaemon_service);
