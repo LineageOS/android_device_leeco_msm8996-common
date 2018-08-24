@@ -1,4 +1,4 @@
-allow sensors property_socket:sock_file { rw_file_perms };
 allow sensors init:unix_stream_socket { connectto };
 
 set_prop(sensors, debug_prop)
+set_prop(sensors, diag_prop)
