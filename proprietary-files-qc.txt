@@ -122,10 +122,8 @@ vendor/lib/libxml.so
 # DPM
 etc/dpm/dpm.conf
 etc/dpm/nsrm/NsrmConfiguration.xml
-etc/init/dpmd.rc
 etc/permissions/com.qti.dpmframework.xml
 etc/permissions/dpmapi.xml
-bin/dpmd
 framework/com.qti.dpmframework.jar
 framework/dpmapi.jar
 framework/tcmclient.jar
@@ -142,6 +140,7 @@ lib64/libdpmfdmgr.so
 lib64/libdpmframework.so
 lib64/libdpmnsrm.so
 lib64/libdpmtcm.so
+vendor/bin/dpmd
 vendor/bin/dpmQmiMgr
 vendor/lib/com.qualcomm.qti.dpm.api@1.0_vendor.so
 vendor/lib/libdpmqmihal.so
@@ -187,43 +186,6 @@ vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
 vendor/lib/vendor.qti.hardware.qteeconnector@1.0_vendor.so
 vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0_vendor.so
-
-# IMS - Gemini 8.0.0/OPR1.170623.032/8.5.24
--app/ims/ims.apk
--app/uceShimService/uceShimService.apk
-etc/permissions/com.qualcomm.qti.imscmservice.xml
-etc/permissions/qti-vzw-ims-internal.xml
-framework/com.qualcomm.qti.imscmservice@1.0-java.jar
-lib64/com.qualcomm.qti.imscmservice@1.0.so
-lib64/lib-imscamera.so
-lib64/lib-imsvideocodec.so
-lib64/lib-imsvt.so
-lib64/lib-imsvtextutils.so
-lib64/lib-imsvtutils.so
-lib64/libdiag_system.so
-lib64/libimscamera_jni.so
-lib64/libimsmedia_jni.so
-lib64/librcc.so
-lib64/vendor.qti.imsrtpservice@1.0.so
-vendor/bin/ims_rtp_daemon
-vendor/bin/imsdatadaemon
-vendor/bin/imsqmidaemon
-vendor/bin/imsrcsd
-vendor/framework/qti-vzw-ims-internal.jar
-vendor/lib64/com.qualcomm.qti.imscmservice@1.0_vendor.so
-vendor/lib64/lib-dplmedia.so
-vendor/lib64/lib-imsSDP.so
-vendor/lib64/lib-imscmservice.so
-vendor/lib64/lib-imsdpl.so
-vendor/lib64/lib-imsqimf.so
-vendor/lib64/lib-imsxml.so
-vendor/lib64/lib-rtpcommon.so
-vendor/lib64/lib-rtpcore.so
-vendor/lib64/lib-rtpdaemoninterface.so
-vendor/lib64/lib-rtpsl.so
-vendor/lib64/lib-uceservice.so
-vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
-vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
 
 # Gatekeeper
 vendor/lib/hw/gatekeeper.msm8996.so
@@ -355,6 +317,43 @@ vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0_vendor.so|d101774878c0374ad805
 # Graphics (Vulkan) - Gemini 8.0.0/OPR1.170623.032/8.5.24
 vendor/lib/hw/vulkan.msm8996.so
 vendor/lib64/hw/vulkan.msm8996.so
+
+# IMS - Gemini 8.0.0/OPR1.170623.032/8.5.24
+-app/ims/ims.apk
+-app/uceShimService/uceShimService.apk
+etc/permissions/com.qualcomm.qti.imscmservice.xml
+etc/permissions/qti-vzw-ims-internal.xml
+framework/com.qualcomm.qti.imscmservice@1.0-java.jar
+lib64/com.qualcomm.qti.imscmservice@1.0.so
+lib64/lib-imscamera.so
+lib64/lib-imsvideocodec.so
+lib64/lib-imsvt.so
+lib64/lib-imsvtextutils.so
+lib64/lib-imsvtutils.so
+lib64/libdiag_system.so
+lib64/libimscamera_jni.so
+lib64/libimsmedia_jni.so
+lib64/librcc.so
+lib64/vendor.qti.imsrtpservice@1.0.so
+vendor/bin/ims_rtp_daemon
+vendor/bin/imsdatadaemon
+vendor/bin/imsqmidaemon
+vendor/bin/imsrcsd
+vendor/framework/qti-vzw-ims-internal.jar
+vendor/lib64/com.qualcomm.qti.imscmservice@1.0_vendor.so
+vendor/lib64/lib-dplmedia.so
+vendor/lib64/lib-imsSDP.so
+vendor/lib64/lib-imscmservice.so
+vendor/lib64/lib-imsdpl.so
+vendor/lib64/lib-imsqimf.so
+vendor/lib64/lib-imsxml.so
+vendor/lib64/lib-rtpcommon.so
+vendor/lib64/lib-rtpcore.so
+vendor/lib64/lib-rtpdaemoninterface.so
+vendor/lib64/lib-rtpsl.so
+vendor/lib64/lib-uceservice.so
+vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
+vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
 
 # Keystore
 vendor/lib/hw/keystore.msm8996.so

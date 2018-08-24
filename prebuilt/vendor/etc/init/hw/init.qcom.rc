@@ -25,9 +25,9 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-import init.qcom.power.rc
-import init.qcom.usb.rc
-import init.device.rc
+import /vendor/etc/init/hw/init.qcom.power.rc
+import /vendor/etc/init/hw/init.qcom.usb.rc
+import /vendor/etc/init/hw/init.device.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
@@ -36,8 +36,9 @@ on early-init
     symlink /data/tombstones /tombstones
     mkdir /dsp 0771 media media
 
-    # Setup zram options
+    # ZRAM setup
     write /sys/block/zram0/comp_algorithm lz4
+    write /proc/sys/vm/page-cluster 0
 
 on init
     # Set permissions for persist partition
@@ -53,15 +54,11 @@ on init
     chown root system /sys/fs/cgroup/memory/bg/tasks
     chmod 0660 /sys/fs/cgroup/memory/bg/tasks
 
-    # ZRAM setup
-    write /sys/block/zram0/comp_algorithm lz4
-    write /proc/sys/vm/page-cluster 0
-
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
 
-    mount_all fstab.qcom
+    mount_all /vendor/etc/fstab.qcom
 
     # Restorecon
     restorecon_recursive /persist
@@ -327,7 +324,7 @@ on post-fs-data
     start netmgrd
 
 on early-boot
-    # set RLIMIT_MEMLOCK to 64MB
+    # Set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
 
     # Allow subsystem (modem etc) debugging
@@ -408,6 +405,7 @@ on boot
     chmod 664 /sys/class/graphics/fb1/pa
     chmod 600 /sys/class/graphics/fb1/cec/wr_msg
 
+    # Access permission for Bluetooth
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/type
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/state
@@ -496,7 +494,7 @@ on boot
     # an ack packet comes out of order
     write /proc/sys/net/netfilter/nf_conntrack_tcp_be_liberal 1
 
-    # Set the console loglevel to < KERN_INFO
+    # Set the console loglevel to KERN_INFO
     # Set the default message loglevel to KERN_INFO
     write /proc/sys/kernel/printk "6 6 1 7"
 
@@ -530,16 +528,15 @@ on property:sys.boot_completed=1
     # CPE fw_name used by sound trigger HAL
     chown media audio /sys/kernel/wcd_cpe0/fw_name
     # Enable ZRAM on boot_complete
-    swapon_all /fstab.qcom
+    swapon_all /vendor/etc/fstab.qcom
     # Enable hvdcp
     setprop persist.hvdcp.allow_opti 1
 
-# start camera server as daemon
-service qcamerasvr /system/bin/mm-qcamera-daemon
+# Start camera server as daemon
+service qcamerasvr /vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
-    seclabel u:r:mm-qcamerad:s0
     writepid /dev/cpuset/system-background/tasks
 
 # start up peripheral manager
@@ -656,7 +653,7 @@ on property:init.svc.zygote=running
 on property:init.svc.zygote=restarting
     stop ppd
 
-service fossctl /system/bin/ppd foss:on
+service fossctl /vendor/bin/ppd foss:on
     user system
     group system graphics
     oneshot
@@ -665,7 +662,7 @@ service fossctl /system/bin/ppd foss:on
 on property:sys.boot_completed=1
     start fossctl
 
-service tlocd /system/bin/tloc_daemon
+service tlocd /vendor/bin/tloc_daemon
     class late_start
     user system
     group drmrpc gps net_raw
@@ -681,7 +678,7 @@ service mdtpd /vendor/bin/mdtpd
     user root
     group system radio drmrpc
 
-service ssr_setup /system/bin/ssr_setup
+service ssr_setup /vendor/bin/ssr_setup
     oneshot
     disabled
 
@@ -788,7 +785,7 @@ service hci_filter_root /vendor/bin/wcnss_filter
     seclabel u:r:wcnss_filter:s0
     disabled
 
-service ftmd /system/bin/ftmdaemon
+service ftmd /vendor/bin/ftmdaemon
     class late_start
     user root
     group bluetooth net_bt_admin misc oem_2901 net_bt
@@ -802,20 +799,20 @@ service netmgrd /vendor/bin/netmgrd
     disabled
     writepid /dev/cpuset/system-background/tasks
 
-service ipacm-diag /system/vendor/bin/ipacm-diag
+service ipacm-diag /vendor/bin/ipacm-diag
     class main
     user radio
     socket ipacm_log_file dgram 660 radio radio
     group radio diag oem_2901
     disabled
 
-service ipacm /system/vendor/bin/ipacm
+service ipacm /vendor/bin/ipacm
     class main
     user radio
     group radio inet
     disabled
 
-service qti /system/vendor/bin/qti
+service qti /vendor/bin/qti
     class main
     user radio
     group radio oem_2901 diag usb net_admin
@@ -842,9 +839,9 @@ on property:sys.sysctl.tcp_adv_win_scale=*
 
 service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     -ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf \
-    -I/system/vendor/etc/wifi/p2p_supplicant_overlay.conf -N \
+    -I/vendor/etc/wifi/p2p_supplicant_overlay.conf -N \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
-    -I/system/vendor/etc/wifi/wpa_supplicant_overlay.conf \
+    -I/vendor/etc/wifi/wpa_supplicant_overlay.conf \
     -O/data/misc/wifi/sockets -puse_p2p_group_interface=1 \
     -e/data/misc/wifi/entropy.bin -g@android:wpa_wlan0
 #   we will start as root and wpa_supplicant will switch to user wifi
@@ -856,7 +853,7 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     disabled
     oneshot
 
-service cnss_diag /system/vendor/bin/cnss_diag -q -f
+service cnss_diag /vendor/bin/cnss_diag -q -f
     class main
     user root
     group root
@@ -908,7 +905,14 @@ service ril-daemon2 /vendor/bin/hw/rild -c 2
 on property:persist.radio.multisim.config=dsds
     enable ril-daemon2
 
-service ssr_diag /system/bin/ssr_diag
+service dpmd /vendor/bin/dpmd
+    class late_start
+    socket dpmd stream 660 root system
+    socket tcm  stream 660 root inet
+    socket dpmwrapper stream 660 root inet
+    group system readproc inet radio wakelock
+
+service ssr_diag /vendor/bin/ssr_diag
     class late_start
     user system
     group system
@@ -919,11 +923,10 @@ service charger_monitor /system/bin/charger_monitor
     group root
     disabled
 
-service qcom-sh /system/bin/sh /init.qcom.sh
+service qcom-sh /vendor/bin/init.qcom.sh
     class late_start
     user root
     oneshot
-    seclabel u:r:qti_init_shell:s0
 
 service hvdcp_opti /vendor/bin/hvdcp_opti
     class main

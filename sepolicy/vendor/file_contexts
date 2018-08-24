@@ -1,0 +1,28 @@
+# Block devices
+/dev/block/platform/soc/624000\.ufshc/by-name/devinfo                    u:object_r:devinfo_block_device:s0
+/dev/block/platform/soc/624000\.ufshc/by-name/persist                    u:object_r:persist_block_device:s0
+
+# data
+/data/vendor/nfc(/.*)?                                                   u:object_r:nfc_data_file:s0
+
+# executables
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.0-service-custom  u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.leeco_8996               u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/ppd                                                                u:object_r:ppd_exec:s0
+
+# ril
+/(vendor|system/vendor)/radio/qcril_database/qcril\.db                   u:object_r:nv_data_file:s0
+
+# persist
+/persist/rfs(/.*)?                                                       u:object_r:rfs_file:s0
+
+# sysfs
+/sys/class/leds(/.*)?                                                    u:object_r:sysfs_leds:s0
+/sys/devices/soc/leds-qpnp-(.*)?/leds(/.*)?                              u:object_r:sysfs_leds:s0
+/sys/devices/soc/qpnp-wled-(.*)?/leds(/.*)?                              u:object_r:sysfs_leds:s0
+/sys/devices/soc/[a-z0-9]+.qcom,mdss_mdp/[a-z0-9]+.qcom,mdss_mdp:qcom,mdss_fb_primary/leds/lcd-backlight(/.*)? u:object_r:sysfs_leds:s0
+
+/sys/devices/soc/75ba000\.i2c/i2c-12/12-0020/input/input2/0dbutton       u:object_r:touchpanel_file:s0
+
+# legacy
+/data/misc/tloc(/.*)?                                                    u:object_r:tlocd_data_file:s0
