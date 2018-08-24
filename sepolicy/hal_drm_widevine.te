@@ -1,1 +1,0 @@
-allow hal_drm_widevine firmware_file:lnk_file { read };

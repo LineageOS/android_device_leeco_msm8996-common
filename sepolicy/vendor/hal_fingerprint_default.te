@@ -1,0 +1,2 @@
+typeattribute hal_fingerprint_default binder_in_vendor_violators;
+binder_use(hal_fingerprint_default);
