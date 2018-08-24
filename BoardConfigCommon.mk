@@ -240,6 +240,9 @@ USE_CLANG_PLATFORM_BUILD := true
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/recovery/fstab.qcom
 endif
 
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(PLATFORM_PATH)
+
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
