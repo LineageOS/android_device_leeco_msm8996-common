@@ -314,6 +314,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librecovery_updater_leeco
 
+# Releasetools
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/bin/deunify.sh:install/bin/deunify.sh \
+    $(LOCAL_PATH)/prebuilt/bin/sgdisk:install/bin/sgdisk \
+    $(LOCAL_PATH)/prebuilt/bin/unlock-vendor.sh:install/bin/unlock-vendor.sh
+
 # RenderScript HAL
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
@@ -368,6 +374,7 @@ PRODUCT_PACKAGES += \
     android.hardware.vr@1.0-impl \
     android.hardware.vr@1.0-service \
     vr.msm8996
+
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
