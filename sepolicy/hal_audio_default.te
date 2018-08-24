@@ -1,2 +1,0 @@
-allow hal_audio_default audio_data_file:sock_file { unlink create setattr };
-allow hal_audio_default property_socket:sock_file { rw_file_perms };
