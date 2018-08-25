@@ -591,7 +591,6 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
-    seclabel u:r:mm-qcamerad:s0
     writepid /dev/cpuset/system-background/tasks
 
 # start up peripheral manager
@@ -979,7 +978,6 @@ service hvdcp_opti /vendor/bin/hvdcp_opti
     class main
     user root
     group root
-    seclabel u:r:hvdcp:s0
 
 service charger /charger
     class charger
