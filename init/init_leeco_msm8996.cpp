@@ -46,7 +46,6 @@
 
 #include "vendor_init.h"
 #include "property_service.h"
-#include "util.h"
 
 #define DEVINFO_FILE "/dev/block/sde21"
 
