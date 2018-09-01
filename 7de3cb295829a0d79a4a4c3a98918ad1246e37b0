@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4b3b0423_aeca6358",
+        "filename": "liblight/service.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2018-09-01T20:18:13Z",
+      "side": 1,
+      "message": "Can\u0027t this method be replaced by\n\ntext.find(prefix) \u003d\u003d 0\n\n?",
+      "revId": "7de3cb295829a0d79a4a4c3a98918ad1246e37b0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
