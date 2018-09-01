@@ -254,5 +254,7 @@
 /dev/block/sdf10          0660   system     system
 
 # misc permissions for force upgrade
-/dev/block/sda4 0660 system system
+/dev/block/sda4           0660   system     system
 
+# DeviceInfo
+/dev/block/sde21          0640   system     system
