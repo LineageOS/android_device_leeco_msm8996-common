@@ -1,0 +1,4 @@
+allow hal_light_default block_device:dir { search };
+allow hal_light_default devinfo_block_device:blk_file { r_file_perms };
+
+allow hal_light_default sysfs_leds:file { rw_file_perms };
