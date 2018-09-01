@@ -6,5 +6,7 @@ allow thermal-engine sysfs_uio_file:file { r_file_perms };
 
 allow thermal-engine system_data_file:dir { w_dir_perms };
 
+allow thermal-engine sysfs_leds:file { rw_file_perms };
+
 # Ignore all decrypt logging requests (we don't use an encrypted configuration file)
 dontaudit thermal-engine system_data_file:file create;
