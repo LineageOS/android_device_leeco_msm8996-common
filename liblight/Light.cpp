@@ -67,7 +67,7 @@ Light::Light(std::pair<std::ofstream, uint32_t>&& lcd_backlight,
              std::ofstream&& red_pause_hi, std::ofstream&& green_pause_hi, std::ofstream&& blue_pause_hi,
              std::ofstream&& red_ramp_step_ms, std::ofstream&& green_ramp_step_ms, std::ofstream&& blue_ramp_step_ms,
              std::ofstream&& red_blink, std::ofstream&& green_blink, std::ofstream&& blue_blink,
-             std::ofstream&& rgb_blink)
+             std::ofstream&& rgb_blink, bool hasRGBlight)
     : mLcdBacklight(std::move(lcd_backlight)),
       mButtonBacklight(std::move(button_backlight)),
       mRedLed(std::move(red_led)),
@@ -91,7 +91,8 @@ Light::Light(std::pair<std::ofstream, uint32_t>&& lcd_backlight,
       mRedBlink(std::move(red_blink)),
       mGreenBlink(std::move(green_blink)),
       mBlueBlink(std::move(blue_blink)),
-      mRgbBlink(std::move(rgb_blink)) {
+      mRgbBlink(std::move(rgb_blink)),
+      mHasRGBlight(std::move(hasRGBlight)) {
     auto attnFn(std::bind(&Light::setAttentionLight, this, std::placeholders::_1));
     auto backlightFn(std::bind(&Light::setLcdBacklight, this, std::placeholders::_1));
     auto batteryFn(std::bind(&Light::setBatteryLight, this, std::placeholders::_1));
@@ -195,7 +196,6 @@ void Light::setSpeakerLightLocked(const LightState& state) {
     int red, green, blue, blink;
     int onMs, offMs, stepDuration, pauseHi;
     uint32_t alpha;
-    bool hasRGBlight;
 
     // Extract brightness from AARRGGBB
     alpha = (state.color >> 24) & 0xff;
@@ -226,7 +226,7 @@ void Light::setSpeakerLightLocked(const LightState& state) {
     blink = onMs > 0 && offMs > 0;
 
     // Disable all blinking to start
-    if (hasRGBlight) {
+    if (mHasRGBlight) {
         mRgbBlink << 0 << std::endl;
     } else {
         mRedBlink << 0 << std::endl;
@@ -265,7 +265,7 @@ void Light::setSpeakerLightLocked(const LightState& state) {
         mBlueRampStepMs << stepDuration << std::endl;
 
         // Start the party
-        if (hasRGBlight) {
+        if (mHasRGBlight) {
             mRgbBlink << 1 << std::endl;
         } else {
             mRedBlink << blink << std::endl;
