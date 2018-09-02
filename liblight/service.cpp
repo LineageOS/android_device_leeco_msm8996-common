@@ -307,7 +307,7 @@ int main() {
             std::move(redPauseHi), std::move(greenPauseHi), std::move(bluePauseHi),
             std::move(redRampStepMs), std::move(greenRampStepMs), std::move(blueRampStepMs),
             std::move(redBlink), std::move(greenBlink), std::move(blueBlink),
-            std::move(rgbBlink));
+            std::move(rgbBlink), std::move(hasRGBlight));
 
     configureRpcThreadpool(1, true);
 
