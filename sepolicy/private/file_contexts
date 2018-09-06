@@ -1,0 +1,2 @@
+# data
+/(vendor|system/vendor)/lib(64)?/libQSEEComAPI\.so                          u:object_r:vendor_qsee_file:s0

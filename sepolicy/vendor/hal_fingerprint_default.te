@@ -1,2 +1,5 @@
 typeattribute hal_fingerprint_default binder_in_vendor_violators;
+
+add_service(hal_fingerprint_default, fingerprintd_custom_service);
+
 binder_use(hal_fingerprint_default);
