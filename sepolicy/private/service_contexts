@@ -1,1 +1,2 @@
 android.hardware.fingerprint.IFingerprintCustomDaemon       u:object_r:fingerprintd_custom_service:s0
+mdtp                                                        u:object_r:mdtpdaemon_service:s0
