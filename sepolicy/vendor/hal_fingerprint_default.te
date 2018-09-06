@@ -1,2 +1,4 @@
 typeattribute hal_fingerprint_default binder_in_vendor_violators;
 binder_use(hal_fingerprint_default);
+
+allow hal_fingerprint_default fingerprintd_custom_service:service_manager { find add };
