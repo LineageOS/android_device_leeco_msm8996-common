@@ -224,11 +224,6 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(PLATFORM_PATH)
 # RIL
 TARGET_RIL_VARIANT := caf
 
-# Shim
-TARGET_LD_SHIM_LIBS := \
-    /vendor/bin/mm-qcamera-daemon|libshims_qcamera-daemon.so \
-    /vendor/lib/libmmcamera_ppeiscore.so|libshims_camera.so
-
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 
