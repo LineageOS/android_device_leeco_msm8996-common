@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f9afe15c_5644e13c",
+        "filename": "rootdir/root/init.qcom.rc",
+        "patchSetId": 2
+      },
+      "lineNbr": 594,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2018-09-08T19:15:54Z",
+      "side": 0,
+      "message": "the reason why we removed this label on treble is because qcom sepolicy takes care of it when it is in /vendor/bin/mm-qcamera-daemon. It isn\u0027t taken care of if it is in /system/bin/mm-qcamera-daemon though.\n\nPlease try labeling it to mm-qcamerad_exec\n\nor set it in sepolicie\u0027s file_context to be for /system/bin/mm-qcamera-daemon similar to how it is setup in vendor on qcom sepolicy here\n\nhttps://github.com/LineageOS/android_device_qcom_sepolicy/blob/ccbad0595577f270349b58dd3b2053b3e95042c3/common/file_contexts#L208",
+      "revId": "74bdb211669406b0bb5eba5604ae0d18f9b46bd4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
