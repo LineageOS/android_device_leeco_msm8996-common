@@ -168,7 +168,7 @@ err_ret:
     return ret;
 }
 
-/* verify_modem("MODEM_VERSION") */
+/* leeco.verify_modem("MODEM_VERSION") */
 Value * VerifyModemFn(const char *name, State *state, const std::vector<std::unique_ptr<Expr>>& argv) {
     char current_modem_version[MODEM_VER_BUF_LEN];
     size_t i;
@@ -205,7 +205,7 @@ Value * VerifyModemFn(const char *name, State *state, const std::vector<std::uni
     return StringValue(strdup(ret ? "1" : "0"));
 }
 
-/* get_device_variant() */
+/* leeco.get_device_variant() */
 Value * GetDeviceVariantFn(const char *name, State *state, const std::vector<std::unique_ptr<Expr>>& argv) {
     FILE * fd;
     char devinfo[DEVINFO_BUF_LEN];
@@ -231,7 +231,18 @@ err_ret:
     return StringValue(strdup("unknown"));
 }
 
+/* leeco.file_exists("PATH") */
+Value * FileExistsFn(const char *name, State *state, const std::vector<std::unique_ptr<Expr>>& argv) {
+    struct stat buffer;
+    std::vector<std::string> file_path;
+    if (!ReadArgs(state, argv, &file_path)) {
+        return ErrorAbort(state, kArgsParsingFailure, "%s() error parsing arguments", name);
+    }
+    return StringValue((stat(file_path[0].c_str(), &buffer) == 0) ? "1" : "0");
+}
+
 void Register_librecovery_updater_leeco() {
     RegisterFunction("leeco.verify_modem", VerifyModemFn);
     RegisterFunction("leeco.get_device_variant", GetDeviceVariantFn);
+    RegisterFunction("leeco.file_exists", FileExistsFn);
 }

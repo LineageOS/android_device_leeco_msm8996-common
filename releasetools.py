@@ -26,6 +26,7 @@ def FullOTA_InstallBegin(info):
   info.script.Mount("/system")
   UnlockVendorPartition(info)
   info.script.Unmount("/system")
+  AddVendorAssertion(info)
   return
 
 def FullOTA_InstallEnd(info):
@@ -42,12 +43,19 @@ def IncrementalOTA_InstallBegin(info):
   info.script.Mount("/system")
   UnlockVendorPartition(info)
   info.script.Unmount("/system")
+  AddVendorAssertion(info)
   return
 
 def IncrementalOTA_InstallEnd(info):
   info.script.Mount("/vendor")
   RunCustomScript(info, "deunify.sh", "")
   info.script.Unmount("/vendor")
+  return
+
+def AddVendorAssertion(info):
+  cmd = 'assert(leeco.file_exists("/dev/block/bootdevice/by-name/vendor") == "1" || \
+abort("Error: Vendor partition doesn\'t exist!"););'
+  info.script.AppendExtra(cmd)
   return
 
 def AddModemAssertion(info):
