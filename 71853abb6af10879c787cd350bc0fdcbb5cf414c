@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e1068ef7_1f3f747b",
+        "filename": "sepolicy/vendor/file_contexts",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 2681
+      },
+      "writtenOn": "2018-09-10T15:31:43Z",
+      "side": 1,
+      "message": "Is this used on zl0/1? For x2, the paths are /sys/devices/soc/soc:qcom,camera-flash/flashled[0,1]",
+      "revId": "71853abb6af10879c787cd350bc0fdcbb5cf414c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
