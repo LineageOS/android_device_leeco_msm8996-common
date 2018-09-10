@@ -25,6 +25,7 @@
 /sys/devices/soc/leds-qpnp-(.*)?/leds(/.*)?                              u:object_r:sysfs_leds:s0
 /sys/devices/soc/qpnp-flash-led-(.*)?/leds(/.*)?                         u:object_r:sysfs_leds:s0
 /sys/devices/soc/qpnp-wled-(.*)?/leds(/.*)?                              u:object_r:sysfs_leds:s0
+/sys/devices/soc/soc:qcom,camera-flash(/.*)?                             u:object_r:sysfs_leds:s0
 /sys/devices/soc/soc:qcom,camera-flash/leds(/.*)?                        u:object_r:sysfs_leds:s0
 
 /sys/devices/soc/[a-z0-9]+.qcom,mdss_mdp/[a-z0-9]+.qcom,mdss_mdp:qcom,mdss_fb_primary/leds/lcd-backlight(/.*)? u:object_r:sysfs_leds:s0
