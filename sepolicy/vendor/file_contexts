@@ -23,7 +23,10 @@
 # sysfs
 /sys/class/leds(/.*)?                                                    u:object_r:sysfs_leds:s0
 /sys/devices/soc/leds-qpnp-(.*)?/leds(/.*)?                              u:object_r:sysfs_leds:s0
+/sys/devices/soc/qpnp-flash-led-(.*)?/leds(/.*)?                         u:object_r:sysfs_leds:s0
 /sys/devices/soc/qpnp-wled-(.*)?/leds(/.*)?                              u:object_r:sysfs_leds:s0
+/sys/devices/soc/soc:qcom,camera-flash/leds(/.*)?                        u:object_r:sysfs_leds:s0
+
 /sys/devices/soc/[a-z0-9]+.qcom,mdss_mdp/[a-z0-9]+.qcom,mdss_mdp:qcom,mdss_fb_primary/leds/lcd-backlight(/.*)? u:object_r:sysfs_leds:s0
 
 /sys/devices/soc/75ba000\.i2c/i2c-12/12-0020/input/input2/0dbutton       u:object_r:touchpanel_file:s0
