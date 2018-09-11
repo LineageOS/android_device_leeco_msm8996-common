@@ -90,6 +90,12 @@ on post-fs-data
     mkdir /tombstones/lpass 0771 system system
     mkdir /tombstones/wcnss 0771 system system
     mkdir /tombstones/dsps 0771 system system
+    mkdir /persist/drm 0770 system system
+    mkdir /persist/bluetooth 0770 bluetooth bluetooth
+    mkdir /persist/misc 0770 system system
+    mkdir /persist/alarm 0770 system system
+    mkdir /persist/time 0770 system system
+    mkdir /persist/secnvm 0770 system system
     mkdir /persist/data/sfs 0700 system system
     mkdir /persist/data/tz 0700 system system
     mkdir /persist/qc_senseid 0700 system system
@@ -180,7 +186,7 @@ on post-fs-data
     mkdir /data/vendor/netmgr 0770 radio radio
     chmod 0770 /data/vendor/netmgr
 
-    #create ipacm log dir
+    # Create ipacm log dir
     mkdir /data/vendor/ipa 0770 radio radio
     chmod 0770 /data/vendor/ipa
 
@@ -195,14 +201,14 @@ on post-fs-data
     mkdir /data/dpm/nsrm 0771 system system
     chown system system /data/dpm/nsrm
 
-    # Create directory used by audio subsystem
+    # Create the directories used by the audio subsystem
     mkdir /data/vendor/audio/ 0770 media audio
     mkdir /data/vendor/misc/audio 0770 audio audio
     # legacy
     mkdir /data/audio/ 0770 media audio
     mkdir /data/misc/audio 0770 audio audio
 
-    # Create a folder for audio delta files
+    # Create the directories used by the audio delta files
     mkdir /data/vendor/audio/acdbdata 0770 media audio
     mkdir /data/vendor/audio/acdbdata/delta 0770 media audio
     mkdir /data/vendor/misc/audio/acdbdata 0770 media audio
@@ -237,6 +243,9 @@ on post-fs-data
     mkdir /data/vendor/location 0770 gps gps
     mkdir /data/vendor/location/mq 0770 gps gps
     mkdir /data/vendor/location/xtwifi 0770 gps gps
+
+    # Create /data/time folder for time-services
+    mkdir /data/time/ 0700 system system
 
     # Create directory from IMS services
     mkdir /data/shared 0755
@@ -433,9 +442,6 @@ on boot
 
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/device/extldo
     chmod 0660 /sys/class/rfkill/rfkill0/device/extldo
-
-    mkdir /persist/drm 0770 system system
-    mkdir /persist/bluetooth 0770 bluetooth bluetooth
 
     # Create NETMGR daemon socket area
     mkdir /dev/socket/netmgr 0750 radio radio
