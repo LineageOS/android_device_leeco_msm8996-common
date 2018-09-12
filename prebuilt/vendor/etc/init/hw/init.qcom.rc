@@ -59,6 +59,7 @@ on fs
     chmod 0771 /mnt/vendor/persist
     mkdir /mnt/vendor/persist/bms 0700 root system
     mkdir /mnt/vendor/persist/data 0700 system system
+    mkdir /mnt/vendor/persist/time 0770 system system
     restorecon_recursive /mnt/vendor/persist
 
     # Start HW service manager early
@@ -92,7 +93,6 @@ on post-fs-data
     mkdir /persist/bluetooth 0770 bluetooth bluetooth
     mkdir /persist/misc 0770 system system
     mkdir /persist/alarm 0770 system system
-    mkdir /persist/time 0770 system system
     mkdir /persist/secnvm 0770 system system
     mkdir /mnt/vendor/persist/secnvm 0770 system system
     mkdir /persist/data/sfs 0700 system system
