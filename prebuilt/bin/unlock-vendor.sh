@@ -42,7 +42,7 @@ safeRunCommand() {
 }
 
 if [ ! -e "$VENDOR" ]; then
-    echo "Vendor partition does not exist"
+    echo "Vendor partition does not exist. Trying to create one..."
 
     # Change typecode to '8300 Linux filesystem'
     command="/tmp/sgdisk --typecode=34:8300 $BLOCKDEV"
@@ -51,6 +51,12 @@ if [ ! -e "$VENDOR" ]; then
     # Change name to 'vendor'
     command="/tmp/sgdisk --change-name=34:vendor $BLOCKDEV"
     safeRunCommand $command
+
+    # Reread the partition table
+    sleep 2
+    /tmp/toybox partprobe $BLOCKDEV
+    sleep 2
+    echo "Done!"
 else
     echo "Found vendor partiton. Good!"
 fi
