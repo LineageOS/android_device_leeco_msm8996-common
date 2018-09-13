@@ -13,7 +13,7 @@ vendor/lib64/libadsprpc.so
 vendor/lib64/libfastcvadsp_stub.so
 vendor/lib64/libfastcvopt.so
 
-# ADSP modules
+# ADSP modules - from zl1
 vendor/lib/rfsa/adsp/libadsp_fd_skel.so|5607a78451b621bb6399878ab58ba896c72797ab
 vendor/lib/rfsa/adsp/libadsp_hvx_add_constant.so|035272c1d77bcd04e3a838056d512964744c9322
 vendor/lib/rfsa/adsp/libadsp_hvx_skel.so|6a1d6ee55cc65d0f12f6a9bfd04823b46d2d6a24
@@ -36,7 +36,6 @@ vendor/lib/rfsa/adsp/us-syncproximity.so|136ec0bae527f7fc81a18f8bf42526219b1bd48
 
 # Audio
 vendor/lib/libacdb-fts.so
-vendor/lib/libacdbloader.so|034a5cf03cccfb22e415832c7d6a043dc52d98c0
 vendor/lib/libacdbmapper.so
 vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
@@ -47,7 +46,6 @@ vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
 vendor/lib64/libacdb-fts.so
-vendor/lib64/libacdbloader.so|33b45951c3098715b33bc1ab3ca606aa99fc2248
 vendor/lib64/libacdbmapper.so
 vendor/lib64/libacdbrtac.so
 vendor/lib64/libadiertac.so
@@ -56,6 +54,10 @@ vendor/lib64/libaudiodevarb.so
 vendor/lib64/soundfx/libqcbassboost.so
 vendor/lib64/soundfx/libqcreverb.so
 vendor/lib64/soundfx/libqcvirt.so
+
+# Audio (acdbloader) - from zl1
+vendor/lib/libacdbloader.so|034a5cf03cccfb22e415832c7d6a043dc52d98c0
+vendor/lib64/libacdbloader.so|33b45951c3098715b33bc1ab3ca606aa99fc2248
 
 # Bluetooth - Gemini 8.0.0/OPR1.170623.032/8.5.24
 vendor/bin/wcnss_filter
@@ -280,15 +282,15 @@ vendor/lib/librs_adreno_sha1.so|62fbee6af6e21d2179a9a1e58eacfa5b931b0928
 vendor/lib/librs_adreno.so|e203398c6cc2a776b7fbde6f559c831f6caaa371
 vendor/lib/libRSDriver_adreno.so|c0551aea7d32e21efde69a6a43b8b45bf69e0528
 
-# Graphics - DRM - LA.UM.6.4.r1-07400-8x98.0
+# Graphics - DRM - from LA.UM.6.4.r1-07400-8x98.0
 vendor/lib/libsdedrm.so|e8b2700c95c94e79412049536c84e2d0b4ce58bd
 vendor/lib64/libsdedrm.so|96c6693b1ff69cd7fe6ab5cb04e67f4e0ea792bb
 
-# Graphics - HDR - LA.UM.6.4.r1-07400-8x98.0
+# Graphics - HDR - from LA.UM.6.4.r1-07400-8x98.0
 vendor/lib/libhdr_tm.so|9f191fda6909c92b29ac15c3d2cbf65c2db94b13
 vendor/lib64/libhdr_tm.so|9a61ddbece993d3329d337265f7be5278c237833
 
-# Graphics - SDM - LA.UM.6.4.r1-07400-8x98.0
+# Graphics - SDM - from LA.UM.6.4.r1-07400-8x98.0
 vendor/bin/hw/vendor.display.color@1.0-service|fec0d808fa0b795bf3afe8cad8afa06dcc3bf6e1
 vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti|dc6ff7d6bdb4bd7ee248eb03e4b1e53bd04f8221
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
@@ -495,16 +497,18 @@ vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
 vendor/lib/libsensor_thresh.so
 vendor/lib/libsensor_user_cal.so
-vendor/lib/sensors.oem.so|08656a65ab1bf120ac9bb16e93faf93cc2cdda86
 vendor/lib/sensors.ssc.so
 vendor/lib64/hw/activity_recognition.msm8996.so
 vendor/lib64/libsensor1.so
 vendor/lib64/libsensor_reg.so
 vendor/lib64/libsensor_thresh.so
 vendor/lib64/libsensor_user_cal.so
+vendor/lib64/sensors.ssc.so
+
+# Sensors (LeEco) - from zl1
+vendor/lib/sensors.oem.so|08656a65ab1bf120ac9bb16e93faf93cc2cdda86
 vendor/lib64/sensors.hal.tof.so|eb19aa40617e50bd1efcc88cee9f5b0af34e7f11
 vendor/lib64/sensors.oem.so|08c12372d3331ee43cc0a3f48b88f21e45324f29
-vendor/lib64/sensors.ssc.so
 
 # Thermal - Gemini 8.0.0/OPR1.170623.032/8.5.24
 vendor/bin/thermal-engine
@@ -518,12 +522,12 @@ vendor/bin/time_daemon
 vendor/lib64/libtime_genoff.so
 vendor/lib/libtime_genoff.so
 
-# Widevine DRM - Marlin - 8.1.0 OPM1.171019.021 4565141
+# Widevine DRM - from Marlin - 8.1.0 OPM1.171019.021 4565141
 vendor/bin/hw/android.hardware.drm@1.0-service.widevine|fd6e14710c196fdd4131afe2ce10c4a5be1b309c
 vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc|51a3168a0dbc064d78ee11ca83614c0cd2e6daa5
 vendor/lib/libwvhidl.so|f7288f7a7ed6765bd1d80d639a0aeb0c31eda795
 
-# Widevine firmware - zl1 - 5.8.020s
+# Widevine firmware - from zl1 - 5.8.020s
 vendor/firmware/widevine.b00|e9613fee8d03b152dd66f667feb493775da995ca
 vendor/firmware/widevine.b01|fa1d61219139f3e8b00e3385270c8f947f13b183
 vendor/firmware/widevine.b02|e0808c16f39c6871a145669b57261546b5332d41
