@@ -2,32 +2,6 @@
 # Vendor properties for msm8996-common
 #
 
-# system props for the MM modules
-PRODUCT_PROPERTY_OVERRIDES += \
-    audio.deep_buffer.media=true \
-    media.stagefright.enable-player=true \
-    media.stagefright.enable-http=true \
-    media.stagefright.enable-aac=true \
-    media.stagefright.enable-qcp=true \
-    media.stagefright.enable-fma2dp=true \
-    media.stagefright.enable-scan=true \
-    mmp.enable.3g2=true \
-    mm.enable.smoothstreaming=true \
-    mm.enable.qcom_parser=4194303 \
-    persist.mm.enable.prefetch=true
-
-# Enable AAC 5.1 output
-PRODUCT_PROPERTY_OVERRIDES += \
-    media.aac_51_output_enabled=true
-
-# Additional i/p buffer in case of encoder DCVS
-PRODUCT_PROPERTY_OVERRIDES += \
-    vidc.enc.dcvs.extra-buff-count=2
-
-# Set default power mode to low power for encoder
-PRODUCT_PROPERTY_OVERRIDES += \
-    vidc.debug.perf.mode=2
-
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
     af.fast_track_multiplier=1 \
@@ -61,6 +35,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.use.sw.alac.decoder=true \
     vendor.audio.use.sw.ape.decoder=true \
     vendor.voice.path.for.pcm.voip=true
+
+# Audio (AAC 5.1 output)
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.aac_51_output_enabled=true
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -130,7 +108,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
    sdm.debug.disable_skip_validate=1 \
    sdm.perf_hint_window=50
 
-# OpenGLES
+# Graphics (OpenGLES)
 PRODUCT_PROPERTY_OVERRIDES += \
    ro.opengles.version=196610
 
@@ -138,6 +116,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
    persist.dbg.volte_avail_ovr=1 \
    persist.dbg.vt_avail_ovr=1
+
+# Media
+PRODUCT_PROPERTY_OVERRIDES += \
+   vidc.debug.perf.mode=2 \
+   vidc.enc.dcvs.extra-buff-count=2
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -181,20 +164,34 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.df.iwlan_mux=9 \
     persist.data.df.dev_name=rmnet_usb0
 
-# Timeservice
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.timed.enable=true
-
-# Wifi
-PRODUCT_PROPERTY_OVERRIDES += \
-    wifi.interface=wlan0
-
 # SSR
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.ssr.restart_level=ALL_ENABLE
+
+# System props for the MM modules
+PRODUCT_PROPERTY_OVERRIDES += \
+    audio.deep_buffer.media=true \
+    media.stagefright.enable-player=true \
+    media.stagefright.enable-http=true \
+    media.stagefright.enable-aac=true \
+    media.stagefright.enable-qcp=true \
+    media.stagefright.enable-fma2dp=true \
+    media.stagefright.enable-scan=true \
+    mmp.enable.3g2=true \
+    mm.enable.smoothstreaming=true \
+    mm.enable.qcom_parser=4194303 \
+    persist.mm.enable.prefetch=true
+
+# Timeservice
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.timed.enable=true
 
 # Volte
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.VT_ENABLE=1 \
     persist.radio.VT_HYBRID_ENABLE=1 \
     persist.dbg.wfc_avail_ovr=1
+
+# Wifi
+PRODUCT_PROPERTY_OVERRIDES += \
+    wifi.interface=wlan0
