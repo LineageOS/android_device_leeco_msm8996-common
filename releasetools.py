@@ -54,7 +54,7 @@ def IncrementalOTA_InstallEnd(info):
 
 def AddVendorAssertion(info):
   cmd = 'assert(leeco.file_exists("/dev/block/bootdevice/by-name/vendor") == "1" || \
-abort("Error: Vendor partition doesn\'t exist!"););'
+abort("Error: Vendor partition doesn\'t exist! Please reboot to recovery and flash again!"););'
   info.script.AppendExtra(cmd)
   return
 
