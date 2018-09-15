@@ -25,8 +25,8 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-# Unlock vendor partition
-#
+
+# Unlock the free 'last_parti' to mount /vendor.
 
 VENDOR=/dev/block/bootdevice/by-name/vendor
 BLOCKDEV=/dev/block/sde
@@ -41,9 +41,8 @@ safeRunCommand() {
    fi
 }
 
+# Check for /vendor existence.
 if [ ! -e "$VENDOR" ]; then
-    echo "Vendor partition does not exist"
-
     # Change typecode to '8300 Linux filesystem'
     command="/tmp/sgdisk --typecode=34:8300 $BLOCKDEV"
     safeRunCommand $command
@@ -51,8 +50,10 @@ if [ ! -e "$VENDOR" ]; then
     # Change name to 'vendor'
     command="/tmp/sgdisk --change-name=34:vendor $BLOCKDEV"
     safeRunCommand $command
-else
-    echo "Found vendor partiton. Good!"
-fi
 
-exit 0
+    # Reboot to recovery after sgdisk operation.
+    sleep 2
+    reboot recovery
+else
+    exit 0
+fi
