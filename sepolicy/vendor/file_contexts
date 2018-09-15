@@ -9,7 +9,6 @@
 
 # executables
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.leeco_8996               u:object_r:hal_light_default_exec:s0
-/(vendor|system/vendor)/bin/ppd                                                                u:object_r:ppd_exec:s0
 
 # keylayout
 /vendor/usr/keylayout(/.*)?                                              u:object_r:vendor_keylayout_file:s0
