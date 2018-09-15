@@ -1,4 +1,4 @@
-# Perf - Gemini 8.0.0/OPR1.170623.032/8.5.24
+# Perf - gemini - 8.0.0/OPR1.170623.032/8.9.13
 lib64/vendor.qti.hardware.iop@1.0.so
 lib64/vendor.qti.hardware.perf@1.0.so
 lib/vendor.qti.hardware.iop@1.0.so

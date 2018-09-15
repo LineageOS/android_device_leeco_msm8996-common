@@ -197,7 +197,6 @@ on post-fs-data
     # Create the directories used by DPM subsystem
     mkdir /data/dpm 0771 system system
     chown system system /data/dpm
-
     mkdir /data/dpm/nsrm 0771 system system
     chown system system /data/dpm/nsrm
 
@@ -743,7 +742,7 @@ service cnd /vendor/bin/cnd
 service dpmQmiMgr /vendor/bin/dpmQmiMgr
     class main
     user system
-    group system
+    group radio system
 
 service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class core
@@ -906,14 +905,6 @@ service ril-daemon2 /vendor/bin/hw/rild -c 2
 
 on property:persist.radio.multisim.config=dsds
     enable ril-daemon2
-
-service dpmd /vendor/bin/dpmd
-    class late_start
-    socket dpmd stream 660 root system
-    socket tcm  stream 660 root inet
-    socket dpmwrapper stream 660 root inet
-    group system readproc inet radio wakelock
-    seclabel u:r:dpmd_exec:s0
 
 service ssr_diag /vendor/bin/ssr_diag
     class late_start

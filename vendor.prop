@@ -70,9 +70,6 @@ ro.qualcomm.cabl=2
 ro.qcom.ad=1
 ro.qcom.ad.sensortype=3
 
-# DPM
-persist.vendor.dpm.feature=5
-
 # DRM
 drm.service.enabled=true
 
