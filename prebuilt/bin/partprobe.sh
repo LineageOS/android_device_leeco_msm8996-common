@@ -26,33 +26,9 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-# Unlock the free 'last_parti' to mount /vendor.
-# Reverting:
-# sgdisk --change-name=34:last_parti /dev/block/sde
+# Ask the kernel to re-read the partition table on the specified block device.
 
-BLOCKDEV=/dev/block/sde
-
-safeRunCommand() {
-   cmnd="$@"
-   $cmnd
-   ERROR_CODE=$?
-   if [ ${ERROR_CODE} != 0 ]; then
-      printf "Error when executing command: '${command}'\n"
-      exit ${ERROR_CODE}
-   fi
-}
-
-# Check for /vendor existence in partition table.
-VENDOR=`/tmp/sgdisk --pretend --print $BLOCKDEV | /tmp/toybox grep -c vendor`
-
-if [ $VENDOR -eq 0 ]; then
-    # Change partition typecode to '8300 Linux filesystem'
-    command="/tmp/sgdisk --typecode=34:8300 $BLOCKDEV"
-    safeRunCommand $command
-
-    # Change partition name to 'vendor'
-    command="/tmp/sgdisk --change-name=34:vendor $BLOCKDEV"
-    safeRunCommand $command
-fi
+BLOCKDEV=$1
+/tmp/toybox partprobe $BLOCKDEV
 
 exit 0
