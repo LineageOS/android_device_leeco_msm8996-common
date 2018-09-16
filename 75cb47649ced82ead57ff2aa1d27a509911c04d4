@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c95b68d4_d4d4c628",
+        "filename": "releasetools.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 12986
+      },
+      "writtenOn": "2018-09-16T17:13:23Z",
+      "side": 1,
+      "message": "This way works, but we need the 2s delay, at least for TWRP.",
+      "revId": "75cb47649ced82ead57ff2aa1d27a509911c04d4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a9989c94_2c179a8c",
+        "filename": "releasetools.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 12986
+      },
+      "writtenOn": "2018-09-16T17:13:23Z",
+      "side": 0,
+      "message": "This way doesn\u0027t work.",
+      "revId": "3b61ae537a1f8437c74fac524084322914bfd1a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
