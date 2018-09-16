@@ -30,5 +30,6 @@
 
 BLOCKDEV=$1
 /tmp/toybox partprobe $BLOCKDEV
+sleep 2
 
 exit 0
