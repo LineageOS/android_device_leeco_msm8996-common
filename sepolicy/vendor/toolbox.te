@@ -1,1 +1,0 @@
-allow toolbox rmnet_mux_prop:file { r_file_perms };
