@@ -55,6 +55,8 @@ def IncrementalOTA_InstallEnd(info):
   return
 
 def AddVendorAssertion(info):
+  info.script.AppendExtra('assert(run_program("/tmp/partprobe.sh", "/dev/block/sde") == "0");');
+  info.script.AppendExtra('ifelse(is_mounted("/vendor"), unmount("/vendor"));');
   cmd = 'assert(leeco.file_exists("/dev/block/bootdevice/by-name/vendor") == "1" || \
 abort("Error: Vendor partition doesn\'t exist! Please reboot to recovery and flash again!"););'
   info.script.AppendExtra(cmd)
@@ -85,7 +87,4 @@ def UnlockVendorPartition(info):
   info.script.AppendExtra('ui_print("Checking for vendor partition...");');
   info.script.AppendExtra('if run_program("/tmp/unlock-vendor.sh") != 0 then');
   info.script.AppendExtra('abort("Unlocking vendor partition failed.");');
-  info.script.AppendExtra('endif;');
-  info.script.AppendExtra('if run_program("/tmp/partprobe.sh", "/dev/block/sde") != 0 then');
-  info.script.AppendExtra('abort("Probing block device failed.");');
   info.script.AppendExtra('endif;');
