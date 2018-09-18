@@ -191,7 +191,7 @@ vendor/lib64/vendor.qti.hardware.qteeconnector@1.0_vendor.so
 vendor/lib/hw/gatekeeper.msm8996.so
 vendor/lib64/hw/gatekeeper.msm8996.so
 
-# GPS - Gemini 8.0.0/OPR1.170623.032/8.5.24
+# GPS - B2N_sprout:9/PPR1.180610.009/00WW_3_190
 etc/permissions/com.qti.location.sdk.xml
 etc/permissions/com.qualcomm.location.xml
 etc/permissions/izat.xt.srv.xml
@@ -201,15 +201,14 @@ lib64/liblocationservice_jni.so
 lib64/libxt_native.so
 lib64/vendor.qti.gnss@1.0.so
 -priv-app/com.qualcomm.location/com.qualcomm.location.apk
-vendor/bin/hw/vendor.qti.gnss@1.0-service
 vendor/bin/loc_launcher
 vendor/bin/lowi-server
 vendor/bin/slim_daemon
 vendor/bin/xtra-daemon
+vendor/bin/hw/vendor.qti.gnss@2.0-service
 vendor/etc/cacert_location.pem
-vendor/etc/init/vendor.qti.gnss@1.0-service.rc
 vendor/etc/xtra_root_cert.pem
-vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so
+vendor/etc/init/vendor.qti.gnss@2.0-service.rc
 vendor/lib64/libalarmservice_jni.so
 vendor/lib64/libdataitems.so
 vendor/lib64/libdrplugin_client.so
@@ -232,7 +231,10 @@ vendor/lib64/libquipc_os_api.so
 vendor/lib64/libulp2.so
 vendor/lib64/libxtadapter.so
 vendor/lib64/libxtwifi_ulp_adaptor.so
-vendor/lib64/vendor.qti.gnss@1.0_vendor.so
+vendor/lib64/vendor.qti.gnss@1.0.so
+vendor/lib64/vendor.qti.gnss@1.1.so
+vendor/lib64/vendor.qti.gnss@1.2.so
+vendor/lib64/hw/vendor.qti.gnss@2.0-impl.so
 
 # Graphics - from bardock-pro - OPM1.171019.019
 vendor/lib64/egl/eglSubDriverAndroid.so|7a51837cf3df8e18d3b305e2f0e7c5981dd39bf3
