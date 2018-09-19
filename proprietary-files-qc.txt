@@ -57,10 +57,20 @@ vendor/lib64/soundfx/libqcbassboost.so
 vendor/lib64/soundfx/libqcreverb.so
 vendor/lib64/soundfx/libqcvirt.so
 
-# Bluetooth - Gemini 8.0.0/OPR1.170623.032/8.5.24
+# Bluetooth
 vendor/bin/wcnss_filter
+lib/com.qualcomm.qti.ant@1.0.so
+-lib/libantradio.so
+lib64/com.qualcomm.qti.ant@1.0.so
+-lib64/libantradio.so
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
+vendor/lib64/com.qualcomm.qti.ant@1.0_vendor.so
 vendor/lib64/libbtnv.so
-vendor/lib/libbtnv.so
+vendor/lib64/libbt-hidlclient.so
+vendor/lib64/vendor.qti.hardware.fm@1.0_vendor.so
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
 
 # Bluetooth (aptX)
 vendor/lib64/libaptX_encoder.so
