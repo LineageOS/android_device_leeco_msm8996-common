@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c20e74f8_5f093e95",
+        "filename": "prebuilt/vendor/etc/init/hw/init.qcom.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 669,
+      "author": {
+        "id": 17257
+      },
+      "writtenOn": "2018-09-21T10:57:36Z",
+      "side": 1,
+      "message": "Leftover",
+      "revId": "3f7555965ba8dbdc32053b995091d59ccd9f3a35",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
