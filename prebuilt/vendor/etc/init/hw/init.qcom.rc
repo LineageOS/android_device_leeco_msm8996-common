@@ -789,6 +789,13 @@ service ftmd /vendor/bin/ftmdaemon
     disabled
     oneshot
 
+service vendor.port-bridge /vendor/bin/port-bridge
+    class main
+    user radio
+    group radio system inet
+    disabled
+    oneshot
+
 service netmgrd /vendor/bin/netmgrd
     class main
     user root
