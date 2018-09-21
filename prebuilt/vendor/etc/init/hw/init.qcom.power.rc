@@ -5,6 +5,9 @@ on init
     write /sys/devices/soc/${ro.boot.bootdevice}/${ro.boot.bootdevice}:ufs_variant/pm_qos_enable 0
     write /sys/module/lpm_levels/parameters/sleep_disabled Y
 
+    # Disable msm_thermal
+    write /sys/module/msm_thermal/parameters/enabled "N"
+
 on boot
     # Bring back main cores CPU 0,2
     write /sys/devices/system/cpu/cpu0/online 1
