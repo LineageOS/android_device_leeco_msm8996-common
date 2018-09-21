@@ -193,6 +193,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.ssr.restart_level=ALL_ENABLE
 
+# USB
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config.extra=none \
+    sys.usb.controller=6a00000.dwc3 \
+    sys.usb.rndis.func.name=rndis_bam \
+    sys.usb.rmnet.func.name=rmnet_bam
+
 # Volte
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.VT_ENABLE=1 \
