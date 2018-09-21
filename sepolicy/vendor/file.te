@@ -3,6 +3,8 @@ type devinfo_block_device, dev_type;
 type nv_data_file, file_type, data_file_type;
 type ifaa_data_file, file_type, data_file_type;
 
+type thermal_data_file, data_file_type, file_type;
+
 type touchpanel_file, file_type, sysfs_type;
 type vendor_keylayout_file, file_type, vendor_file_type;
 

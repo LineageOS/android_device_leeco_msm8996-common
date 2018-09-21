@@ -4,6 +4,7 @@
 
 # data
 /data/misc/audio/aud_devi_arbi                                           u:object_r:audio_socket:s0
+/data/decrypt\.txt                                                       u:object_r:thermal_data_file:s0
 /(vendor|system/vendor)/lib(64)?/libqmi_cci\.so                          u:object_r:same_process_hal_file:s0
 
 # executables
