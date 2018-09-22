@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "063cf0cf_d9e25efa",
+        "filename": "manifest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 282,
+      "author": {
+        "id": 523
+      },
+      "writtenOn": "2018-09-22T07:32:07Z",
+      "side": 1,
+      "message": "is this valid?\ncan\u0027t find it on codebase.",
+      "range": {
+        "startLine": 282,
+        "startChar": 36,
+        "endLine": 282,
+        "endChar": 43
+      },
+      "revId": "a18494af26f9b166ba65e8f519d7b5c5dd6627e6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
