@@ -659,8 +659,6 @@ on property:init.svc.zygote=running
 on property:init.svc.zygote=restarting
     stop ppd
 
-on property:sys.boot_completed=1
-
 service tlocd /vendor/bin/tloc_daemon
     class late_start
     user system
