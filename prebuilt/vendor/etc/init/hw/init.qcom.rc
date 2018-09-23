@@ -101,7 +101,7 @@ on post-fs-data
     mkdir /persist/alarm 0770 system system
     mkdir /persist/time 0770 system system
     mkdir /persist/secnvm 0770 system system
-    mkdir /mnt/vendor/persist/secnvm 0770 system system
+    #mkdir /mnt/vendor/persist/secnvm 0770 system system
     mkdir /persist/data/sfs 0700 system system
     mkdir /persist/data/tz 0700 system system
     mkdir /persist/qc_senseid 0700 system system
@@ -110,6 +110,9 @@ on post-fs-data
     mkdir /data/misc/tloc/ 0700 system drmrpc
     mkdir /data/misc/qvop 0660 system system
     mkdir /data/misc/audio_pp 0771 media audio
+
+    # For nokia ril
+    symlink /persist /mnt/vendor/persist
 
     # NFC
     mkdir /data/nfc
@@ -364,6 +367,35 @@ on post-fs-data
 
     # Wifi firmware reload path
     chown wifi wifi /sys/module/wlan/parameters/fwpath
+
+    # For nokia ril
+    mkdir /data/misc/fih_mcfg 2775 radio root
+    mkdir /data/misc/fih_atl 2775 radio root
+    mkdir /data/misc/fih_atl/modem_config 2775 radio root
+
+    write /data/misc/fih_mcfg/fih_model.txt fih_sdm660_64
+    chown system vendor_rfs /data/misc/fih_mcfg/fih_model.txt
+    chmod 0776 /data/misc/fih_mcfg/fih_model.txt
+    
+    write /data/misc/fih_mcfg/rfs_complete 0
+    chown system vendor_rfs /data/misc/fih_mcfg/rfs_complete
+    chmod 0776 /data/misc/fih_mcfg/rfs_complete
+
+    write /data/misc/fih_mcfg/atl_log.txt "\n"
+    chown system vendor_rfs /data/misc/fih_mcfg/atl_log.txt
+    chmod 0776 /data/misc/fih_mcfg/atl_log.txt
+
+    write /data/misc/fih_mcfg/mbn_0 "\n"
+    chown system vendor_rfs /data/misc/fih_mcfg/mbn_0
+    chmod 0776 /data/misc/fih_mcfg/mbn_0
+
+    write /data/misc/fih_mcfg/mbn_1 "\n"
+    chown system vendor_rfs /data/misc/fih_mcfg/mbn_1
+    chmod 0776 /data/misc/fih_mcfg/mbn_1
+
+    write /data/vendor/radio/atl_complete 0
+    chown system radio /data/vendor/radio/atl_complete
+    chmod 0776 /data/vendor/radio/atl_complete
 
     start ipacm-diag
     start ipacm
