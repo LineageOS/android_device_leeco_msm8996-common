@@ -1,4 +1,4 @@
-# Copyright (c) 2009-2012, 2014-2017, The Linux Foundation. All rights reserved.
+# Copyright (c) 2009-2012, 2014-2018, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -32,6 +32,11 @@ import /vendor/etc/init/hw/init.device.rc
 on early-init
     mount debugfs debugfs /sys/kernel/debug
     chmod 0755 /sys/kernel/debug
+
+  # create symlink for vendor mount points
+    symlink /vendor/firmware_mnt /firmware
+    symlink /vendor/bt_firmware /bt_firmware
+    symlink /vendor/dsp /dsp
 
     symlink /data/tombstones /tombstones
     mkdir /dsp 0771 media media
@@ -96,6 +101,7 @@ on post-fs-data
     mkdir /persist/alarm 0770 system system
     mkdir /persist/time 0770 system system
     mkdir /persist/secnvm 0770 system system
+    mkdir /mnt/vendor/persist/secnvm 0770 system system
     mkdir /persist/data/sfs 0700 system system
     mkdir /persist/data/tz 0700 system system
     mkdir /persist/qc_senseid 0700 system system
@@ -124,6 +130,16 @@ on post-fs-data
     mkdir /data/fpc_images/enroll 0770 system system
     mkdir /data/fpc 0770 system system
 
+    # Create directory used for display
+    mkdir /persist/display 0770 system graphics
+
+    # Create vpp directory
+    mkdir /mnt/vendor/persist/vpp 0770 media media
+
+    # Create hvdcp_opti directory
+    mkdir /mnt/vendor/persist/hvdcp_opti 0770 root system
+
+    # msm specific files that need to be created on /data
     mkdir /data/vendor/misc 01771 system system
 
     # Create directory used by display clients
@@ -147,9 +163,12 @@ on post-fs-data
     # create QDMA dropbox
     mkdir /data/vendor/qdmastats 0700 system system
     mkdir /data/vendor/qdma 0770 system system
+    mkdir /dev/socket/qdma 0770 system system
+    chmod 2770 /dev/socket/qdma
 
-    # Create directory for TZ Apps
+    # Create /data/vendor/tzstorage directory for SFS listener
     mkdir /data/misc/qsee 0770 system system
+    mkdir /data/vendor/tzstorage 0770 system system
 
     # Create directory for apps access via QTEEConnector
     mkdir /data/vendor/qtee 0770 system system
@@ -158,7 +177,6 @@ on post-fs-data
     mkdir /data/misc/qvop 0771 system system
 
     # Create folder for mm-qcamera-daemon
-    mkdir /data/misc/camera 0770 camera camera
     mkdir /data/vendor/camera 0770 camera camera
 
     mkdir /data/media 0770 media_rw media_rw
@@ -168,21 +186,17 @@ on post-fs-data
     mkdir /data/vendor/tombstones 0771 system system
 
     mkdir /data/vendor/ramdump 0771 root system
-    mkdir /data/misc/bluetooth 0770 bluetooth bluetooth
-    mkdir /data/vendor/misc/bluetooth 0770 bluetooth bluetooth
+    mkdir /data/vendor/bluetooth 0770 bluetooth bluetooth
+    mkdir /data/vendor/ramdump/bluetooth 0770 bluetooth bluetooth
 
     # Create the directories used by the Wireless subsystem
-    mkdir /data/misc/wifi 0770 wifi wifi
-    mkdir /data/misc/wifi/sockets 0770 wifi wifi
-    mkdir /data/misc/wifi/wpa_supplicant 0770 wifi wifi
     mkdir /data/vendor/wifi 0770 wifi wifi
     mkdir /data/vendor/wifi/sockets 0770 wifi wifi
+    mkdir /data/vendor/wifi/hostapd 0770 wifi wifi
     mkdir /data/vendor/wifi/hostapd/ctrl 0770 wifi wifi
+    mkdir /data/vendor/wifi/wpa_supplicant 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa/sockets 0770 wifi wifi
-    mkdir /data/vendor/wifi/wpa_supplicant 0770 wifi wifi
-    mkdir /data/misc/dhcp 0770 dhcp dhcp
-    chown dhcp dhcp /data/misc/dhcp
 
     # Create port-bridge log dir
     mkdir /data/vendor/port_bridge 0770 radio radio
@@ -196,36 +210,36 @@ on post-fs-data
     mkdir /data/vendor/ipa 0770 radio radio
     chmod 0770 /data/vendor/ipa
 
+    #Create QTI dir for logs
+    mkdir /data/vendor/dataqti 0770 radio radio
+    chmod 0770 /data/vendor/dataqti
+
     # Create the directories used by CnE subsystem
-    mkdir /data/connectivity 0771 system system
-    chown system system /data/connectivity
+    mkdir /data/vendor/connectivity 0771 radio radio
+    chown radio radio /data/vendor/connectivity
 
     # Create the directories used by DPM subsystem
     mkdir /data/dpm/nsrm 0771 system system
     chown system system /data/dpm/nsrm
 
     # Create the directories used by the audio subsystem
-    mkdir /data/vendor/audio/ 0770 media audio
-    mkdir /data/vendor/misc/audio 0770 audio audio
-    # legacy
-    mkdir /data/audio/ 0770 media audio
-    mkdir /data/misc/audio 0770 audio audio
+    mkdir /data/vendor/audio 0770 audio audio
 
     # Create the directories used by the audio delta files
     mkdir /data/vendor/audio/acdbdata 0770 media audio
     mkdir /data/vendor/audio/acdbdata/delta 0770 media audio
     mkdir /data/vendor/misc/audio/acdbdata 0770 media audio
     mkdir /data/vendor/misc/audio/acdbdata/delta 0770 media audio
-    # legacy
-    mkdir /data/audio/acdbdata 0770 media audio
-    mkdir /data/audio/acdbdata/delta 0770 media audio
 
     # Create directory for radio
     mkdir /data/vendor/radio 0770 system radio
 
+    # Create directory for modem_config
+    mkdir /data/vendor/modem_config 0570 radio root
+
     # Mounting of persist is moved to 'on emmc-fs' and 'on fs' sections
     # We chown/chmod /persist again so because mount is run as root + defaults
-    chown system system /persist
+    chown root system /persist
     chmod 0771 /persist
     chmod 0664 /sys/devices/platform/msm_sdcc.1/polling
     chmod 0664 /sys/devices/platform/msm_sdcc.2/polling
@@ -246,9 +260,9 @@ on post-fs-data
     mkdir /data/vendor/location 0770 gps gps
     mkdir /data/vendor/location/mq 0770 gps gps
     mkdir /data/vendor/location/xtwifi 0770 gps gps
-
-    # Create /data/time folder for time-services
-    mkdir /data/time/ 0700 system system
+    mkdir /dev/socket/location 0770 gps gps
+    mkdir /dev/socket/location/mq 0770 gps gps
+    mkdir /dev/socket/location/xtra 0770 gps gps
 
     # Create directory from IMS services
     mkdir /data/shared 0755
@@ -263,6 +277,7 @@ on post-fs-data
 
     # Create /data/time folder for time-services
     mkdir /data/time/ 0700 system system
+    mkdir /data/vendor/time/ 0700 system system
 
     setprop vold.post_fs_data_done 1
 
@@ -270,8 +285,8 @@ on post-fs-data
     mkdir /data/data/media 0770 media media
 
     # Create FM dir for patchdownloader
-    mkdir /data/misc/fm 0770 system system
-    chmod 0770 /data/misc/fm
+    mkdir /data/vendor/fm 0770 system system
+    chmod 0770 /data/vendor/fm
 
     # RIDL data
     mkdir /data/misc/SelfHost/ 0710 system shell
@@ -293,7 +308,7 @@ on post-fs-data
     mkdir /data/vendor/nfc/param 0770 nfc nfc
 
     # Create IOP  deamon related dirs
-    mkdir /data/vendor/iop 0770 root system
+    mkdir /data/vendor/iop 0700 root system
 
     # Mark the copy complete flag to not completed
     write /data/vendor/radio/copy_complete 0
@@ -322,19 +337,22 @@ on post-fs-data
     mkdir /data/vendor/qti-logkit/logdata/ 2750 system shell
 
     #Create SWAP related dirs
-    mkdir /data/system/swap 0770 root system
-    chmod 2770 /data/system/swap
+    mkdir /data/vendor/swap 0770 root system
+    chmod 2770 /data/vendor/swap
 
     # Create vpp directory
     mkdir /data/vendor/vpp 0770 media media
 
+    #Create dir for TUI
+    mkdir /data/vendor/tui 0600 system drmrpc
+
+
     # Wifi firmware reload path
     chown wifi wifi /sys/module/wlan/parameters/fwpath
 
-    start ipacm-diag
-    start ipacm
-    start qti
-    start netmgrd
+    start vendor.ipacm
+    start vendor.dataqti
+    start vendor.netmgrd
 
 on early-boot
     # Set RLIMIT_MEMLOCK to 64MB
@@ -679,21 +697,21 @@ service mdtpd /vendor/bin/mdtpd
     user root
     group system radio drmrpc
 
-service ssr_setup /vendor/bin/ssr_setup
+service vendor.ssr_setup /system/vendor/bin/ssr_setup
     oneshot
     disabled
 
-on property:persist.sys.ssr.restart_level=*
-    start ssr_setup
+on property:persist.vendor.ssr.restart_level=*
+    start vendor.ssr_setup
 
-on property:persist.sys.ssr.enable_ramdumps=0
+on property:persist.vendor.ssr.enable_ramdumps=0
     write /sys/module/subsystem_restart/parameters/enable_ramdumps 0
 
-on property:persist.radio.atfwd.start=false
-    stop atfwd
+on property:persist.vendor.radio.atfwd.start=false
+    stop vendor.atfwd
 
-on property:radio.atfwd.start=false
-    stop atfwd
+on property:vendor.radio.atfwd.start=false
+    stop vendor.atfwd
 
 # corefile limit
 on property:persist.debug.trace=1
@@ -702,18 +720,6 @@ on property:persist.debug.trace=1
 
 on property:bluetooth.isEnabled=true
     write /sys/class/bluetooth/hci0/idle_timeout 7000
-
-on property:bluetooth.sap.status=running
-    start bt-sap
-
-on property:bluetooth.sap.status=stopped
-    stop bt-sap
-
-on property:bluetooth.dun.status=running
-    start bt-dun
-
-on property:bluetooth.dun.status=stopped
-    stop bt-dun
 
 on property:ro.bluetooth.ftm_enabled=true
     start ftmd
@@ -735,7 +741,7 @@ on property:vold.decrypt=trigger_restart_framework
 on property:persist.env.fastdorm.enabled=true
     setprop persist.radio.data_no_toggle 1
 
-service cnd /vendor/bin/cnd
+service vendor.cnd /vendor/bin/cnd
     class main
     socket cnd stream 660 root inet
     group root wakelock
@@ -751,22 +757,28 @@ service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     user root
     oneshot
 
-service rmt_storage /vendor/bin/rmt_storage
+service vendor.rmt_storage /vendor/bin/rmt_storage
     class core
     user root
-    group root system wakelock
+    shutdown critical
+    ioprio rt 0
     writepid /dev/cpuset/system-background/tasks
 
-service tftp_server /vendor/bin/tftp_server
-    class main
+service vendor.tftp_server /vendor/bin/tftp_server
+    class core
     user root
     writepid /dev/cpuset/system-background/tasks
+
+on property:wc_transport.start_hci=true
+    start start_hci_filter
+
+on property:wc_transport.start_hci=false
+    stop start_hci_filter
 
 service start_hci_filter /vendor/bin/wcnss_filter
     class late_start
     user bluetooth
     group bluetooth diag system wakelock
-    seclabel u:r:wcnss_filter:s0
     disabled
 
 on property:wc_transport.start_root=true
@@ -779,7 +791,6 @@ service hci_filter_root /vendor/bin/wcnss_filter
     class late_start
     user bluetooth
     group bluetooth oem_2901 system
-    seclabel u:r:wcnss_filter:s0
     disabled
 
 service ftmd /vendor/bin/ftmdaemon
@@ -796,42 +807,35 @@ service vendor.port-bridge /vendor/bin/port-bridge
     disabled
     oneshot
 
-service netmgrd /vendor/bin/netmgrd
+service vendor.netmgrd /vendor/bin/netmgrd
     class main
     user root
     group root wifi wakelock radio inet
     disabled
     writepid /dev/cpuset/system-background/tasks
 
-service ipacm-diag /vendor/bin/ipacm-diag
-    class main
-    user radio
-    socket ipacm_log_file dgram 660 radio radio
-    group radio diag oem_2901
-    disabled
-
-service ipacm /vendor/bin/ipacm
+service vendor.ipacm /vendor/bin/ipacm
     class main
     user radio
     group radio inet
     disabled
 
-service qti /vendor/bin/qti
+service vendor.dataqti /vendor/bin/qti
     class main
     user radio
     group radio oem_2901 diag usb net_admin
     disabled
     writepid /dev/cpuset/system-background/tasks
 
-service sensors /vendor/bin/sensors.qcom
+service vendor.sensors /vendor/bin/sensors.qcom
     class core
     user root
     group root
     writepid /dev/cpuset/system-background/tasks
 
-on property:ro.use_data_netmgrd=false
+on property:ro.vendor.use_data_netmgrd=false
     # netmgr not supported on specific target
-    stop netmgrd
+    stop vendor.netmgrd
 
 # Adjust socket buffer to enlarge TCP receive window for high bandwidth
 # but only if ro.data.large_tcp_window_size property is set.
@@ -843,36 +847,28 @@ on property:sys.sysctl.tcp_adv_win_scale=*
 
 service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     -O/data/vendor/wifi/wpa/sockets -puse_p2p_group_interface=1 \
-    -g@android:wpa_wlan0
-    interface android.hardware.wifi.supplicant@1.0::ISupplicant default
-    interface android.hardware.wifi.supplicant@1.1::ISupplicant default
+    -g@android:vendor_wpa_wlan0
 #   we will start as root and wpa_supplicant will switch to user wifi
 #   after setting up the capabilities required for WEXT
 #   user wifi
 #   group wifi inet keystore
+    interface android.hardware.wifi.supplicant@1.0::ISupplicant default
+    interface android.hardware.wifi.supplicant@1.1::ISupplicant default
     class main
-    socket wpa_wlan0 dgram 660 wifi wifi
+    socket vendor_wpa_wlan0 dgram 660 wifi wifi
     disabled
     oneshot
-
-service cnss_diag /vendor/bin/cnss_diag -q -f
-    class main
-    user root
-    group root
-    oneshot
-    # cnss diag cause power consumption bigger sometimes, so disable it until solve it
-    disabled
 
 service cnss-daemon /vendor/bin/cnss-daemon -n -l
     class late_start
     user system
     group system inet net_admin wifi
+    capabilities NET_ADMIN
 
-on property:sys.shutdown.requested=*
-stop cnss-daemon
+on property:sys.powerctl=*
+    stop cnss-daemon
 
 service loc_launcher /vendor/bin/loc_launcher
-    # loc_launcher will start as root and set its uid to gps
     class late_start
     group gps inet diag wifi
     writepid /dev/cpuset/system-background/tasks
@@ -881,7 +877,7 @@ on property:crypto.driver.load=1
     insmod /system/lib/modules/qce.ko
     insmod /system/lib/modules/qcedev.ko
 
-service atfwd /vendor/bin/ATFWD-daemon
+service vendor.atfwd /vendor/bin/ATFWD-daemon
     class late_start
     user system
     group system radio
@@ -891,23 +887,18 @@ on property:ro.data.large_tcp_window_size=true
     # Adjust socket buffer to enlarge TCP receive window for high bandwidth (e.g. DO-RevB)
     write /proc/sys/net/ipv4/tcp_adv_win_scale  2
 
-service ril-daemon /vendor/bin/hw/rild
+service vendor.ril-daemon2 /vendor/bin/hw/rild -c 2
     class main
     user radio
-    group radio cache inet misc audio log readproc wakelock oem_2901 net_raw
+    disabled
+    group radio cache inet misc audio sdcard_r sdcard_rw diag oem_2901 log
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
-service ril-daemon2 /vendor/bin/hw/rild -c 2
-    class main
-    user radio
-    group radio cache inet misc audio log readproc wakelock oem_2901 net_raw
-    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
-    disabled
 
 on property:persist.radio.multisim.config=dsds
-    enable ril-daemon2
+    enable vendor.ril-daemon2
 
-service ssr_diag /vendor/bin/ssr_diag
+service vendor.ssr_diag /vendor/bin/ssr_diag
     class late_start
     user system
     group system
@@ -921,6 +912,7 @@ service charger_monitor /system/bin/charger_monitor
 service qcom-sh /vendor/bin/init.qcom.sh
     class late_start
     user root
+    group root system radio
     oneshot
 
 service hvdcp_opti /vendor/bin/hvdcp_opti
