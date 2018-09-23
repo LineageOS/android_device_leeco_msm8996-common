@@ -90,9 +90,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Data modules
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.iwlan.enable=true \
-    persist.data.mode=concurrent \
-    persist.data.netmgrd.qos.enable=true \
-    ro.use_data_netmgrd=true
+    persist.vendor.data.mode=concurrent \
+    ro.vendor.use_data_netmgrd=true
 
 # Display (Qualcomm Assertive Display)
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -158,11 +157,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.REVERSE_QMI=0 \
     persist.radio.ROTATION_ENABLE=1 \
     persist.rcs.supported=1 \
+    persist.vendor.radio.atfwd.start=true \
     persist.vendor.radio.cs_srv_type=1 \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.facnotsup_as_nonw=1 \
+    persist.radio.flexmap_type=nw_mode \
     persist.vendor.radio.force_on_dc=true \
     persist.vendor.radio.ignore_dom_time=5 \
+    persist.vendor.radio.oem_socket=true \
     persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.redir_party_num=1 \
     persist.vendor.radio.mt_sms_ack=20 \
