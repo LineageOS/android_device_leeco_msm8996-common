@@ -288,6 +288,18 @@ else
     prev_version_info=""
 fi
 
+# For nokia ril
+chmod g+w -R /data/vendor/fih_atl/*
+chmod g+w -R /data/vendor/fih_mcfg/*
+chmod g+w -R /data/vendor/fih_atl/modem_config/*
+cur_fihmodel=`getprop ro.product.name` #`getprop ro.product.model.num`
+fihmodel=${cur_fihmodel##*_}
+if [ ! -f /data/vendor/fih_mcfg/fih_model.txt ]; then
+    echo $fihmodel > /data/vendor/fih_mcfg/fih_model.txt
+    chmod 776 /data/vendor/fih_mcfg/fih_model.txt
+    chown system.vendor_rfs /data/vendor/fih_mcfg/fih_model.txt
+fi
+
 cur_version_info=`cat /firmware/verinfo/ver_info.txt`
 if [ ! -f /firmware/verinfo/ver_info.txt -o "$prev_version_info" != "$cur_version_info" ]; then
     rm -rf /data/misc/radio/modem_config

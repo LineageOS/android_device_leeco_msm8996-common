@@ -331,6 +331,31 @@ on post-fs-data
     # Wifi firmware reload path
     chown wifi wifi /sys/module/wlan/parameters/fwpath
 
+    # For nokia ril
+    mkdir /data/vendor/fih_mcfg 2775  radio root #system vendor_rfs
+    mkdir /data/vendor/fih_atl 2775  radio root #system vendor_rfs
+    mkdir /data/vendor/fih_atl/modem_config 2775  radio root #radio vendor_rfs
+
+    write /data/vendor/radio/atl_complete 0
+    chown system radio /data/vendor/radio/atl_complete
+    chmod 0776 /data/vendor/radio/atl_complete
+
+    write /data/vendor/fih_mcfg/rfs_complete 0
+    chown system vendor_rfs /data/vendor/fih_mcfg/rfs_complete
+    chmod 0776 /data/vendor/fih_mcfg/rfs_complete
+
+    write /data/vendor/fih_mcfg/atl_log.txt "\n"
+    chown system vendor_rfs /data/vendor/fih_mcfg/atl_log.txt
+    chmod 0776 /data/vendor/fih_mcfg/atl_log.txt
+
+    write /data/vendor/fih_mcfg/mbn_0 "\n"
+    chown system vendor_rfs /data/vendor/fih_mcfg/mbn_0
+    chmod 0776 /data/vendor/fih_mcfg/mbn_0
+
+    write /data/vendor/fih_mcfg/mbn_1 "\n"
+    chown system vendor_rfs /data/vendor/fih_mcfg/mbn_1
+    chmod 0776 /data/vendor/fih_mcfg/mbn_1
+
     start ipacm-diag
     start ipacm
     start qti
