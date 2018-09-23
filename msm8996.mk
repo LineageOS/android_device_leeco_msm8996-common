@@ -318,6 +318,7 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    android.hardware.radio.config@1.0 \
     libprotobuf-cpp-full \
     librmnetctl \
     libxml2
@@ -398,7 +399,8 @@ PRODUCT_COPY_FILES += \
 # /system/etc/firmware to be able to move cppf firmware (via hex edit) to /vendor a link 
 # /vendor/firmware/drm is created, which points to /vendor/firmware
 BOARD_VENDOR_EXTRA_SYMLINKS += \
-    /vendor/firmware:/firmware/drm
+    /vendor/firmware:/firmware/drm \
+    /firmware:/mnt/vendor/persist
 
 # Model is set via init library
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
