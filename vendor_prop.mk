@@ -92,7 +92,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.iwlan.enable=true \
     persist.data.mode=concurrent \
     persist.data.netmgrd.qos.enable=true \
-    ro.use_data_netmgrd=true
+    ro.vendor.use_data_netmgrd=true
 
 # Display (Qualcomm Assertive Display)
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -191,7 +191,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # SSR
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.ssr.restart_level=ALL_ENABLE
+    persist.vendor.ssr.restart_level=ALL_ENABLE
 
 # Volte
 PRODUCT_PROPERTY_OVERRIDES += \
