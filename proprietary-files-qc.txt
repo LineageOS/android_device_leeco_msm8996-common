@@ -44,26 +44,36 @@ lib/com.qualcomm.qti.ant@1.0.so|fcd6a7130c480bfe4e4d9cc00702ed8444cddc82
 vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
 vendor/lib64/com.qualcomm.qti.ant@1.0_vendor.so
 
-# Audio - from CAF
-vendor/lib/libacdb-fts.so|1ebcdd5bee8fbd7e6b31608d3791d91b8f91ec22
-vendor/lib/libacdbmapper.so|201959a45232c901e6291c77214e1489166c66b3
-vendor/lib/libacdbrtac.so|323798bbf0bb0883176b16135316f4d0cd8aa80a
-vendor/lib/libadiertac.so|c2d0b5725e762d85f4bb4b2644c9820c39b01522
-vendor/lib/libadm.so|d2e6b046f745ae5da24b15c5121a36578e0c730f
-vendor/lib/libaudcal.so|dea77c9bc6f417f96857c5de936e54eef167f0d4
-vendor/lib/libaudiodevarb.so|713d391a884aa5c033e98f3d78337e235e4f3f0c
-vendor/lib/soundfx/libqcbassboost.so|6654e7d0c88d1a31f4b9dda8b9b0e92d41a3ced5
-vendor/lib/soundfx/libqcreverb.so|28b80d3b512cbf4c211ceec5ccced32dfefee928
-vendor/lib/soundfx/libqcvirt.so|f1a08234039935fefbaed6c3035742e51308c0c4
-vendor/lib64/libacdb-fts.so|757c5993479f97c91f4f3cd3f01b3cdbe710a8ba
-vendor/lib64/libacdbmapper.so|2a8b8f65e764b2336a3cdafb42a01ea6264ffd2e
-vendor/lib64/libacdbrtac.so|1702e595ee2b9cffad976f2dacbc55f28bddfd30
-vendor/lib64/libadiertac.so|39c05c63102c6d17ffd8f3693e6f7e13c87a1801
-vendor/lib64/libaudcal.so|c0727764de3ae81d3b4efa75089174016ba8c7c3
-vendor/lib64/libaudiodevarb.so|77a3897732553d5e7dad37035b8fac7689766b50
-vendor/lib64/soundfx/libqcbassboost.so|072b3648604b01ae69aa9f0e554244f68c75e434
-vendor/lib64/soundfx/libqcreverb.so|5ed1b2a14a0df84e4a96b82e5fff262f1b8920aa
-vendor/lib64/soundfx/libqcvirt.so|78812c4c6356e2632865de5078ce028e362f4aa7
+# Audio - Gemini 8.0.0/OPR1.170623.032/8.9.13
+etc/permissions/audiosphere.xml
+framework/audiosphere.jar
+vendor/lib/libacdb-fts.so
+vendor/lib/libacdbmapper.so
+vendor/lib/libacdbrtac.so
+vendor/lib/libadiertac.so
+vendor/lib/libadm.so
+vendor/lib/libaudcal.so
+vendor/lib/libaudioalsa.so
+vendor/lib/libmdsprpc.so
+vendor/lib/libqtigef.so
+vendor/lib/soundfx/libasphere.so
+vendor/lib/soundfx/libqcbassboost.so
+vendor/lib/soundfx/libqcreverb.so
+vendor/lib/soundfx/libqcvirt.so
+vendor/lib/soundfx/libshoebox.so
+vendor/lib64/libacdb-fts.so
+vendor/lib64/libacdbmapper.so
+vendor/lib64/libacdbrtac.so
+vendor/lib64/libadiertac.so
+vendor/lib64/libaudcal.so
+vendor/lib64/libaudioalsa.so
+vendor/lib64/libmdsprpc.so
+vendor/lib64/libqtigef.so
+vendor/lib64/soundfx/libasphere.so
+vendor/lib64/soundfx/libqcbassboost.so
+vendor/lib64/soundfx/libqcreverb.so
+vendor/lib64/soundfx/libqcvirt.so
+vendor/lib64/soundfx/libshoebox.so
 
 # Audio - acdbloader - from zl1
 vendor/lib/libacdbloader.so|034a5cf03cccfb22e415832c7d6a043dc52d98c0
