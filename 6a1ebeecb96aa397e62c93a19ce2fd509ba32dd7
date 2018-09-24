@@ -16,6 +16,24 @@
       "revId": "6a1ebeecb96aa397e62c93a19ce2fd509ba32dd7",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "caadedaf_4ca9397e",
+        "filename": "prebuilt/vendor/etc/init/hw/init.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 893,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2018-09-24T03:17:56Z",
+      "side": 1,
+      "message": "Thanks for reviewing my commits. I looked in config.fs for cnss-daemon and we have \"caps: NET_BIND_SERVICE\" is that a similar capability or should we also add this NET_ADMIN?",
+      "parentUuid": "e6afcf6a_e8568aeb",
+      "revId": "6a1ebeecb96aa397e62c93a19ce2fd509ba32dd7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
