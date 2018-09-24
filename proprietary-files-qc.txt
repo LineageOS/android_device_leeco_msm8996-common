@@ -357,11 +357,11 @@ vendor/lib64/vendor.display.color@1.0.so|857a9ca67fd219b91c237f97c4ac727aed1c9cb
 vendor/lib64/vendor.display.color@1.1.so|73ac32f065fd05008ccccb5df833a114e4f796ae
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|685d1918332fd7ee9c4a54c3b8f32f8b9d287cb3
 
-# Graphics - Vulkan - Gemini 8.0.0/OPR1.170623.032/8.5.24
+# Graphics - Vulkan - Gemini 8.0.0/OPR1.170623.032/8.9.13
 vendor/lib/hw/vulkan.msm8996.so
 vendor/lib64/hw/vulkan.msm8996.so
 
-# IMS - Gemini 8.0.0/OPR1.170623.032/8.5.24
+# IMS - Gemini 8.0.0/OPR1.170623.032/8.9.13
 -app/ims/ims.apk
 -app/uceShimService/uceShimService.apk
 etc/permissions/com.qualcomm.qti.imscmservice.xml
@@ -436,7 +436,7 @@ vendor/bin/pm-service|ca317d7448d7f115963c3f37ccebbe47ba53fa91
 vendor/lib/libperipheral_client.so|7e54351ec6cae4a302330671e247a2487e36ff15
 vendor/lib64/libperipheral_client.so|1a8db83ca35bb8f9e973cd6d988456d5e6696888
 
-# QMI - Gemini 8.0.0/OPR1.170623.032/8.5.24
+# QMI - Gemini 8.0.0/OPR1.170623.032/8.9.13
 etc/permissions/qti_permissions.xml:vendor/etc/permissions/qti_permissions.xml
 etc/permissions/qti_libpermissions.xml:vendor/etc/permissions/qti_libpermissions.xml
 vendor/bin/irsc_util
@@ -478,7 +478,7 @@ vendor/lib/libsmemlog.so
 # QuickCharge - from zl1
 vendor/bin/hvdcp_opti|316e3b0643981b502f58f2f48e4058b06a98706d
 
-# RIL - Gemini 8.0.0/OPR1.170623.032/8.5.24
+# RIL - Gemini 8.0.0/OPR1.170623.032/8.9.13
 -app/QtiTelephonyService/QtiTelephonyService.apk
 etc/permissions/qcrilhook.xml
 etc/permissions/telephonyservice.xml
@@ -537,13 +537,13 @@ vendor/lib/sensors.oem.so|08656a65ab1bf120ac9bb16e93faf93cc2cdda86
 vendor/lib64/sensors.hal.tof.so|eb19aa40617e50bd1efcc88cee9f5b0af34e7f11
 vendor/lib64/sensors.oem.so|08c12372d3331ee43cc0a3f48b88f21e45324f29
 
-# Thermal - Gemini 8.0.0/OPR1.170623.032/8.5.24
+# Thermal - Gemini 8.0.0/OPR1.170623.032/8.9.13
 vendor/bin/thermal-engine
 -vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 -vendor/lib/libthermalclient.so
 
-# Time services - Gemini 8.0.0/OPR1.170623.032/8.5.24
+# Time services - Gemini 8.0.0/OPR1.170623.032/8.9.13
 -vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
 vendor/lib64/libtime_genoff.so
@@ -562,5 +562,5 @@ vendor/bin/hw/android.hardware.drm@1.0-service.widevine|f54f2a4fb4aaaa0fbabac109
 vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc|51a3168a0dbc064d78ee11ca83614c0cd2e6daa5
 vendor/lib/libwvhidl.so|ba7317da489980b8ef653f3dfd4107c3073edd0f
 
-# Wi-Fi - Gemini 8.0.0/OPR1.170623.032/8.5.24
+# Wi-Fi - Gemini 8.0.0/OPR1.170623.032/8.9.13
 vendor/bin/cnss-daemon
