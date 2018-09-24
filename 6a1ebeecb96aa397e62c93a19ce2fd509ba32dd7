@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e6afcf6a_e8568aeb",
+        "filename": "prebuilt/vendor/etc/init/hw/init.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 893,
+      "author": {
+        "id": 16208
+      },
+      "writtenOn": "2018-09-24T02:01:29Z",
+      "side": 1,
+      "message": "I believe you have this in config.fs",
+      "revId": "6a1ebeecb96aa397e62c93a19ce2fd509ba32dd7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
