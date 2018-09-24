@@ -16,6 +16,24 @@
       "revId": "641a32f939eb085ba4f18990ba381be30b79bbab",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4934bfbb_4a6a27e1",
+        "filename": "vendor_prop.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 523
+      },
+      "writtenOn": "2018-09-24T14:10:32Z",
+      "side": 1,
+      "message": "\u003e should we still declare this and the rndis and rmnet functions?\n\nthis is needed when you don\u0027t use init.qcom.usb.sh script.\ni don\u0027t like the qcom scripts at all. bloated shit.",
+      "parentUuid": "d51fc6c6_b4ac3c8d",
+      "revId": "641a32f939eb085ba4f18990ba381be30b79bbab",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
