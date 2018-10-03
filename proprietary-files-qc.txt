@@ -367,9 +367,9 @@ vendor/lib64/vendor.display.color@1.0.so|857a9ca67fd219b91c237f97c4ac727aed1c9cb
 vendor/lib64/vendor.display.color@1.1.so|73ac32f065fd05008ccccb5df833a114e4f796ae
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|685d1918332fd7ee9c4a54c3b8f32f8b9d287cb3
 
-# Graphics - Vulkan - Gemini 8.0.0/OPR1.170623.032/8.5.24
-vendor/lib/hw/vulkan.msm8996.so
-vendor/lib64/hw/vulkan.msm8996.so
+# Graphics - Vulkan - from B2N_sprout:9/PPR1.180610.009/00WW_3_190
+vendor/lib/hw/vulkan.sdm660.so:vendor/lib/hw/vulkan.msm8996.so|f6abb734fe618fd4026f8aaf0514312a9a1fe236
+vendor/lib64/hw/vulkan.sdm660.so:vendor/lib64/hw/vulkan.msm8996.so|217f59d5835051674c882ef0297f8777330bd9e4
 
 # IMS - Gemini 8.0.0/OPR1.170623.032/8.5.24
 -app/ims/ims.apk
@@ -420,25 +420,45 @@ vendor/lib/vendor.qti.voiceprint@1.0.so|a706a35926dde53af240cafea640ab9e607f0cf1
 vendor/lib64/hw/sound_trigger.primary.msm8996.so|d35bc552da96d2f0de10cebf39c9bb0dc0bf6ab0
 vendor/lib64/vendor.qti.voiceprint@1.0.so|e68fb38066c46a7f2b5be0f9a11300e01ec74dee
 
-# Media - from bardock-pro - OPM1.171019.019
--vendor/lib64/libgpustats.so|60d5afa0c9bbbd11ee1b8d5d9470b8684a590da7
--vendor/lib/libgpustats.so|6918887a8b766d09aeb83b45fa4ff8edeaefe750
-vendor/lib/libI420colorconvert.so|7dca5526b37c9bcad9c13130bc22ade0288b8fa3
-vendor/lib/libmm-color-convertor.so|21793e7f712e7273f98022396c9d63a3edeceaba
-vendor/lib/libOmxAacDec.so|d9989948a9d69be9147966ae2074c5630283e330
-vendor/lib/libOmxAlacDec.so|66a5b18e216589ff3480f3e2ed7ad9417179bb2d
-vendor/lib/libOmxAlacDecSw.so|8038041d44ed6d5d894c1314cd645a2d4bfd21fe
-vendor/lib/libOmxAmrDec.so|233d986523d24bc17f7ef4493d31ba48cd2805fa
-vendor/lib/libOmxAmrwbplusDec.so|9bc02001fe2c586499c560eeb913179a890f26d0
-vendor/lib/libOmxApeDec.so|43d6dbdcfa2d4e772f9094ae2f58e3ce12045736
-vendor/lib/libOmxApeDecSw.so|a1355949eee14cd814e29b3c204b975744b8a49c
-vendor/lib/libOmxEvrcDec.so|bc06bdcd812e012541dc59a53cae3f1b8fbca250
-vendor/lib/libOmxQcelp13Dec.so|25c7f4a214b9fb18e006bb3368c032a73e9fc729
-vendor/lib/libOmxVideoDSMode.so|169545ced7000f0950c006677c33537aaa70dcec
-vendor/lib/libOmxVpp.so|c78b1f37f09328f10fbd62edac4f68b3eac7fef5
-vendor/lib/libOmxWmaDec.so|44998108a6a1bc2d089a4e3d0de88cb210f2b7cc
-vendor/lib/libvpplibrary.so|da05a8f39c02b3b46d60ccec4ca76a80c64e3f8b
-vendor/lib/libvqzip.so|70451e720fb3d5697cf440432c430e3e39e0ad71
+# Media - from B2N_sprout:9/PPR1.180610.009/00WW_3_190
+lib/libmmosal.so|54fb60b71faa40519bd5ce581f8d04c286654851
+lib/vendor.qti.hardware.vpp@1.1.so|f640ff6704d3f78451420cfb479695a733229ada
+lib64/libmmosal.so|1a16c69705f39c995f711158ed6d8c79785af127
+lib64/vendor.qti.hardware.vpp@1.1.so|bd22269eac11557c6933ee5351dfc8b98d349156
+-vendor/lib/libgpustats.so|cb8b3024291ffb97a5621218a18f757ee0d77c02
+vendor/lib/libI420colorconvert.so|148b7e8d305152c8f81586446ea7fd2cc7ebe818
+vendor/lib/libmm-color-convertor.so|4b364fddac2aa0992df0b4fc31b5976fc39929d2
+vendor/lib/libOmxAacDec.so|a92cee7dde432713ae8d87db06587c0f417fd690
+vendor/lib/libOmxAlacDec.so|f81a4ff65837ececf15fd8058f6da98885b003e3
+vendor/lib/libOmxAlacDecSw.so|f6c3d4aa46e05794550103dbe7da16fdd6664185
+vendor/lib/libOmxAmrDec.so|75bcd1a01770c8daa018a0881a12a94ae84fd713
+vendor/lib/libOmxAmrwbplusDec.so|3e7c65e37a539a9eab60e502cb56a892aa0d1cb0
+vendor/lib/libOmxApeDec.so|1e745b99c9f4b50328a5ea4948c7cfcd128d33ba
+vendor/lib/libOmxApeDecSw.so|0e28a8d8bea169b626fdd505a1b08fc45a12aa7f
+vendor/lib/libOmxEvrcDec.so|71404d14fb89086c6220f5ea3b530e44a9f7362b
+vendor/lib/libOmxQcelp13Dec.so|4a2b5b18e12f31dec17890607ad6bcbb899d02a6
+vendor/lib/libOmxVideoDSMode.so|4ea8e5946bea62b837df4787129874bd7225a56e
+vendor/lib/libOmxVpp.so|42cc01f4ee6068d2d412959076af898e57b529f1
+vendor/lib/libOmxWmaDec.so|292fabacae8283f257a7bc85b00b1b5c137b15a9
+vendor/lib/libvpphvx.so|d9ae36e492e2ca03f3880db16ab6d8b0e9642188
+vendor/lib/libvpplibrary.so|fc33228da9d1be65f7244c787e0ce20fc8bee654
+vendor/lib/libvqzip.so|88e4b0722850be25caebe1884a2a6765f8b2acbc
+-vendor/lib64/libgpustats.so|d5cbfaf117fafaf595bb0e66214d80f6f652c964
+vendor/lib64/libI420colorconvert.so|8be29a4b0b8f1adc828ad49df44dc47952821d11
+vendor/lib64/libmm-color-convertor.so|e20947d3133b644191c81759c974f50040751431
+vendor/lib64/libOmxAacDec.so|600dba09e9e499c1e905ef09b2c5819b48d2b386
+vendor/lib64/libOmxAlacDec.so|31e9bb1ee1ba666c276055e036fdba645944ce92
+vendor/lib64/libOmxAlacDecSw.so|3503cec298523286eb14f13512401f3f57ada816
+vendor/lib64/libOmxAmrDec.so|9aa900a995a9d644a32ae498675c26ec3e96ce69
+vendor/lib64/libOmxAmrwbplusDec.so|a8d695b37e17cf56ad1934cd5d3ad33fb4c38d85
+vendor/lib64/libOmxApeDec.so|4dae9590a57227fbf83c15fae15feb0b76cdaea4
+vendor/lib64/libOmxApeDecSw.so|e473a5a52ed9a571f42038d5f2664dda8a6786d7
+vendor/lib64/libOmxEvrcDec.so|2ef34239c548797b6308eb1f1de637aacbe405e0
+vendor/lib64/libOmxQcelp13Dec.so|3675293e46fda7c8d03df0b40699762cd408d7a0
+vendor/lib64/libOmxVpp.so|15f23ca72b7ee9d59e310a8d5c5da7e8d5f95263
+vendor/lib64/libOmxWmaDec.so|44b163088bbd55d26f80de06a799f7c769c9685d
+vendor/lib64/libvpphvx.so|4b980de18d0763d6eab535733099c0a1db6f5166
+vendor/lib64/libvpplibrary.so|07a72285416874698b60c6bb0352295ea6f93938
 
 # Peripheral manager - from OnePlus3
 vendor/bin/pm-proxy|e2354a71c979c3d961f198d3c8f3e2e27d8ab85b
