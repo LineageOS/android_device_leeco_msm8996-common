@@ -97,14 +97,18 @@ sdm.perf_hint_window=50
 # Graphics (OpenGLES)
 ro.opengles.version=196610
 
+# IMS / VoLTE
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+persist.radio.VT_CAM_INTERFACE=2
+persist.radio.VT_ENABLE=1
+persist.radio.VT_HYBRID_ENABLE=1
+
 # Media
 persist.media.treble_omx=true
 vidc.debug.perf.mode=2
 vidc.enc.dcvs.extra-buff-count=2
-
-# IMS
-persist.dbg.volte_avail_ovr=1
-persist.dbg.vt_avail_ovr=1
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
@@ -148,7 +152,7 @@ persist.data.df.dev_name=rmnet_usb0
 # SSR
 persist.sys.ssr.restart_level=ALL_ENABLE
 
-# system props for the MM modules
+# System props for the MM modules
 audio.deep_buffer.media=true
 media.stagefright.enable-player=true
 media.stagefright.enable-http=true
@@ -163,11 +167,6 @@ persist.mm.enable.prefetch=true
 
 # Timeservice
 persist.timed.enable=true
-
-# Volte
-persist.radio.VT_ENABLE=1
-persist.radio.VT_HYBRID_ENABLE=1
-persist.dbg.wfc_avail_ovr=1
 
 # Wifi
 wifi.interface=wlan0
