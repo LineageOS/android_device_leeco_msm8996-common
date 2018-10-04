@@ -411,3 +411,9 @@ case "$buildvariant" in
         echo "4 4 1 4" > /proc/sys/kernel/printk
         ;;
 esac
+
+voltehaxfile=/data/system/users/0/settings_global.xml
+if [ ! grep -q multi_sim_data_call=-1 "$voltehaxfile" ]; then
+    sed -i 's/"multi_sim_data_call" value=.*/"multi_sim_data_call" value="-1"/g' $voltehaxfile
+    restorecon $voltehaxfile
+fi
