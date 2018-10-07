@@ -1,0 +1,6 @@
+type init_uei_shell, domain;
+
+init_daemon_domain(init_uei_shell)
+
+allow init_uei_shell vendor_shell_exec:file { rx_file_perms };
+allow init_uei_shell vendor_toolbox_exec:file { rx_file_perms };

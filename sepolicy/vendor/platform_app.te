@@ -1,1 +1,5 @@
 get_prop(platform_app, qemu_hw_mainkeys_prop)
+
+allow platform_app cir_device:file rx_file_perms;
+allow platform_app cir_data_file:chr_file rw_file_perms;
+allow platform_app sysfs_ir_enable:chr_file rw_file_perms;
