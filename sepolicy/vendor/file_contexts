@@ -3,12 +3,17 @@
 /dev/block/platform/soc/624000\.ufshc/by-name/persist                    u:object_r:persist_block_device:s0
 
 # data
+/data/data/com\.uei\.quicksetsdk\.letv/files/libqs_jni\.so               u:object_r:cir_data_file:s0
 /data/misc/audio/aud_devi_arbi                                           u:object_r:audio_socket:s0
 /data/vendor/nfc(/.*)?                                                   u:object_r:nfc_data_file:s0
 /data/decrypt\.txt                                                       u:object_r:thermal_data_file:s0
 /(vendor|system/vendor)/lib(64)?/libqmi_cci\.so                          u:object_r:same_process_hal_file:s0
 
+# dev
+/dev/ttyHSL1                                                             u:object_r:cir_device:s0
+
 # executables
+/(vendor|system/vendor)/bin/hw/android\.hardware\.ir@1\.0-service\.leeco_8996                  u:object_r:hal_ir_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.leeco_8996               u:object_r:hal_light_default_exec:s0
 
 # keylayout
@@ -19,6 +24,9 @@
 
 # persist
 /persist/rfs(/.*)?                                                       u:object_r:rfs_file:s0
+
+# Shell scripts
+/(vendor|system/vendor)/bin/init\.uei\.sh                                u:object_r:init_uei_shell_exec:s0
 
 # sysfs
 /sys/class/leds(/.*)?                                                    u:object_r:sysfs_leds:s0
@@ -31,6 +39,8 @@
 /sys/devices/soc/[a-z0-9]+.qcom,mdss_mdp/[a-z0-9]+.qcom,mdss_mdp:qcom,mdss_fb_primary/leds/lcd-backlight(/.*)? u:object_r:sysfs_leds:s0
 
 /sys/devices/soc/75ba000\.i2c/i2c-12/12-0020/input/input2/0dbutton       u:object_r:touchpanel_file:s0
+
+/sys/remote/enable                                                       u:object_r:sysfs_ir_enable:s0
 
 # legacy
 /data/misc/tloc(/.*)?                                                    u:object_r:tlocd_data_file:s0

@@ -127,6 +127,9 @@ vendor/lib/libwms.so
 vendor/lib/libwqe.so
 vendor/lib/libxml.so
 
+# ConsumerIR - from zl1
+etc/UEISettings:vendor/etc/UEISettings|e95577884775d955c1b9f4edbcfbaf99d003b508
+
 # DPM - gemini - 8.0.0/OPR1.170623.032/8.9.13
 bin/dpmd
 etc/dpm/dpm.conf

@@ -1,5 +1,10 @@
 type devinfo_block_device, dev_type;
 
+type cir_data_file, file_type, data_file_type;
+type cir_device, dev_type;
+type init_uei_shell_exec, file_type, exec_type, vendor_file_type;
+type sysfs_ir_enable, fs_type, sysfs_type;
+
 type nv_data_file, file_type, data_file_type;
 type ifaa_data_file, file_type, data_file_type;
 
