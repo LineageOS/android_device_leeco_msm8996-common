@@ -928,7 +928,7 @@ service hvdcp_opti /vendor/bin/hvdcp_opti
     group root
     seclabel u:r:hvdcp:s0
 
-service charger /charger
+service charger /vendor/bin/charger
     class charger
     group system graphics log
     seclabel u:r:charger:s0
