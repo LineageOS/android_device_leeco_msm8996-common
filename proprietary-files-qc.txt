@@ -423,6 +423,9 @@ vendor/lib/libOmxWmaDec.so|afeba1eb1da8992ba8cec897c7372e77f1e60a4b
 vendor/lib/libvpplibrary.so|1b74559eeaa6cb55e0dac65b94bae08279098b90
 vendor/lib/libvqzip.so|70451e720fb3d5697cf440432c430e3e39e0ad71
 
+# Offline charger - from x2
+vendor/bin/charger|0a3861fd5b997337a40926e7ddb2829461cfded8
+
 # Peripheral manager
 vendor/bin/pm-proxy
 vendor/bin/pm-service
