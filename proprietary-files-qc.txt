@@ -460,6 +460,9 @@ vendor/lib64/libOmxWmaDec.so|44b163088bbd55d26f80de06a799f7c769c9685d
 vendor/lib64/libvpphvx.so|4b980de18d0763d6eab535733099c0a1db6f5166
 vendor/lib64/libvpplibrary.so|07a72285416874698b60c6bb0352295ea6f93938
 
+# Offline charger - from x2
+vendor/bin/charger|0a3861fd5b997337a40926e7ddb2829461cfded8
+
 # Peripheral manager - from OnePlus3
 vendor/bin/pm-proxy|e2354a71c979c3d961f198d3c8f3e2e27d8ab85b
 vendor/bin/pm-service|ca317d7448d7f115963c3f37ccebbe47ba53fa91

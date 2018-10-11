@@ -206,7 +206,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.health@2.0-impl \
     android.hardware.health@2.0-service \
-    libhealthd.msm
+    libhealthd.msm \
+    charger_res_images
 
 # HIDL
 PRODUCT_PACKAGES += \
