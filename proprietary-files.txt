@@ -78,9 +78,9 @@ vendor/lib/libbtnv.so
 vendor/lib64/libaptX_encoder.so
 vendor/lib64/libaptXHD_encoder.so
 
-# Camera
-vendor/lib/libstlport.so
-vendor/lib64/libstlport.so
+# Camera - from CAF
+vendor/lib/libstlport.so|8971701a4dd5d7928d5f44245dd0c08435540ad8
+vendor/lib64/libstlport.so|6ed59e168ff6cf43fcc1a911d2b06821691b5aca
 
 # CNE - gemini - 8.0.0/OPR1.170623.032/8.9.13
 etc/cne/SwimConfig.xml
@@ -439,6 +439,46 @@ vendor/bin/pm-service
 vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
 
+# Perf - Gemini 8.0.0/OPR1.170623.032/8.9.13
+lib64/vendor.qti.hardware.iop@1.0.so
+lib64/vendor.qti.hardware.perf@1.0.so
+lib/vendor.qti.hardware.iop@1.0.so
+lib/vendor.qti.hardware.perf@1.0.so
+vendor/bin/energy-awareness
+vendor/bin/hw/vendor.qti.hardware.iop@1.0-service
+vendor/bin/hw/vendor.qti.hardware.perf@1.0-service
+vendor/etc/init/vendor.qti.hardware.iop@1.0-service.rc
+vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc
+vendor/etc/perf/gamedwhitelist.xml
+vendor/etc/perf/perfboostsconfig.xml
+vendor/etc/perf/perf-profile0.conf
+vendor/etc/perf/perf-profile1.conf
+vendor/etc/perf/perf-profile2.conf
+vendor/etc/perf/perf-profile3.conf
+vendor/etc/perf/perf-profile4.conf
+vendor/etc/perf/perf-profile5.conf
+vendor/etc/perf/perf-profile6.conf
+vendor/lib64/hw/vendor.qti.hardware.iop@1.0-impl.so
+vendor/lib64/libfeedbackhandler.so
+vendor/lib64/libperfgluelayer.so
+vendor/lib64/libqti-iopd.so
+vendor/lib64/libqti-iopd-client.so
+vendor/lib64/libqti-perfd.so
+vendor/lib64/libqti-perfd-client.so
+vendor/lib64/libqti-util.so
+vendor/lib64/vendor.qti.hardware.iop@1.0_vendor.so
+vendor/lib64/vendor.qti.hardware.perf@1.0_vendor.so
+vendor/lib/hw/vendor.qti.hardware.iop@1.0-impl.so
+vendor/lib/libfeedbackhandler.so
+vendor/lib/libperfgluelayer.so
+vendor/lib/libqti-iopd.so
+vendor/lib/libqti-iopd-client.so
+vendor/lib/libqti-perfd.so
+vendor/lib/libqti-perfd-client.so
+vendor/lib/libqti-util.so
+vendor/lib/vendor.qti.hardware.iop@1.0_vendor.so
+vendor/lib/vendor.qti.hardware.perf@1.0_vendor.so
+
 # Postprocessing - from bardock-pro - 8.1.0/OPM1.171019.026/717
 etc/permissions/com.qti.snapdragon.sdk.display.xml|0bff16d681e75f203c1e11ff33afba82490e49b3
 framework/com.qti.snapdragon.sdk.display.jar|cc367fe3c3525bc580f0d3ab41e43190dcee60dc
@@ -501,8 +541,8 @@ vendor/lib/libqmi.so
 vendor/lib/libqmiservices.so
 vendor/lib/libsmemlog.so
 
-# QuickCharge
-vendor/bin/hvdcp_opti
+# QuickCharge - from zl1
+vendor/bin/hvdcp_opti|316e3b0643981b502f58f2f48e4058b06a98706d
 
 # RIL - gemini - 8.0.0/OPR1.170623.032/8.9.13
 -app/QtiTelephonyService/QtiTelephonyService.apk
