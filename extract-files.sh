@@ -21,7 +21,7 @@ set -e
 DEVICE_COMMON=msm8996-common
 VENDOR=leeco
 
-# Load extractutils and do some sanity checks
+# Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
@@ -58,9 +58,7 @@ fi
 # Initialize the helper for common
 setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true "$CLEAN_VENDOR"
 
-extract "$MY_DIR"/proprietary-files-qc-perf.txt "$SRC" "$SECTION"
-
-extract "$MY_DIR"/proprietary-files-qc.txt "$SRC" "$SECTION"
+extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
 
 # Initialize the helper for device
 setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" false "$CLEAN_VENDOR"
