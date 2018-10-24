@@ -75,9 +75,6 @@ on fs
     # for android.hardware.health@2.0-service.leeco_8996 cycle count backup
     mkdir /persist/battery 0700 system system
 
-    # Start HW service manager early
-    start hwservicemanager
-
 on late-fs
     # boot time fs tune
     write /sys/block/sda/queue/iostats 0
