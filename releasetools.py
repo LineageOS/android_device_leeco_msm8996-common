@@ -30,8 +30,10 @@ def FullOTA_InstallBegin(info):
   return
 
 def FullOTA_InstallEnd(info):
+  info.script.Mount("/system")
   info.script.Mount("/vendor")
   RunCustomScript(info, "deunify.sh", "")
+  info.script.Unmount("/system")
   info.script.Unmount("/vendor")
   return
 
