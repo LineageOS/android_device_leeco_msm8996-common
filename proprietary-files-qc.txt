@@ -408,6 +408,10 @@ vendor/lib64/lib-uceservice.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
 
+# IR
+-app/LetvRemoteControl_preinstall/LetvRemoteControl_preinstall.apk
+-app/UEIQuicksetSDKLeTV/UEIQuicksetSDKLeTV.apk
+
 # Keystore - from CAF
 vendor/lib/hw/keystore.msm8996.so|bd92d1ccbc294e6bcb0fdb4018749646d1ba0193
 vendor/lib64/hw/keystore.msm8996.so|ade812bb2991c103f6af397e9662460ed0e48d5f
