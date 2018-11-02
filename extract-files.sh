@@ -73,4 +73,12 @@ COMMON_BLOB_ROOT="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE_COMMON"/proprietary
 sed -i "s|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-java|g" \
     "$COMMON_BLOB_ROOT"/vendor/etc/permissions/qti_libpermissions.xml
 
+#
+# Hax libaudcal.so to store acdbdata in new path
+#
+sed -i "s|\/data\/vendor\/misc\/audio\/acdbdata\/delta\/|\/data\/vendor\/audio\/acdbdata\/delta\/\x00\x00\x00\x00\x00|g" \
+    "$COMMON_BLOB_ROOT"/vendor/lib/libaudcal.so
+sed -i "s|\/data\/vendor\/misc\/audio\/acdbdata\/delta\/|\/data\/vendor\/audio\/acdbdata\/delta\/\x00\x00\x00\x00\x00|g" \
+    "$COMMON_BLOB_ROOT"/vendor/lib64/libaudcal.so
+
 "$MY_DIR"/setup-makefiles.sh
