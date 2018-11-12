@@ -175,10 +175,6 @@ vendor/lib64/librpmb.so|1be8d44919ad1d457b73fdc987335f4ec2620842
 vendor/lib64/libssd.so|2a07064578f0b8dde52d755b44227f354af15c77
 vendor/lib/libQSEEComAPI.so|7062cdfb83a986d44190d6fd9762da43d508e10a
 
-# DRM ClearKey - from marlin - PPR2.181005.003
-vendor/bin/hw/android.hardware.drm@1.1-service.clearkey|50821791fc935a98ae6e41a7ee529c8fe9bd47c2
-vendor/etc/init/android.hardware.drm@1.1-service.clearkey.rc|acf0c3c835d4cf105b8832b9fd16046042aad629
-
 # DRM Widevine - from marlin - PPR2.181005.003
 vendor/bin/hw/android.hardware.drm@1.1-service.widevine|2c2455a218eb8d5368f1ccd39bea51be8364a0f3
 vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc|5a01d337c1d375ee24a6c8992ba91f54afb7637e
