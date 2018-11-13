@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "41e6abb2_004901d3",
+        "filename": "healthd/healthd_board_msm.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 18789
+      },
+      "writtenOn": "2018-11-13T05:27:55Z",
+      "side": 1,
+      "message": "Wrong path, correct should be: \"/sys/class/leds/lcd-backlight/brightness\"\nref: https://github.com/LineageOS/android_device_leeco_msm8996-common/blob/lineage-16.0/liblight/service.cpp#L35",
+      "range": {
+        "startLine": 52,
+        "startChar": 0,
+        "endLine": 52,
+        "endChar": 82
+      },
+      "revId": "222da30eb1e3c7ccf6c0a8c73939a7d18f3d3cc7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
