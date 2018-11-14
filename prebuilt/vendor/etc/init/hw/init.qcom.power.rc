@@ -48,9 +48,6 @@ on charger
     start thermal-engine
 
 on enable-low-power
-    # Enable all LPMs (this will enable C4, D4, D3, E4 and M3 LPMs)
-    write /sys/module/lpm_levels/parameters/sleep_disabled "N"
-
     # Set GPU idle frequency to 133 MHz
     write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 6
 
@@ -138,6 +135,12 @@ on enable-low-power
     write /sys/devices/soc/${ro.boot.bootdevice}/clkscale_enable 1
     write /sys/devices/soc/${ro.boot.bootdevice}/clkgate_enable 1
     write /sys/devices/soc/${ro.boot.bootdevice}/${ro.boot.bootdevice}:ufs_variant/pm_qos_enable 1
+
+    # Enable all LPMs (this will enable C4, D4, D3, E4 and M3 LPMs)
+    write /sys/module/lpm_levels/parameters/sleep_disabled "N"
+
+    # Set perfd properties
+    setprop sys.post_boot.parsed 1
 
     setprop sys.io.scheduler "bfq"
 
