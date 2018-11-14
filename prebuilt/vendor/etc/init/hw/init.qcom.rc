@@ -922,7 +922,7 @@ service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqb
     group root
     writepid /dev/cpuset/system-background/tasks
 
-service hvdcp_opti /vendor/bin/hvdcp_opti
+service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
     class main
     user root
     group root
@@ -933,9 +933,6 @@ service charger /vendor/bin/charger
     group system graphics log
     seclabel u:r:charger:s0
     writepid /dev/cpuset/system-background/tasks
-
-on charger
-    start hvdcp_opti
 
 on property:persist.sys.le_fast_chrg_enable=1
     write /sys/class/power_supply/le_ab/le_quick_charge_mode 0
