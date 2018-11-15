@@ -99,8 +99,8 @@ on enable-low-power
     write /sys/module/msm_thermal/core_control/enabled 1
 
     # Input boost configuration
-    write /sys/module/cpu_boost/parameters/input_boost_freq "0:1324800 2:0"
-    write /sys/module/cpu_boost/parameters/input_boost_ms 80
+    write /sys/module/cpu_boost/parameters/input_boost_freq "0:1324800 2:1324800"
+    write /sys/module/cpu_boost/parameters/input_boost_ms 40
 
     # Set big.LITTLE scheduler parameters
     write /proc/sys/kernel/sched_boost 0
