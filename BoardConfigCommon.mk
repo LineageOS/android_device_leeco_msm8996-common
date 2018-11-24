@@ -195,7 +195,6 @@ TARGET_USES_MKE2FS := true
 
 # Power
 TARGET_HAS_NO_WIFI_STATS := true
-TARGET_USES_INTERACTION_BOOST := true
 
 # Recovery
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_leeco
