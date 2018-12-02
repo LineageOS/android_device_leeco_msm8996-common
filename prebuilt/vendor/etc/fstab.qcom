@@ -2,12 +2,18 @@
 # The filesystem that contains the filesystem checker binary (typically /system) cannot
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
-#TODO: Add 'check' as fs_mgr_flags with data partition.
+# TODO: Add 'check' as fs_mgr_flags with data partition.
 # Currently we dont have e2fsck compiled. So fs check would failed.
+
+# NOTE: /system and /vendor partitions are now early-mounted and the fstab entry is specified in device tree (duplicated below for recovery image purposes only):
+#       /proc/device-tree/firmware/android/fstab/system
+#       /proc/device-tree/firmware/android/fstab/vendor
 
 #<src>                                                       <mnt_point>       <type>  <mnt_flags and options>                                                 <fs_mgr_flags>
 /dev/block/bootdevice/by-name/boot                           /boot             emmc    defaults                                                                defaults
 /dev/block/bootdevice/by-name/recovery                       /recovery         emmc    defaults                                                                defaults
+/dev/block/bootdevice/by-name/system                         /system           ext4    ro,barrier=1,discard                                                    wait,recoveryonly
+/dev/block/bootdevice/by-name/vendor                         /vendor           ext4    ro,barrier=1,discard                                                    wait,recoveryonly
 /dev/block/bootdevice/by-name/userdata                       /data             ext4    nosuid,nodev,noatime,barrier=1,noauto_da_alloc,discard                  wait,check,encryptable=footer,quota,length=-16384
 /dev/block/bootdevice/by-name/userdata                       /data             f2fs    nosuid,nodev,noatime,discard                                            wait,encryptable=footer,quota,length=-16384
 /dev/block/bootdevice/by-name/cache                          /cache            ext4    nosuid,nodev,noatime,barrier=1                                          wait,check
