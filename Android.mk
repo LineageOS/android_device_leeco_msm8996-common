@@ -67,7 +67,7 @@ $(ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "ADSP firmware link: $@"
 	@mkdir -p $(dir $@)
 	@rm -rf $@
-	$(hide) ln -sf /firmware/image/$(notdir $@) $@
+	$(hide) ln -sf /vendor/firmware_mnt/image/$(notdir $@) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(ADSP_SYMLINKS)
 
@@ -77,7 +77,7 @@ $(FIDOTAP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "FIDOTAP firmware link: $@"
 	@mkdir -p $(dir $@)
 	@rm -rf $@
-	$(hide) ln -sf /firmware/image/$(notdir $@) $@
+	$(hide) ln -sf /vendor/firmware_mnt/image/$(notdir $@) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(FIDOTAP_SYMLINKS)
 
@@ -87,7 +87,7 @@ $(GOODIXFP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "GOODIXFP firmware link: $@"
 	@mkdir -p $(dir $@)
 	@rm -rf $@
-	$(hide) ln -sf /firmware/image/$(notdir $@) $@
+	$(hide) ln -sf /vendor/firmware_mnt/image/$(notdir $@) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(GOODIXFP_SYMLINKS)
 
@@ -107,7 +107,7 @@ $(MDTP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "MDTP firmware link: $@"
 	@mkdir -p $(dir $@)
 	@rm -rf $@
-	$(hide) ln -sf /firmware/image/$(notdir $@) $@
+	$(hide) ln -sf /vendor/firmware_mnt/image/$(notdir $@) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(MDTP_SYMLINKS)
 
@@ -155,7 +155,7 @@ $(VENUS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "VENUS firmware link: $@"
 	@mkdir -p $(dir $@)
 	@rm -rf $@
-	$(hide) ln -sf /firmware/image/$(notdir $@) $@
+	$(hide) ln -sf /vendor/firmware_mnt/image/$(notdir $@) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(VENUS_SYMLINKS)
 
