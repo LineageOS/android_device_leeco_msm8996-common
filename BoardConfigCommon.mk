@@ -204,9 +204,9 @@ TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_leeco
 
 #RECOVERY_VARIANT := twrp
 BOARD_HAS_LARGE_FILESYSTEM := true
+TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/prebuilt/vendor/etc/fstab.qcom
 
 ifeq ($(RECOVERY_VARIANT),twrp)
-TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/recovery/twrp.fstab
 BOARD_HAS_NO_REAL_SDCARD := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/soc/6a00000.ssusb/6a00000.dwc3/gadget/lun0/file
 TW_THEME := portrait_hdpi
@@ -219,8 +219,6 @@ TW_EXTRA_LANGUAGES := true
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_NTFS_3G := true
 #TWRP_EVENT_LOGGING := true
-else
-TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/recovery/fstab.qcom
 endif
 
 # Releasetools
