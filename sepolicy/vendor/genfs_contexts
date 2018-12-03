@@ -1,3 +1,5 @@
 genfscon debugfs /rmt_storage/rmts     u:object_r:qti_debugfs:s0
 
 genfscon debugfs /msm_core             u:object_r:qti_debugfs:s0
+
+genfscon sysfs /devices/soc/9300000.qcom,lpass/subsys3/name            u:object_r:sysfs_ssr:s0
