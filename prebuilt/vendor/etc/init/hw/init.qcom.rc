@@ -209,7 +209,7 @@ on post-fs-data
     mkdir /data/dpm/nsrm 0771 system system
     chown system system /data/dpm/nsrm
 
-    # Create the directories used by the audio subsystem
+    # Create directory used by audio subsystem
     mkdir /data/vendor/audio 0770 audio audio
 
     # Create the directories used by the audio delta files
@@ -347,6 +347,7 @@ on early-boot
     # Allow subsystem (modem etc) debugging
     write /sys/kernel/boot_adsp/boot 1
     write /sys/kernel/boot_slpi/boot 1
+    chown root audio /sys/kernel/boot_adsp/boot
 
 on boot
     # Secure touch
