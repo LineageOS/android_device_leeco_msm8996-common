@@ -82,6 +82,9 @@ on post-fs
     wait_for_prop sys.listeners.registered true
 
 on post-fs-data
+    # OnePlus radio
+    mkdir /data/vendor/oemnvitems 0771 radio radio
+
     # msm specific files that need to be created on /data
     mkdir /persist/drm 0770 system system
     mkdir /persist/misc 0770 system system
