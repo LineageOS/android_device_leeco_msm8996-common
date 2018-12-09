@@ -92,7 +92,7 @@ void init_target_properties()
             property_set("persist.data.iwlan.enable", "false");
             // Dual SIM
             property_set("persist.radio.multisim.config", "dsds");
-            property_set("ro.telephony.default_network", "10,10");
+            property_set("ro.telephony.default_network", "22,20");
             // Power profile
             property_set("ro.power_profile.override", "power_profile_zl0");
             unknownDevice = 0;
@@ -105,7 +105,7 @@ void init_target_properties()
             property_set("persist.data.iwlan.enable", "true");
             // Single SIM
             property_set("persist.radio.multisim.config", "NA");
-            property_set("ro.telephony.default_network", "10");
+            property_set("ro.telephony.default_network", "22");
             // NFC
             property_set("persist.nfc.smartcard.config", "SIM1,eSE1");
             unknownDevice = 0;
@@ -117,7 +117,7 @@ void init_target_properties()
             property_set("persist.data.iwlan.enable", "false");
             // Dual SIM
             property_set("persist.radio.multisim.config", "dsds");
-            property_set("ro.telephony.default_network", "10,10");
+            property_set("ro.telephony.default_network", "22,20");
             // NFC
             property_set("persist.nfc.smartcard.config", "SIM1,SIM2,eSE1");
             unknownDevice = 0;
