@@ -1,7 +1,4 @@
 VNDK_SP_LIBRARIES := \
-    android.hardware.camera.device@1.0 \
-    android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4 \
     android.hardware.graphics.allocator@2.0 \
     android.hardware.graphics.mapper@2.0 \
     android.hardware.graphics.mapper@2.1 \
@@ -32,39 +29,4 @@ VNDK_SP_LIBRARIES := \
     libunwindstack \
     libutils \
     libutilscallstack \
-    libdexfile \
-    libz
-
-EXTRA_VENDOR_LIBRARIES := \
-    android.hidl.base@1.0 \
-    android.hidl.manager@1.0 \
-    android.hardware.camera.device@1.0 \
-    android.hardware.camera.device@3.2 \
-    android.hardware.camera.device@3.3 \
-    android.hardware.camera.provider@2.4 \
-    libcamera_metadata \
-    libfmq \
-    android.hardware.camera.common@1.0 \
-    android.hardware.configstore@1.0 \
-    android.hardware.configstore-utils \
-    android.hidl.allocator@1.0 \
-    android.hidl.memory@1.0 \
-    libbinder \
-    libui
-
-HW_VENDOR_LIBRARIES := \
-    android.hidl.base@1.0 \
-    android.hidl.manager@1.0 \
-    android.hardware.camera.device@1.0 \
-    android.hardware.camera.device@3.2 \
-    android.hardware.camera.device@3.3 \
-    android.hardware.camera.provider@2.4 \
-    libcamera_metadata \
-    libfmq \
-    android.hardware.camera.common@1.0 \
-    android.hardware.configstore@1.0 \
-    android.hardware.configstore-utils \
-    android.hidl.allocator@1.0 \
-    android.hidl.memory@1.0 \
-    libbinder \
-    libui
+    libdexfile
