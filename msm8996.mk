@@ -134,11 +134,8 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.device@1.0.so \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
-    camera.device@3.2-impl \
-    camera.device@1.0-impl \
     camera.msm8996 \
     Snap
 
@@ -376,10 +373,6 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-service
 
 # VNDK
-PRODUCT_PACKAGES += \
-    vndk_package
-
-# VNDK-SP
 PRODUCT_PACKAGES += \
     vndk-sp
 
