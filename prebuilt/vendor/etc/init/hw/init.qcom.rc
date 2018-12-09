@@ -82,6 +82,9 @@ on post-fs
     wait_for_prop sys.listeners.registered true
 
 on post-fs-data
+    # OnePlus radio
+    mkdir /data/vendor/oemnvitems 0771 radio radio
+
     # msm specific files that need to be created on /data
     mkdir /persist/drm 0770 system system
     mkdir /persist/misc 0770 system system
@@ -616,7 +619,7 @@ service vendor.ims_rtp_daemon /vendor/bin/ims_rtp_daemon
 service vendor.imsrcsservice /vendor/bin/imsrcsd
    class main
    user system
-   group radio diag inet log
+   group radio diag inet log wakelock
 
 on property:vendor.ims.DATA_DAEMON_STATUS=1
     start vendor.ims_rtp_daemon
@@ -721,6 +724,9 @@ service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class core
     user root
     oneshot
+
+service vendor.pd_mapper /vendor/bin/pd-mapper
+     class core
 
 service vendor.rmt_storage /vendor/bin/rmt_storage
     class core
@@ -859,7 +865,6 @@ service vendor.ril-daemon2 /vendor/bin/hw/rild -c 2
     disabled
     group radio cache inet misc audio sdcard_r sdcard_rw diag oem_2901 log
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
-
 
 on property:persist.radio.multisim.config=dsds
     enable vendor.ril-daemon2
