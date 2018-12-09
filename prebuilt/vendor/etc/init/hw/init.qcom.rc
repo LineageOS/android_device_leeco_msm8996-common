@@ -82,6 +82,9 @@ on post-fs
     wait_for_prop sys.listeners.registered true
 
 on post-fs-data
+    # OnePlus radio
+    mkdir /data/vendor/oemnvitems 0771 radio radio
+
     # msm specific files that need to be created on /data
     mkdir /persist/drm 0770 system system
     mkdir /persist/misc 0770 system system
@@ -616,7 +619,7 @@ service vendor.ims_rtp_daemon /vendor/bin/ims_rtp_daemon
 service vendor.imsrcsservice /vendor/bin/imsrcsd
    class main
    user system
-   group radio diag inet log
+   group radio diag inet log wakelock
 
 on property:vendor.ims.DATA_DAEMON_STATUS=1
     start vendor.ims_rtp_daemon
@@ -721,6 +724,21 @@ service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class core
     user root
     oneshot
+
+service vendor.pd_mapper /vendor/bin/pd-mapper
+     class core
+
+service ssgqmigd /vendor/bin/ssgqmigd
+    class late_start
+    user radio
+    group radio gps system
+    socket ssgqmig seqpacket 0660 radio inet
+
+service ssgtzd /vendor/bin/ssgtzd
+    class late_start
+    user system
+    group system
+    socket ssgtzd stream 0660 system inet
 
 service vendor.rmt_storage /vendor/bin/rmt_storage
     class core
@@ -853,6 +871,11 @@ on property:ro.data.large_tcp_window_size=true
     # Adjust socket buffer to enlarge TCP receive window for high bandwidth (e.g. DO-RevB)
     write /proc/sys/net/ipv4/tcp_adv_win_scale  2
 
+service qcom-c_main-sh /vendor/bin/init.class_main.sh
+    class main
+    user root
+    oneshot
+
 service vendor.ril-daemon2 /vendor/bin/hw/rild -c 2
     class main
     user radio
@@ -860,9 +883,19 @@ service vendor.ril-daemon2 /vendor/bin/hw/rild -c 2
     group radio cache inet misc audio sdcard_r sdcard_rw diag oem_2901 log
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
+service vendor.ril-daemon3 /vendor/bin/hw/rild -c 3
+    class main
+    user radio
+    disabled
+    group radio cache inet misc audio sdcard_r sdcard_rw diag oem_2901 log
+    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
-on property:persist.radio.multisim.config=dsds
-    enable vendor.ril-daemon2
+# Set vendor-ril lib path based on Meta version
+on property:vendor.rild.libpath=*
+    setprop rild.libpath ${vendor.rild.libpath}
+
+on property:ro.vendor.radio.noril=*
+    setprop ro.radio.noril ${ro.vendor.radio.noril}
 
 service vendor.ssr_diag /vendor/bin/ssr_diag
     class late_start
