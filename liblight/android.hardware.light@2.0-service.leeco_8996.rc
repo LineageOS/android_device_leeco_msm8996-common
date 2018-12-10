@@ -56,6 +56,14 @@ on init
     chown system system /sys/class/leds/button-backlight/brightness
     chmod 660 /sys/class/leds/button-backlight/brightness
 
+    # RGB brightness
+    chown system system /sys/class/leds/red/brightness
+    chown system system /sys/class/leds/blue/brightness
+    chown system system /sys/class/leds/green/brightness
+    chmod 660 /sys/class/leds/red/brightness
+    chmod 660 /sys/class/leds/blue/brightness
+    chmod 660 /sys/class/leds/green/brightness
+
 service light-hal-2-0 /vendor/bin/hw/android.hardware.light@2.0-service.leeco_8996
     class hal
     user system
