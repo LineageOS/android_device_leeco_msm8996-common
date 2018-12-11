@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "015209ec_fb22cecd",
+        "filename": "proprietary-files-qc.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 557,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2018-12-11T20:13:31Z",
+      "side": 1,
+      "message": "Please remove the extra etc/permissions",
+      "revId": "cea40c0f36a21b3f4f32c3641411654975eddd35",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bbb626e4_7b095890",
+        "filename": "proprietary-files-qc.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 558,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2018-12-11T20:13:31Z",
+      "side": 1,
+      "message": "Please remove the extra etc/permissions",
+      "revId": "cea40c0f36a21b3f4f32c3641411654975eddd35",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
