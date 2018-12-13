@@ -15,9 +15,6 @@
 # ril
 /(vendor|system/vendor)/radio/qcril_database/qcril\.db                   u:object_r:nv_data_file:s0
 
-# persist
-/persist/rfs(/.*)?                                                       u:object_r:rfs_file:s0
-
 # sysfs
 /sys/class/leds(/.*)?                                                    u:object_r:sysfs_leds:s0
 /sys/devices/soc/leds-qpnp-(.*)?/leds(/.*)?                              u:object_r:sysfs_leds:s0
