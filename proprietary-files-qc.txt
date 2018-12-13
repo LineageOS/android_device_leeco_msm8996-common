@@ -647,8 +647,8 @@ vendor/lib64/vendor.oneplus.hardware.param@1.0.so
 # Radio - mbn - from OnePlus 5 Beta 22
 etc/firmware/mbn_ota/mbn_ota.txt:vendor/firmware/mbn_ota/mbn_ota.txt
 
-# Sensors - from OnePlus3
-vendor/bin/sensors.qcom|0b2396b61377f8c82ea4a917f5f3243578be3c7a
+# Sensors - from oneplus3 - 8.0.0/OPR1.170623.032/1812060016
+vendor/bin/sensors.qcom:vendor/bin/sensors.qti|fadef46468ccbe4ee4f6a4ea3c69510c9f0ca3d4
 vendor/lib/hw/activity_recognition.msm8996.so|a93ab9aa549c2ce5b9ba5b1b8d62a192a66a6c1a
 vendor/lib/libsensor1.so|d8d2f53a261c045d814e5a70ba1194c2f0075942
 vendor/lib/libsensor_reg.so|5fb200beaf65132cfea6ba076b9d6178015bd11e
