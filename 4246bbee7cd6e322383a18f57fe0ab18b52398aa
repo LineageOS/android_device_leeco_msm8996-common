@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "08b66226_523e5e83",
+        "filename": "config.fs",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 17594
+      },
+      "writtenOn": "2018-12-16T15:48:19Z",
+      "side": 1,
+      "message": "sensors.qcom",
+      "revId": "4246bbee7cd6e322383a18f57fe0ab18b52398aa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
