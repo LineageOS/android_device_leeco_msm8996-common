@@ -16,6 +16,24 @@
       "revId": "4246bbee7cd6e322383a18f57fe0ab18b52398aa",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "974233db_0496147c",
+        "filename": "config.fs",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2018-12-16T15:55:54Z",
+      "side": 1,
+      "message": "Heyyo shiva, the plan is to later switch to sensors.qti, as that is the Qualcomm Sensors blob in pie.\n\nTbh, I\u0027m in the middle of testing renaming our blobs to sensors.qti and updating them from Gemini... if that works? That\u0027s the route we should go. Otherwise? We could update from OP3 5.0.8 to also get rid of that /data/misc/sensors entry which is also causing selinux denials, and we shouldn\u0027t need it with updated sensor blobs.\n\nPlease check CAF to see what I mean\nhttps://source.codeaurora.org/quic/la/device/qcom/common/tree/config.fs?h\u003dLA.UM.7.5.r1-03700-8x96.0",
+      "parentUuid": "08b66226_523e5e83",
+      "revId": "4246bbee7cd6e322383a18f57fe0ab18b52398aa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
