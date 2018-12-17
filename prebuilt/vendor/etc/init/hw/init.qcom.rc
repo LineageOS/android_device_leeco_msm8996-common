@@ -681,9 +681,6 @@ on property:persist.debug.trace=1
 on property:bluetooth.isEnabled=true
     write /sys/class/bluetooth/hci0/idle_timeout 7000
 
-on property:ro.bluetooth.ftm_enabled=true
-    start ftmd
-
 on property:vold.decrypt=trigger_reset_main
     stop audio-hal-2-0
 
@@ -752,13 +749,6 @@ service hci_filter_root /vendor/bin/wcnss_filter
     user bluetooth
     group bluetooth oem_2901 system
     disabled
-
-service ftmd /vendor/bin/ftmdaemon
-    class late_start
-    user root
-    group bluetooth net_bt_admin misc oem_2901 net_bt
-    disabled
-    oneshot
 
 service vendor.port-bridge /vendor/bin/port-bridge
     class main
