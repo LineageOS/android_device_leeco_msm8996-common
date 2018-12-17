@@ -8,5 +8,6 @@ allow thermal-engine system_data_file:dir { w_dir_perms };
 
 allow thermal-engine sysfs_leds:file { rw_file_perms };
 
-# Ignore all decrypt logging requests (we don't use an encrypted configuration file)
-dontaudit thermal-engine system_data_file:file { create_file_perms };
+type_transition thermal-engine socket_device:sock_file thermal_socket "thermal-send-client";
+type_transition thermal-engine socket_device:sock_file thermal_socket "thermal-recv-client";
+type_transition thermal-engine socket_device:sock_file thermal_socket "thermal-recv-passive-client";
