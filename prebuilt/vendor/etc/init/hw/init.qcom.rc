@@ -717,9 +717,6 @@ on property:bluetooth.dun.status=running
 on property:bluetooth.dun.status=stopped
     stop bt-dun
 
-on property:ro.bluetooth.ftm_enabled=true
-    start ftmd
-
 on property:vold.decrypt=trigger_reset_main
     stop audio-hal-2-0
 
@@ -791,13 +788,6 @@ service hci_filter_root /vendor/bin/wcnss_filter
     group bluetooth oem_2901 system
     seclabel u:r:wcnss_filter:s0
     disabled
-
-service ftmd /vendor/bin/ftmdaemon
-    class late_start
-    user root
-    group bluetooth net_bt_admin misc oem_2901 net_bt
-    disabled
-    oneshot
 
 service netmgrd /vendor/bin/netmgrd
     class main
