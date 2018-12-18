@@ -652,11 +652,6 @@ service energy-awareness /vendor/bin/energy-awareness
     group system
     oneshot
 
-service mdtpd /vendor/bin/mdtpd
-    class late_start
-    user root
-    group system radio drmrpc
-
 service vendor.ssr_setup /system/vendor/bin/ssr_setup
     oneshot
     disabled
