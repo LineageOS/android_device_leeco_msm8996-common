@@ -92,7 +92,6 @@ on post-fs-data
     mkdir /persist/data/sfs 0700 system system
     mkdir /persist/data/tz 0700 system system
     mkdir /data/misc/tloc/ 0700 system drmrpc
-    mkdir /data/misc/qvop 0660 system system
     mkdir /data/misc/audio_pp 0771 media audio
 
     mkdir /data/oemnvitems 0771 radio radio
@@ -148,14 +147,10 @@ on post-fs-data
     chmod 2770 /dev/socket/qdma
 
     # Create /data/vendor/tzstorage directory for SFS listener
-    mkdir /data/misc/qsee 0770 system system
     mkdir /data/vendor/tzstorage 0770 system system
 
     # Create directory for apps access via QTEEConnector
     mkdir /data/vendor/qtee 0770 system system
-
-    # Create directory for voiceprint
-    mkdir /data/misc/qvop 0771 system system
 
     # Create folder for mm-qcamera-daemon
     mkdir /data/vendor/camera 0770 camera camera
