@@ -105,7 +105,6 @@ on post-fs-data
 
     # NFC
     mkdir /data/nfc
-    mkdir /data/oemnvitems 0771 radio radio
 
     # Sensors
     mkdir /data/misc/sensors
