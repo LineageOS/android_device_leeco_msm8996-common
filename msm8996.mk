@@ -194,11 +194,10 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.1-impl-qti \
-    android.hardware.gnss@1.1-service-qti \
+    android.hardware.gnss@1.0-impl-qti \
+    libcurl \
     libgnss \
     libgnsspps \
-    libcurl \
     libsensorndkbridge
 
 PRODUCT_COPY_FILES += \
