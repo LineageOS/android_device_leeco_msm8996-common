@@ -793,7 +793,7 @@ service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
 service charger /vendor/bin/charger
     class charger
     group system graphics log
-    seclabel u:r:charger:s0
+    seclabel u:r:healthd:s0
     writepid /dev/cpuset/system-background/tasks
 
 on property:ro.vendor.ril.mbn_copy_completed=1
