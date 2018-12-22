@@ -196,6 +196,8 @@ TARGET_USES_MKE2FS := true
 
 # Power
 TARGET_HAS_NO_WLAN_STATS := true
+BOARD_POWER_CUSTOM_BOARD_LIB := libpower_msm8996
+TARGET_USES_INTERACTION_BOOST := true
 
 # Recovery
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_leeco
