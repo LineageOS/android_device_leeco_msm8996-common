@@ -520,14 +520,19 @@ vendor/lib/vendor.qti.voiceprint@1.0.so|a706a35926dde53af240cafea640ab9e607f0cf1
 vendor/lib64/hw/sound_trigger.primary.msm8996.so|d35bc552da96d2f0de10cebf39c9bb0dc0bf6ab0
 vendor/lib64/vendor.qti.voiceprint@1.0.so|e68fb38066c46a7f2b5be0f9a11300e01ec74dee
 
-# Media - from daisy - 9/PKQ1.180917.001/V10.0.1.0.PDLMIFJ
+# Media - from daisy - 9/PKQ1.180917.001/V10.0.3.0.PDLMIXM
+lib/extractors/libmmparser.so|00f2cf35e169f7877d6e2e7ede730e8e5af94adf
+lib/libFileMux.so|5961dd16c9c6808e8321abf4b0266a9926ef327b
 lib/libmmosal.so|37719ae5647ef6ec826d06b93e34e0b53c565529
+lib/libmmparser_lite.so|db9e6dafd466fd0aa3b2d7b387fda38ee9838a08
+lib/libOmxMux.so|6aff8e6e81331f3d5d3a8d46d342e5b5efc237f3
 lib/vendor.qti.hardware.vpp@1.1.so|040738576bf1e8b5c11aaeec11871b393f5a3c60
 lib64/libmmosal.so|3d50c7ea56db9c3676be9d6e36e1030386ecdb02
 lib64/vendor.qti.hardware.vpp@1.1.so|8e39a979aac1aa7002ef4e50c74878177ee755f7
 -vendor/lib/libgpustats.so|83d8856717923ab389aecf17445e33fc21b90afc
 vendor/lib/libI420colorconvert.so|eed42cd41b14f8921d668eca1a798aae76cfebe1
 vendor/lib/libmm-color-convertor.so|37baa4587bbbc8b83ee1b1aa94e8818ccfaaf3a0
+vendor/lib/libmmosal_proprietary.so|dfa0b9751df0a52ffd69e00af463ad65f54c01e5
 vendor/lib/libOmxAacDec.so|364628180f938a005c6c9bc9db56d2a9e414f263
 vendor/lib/libOmxAlacDec.so|6a7a88d3f107cd2823b728967158c541a9426cef
 vendor/lib/libOmxAlacDecSw.so|3b4ef8fd510e91df8c440447c03a8a42bac23752
@@ -742,6 +747,45 @@ vendor/lib64/libthermalioctl.so|cc51f7347a5c04e478b0abd2efa39c5dbe63b9a5
 -vendor/app/TimeService/TimeService.apk|78109530538aa8fb533ad288c9d356c57481a10e
 vendor/bin/time_daemon|d67f1c50583b5efca0f5baea00a51056a798b7f8
 vendor/lib64/libtime_genoff.so|8f4c1f9ace6af463b241b130d6872b5d39cc7b2a
+
+# Wi-Fi Display - from daisy - 9/PKQ1.180917.001/V10.0.3.0.PDLMIXM
+bin/wfdservice|edeb291221024401cbae69c2fa4e58733b7efc4c
+etc/init/wfdservice.rc|311bfdd1675e56499662f39455536b75b78477bb
+etc/wfdconfig.xml|60a210d323f3f65dd1424cfd517295c522824b7b
+etc/wfdconfigsink.xml|f180a45f69fa2ff01dbaf98c905cff1e9eba903e
+-framework/WfdCommon.jar|3291ce29c033fb9482011767ebebc52c6cf8c265
+lib/com.qualcomm.qti.wifidisplayhal@1.0.so|93487a83a35f0fa3fe37445edd3ff22fcc52e4fc
+lib/libmmrtpdecoder.so|adb55936e63ff087a9e3458070515e1ab7dbe178
+lib/libmmrtpencoder.so|9a85d450a8633207f7a499962c5821d1a3fec2b8
+lib/libwfdavenhancements.so|56e9d0050d3840bb3b27ce00425bfd67daac01c0
+lib/libwfdclient.so|d5b207da4797e536e1666edb0f790500d1c20074
+lib/libwfdcodecv4l2.so|b3a3fb10c2d3a8709badb9b3f6c02d0b961136ab
+lib/libwfdcommonutils.so|4672af5a1537df38149b37671f75f9d53e51cfb5
+lib/libwfdconfigutils.so|70b0ddab92a1dcaa4f0d182c9b4d554eb9c65764
+lib/libwfdmminterface.so|caf012b833585121fed196342c35d24f58940138
+lib/libwfdmmsink.so|83df22a52492696af2943534f31bf12cfb63be8d
+lib/libwfdmmsrc.so|bacc30868f165adf59d483207974cbf945ccb8fa
+lib/libwfdnative.so|66774d0946ab2694e5bc09a089869608cd9c43d1
+lib/libwfdrtsp.so|35d56a25e9fe0ec7756c8b10183491c00cfb5879
+lib/libwfdservice.so|55459dbfe15058871070f9c47a95f1c69c25c468
+lib/libwfdsm.so|cde4e7f9dd29449eb518dd6fb888bb41c2e6e8cc
+lib/libwfduibcinterface.so|334a422ec1520da8488a9c14ae9a721142fe12c4
+lib/libwfduibcsinkinterface.so|f8c191d35178f865777dad9874692a26fae90851
+lib/libwfduibcsink.so|989ed94f8c0047d85db60acc7b76eb9fb0014270
+lib/libwfduibcsrcinterface.so|3ce31a3bde36bd5c7dac31ccc1fda8043f482f86
+lib/libwfduibcsrc.so|78bc3258deb8f818c3392d5accdf8e7aac729fdc
+lib64/libwfdclient.so|c69712162493bdaa8833b5aae342ee4f9b0c2408
+lib64/libwfdnative.so|559148bbb82e1a37883be0926d2d90efe3bf18b8
+-priv-app/WfdService/WfdService.apk|faf7643790e30775a05d36176ce2aaabe3e7b199
+vendor/bin/wifidisplayhalservice|959c9f4c35f3967d6ebf9d3c5cb5728ce5e4752f
+vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc|f3add191d48d9285eb1b69433c36bb3edbaf86fe
+vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so|d4426bb8bb6016c932f9cbcafcb1ff8b7121cb10
+vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0.so|93487a83a35f0fa3fe37445edd3ff22fcc52e4fc
+vendor/lib/libwfdcommonutils_proprietary.so|d190dd29efbb601933a32dbc0f1f1df00384f077
+vendor/lib/libwfdhaldsmanager.so|0d4207c8c43640ea3c3ab6ecdb82afa528c2fd25
+vendor/lib/libwfdhdcpcp.so|ab6368f49c6acbc8a27aefd50282f267d16addac
+vendor/lib/libwfdmmservice.so|a99c38be9f6a6ce4a2767fb066191c2017fcb341
+vendor/lib/libwfdmodulehdcpsession.so|89fc62ee8f41bde6b2dcc9bcde3e52954ae5253d
 
 # Wi-Fi - Gemini 8.0.0/OPR1.170623.032/8.5.24
 vendor/bin/cnss-daemon
