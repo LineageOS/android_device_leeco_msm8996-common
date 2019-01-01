@@ -11,7 +11,7 @@ ifeq ($(TARGET_USES_INTERACTION_BOOST),true)
     LOCAL_CFLAGS += -DINTERACTION_BOOST
 endif
 
-LOCAL_SRC_FILES := power-msm8996.c
+LOCAL_SRC_FILES := power-msm8996.c utils_ext.c
 LOCAL_MODULE := libpower_msm8996
 LOCAL_VENDOR_MODULE := true
 include $(BUILD_STATIC_LIBRARY)
