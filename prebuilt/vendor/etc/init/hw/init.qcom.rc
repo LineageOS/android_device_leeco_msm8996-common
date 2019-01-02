@@ -858,10 +858,6 @@ service loc_launcher /vendor/bin/loc_launcher
     group gps inet diag wifi
     writepid /dev/cpuset/system-background/tasks
 
-on property:crypto.driver.load=1
-    insmod /system/lib/modules/qce.ko
-    insmod /system/lib/modules/qcedev.ko
-
 service atfwd /vendor/bin/ATFWD-daemon
     class late_start
     user system
