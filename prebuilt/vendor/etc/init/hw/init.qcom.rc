@@ -106,12 +106,6 @@ on post-fs-data
     chown system system /mnt/vendor/persist/sensors/registry/config
     chmod 0664 /mnt/vendor/persist/sensors/sensors_settings
 
-    # Create directories for Fingerprint
-    mkdir /data/fpc_images 0770 system system
-    mkdir /data/fpc_images/verify 0770 system system
-    mkdir /data/fpc_images/enroll 0770 system system
-    mkdir /data/fpc 0770 system system
-
     # Create vpp directory
     mkdir /mnt/vendor/persist/vpp 0770 media media
 
