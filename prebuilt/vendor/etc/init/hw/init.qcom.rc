@@ -657,17 +657,6 @@ service mdtpd /vendor/bin/mdtpd
     class late_start
     user root
     group system radio drmrpc
-
-service ssr_setup /vendor/bin/ssr_setup
-    oneshot
-    disabled
-
-on property:persist.sys.ssr.restart_level=*
-    start ssr_setup
-
-on property:persist.sys.ssr.enable_ramdumps=0
-    write /sys/module/subsystem_restart/parameters/enable_ramdumps 0
-
 on property:persist.radio.atfwd.start=false
     stop atfwd
 
@@ -863,12 +852,6 @@ service ril-daemon2 /vendor/bin/hw/rild -c 2
 
 on property:persist.radio.multisim.config=dsds
     enable ril-daemon2
-
-service ssr_diag /vendor/bin/ssr_diag
-    class late_start
-    user system
-    group system
-    disabled
 
 service charger_monitor /system/bin/charger_monitor
     user root
