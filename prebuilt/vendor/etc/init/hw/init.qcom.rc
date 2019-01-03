@@ -586,16 +586,6 @@ service energy-awareness /vendor/bin/energy-awareness
     group system
     oneshot
 
-service vendor.ssr_setup /system/vendor/bin/ssr_setup
-    oneshot
-    disabled
-
-on property:persist.vendor.ssr.restart_level=*
-    start vendor.ssr_setup
-
-on property:persist.vendor.ssr.enable_ramdumps=0
-    write /sys/module/subsystem_restart/parameters/enable_ramdumps 0
-
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd
 
@@ -773,12 +763,6 @@ service vendor.ril-daemon2 /vendor/bin/hw/rild -c 2
 
 on property:persist.radio.multisim.config=dsds
     enable vendor.ril-daemon2
-
-service vendor.ssr_diag /vendor/bin/ssr_diag
-    class late_start
-    user system
-    group system
-    disabled
 
 service charger_monitor /system/bin/charger_monitor
     user root

@@ -170,10 +170,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.df.iwlan_mux=9 \
     persist.data.df.dev_name=rmnet_usb0
 
-# SSR
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.ssr.restart_level=ALL_ENABLE
-
 # System props for the MM modules
 PRODUCT_PROPERTY_OVERRIDES += \
     audio.deep_buffer.media=true \
