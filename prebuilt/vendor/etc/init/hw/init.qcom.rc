@@ -63,12 +63,18 @@ on fs
     mkdir /mnt/vendor/persist/time 0770 system system
     restorecon_recursive /mnt/vendor/persist
 
+    # Start Time Daemon early for keymaster 
+    start time_daemon 
+    wait_for_prop init.svc.time_daemon running
+
     # Start HW service manager early
     start hwservicemanager
+    wait_for_prop hwservicemanager.ready true
 
     # qseecomd needs /dev/block/bootdevice
     # vold needs keymaster that needs qseecomd
     start qseecomd
+    wait_for_prop init.svc.qseecomd running
 
 on late-fs
     # boot time fs tune
