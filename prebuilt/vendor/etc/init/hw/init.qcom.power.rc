@@ -45,6 +45,7 @@ on charger
     write /sys/module/msm_thermal/parameters/enabled "N"
     start vendor.hvdcp_opti
     start thermal-engine
+    start vendor.power_off_alarm
 
 on enable-low-power
     # Disable thermal hotplug to switch governor
