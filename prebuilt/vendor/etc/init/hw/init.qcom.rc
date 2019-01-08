@@ -478,24 +478,25 @@ service qcamerasvr /vendor/bin/mm-qcamera-daemon
     writepid /dev/cpuset/system-background/tasks
 
 # start up peripheral manager
-service per_mgr /vendor/bin/pm-service
-    class late_start
+service vendor.per_mgr /vendor/bin/pm-service
+    class core
     user system
-    group system net_raw
+    group system
+    ioprio rt 4
     writepid /dev/cpuset/system-background/tasks
 
-service per_proxy /vendor/bin/pm-proxy
-    class late_start
+service vendor.per_proxy /vendor/bin/pm-proxy
+    class core
     user system
     group system
     disabled
     writepid /dev/cpuset/system-background/tasks
 
-on property:init.svc.per_mgr=running
-    start per_proxy
+on property:init.svc.vendor.per_mgr=running
+    start vendor.per_proxy
 
 on property:sys.shutdown.requested=*
-    stop per_proxy
+    stop vendor.per_proxy
 
 service qseecomd /vendor/bin/qseecomd
    class core
@@ -555,7 +556,7 @@ service vendor.imsrcsservice /vendor/bin/imsrcsd
    group radio diag inet log
 
 on property:vendor.ims.DATA_DAEMON_STATUS=1
-    start vendor.ims_rtp_daemon
+    restart vendor.ims_rtp_daemon
 
 service ppd /vendor/bin/mm-pp-dpps
     class late_start
