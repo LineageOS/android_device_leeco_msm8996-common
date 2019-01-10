@@ -280,7 +280,6 @@ on early-boot
     # Allow subsystem (modem etc) debugging
     write /sys/kernel/boot_adsp/boot 1
     write /sys/kernel/boot_slpi/boot 1
-    chown root audio /sys/kernel/boot_adsp/boot
 
 on boot
     # Secure touch
