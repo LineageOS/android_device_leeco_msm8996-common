@@ -6,7 +6,6 @@
 PRODUCT_PROPERTY_OVERRIDES += \
     af.fast_track_multiplier=1 \
     audio.heap.size.multiplier=7 \
-    audio.offload.min.duration.secs=30 \
     audio.offload.video=true \
     persist.audio.ssr.3mic=false \
     persist.vendor.audio.fluence.audiorec=false \
