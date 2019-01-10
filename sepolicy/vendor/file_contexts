@@ -32,3 +32,4 @@
 /sys/devices/soc/[a-z0-9]+.qcom,mdss_mdp/[a-z0-9]+.qcom,mdss_mdp:qcom,mdss_fb_primary/leds/lcd-backlight(/.*)? u:object_r:sysfs_leds:s0
 
 /sys/devices/soc/75ba000\.i2c/i2c-12/12-[0-9a-f]+/input/input[0-9]+/0dbutton                   u:object_r:proc_touchpanel:s0
+/sys/devices/soc/75ba000\.i2c/i2c-12/12-[0-9a-f]+/keys_off                                     u:object_r:proc_touchpanel:s0
