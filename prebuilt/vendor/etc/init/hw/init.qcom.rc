@@ -525,7 +525,7 @@ service adsprpcd /vendor/bin/adsprpcd
    user media
    group media
 
-# imsdatadaemon starts with root and UID will be downgraded to SYSTEM.
+# imsqmidaemon starts with root and UID will be downgraded to SYSTEM.
 service vendor.imsqmidaemon /vendor/bin/imsqmidaemon
     class main
     user system
@@ -543,7 +543,7 @@ service vendor.imsdatadaemon /vendor/bin/imsdatadaemon
     disabled
 
 on property:vendor.ims.QMI_DAEMON_STATUS=1
-    restart vendor.imsdatadaemon
+    start vendor.imsdatadaemon
 
 service vendor.ims_rtp_daemon /vendor/bin/ims_rtp_daemon
    class main
