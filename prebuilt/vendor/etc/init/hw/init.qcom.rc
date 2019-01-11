@@ -46,7 +46,7 @@ on init
 
     # Start qseecomd early as we mount /system early
     # vold needs keymaster which needs qseecomd
-    start qseecomd
+    start vendor.qseecomd
 
     # Create cgroup mount point for memory
     mkdir /sys/fs/cgroup/memory/bg 0750 root system
@@ -496,7 +496,7 @@ on property:sys.shutdown.requested=*
     stop vendor.per_proxy
     stop vendor.ims_rtp_daemon
 
-service qseecomd /vendor/bin/qseecomd
+service vendor.qseecomd /vendor/bin/qseecomd
    class core
    user root
    group root
