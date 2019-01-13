@@ -5,3 +5,5 @@ allow init servicemanager:binder { call };
 allow init proc_touchpanel:dir { rw_dir_perms setattr };
 
 allow init sysfs_leds:lnk_file { r_file_perms };
+
+allow init vendor_charger_exec:file { rx_file_perms };
