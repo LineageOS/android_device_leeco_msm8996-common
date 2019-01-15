@@ -171,9 +171,6 @@ DEVICE_MATRIX_FILE := $(PLATFORM_PATH)/compatibility_matrix.xml
 TARGET_INIT_VENDOR_LIB := libinit_leeco_msm8996
 TARGET_RECOVERY_DEVICE_MODULES := libinit_leeco_msm8996
 
-# Lineage Hardware
-JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(PLATFORM_PATH)/lineagehw|**/*.java
-
 # Partitions (/proc/partitions * 2 * BLOCK_SIZE (512) = size in bytes)
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
