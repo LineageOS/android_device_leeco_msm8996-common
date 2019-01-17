@@ -17,10 +17,7 @@ genfscon sysfs /devices/soc/qpnp-smbcharger-17/power_supply/le_ab/type  u:object
 genfscon sysfs /devices/soc/qpnp-rtc-8/rtc                              u:object_r:sysfs_rtc:s0
 
 # SSR
-genfscon sysfs /devices/soc/9300000.qcom,lpass/subsys3/name             u:object_r:sysfs_ssr:s0
 genfscon sysfs /devices/soc/1c00000.qcom,lpass/subsys4/name             u:object_r:sysfs_ssr:s0
-genfscon sysfs /devices/soc/1c00000.qcom,ssc/subsys4/name               u:object_r:sysfs_ssr:s0
-genfscon sysfs /devices/soc/2080000.qcom,mss/subsys5/name               u:object_r:sysfs_ssr:s0
 
 # Touchpanel
 genfscon proc /touchpanel    u:object_r:proc_touchpanel:s0
