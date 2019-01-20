@@ -1,5 +1,6 @@
-# Block devices
+# devices
 /dev/block/platform/soc/624000\.ufshc/by-name/devinfo                    u:object_r:devinfo_block_device:s0
+/dev/ttyHSL1                                                             u:object_r:consumer_ir_device:s0
 
 # data
 /data/vendor/qcam(/.*)?                                                  u:object_r:vendor_camera_data_file:s0
@@ -13,6 +14,7 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service\.clearkey     u:object_r:hal_drm_clearkey_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service\.widevine     u:object_r:hal_drm_widevine_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.health@2\.0-service\.leeco_8996          u:object_r:hal_health_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.ir@1\.0-service\.leeco_8996    u:object_r:hal_ir_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.leeco_8996   u:object_r:hal_lineage_touch_default_exec:s0
 
 # keylayout
@@ -31,6 +33,7 @@
 
 # Shell scripts
 /(vendor|system/vendor)/bin/init\.proc_touchpanel\.sh                                          u:object_r:vendor_init_proc_touchpanel_exec:s0
+/(vendor|system/vendor)/bin/init\.uei\.sh                                u:object_r:init_uei_exec:s0
 
 # sysfs
 /sys/devices/soc/[a-z0-9]+.i2c/i2c-[0-9]/[0-9]-[a-z0-9]+/name            u:object_r:sysfs_battery_supply:s0
@@ -49,3 +52,6 @@
 
 /sys/class/leds/torch-light[0-9](/.*)?                                   u:object_r:sysfs_torch:s0
 /sys/devices/soc/soc:qcom,camera-flash/flashled[0-9](/.*)?               u:object_r:sysfs_torch:s0
+
+/sys/remote/enable                                                       u:object_r:sysfs_ir_enable:s0
+
