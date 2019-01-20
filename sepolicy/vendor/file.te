@@ -10,3 +10,5 @@ type vendor_keylayout_file, file_type, vendor_file_type;
 type audio_socket, file_type, data_file_type;
 
 type vendor_charger_exec, exec_type, file_type, vendor_file_type;
+
+type sysfs_ir_enable, fs_type, sysfs_type;
