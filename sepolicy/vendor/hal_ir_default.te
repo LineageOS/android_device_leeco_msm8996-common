@@ -1,0 +1,5 @@
+allow hal_ir_default activity_service:service_manager { find };
+allow hal_ir_default binder_device:chr_file { ioctl open read write };
+allow hal_ir_default servicemanager:binder { call };
+allow hal_ir_default shell_exec:file { execute execute_no_trans getattr open read };
+allow hal_ir_default system_file:file { execute_no_trans };
