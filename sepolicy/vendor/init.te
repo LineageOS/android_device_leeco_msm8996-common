@@ -9,6 +9,7 @@ allow init netutils_wrapper_exec:file { execute r_file_perms };
 
 allow init servicemanager:binder call;
 
+allow init sysfs_ir_enable:file setattr;
 allow init sysfs_leds:lnk_file r_file_perms;
 
 allow init sysfs_scsi_devices_0000:dir relabelfrom;
