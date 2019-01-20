@@ -144,6 +144,10 @@ vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so|063298fa29ad1d8491853051
 vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so|dd4aebcdd0f711b15ef173601ec121e7a91c5c63
 vendor/lib64/vendor.qti.latency@2.0.so|68fd46a6f26e2e101a6ecb0c40643fd5e137d716
 
+# consumerir - from le_x10 (x850) - 7.1.1/LEXCNFN6061705181T/letv05181516
+vendor/app/UEIQuicksetSDKLeTV/UEIQuicksetSDKLeTV.apk|5f277e31c08585ca8e79f7fda0957bd577c99c7d
+vendor/etc/UEISettings|e95577884775d955c1b9f4edbcfbaf99d003b508
+
 # DPM - from B2N_sprout:9/PPR1.180610.009/00WW_3_190
 bin/dpmd|985cdaedd7524abb646535954f860db24893ff20
 etc/dpm/dpm.conf|5f19d3984b5291ac956552bda2a84c10c535df0a

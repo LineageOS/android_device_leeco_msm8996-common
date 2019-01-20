@@ -1,6 +1,7 @@
-# Block devices
+# devices
 /dev/block/platform/soc/624000\.ufshc/by-name/devinfo                    u:object_r:devinfo_block_device:s0
 /dev/block/platform/soc/624000\.ufshc/by-name/persist                    u:object_r:persist_block_device:s0
+/dev/ttyHSL1                                                             u:object_r:consumer_ir_device:s0
 
 # data
 /data/misc/audio/aud_devi_arbi                                           u:object_r:audio_socket:s0
@@ -8,6 +9,7 @@
 /(vendor|system/vendor)/lib(64)?/vendor\.qti\.gnss@[0-9]+\.[0-9]+\.so    u:object_r:same_process_hal_file:s0
 
 # executables
+/(vendor|system/vendor)/bin/hw/android\.hardware\.ir@1\.0-service\.leeco_8996                  u:object_r:hal_ir_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.leeco_8996               u:object_r:hal_light_default_exec:s0
 /(vendor|system/vendor)/bin/charger                                                            u:object_r:vendor_charger_exec:s0
 
@@ -21,6 +23,9 @@
 # ril
 /(vendor|system/vendor)/radio/qcril_database/qcril\.db                   u:object_r:nv_data_file:s0
 
+# Shell scripts
+/(vendor|system/vendor)/bin/init\.uei\.sh                                u:object_r:init_uei_exec:s0
+
 # sysfs
 /sys/class/leds(/.*)?                                                    u:object_r:sysfs_leds:s0
 /sys/devices/soc/leds-qpnp-(.*)?/leds(/.*)?                              u:object_r:sysfs_leds:s0
@@ -33,3 +38,5 @@
 
 /sys/devices/soc/75ba000\.i2c/i2c-12/12-[0-9a-f]+/input/input[0-9]+/0dbutton                   u:object_r:proc_touchpanel:s0
 /sys/devices/soc/75ba000\.i2c/i2c-12/12-[0-9a-f]+/keys_on                                      u:object_r:proc_touchpanel:s0
+
+/sys/remote/enable                                                       u:object_r:sysfs_ir_enable:s0
