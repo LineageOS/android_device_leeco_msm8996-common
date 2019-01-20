@@ -1,0 +1,12 @@
+type hal_ir_leeco_msm8996, domain, coredomain;
+type hal_ir_leeco_msm8996_exec, exec_type, file_type;
+
+hal_server_domain(hal_ir_leeco_msm8996, hal_ir)
+
+init_daemon_domain(hal_ir_leeco_msm8996)
+
+# /system/etc/hosts
+allow hal_ir_leeco_msm8996 system_file:file { lock };
+
+# Create udp socket
+allow hal_ir_leeco_msm8996 self:udp_socket { create_socket_perms };
