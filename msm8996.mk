@@ -27,6 +27,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := framework-res
 
 # Init
 PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,${LOCAL_PATH}/prebuilt/system,system) \
     $(call find-copy-subdir-files,*,${LOCAL_PATH}/prebuilt/vendor,$(TARGET_COPY_OUT_VENDOR))
 
 # Permissions
@@ -142,6 +143,14 @@ PRODUCT_PACKAGES += \
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
+
+# Consumer IR
+PRODUCT_PACKAGES += \
+    android.hardware.ir@1.0-service.leeco_8996 \
+    ConsumerirTransmitter
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
 
 # Display
 PRODUCT_PACKAGES += \

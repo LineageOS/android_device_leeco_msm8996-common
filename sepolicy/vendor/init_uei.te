@@ -1,0 +1,15 @@
+type init_uei, domain, coredomain;
+type init_uei_exec, exec_type, file_type;
+
+# Allow for transition from init domain to init_uei
+init_daemon_domain(init_uei)
+
+# required for mkdir of /data/data/com.uei.quicksetsdk.letv
+allow init_uei app_data_file:dir { rw_dir_perms };
+
+# required for copying Settings from /system/etc to /data/data/com.uei.quicksetsdk.letv
+allow init_uei app_data_file:file { rw_file_perms };
+
+# Shell script needs to execute /system/bin/sh
+allow init_uei shell_exec:file { rx_file_perms };
+allow init_uei toolbox_exec:file { rx_file_perms };
