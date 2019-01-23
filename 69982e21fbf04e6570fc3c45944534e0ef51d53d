@@ -16,6 +16,24 @@
       "revId": "69982e21fbf04e6570fc3c45944534e0ef51d53d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dc6c49d4_995a4840",
+        "filename": "consumerir/ConsumerIr.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2019-01-23T06:40:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "01ee2772_120ad1e2",
+      "revId": "69982e21fbf04e6570fc3c45944534e0ef51d53d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
