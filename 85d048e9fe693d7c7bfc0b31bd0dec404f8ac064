@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3bfe58e1_876c6143",
+        "filename": "consumerir-transmitter/src/org/lineageos/consumerirtransmitter/Startup.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 21054
+      },
+      "writtenOn": "2019-01-24T19:45:36Z",
+      "side": 1,
+      "message": "ConsumerirTransmitterService.class",
+      "range": {
+        "startLine": 33,
+        "startChar": 59,
+        "endLine": 33,
+        "endChar": 94
+      },
+      "revId": "85d048e9fe693d7c7bfc0b31bd0dec404f8ac064",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
