@@ -579,7 +579,7 @@ vendor/bin/hw/vendor.qti.hardware.perf@1.0-service
 vendor/etc/init/vendor.qti.hardware.iop@1.0-service.rc
 vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc
 vendor/etc/perf/gamedwhitelist.xml
-vendor/etc/perf/perfboostsconfig.xml
+vendor/etc/perf/perfboostsconfig.xml|fce795f55754630cf1db2049258a4a310736826f
 vendor/etc/perf/perf-profile0.conf
 vendor/etc/perf/perf-profile1.conf
 vendor/etc/perf/perf-profile2.conf
