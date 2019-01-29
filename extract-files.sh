@@ -87,6 +87,34 @@ function blob_fixup() {
         sed -i -e 's|/system/bin/linker64|/sbin/linker64\x0\x0\x0\x0\x0\x0|g' "${2}"
         ;;
 
+    # Patch blobs for VNDK
+    vendor/lib/libmmcamera2_stats_modules.so)
+        sed -i "s|libgui.so|libfui.so|g" "${2}"
+        sed -i "s|/data/misc/camera|/data/vendor/qcam|g" "${2}"
+        sed -i "s|libandroid.so|libcamshim.so|g" "${2}"
+        ;;
+
+    # Patch blobs for VNDK
+    vendor/lib/libmmcamera_ppeiscore.so | vendor/lib/libcamera_letv_algo.so)
+        sed -i "s|libgui.so|libfui.so|g" "${2}"
+        ;;
+
+    # Patch blobs for VNDK
+    vendor/lib/libarcsoft_hdr_detection.so | vendor/lib/libmpbase.so | vendor/lib/libarcsoft_panorama_burstcapture.so | vendor/lib/libarcsoft_smart_denoise.so | vendor/lib/libarcsoft_nighthawk.so | vendor/lib/libarcsoft_hdr.so | vendor/lib/libarcsoft_night_shot.so)
+        patchelf --remove-needed "libandroid.so" "${2}"
+        ;;
+
+    # Patch blobs for VNDK
+    vendor/lib/libletv_algo_jni.so)
+        sed -i "s|libgui.so|libfui.so|g" "${2}"
+        patchelf --remove-needed "libandroid_runtime.so" "${2}"
+        ;;
+
+    # Patch blobs for VNDK
+    vendor/lib64/lib-dplmedia.so)
+        patchelf --remove-needed "libmedia.so" "${2}"
+        ;;
+
     esac
 }
 
