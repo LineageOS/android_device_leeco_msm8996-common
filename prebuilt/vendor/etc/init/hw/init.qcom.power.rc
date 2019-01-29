@@ -3,7 +3,7 @@ on init
     write /sys/devices/soc/${ro.boot.bootdevice}/clkscale_enable 0
     write /sys/devices/soc/${ro.boot.bootdevice}/clkgate_enable 0
     write /sys/devices/soc/${ro.boot.bootdevice}/${ro.boot.bootdevice}:ufs_variant/pm_qos_enable 0
-    write /sys/module/lpm_levels/parameters/sleep_disabled Y
+    write /sys/module/lpm_levels/parameters/sleep_disabled "Y"
 
 on boot
     # Bring back main cores CPU 0,2
@@ -26,6 +26,23 @@ on boot
 
     # Enable sched boost
     write /proc/sys/kernel/sched_boost 1
+
+on charger
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    # Enable UFS powersaving
+    write /sys/devices/soc/${ro.boot.bootdevice}/clkscale_enable 1
+    write /sys/devices/soc/${ro.boot.bootdevice}/clkgate_enable 1
+    write /sys/devices/soc/${ro.boot.bootdevice}/${ro.boot.bootdevice}:ufs_variant/pm_qos_enable 1
+    write /sys/module/lpm_levels/parameters/sleep_disabled "N"
+
+    write /sys/devices/system/cpu/cpu1/online 0
+    write /sys/devices/system/cpu/cpu2/online 0
+    write /sys/devices/system/cpu/cpu3/online 0
+    write /sys/module/msm_thermal/core_control/cpus_offlined 14
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "powersave"
+    write /sys/module/msm_thermal/parameters/enabled "N"
+    start hvdcp_opti
+    start thermal-engine
 
 on enable-low-power
     # Enable all LPMs (this will enable C4, D4, D3, E4 and M3 LPMs)
@@ -132,18 +149,6 @@ on enable-low-power
     write /dev/cpuset/foreground/cpus 0-2
     write /dev/cpuset/background/cpus 0
     write /dev/cpuset/system-background/cpus 0-2
-
-on charger
-    write /sys/devices/system/cpu/cpu1/online 0
-    write /sys/devices/system/cpu/cpu2/online 0
-    write /sys/devices/system/cpu/cpu3/online 0
-    write /sys/module/msm_thermal/core_control/cpus_offlined 14
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "powersave"
-    # Enable UFS powersaving
-    write /sys/devices/soc/${ro.boot.bootdevice}/clkscale_enable 1
-    write /sys/devices/soc/${ro.boot.bootdevice}/clkgate_enable 1
-    write /sys/devices/soc/${ro.boot.bootdevice}/${ro.boot.bootdevice}:ufs_variant/pm_qos_enable 1
-    write /sys/module/lpm_levels/parameters/sleep_disabled 0
 
 on property:init.svc.recovery=running
     trigger enable-low-power

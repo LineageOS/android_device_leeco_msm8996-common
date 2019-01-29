@@ -933,9 +933,6 @@ service charger /charger
     seclabel u:r:charger:s0
     writepid /dev/cpuset/system-background/tasks
 
-on charger
-    start hvdcp_opti
-
 on property:persist.sys.le_fast_chrg_enable=1
     write /sys/class/power_supply/le_ab/le_quick_charge_mode 0
 
