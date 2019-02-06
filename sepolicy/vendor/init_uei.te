@@ -22,3 +22,6 @@ allow init_uei system_data_file:dir { getattr };
 # Shell script needs to execute /vendor/bin/sh
 allow init_uei vendor_shell_exec:file { rx_file_perms };
 allow init_uei vendor_toolbox_exec:file { rx_file_perms };
+
+# FIXME
+dontaudit init_uei self:capability { dac_override dac_read_search };

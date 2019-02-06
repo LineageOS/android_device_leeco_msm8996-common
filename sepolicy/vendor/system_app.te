@@ -1,1 +1,8 @@
+allow system_app proc_touchpanel:dir { search };
+allow system_app proc_touchpanel:file { rw_file_perms };
+
 allow system_app sysfs_ir_enable:file { rw_file_perms };
+
+# for our oreo qsee & fingerprint.service
+typeattribute system_app data_between_core_and_vendor_violators;
+allow system_app vendor_file:file { rx_file_perms };

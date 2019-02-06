@@ -1,4 +1,2 @@
-allow netmgrd net_data_file:file create_file_perms;
-
 set_prop(netmgrd, debug_prop)
 set_prop(netmgrd, vendor_xlat_prop)

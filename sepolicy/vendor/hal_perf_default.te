@@ -1,0 +1,2 @@
+# FIXME
+dontaudit hal_perf_default self:capability { dac_override };

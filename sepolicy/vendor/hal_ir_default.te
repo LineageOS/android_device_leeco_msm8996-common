@@ -1,3 +1,5 @@
 allow hal_ir_default activity_service:service_manager { find };
+
+typeattribute hal_ir_default binder_in_vendor_violators;
 allow hal_ir_default binder_device:chr_file { rw_file_perms };
 binder_call(hal_ir_default, servicemanager)
