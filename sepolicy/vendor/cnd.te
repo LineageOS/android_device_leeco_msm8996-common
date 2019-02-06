@@ -1,5 +1,7 @@
 add_hwservice(cnd, hal_dataservice_hwservice)
 
-allow cnd self:capability { dac_override chown fsetid net_raw };
+allow cnd self:capability { chown fsetid net_raw };
+# FIXME
+#allow cnd self:capability { dac_override };
 
 set_prop(cnd, debug_prop)

@@ -30,6 +30,8 @@
 /(vendor|system/vendor)/bin/init\.uei\.sh                                u:object_r:init_uei_exec:s0
 
 # sysfs
+/sys/devices/soc/[a-z0-9]+.i2c/i2c-[0-9]/[0-9]-[a-z0-9]+/name            u:object_r:sysfs_battery_supply:s0
+
 /sys/class/leds(/.*)?                                                    u:object_r:sysfs_leds:s0
 /sys/devices/soc/leds-qpnp-(.*)?/leds(/.*)?                              u:object_r:sysfs_leds:s0
 /sys/devices/soc/qpnp-flash-led-(.*)?/leds(/.*)?                         u:object_r:sysfs_leds:s0

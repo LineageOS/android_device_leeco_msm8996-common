@@ -3,7 +3,8 @@ allow system_server proc_touchpanel:file { rw_file_perms };
 
 get_prop(system_server, vendor_alarm_boot_prop)
 
-allow system_server mnt_vendor_file:dir { write };
+# FIXME
+#allow system_server mnt_vendor_file:dir { write };
 
 allow system_server vendor_keylayout_file:file { r_file_perms };
 allow system_server vendor_keylayout_file:dir { r_dir_perms };
