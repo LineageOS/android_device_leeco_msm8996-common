@@ -267,6 +267,9 @@ on post-fs-data
     # Wifi firmware reload path
     chown wifi wifi /sys/module/wlan/parameters/fwpath
 
+    # Set shared touchpanel nodes ownership (these are proc_symlinks to the real sysfs nodes)
+    chown system system /proc/touchpanel/capacitive_keys_enable
+
     start vendor.ipacm
     start vendor.dataqti
     start vendor.netmgrd
@@ -784,10 +787,9 @@ service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
     group root
     seclabel u:r:hvdcp:s0
 
-service charger /vendor/bin/charger
+service vendor.charger /vendor/bin/charger
     class charger
     group system graphics log
-    seclabel u:r:healthd:s0
     writepid /dev/cpuset/system-background/tasks
 
 on property:ro.vendor.ril.mbn_copy_completed=1
