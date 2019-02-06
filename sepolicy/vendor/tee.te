@@ -1,1 +1,2 @@
-allow tee system_data_file:dir { r_dir_perms };
+# FIXME
+#allow tee system_data_file:dir { r_dir_perms };
