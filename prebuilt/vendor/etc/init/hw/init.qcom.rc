@@ -267,6 +267,9 @@ on post-fs-data
     # Wifi firmware reload path
     chown wifi wifi /sys/module/wlan/parameters/fwpath
 
+    # Set shared touchpanel nodes ownership (these are proc_symlinks to the real sysfs nodes)
+    chown system system /proc/touchpanel/capacitive_keys_enable
+
     start vendor.ipacm
     start vendor.dataqti
     start vendor.netmgrd

@@ -1,1 +1,2 @@
-allow netutils_wrapper self:capability { sys_module };
+# FIXME
+#allow netutils_wrapper self:capability { sys_module };

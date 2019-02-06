@@ -1,1 +1,2 @@
-allow hal_fingerprint_default fingerprintd_data_file:dir { rw_dir_perms };
+# FIXME
+#allow hal_fingerprint_default fingerprintd_data_file:dir { rw_dir_perms };
