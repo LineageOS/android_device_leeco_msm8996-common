@@ -5,5 +5,5 @@ allow rild qcom_ims_prop:property_service { set };
 
 set_prop(rild, system_radio_prop)
 
-allow rild tombstone_data_file:file { open read write };
-allow rild tombstone_data_file:dir search;
+dontaudit rild tombstone_data_file:dir { search };
+dontaudit rild vendor_file:file { ioctl };

@@ -1,4 +1,5 @@
-allow hvdcp self:capability { dac_override };
-allow hvdcp sysfs_battery_supply:dir { write };
+# FIXME
+#allow hvdcp self:capability { dac_override };
+#allow hvdcp sysfs_battery_supply:dir { write };
 
 r_dir_file(hvdcp, sysfs_batteryinfo)
