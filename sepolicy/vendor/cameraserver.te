@@ -1,13 +1,11 @@
-allow cameraserver sysfs:file { write };
-
-allow cameraserver mpctl_data_file:dir search;
+typeattribute cameraserver socket_between_core_and_vendor_violators;
 allow cameraserver mpctl_data_file:sock_file write;
-allow cameraserver mpctl_socket:dir search;
 allow cameraserver mpctl_socket:sock_file write;
 
-allow cameraserver sysfs_leds:dir search;
-allow cameraserver sysfs_leds:file { rw_file_perms };
-allow cameraserver sysfs_leds:lnk_file { rw_file_perms };
+allow cameraserver sysfs_torch:dir { r_dir_perms };
+allow cameraserver sysfs_torch:file { rw_file_perms };
+allow cameraserver sysfs_torch:lnk_file { rw_file_perms };
 
 allow cameraserver hal_perf_hwservice:hwservice_manager { find };
-allow cameraserver hal_perf_default:binder { call };
+
+binder_call(cameraserver, hal_perf_default)
