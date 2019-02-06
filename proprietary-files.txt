@@ -89,8 +89,8 @@ vendor/lib64/vendor.qti.hardware.fm@1.0_vendor.so
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 
 # Bluetooth (aptX) - from OnePlus3
-vendor/lib64/libaptX_encoder.so|0cebad28afcf29f931bdc2d24fce2730dc882ecf
-vendor/lib64/libaptXHD_encoder.so|90f47f10af28b3ead143200cb4370b847c513127
+lib64/libaptX_encoder.so|0cebad28afcf29f931bdc2d24fce2730dc882ecf
+lib64/libaptXHD_encoder.so|90f47f10af28b3ead143200cb4370b847c513127
 
 # Camera - from zl1 - 6.0.1/WAXCNFN5902012312S/letv01060151
 bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon|c36fe0c5f93cdfbc3abf83ca0e73880bd218c079
