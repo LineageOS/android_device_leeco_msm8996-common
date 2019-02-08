@@ -666,7 +666,7 @@ vendor/bin/ATFWD-daemon
 vendor/bin/netmgrd
 vendor/bin/port-bridge
 vendor/bin/qti
-vendor/bin/rmt_storage
+vendor/bin/rmt_storage|346ef281e829109ba11af912509309e520351ef9
 vendor/bin/tftp_server|05a9c0e0e691e534e703bded4a99083d25a26ebb
 vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
