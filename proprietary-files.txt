@@ -79,14 +79,14 @@ vendor/lib64/soundfx/libshoebox.so
 vendor/lib/libacdbloader.so|034a5cf03cccfb22e415832c7d6a043dc52d98c0
 vendor/lib64/libacdbloader.so|33b45951c3098715b33bc1ab3ca606aa99fc2248
 
-# Bluetooth
-vendor/bin/wcnss_filter
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
-vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
-vendor/lib64/libbtnv.so
-vendor/lib64/libbt-hidlclient.so
-vendor/lib64/vendor.qti.hardware.fm@1.0_vendor.so
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
+# Bluetooth - from daisy - 9/PKQ1.180917.001/V10.0.1.0.PDLMIFJ
+vendor/bin/wcnss_filter|a8c9bb84629693a3e57fd9d24d8819454bfcc38a
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|9178856dc8651b499d1b155825b6115a486ee05e
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|20e66aaca57c6ba6df8009404abdfacb608dc341
+vendor/lib64/libbtnv.so|136dc47f7d16a841e9c6ad909753e96a41392534
+vendor/lib64/libbt-hidlclient.so|0b0b69ef9787e3cd5409f0050cad03698dd6ce26
+vendor/lib64/vendor.qti.hardware.fm@1.0.so|dc576dfcb0bf390a106b5ed8861e7f547110cbf1
 
 # Bluetooth (aptX) - from OnePlus3
 vendor/lib64/libaptX_encoder.so|0cebad28afcf29f931bdc2d24fce2730dc882ecf
