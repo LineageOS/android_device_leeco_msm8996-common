@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "79bc3b32_fe33f6c3",
+        "filename": "consumerir/ConsumerIr.cpp",
+        "patchSetId": 21
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 523
+      },
+      "writtenOn": "2019-02-10T17:41:31Z",
+      "side": 1,
+      "message": "this is causing neverallows. doesn\u0027t matter if the hal is in system or vendor.",
+      "range": {
+        "startLine": 62,
+        "startChar": 12,
+        "endLine": 62,
+        "endChar": 76
+      },
+      "revId": "98206893b617f9d507e191d6780fe586d59c253d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
