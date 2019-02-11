@@ -29,4 +29,7 @@ cc_binary {
         "libutils",
         "vendor.lineage.touch@1.0",
     ],
+    header_libs: [
+        "libbinder_headers",
+    ],
 }
