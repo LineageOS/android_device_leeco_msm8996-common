@@ -91,7 +91,6 @@ on post-fs
 on post-fs-data
     # msm specific files that need to be created on /data
     mkdir /persist/drm 0770 system system
-    mkdir /persist/misc 0770 system system
     mkdir /persist/secnvm 0770 system system
     mkdir /mnt/vendor/persist/secnvm 0770 system system
     mkdir /persist/data/sfs 0700 system system
