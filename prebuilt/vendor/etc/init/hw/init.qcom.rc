@@ -596,8 +596,7 @@ on property:vold.decrypt=trigger_restart_min_framework
     start vendor.audio-hal-2-0
 
 on property:vold.decrypt=trigger_restart_framework
-    stop vendor.camera-provider-2-4
-    start vendor.camera-provider-2-4
+    restart vendor.camera-provider-2-4
     start vendor.audio-hal-2-0
 
 on property:persist.env.fastdorm.enabled=true
