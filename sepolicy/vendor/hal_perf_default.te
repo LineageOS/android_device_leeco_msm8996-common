@@ -1,1 +1,3 @@
 set_prop(hal_perf_default, vendor_mpctl_prop)
+
+dontaudit hal_perf_default self:capability { dac_override dac_read_search };
