@@ -1,4 +1,3 @@
 r_dir_file(hvdcp, sysfs_batteryinfo)
 
-# FIXME
 dontaudit hvdcp self:capability { dac_override };
