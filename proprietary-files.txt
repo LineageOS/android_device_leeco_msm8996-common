@@ -336,15 +336,26 @@ vendor/lib64/libdpmqmihal.so|4254cc9f10f6f3d990958c17f4e43d8e9e09c382
 
 # DRM and SEE - from oneplus3 - 8.0.0/OPR1.170623.032/1812060016
 vendor/bin/qseecomd|afd6f74e091e0ba21a4f84b4a69b5db8c755afb0
-vendor/lib64/libGPreqcancel.so|1f00e7a539f5851a2a8fb55a5cedd806a12472aa
-vendor/lib64/libGPreqcancel_svc.so|7e36ee7225ff30e74fa00132ba8e5dfc9dc8bb2b
+vendor/lib64/lib-sec-disp.so|e34d0a03eec000d5455f818710cb255800e7d348
 vendor/lib64/libQSEEComAPI.so|4c7e40896d8b92cac02f457dce605b7eeff139e6
+vendor/lib64/libSecureUILib.so|d650623d3cf8840e38f9b3d4be6400ab601644f9
+vendor/lib64/libStDrvInt.so|987a06865440e3c20ce3130d5e65d7bbe84a0c2b
 vendor/lib64/libdrmfs.so|caaa4442b3bd3b2be345d3cddf86b0b4d6e7cbe5
 vendor/lib64/libdrmtime.so|0d8c67f8bd42906d9dde3131b690051cfc33e29c
+vendor/lib64/libGPreqcancel_svc.so|7e36ee7225ff30e74fa00132ba8e5dfc9dc8bb2b
+vendor/lib64/libGPreqcancel.so|1f00e7a539f5851a2a8fb55a5cedd806a12472aa
 vendor/lib64/libqisl.so|83eb6617d7f0a11593df45adb9d09e485abe14b6
 vendor/lib64/librpmb.so|1be8d44919ad1d457b73fdc987335f4ec2620842
+vendor/lib64/libsecureui.so|96e8730968a044ecce63d478be9f0ce07c97c746
+vendor/lib64/libsecureui_svcsock.so|b18eaba3019428b6b2d92a33cd166924b20eca2d
 vendor/lib64/libssd.so|2a07064578f0b8dde52d755b44227f354af15c77
-vendor/lib/libQSEEComAPI.so|7062cdfb83a986d44190d6fd9762da43d508e10a
+
+# DRM (Qualcomm Trusted Execution Enviornment) - from oneplus3 - 8.0.0/OPR1.170623.032/1812060016
+lib64/vendor.qti.hardware.qteeconnector@1.0.so|b0056026d9b5f97b8ae85c5d8b5787dc878d8ef7
+vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service|71d0cbaa12b59c98ce8d0376f57a377a0e35f109
+vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc|c966350ee67d3a7c73ca7184e3725264025d16f5
+vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|19af27253b0c168926456e519af81eb6a723b78c
+vendor/lib64/vendor.qti.hardware.qteeconnector@1.0_vendor.so|639533f6a8de73cd6a36cbeed22edc546e7da79c
 
 # DRM Widevine - from marlin - PPR2.181005.003
 vendor/bin/hw/android.hardware.drm@1.1-service.widevine|2c2455a218eb8d5368f1ccd39bea51be8364a0f3
@@ -353,7 +364,6 @@ vendor/lib/libwvhidl.so|37333d17980282275805807bc648bf8516fd4143
 
 # Gatekeeper - from oneplus3 - 8.0.0/OPR1.170623.032/1812060016
 vendor/lib64/hw/gatekeeper.msm8996.so|3c5dacdbbba914a048ce69d7f6693a9c8505990b
-vendor/lib/hw/gatekeeper.msm8996.so|3ac31ca2b07444125c8f11de5460125b29fa86f1
 
 # GPS - from daisy - 9/PKQ1.180917.001/V10.0.1.0.PDLMIFJ
 lib/vendor.qti.gnss@1.0.so|eddf81581610bdad45674d31e9b88eb8a9d08784
@@ -510,7 +520,6 @@ vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
 
 # Keystore - from oneplus3 - 8.0.0/OPR1.170623.032/1812060016
 vendor/lib64/hw/keystore.msm8996.so|66a7203806db48f1087bfa29b2a2017727d633b0
-vendor/lib/hw/keystore.msm8996.so|012e1f5bcf93b5f254a6f0b6f0dc2656ee19f804
 
 # Listen - from OnePlus3
 vendor/lib/hw/sound_trigger.primary.msm8996.so|48674459b8e5dcec0231a9345c8824a248d8f537
