@@ -70,6 +70,11 @@ function blob_fixup() {
 	vendor/lib/libaudcal.so | vendor/lib64/libaudcal.so)
 		sed -i -e 's|\/data\/vendor\/misc\/audio\/acdbdata\/delta\/|\/data\/vendor\/audio\/acdbdata\/delta\/\x00\x00\x00\x00\x00|g' "${2}"
 		;;
+
+	# Hax gatekeeper and keystore for msm8998 -> msm8996
+	vendor/lib/hw/gatekeeper.msm8996.so | vendor/lib64/hw/gatekeeper.msm8996.so | vendor/lib/hw/keystore.msm8996.so | vendor/lib64/hw/keystore.msm8996.so)
+		sed -i -e 's|msm8998|msm8996|g' "${2}"
+		;;
 	esac
 }
 
