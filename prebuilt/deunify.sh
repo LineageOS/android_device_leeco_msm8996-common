@@ -12,6 +12,23 @@ DEVINFO=$(strings /dev/block/sde21 | head -n 1)
 echo "DEVINFO: ${DEVINFO}"
 
 case "$DEVINFO" in
+  max_plus*)
+    # Mount parittions
+    if test -f "$LOSRECOVERY"; then
+        toybox mount /dev/block/bootdevice/by-name/system -t ext4 /mnt/system
+        toybox mount /dev/block/bootdevice/by-name/vendor -t ext4 /mnt/vendor
+    else
+        /tmp/toybox mount /dev/block/bootdevice/by-name/system -t ext4 /mnt/system
+        /tmp/toybox mount /dev/block/bootdevice/by-name/vendor -t ext4 /mnt/vendor
+    fi
+
+    # Move ACDB
+    mv -f /mnt/vendor/etc/acdbdata/MTP/max_plus/* /mnt/vendor/etc/acdbdata/MTP/
+
+    # Move firmware
+    mv -f /mnt/vendor/firmware/max_plus/* /mnt/vendor/firmware/
+    ;;
+
   le_zl0*)
     # Mount parittions
     if test -f "$LOSRECOVERY"; then
@@ -48,6 +65,7 @@ case "$DEVINFO" in
         /tmp/toybox umount /mnt/vendor
     fi
     ;;
+
   *)
     echo "Nothing to do!"
     ;;
