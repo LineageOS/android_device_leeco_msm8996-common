@@ -85,6 +85,8 @@ int main() {
             hasRGBlight = true;
         } else if (deviceInfo.find("le_x2") == 0) {
             LOG(WARNING) << "DeviceInfo: X2";
+        } else if (deviceInfo.find("max_plus") == 0) {
+            LOG(WARNING) << "DeviceInfo: X910";
         } else {
             LOG(ERROR) << "DeviceInfo: UNKNOWN";
             return 1;
