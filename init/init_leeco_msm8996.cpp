@@ -178,6 +178,18 @@ void vendor_load_properties()
         property_override("ro.telephony.default_network", "10,10");
         unknownDevice = false;
     }
+    else if (device == "max_plus") {
+        // This is LEX910
+        property_overrride_triple("ro.product.device", "ro.product.system.device", "ro.product.vendor.device", "max_plus");
+        property_overrride_triple("ro.product.model", "ro.product.system.model", "ro.product.vendor.model", "LEX910");
+        property_overrride_triple("ro.product.name", "ro.product.system.name", "ro.product.vendor.name", "LeMaxPro_CN");
+        // Dual SIM
+        property_override("persist.radio.multisim.config", "dsds");
+        property_override("ro.telephony.default_network", "10,10");
+        // NFC
+        property_override("persist.nfc.smartcard.config", "SIM1,SIM2,eSE1");
+        unknownDevice = 0;
+    }
     else {
         LOG(ERROR) << "Unable to set DEVINFO from ro.leeco.devinfo prop";
     }
