@@ -261,9 +261,6 @@ on post-fs-data
     # Wifi firmware reload path
     chown wifi wifi /sys/module/wlan/parameters/fwpath
 
-    # Set shared touchpanel nodes ownership (these are proc_symlinks to the real sysfs nodes)
-    chown system system /proc/touchpanel/capacitive_keys_enable
-
     start vendor.ipacm
     start vendor.dataqti
     start vendor.netmgrd
@@ -742,6 +739,12 @@ service qcom-sh /vendor/bin/init.qcom.sh
     class late_start
     user root
     group root system radio
+    oneshot
+
+service proc-touchpanel-sh /vendor/bin/init.proc_touchpanel.sh
+    class late_start
+    user root
+    group root system
     oneshot
 
 service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
