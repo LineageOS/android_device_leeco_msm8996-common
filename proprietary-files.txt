@@ -79,7 +79,7 @@ vendor/lib64/soundfx/libshoebox.so
 vendor/lib/libacdbloader.so|034a5cf03cccfb22e415832c7d6a043dc52d98c0
 vendor/lib64/libacdbloader.so|33b45951c3098715b33bc1ab3ca606aa99fc2248
 
-# Bluetooth - from daisy - 9/PKQ1.180917.001/V10.0.1.0.PDLMIFJ
+# Bluetooth - from daisy - 9/PKQ1.180917.001/V10.0.3.0.PDLMIXM
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|9178856dc8651b499d1b155825b6115a486ee05e
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|20e66aaca57c6ba6df8009404abdfacb608dc341
@@ -245,7 +245,7 @@ vendor/lib/libmmcamera_isp_sce40.so|c56210d76256807abb7cb31f9dc923adb78392fd
 vendor/lib/libmmcamera_isp_snr47.so|44f15661d64906cb1e87de1e028f87f0f022c928
 vendor/lib/libmmcamera_isp_sub_module.so|5fb215ead8c3eefb1c2a0f3c6730dd9d3a55365c
 
-# CNE - from daisy - 9/PKQ1.180917.001/V10.0.1.0.PDLMIFJ
+# CNE - from daisy - 9/PKQ1.180917.001/V10.0.3.0.PDLMIXM
 etc/permissions/cneapiclient.xml|15831adf0e80243042b90c734eea0a68eb8ae9c9
 etc/permissions/com.quicinc.cne.xml|e99e631d8b06ba4680529e9e4004d8d05baf6904
 framework/cneapiclient.jar|af7db889362e562a4c5073bb6aae32947218abf0
@@ -315,13 +315,13 @@ vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so|b1c83ea1046e5e356e0b0a74b99d7a3
 vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so|cbc75b554051298020506d85427a1aa70346fbd5
 vendor/lib64/vendor.qti.latency@2.0.so|15e50ce40e210993343406947dd2c959920f40c8
 
-# DPM - from daisy - 9/PKQ1.180917.001/V10.0.1.0.PDLMIFJ
+# DPM - from daisy - 9/PKQ1.180917.001/V10.0.3.0.PDLMIXM
 bin/dpmd|1b38829a7faf33d5cbdc195d703f99384c20c9f4
 etc/dpm/dpm.conf|5f19d3984b5291ac956552bda2a84c10c535df0a
 etc/init/dpmd.rc|52ca6ad920a1804e4ff608113cece063730f5e0c
 etc/permissions/com.qti.dpmframework.xml|36b94c9338069e434b83359a92cdc7ff62b822df
 etc/permissions/dpmapi.xml|ded29f9befaef20a7ccee0c75427fda1d1d04890
-framework/com.qti.dpmframework.jar|4a48456f8ed4b751135b05a99f273996bf35fd9c
+framework/com.qti.dpmframework.jar|2a6ff555ebff148a508fc7ea2fbeaee4b9a2dff6
 framework/dpmapi.jar|66a30e2752b058f6f522721ef6b5efb4c747f7ed
 framework/tcmclient.jar|5f3878f0fe312a429d3a69a2119b34100818292e
 lib64/com.qualcomm.qti.dpm.api@1.0.so|2af88934e4039edaac842576a1861cbdfe39838b
@@ -355,7 +355,7 @@ vendor/lib/libwvhidl.so|37333d17980282275805807bc648bf8516fd4143
 vendor/lib64/hw/gatekeeper.msm8996.so|3c5dacdbbba914a048ce69d7f6693a9c8505990b
 vendor/lib/hw/gatekeeper.msm8996.so|3ac31ca2b07444125c8f11de5460125b29fa86f1
 
-# GPS - from daisy - 9/PKQ1.180917.001/V10.0.1.0.PDLMIFJ
+# GPS - from daisy - 9/PKQ1.180917.001/V10.0.3.0.PDLMIXM
 lib/vendor.qti.gnss@1.0.so|eddf81581610bdad45674d31e9b88eb8a9d08784
 lib/vendor.qti.gnss@1.1.so|fea7124d30c04636974dfdbe1a348ff249d897fe
 lib/vendor.qti.gnss@1.2.so|818c951a47baa82f72da4266e61e41cfef16a67c
@@ -371,7 +371,7 @@ vendor/bin/loc_launcher|23a4470552c0c418662a7d91fa7f593bee767459
 vendor/bin/lowi-server|f83f6ab9b978c618c87d2b5c66854533d0e3a66f
 vendor/bin/slim_daemon|0346d3721c2a0471559d0728c329888e5bad8452
 vendor/bin/xtra-daemon|f4fdd2d7fc56472066b05899340eb19ff67d54b4
-vendor/etc/cacert_location.pem|0789bf799c7e45d352a83e2f79ddb0cea86db85b
+vendor/etc/cacert_location.pem|6a05f324e7d9ff584811e62aabeb6d89a5239bbe
 vendor/etc/init/vendor.qti.gnss@1.0-service.rc|98655e2adc2158a052b0ecf06b065535f0a2aac7
 vendor/etc/xtra_root_cert.pem|f55a31ec4d9cf8ce2724acadecf00c779f8767db
 vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so|27375e1ff018f7fb65b87ee0ff06e3e39c2c13fc
@@ -401,7 +401,7 @@ vendor/lib64/vendor.qti.gnss@1.1.so|1edcf36fc3afbc465e53e3b74f99fde1e952f718
 vendor/lib64/vendor.qti.gnss@1.2.so|fc002fdced5768ed97936fde007476c1e9eaabb2
 vendor/lib64/vendor.qti.gnss@2.0.so|58e69a003eb530cf59bbe204251b9652d28a4b89
 
-# Graphics - from daisy - 9/PKQ1.180917.001/V10.0.1.0.PDLMIFJ
+# Graphics - from daisy - 9/PKQ1.180917.001/V10.0.3.0.PDLMIXM
 vendor/lib64/egl/eglSubDriverAndroid.so|1722e81010c6f9836d83f6d684b206412c410d49
 vendor/lib64/egl/libEGL_adreno.so|b7ab1dad439779da82ab66439e3c8e85a153056d
 vendor/lib64/egl/libGLESv1_CM_adreno.so|1eaa98e7feb9daba88f68ff167e2dacfaeed5e21
@@ -439,7 +439,7 @@ vendor/lib/librs_adreno_sha1.so|065a538f25d41713501c568a2d7ef1561c8e3bb7
 vendor/lib/librs_adreno.so|12b4c0d4174c108e27a4e09fe3e2b5ac860693a2
 vendor/lib/libRSDriver_adreno.so|26de2b456a064d9d3ea68b8ceacf26f4a866c067
 
-# Graphics (HDR) - from daisy - 9/PKQ1.180917.001/V10.0.1.0.PDLMIFJ
+# Graphics (HDR) - from daisy - 9/PKQ1.180917.001/V10.0.3.0.PDLMIXM
 vendor/lib64/libhdr_tm.so|df15d487e73560f81017bcf4a73c28c9697b1ed9
 vendor/lib/libhdr_tm.so|8060a5d9ed0283c7b89716165ba8af4b86ef0210
 
@@ -457,7 +457,7 @@ vendor/lib64/libsdm-diag.so|7ab5d2a980029ac9bd20fe68656823b21e483e11
 vendor/lib64/libsdmextension.so|e91aaf852df780e42bb083c3089f5b42c87c49f7
 vendor/lib64/libtinyxml2_1.so|b743b93bbb47bb2d80322fcfb985b7b8c696fa1b
 
-# Graphics (Vulkan) - from daisy - 9/PKQ1.180917.001/V10.0.1.0.PDLMIFJ
+# Graphics (Vulkan) - from daisy - 9/PKQ1.180917.001/V10.0.3.0.PDLMIXM
 vendor/lib/hw/vulkan.msm8953.so:vendor/lib/hw/vulkan.msm8996.so|6259874ee4fe1a414b5e2109ec63af55a70d3733
 vendor/lib64/hw/vulkan.msm8953.so:vendor/lib64/hw/vulkan.msm8996.so|e1905916771354829868a65e6757615c7de20b71
 
@@ -613,7 +613,7 @@ vendor/lib/libqti-util.so
 vendor/lib/vendor.qti.hardware.iop@1.0_vendor.so
 vendor/lib/vendor.qti.hardware.perf@1.0_vendor.so
 
-# Postprocessing - from daisy - 9/PKQ1.180917.001/V10.0.1.0.PDLMIFJ
+# Postprocessing - from daisy - 9/PKQ1.180917.001/V10.0.3.0.PDLMIXM
 vendor/bin/hw/vendor.display.color@1.0-service|2dbbb46a62ac5cf8d3a084c8350457442f5741eb
 vendor/bin/mm-pp-dpps|c281ee28274eeff6273091ae07aa1856a0c160db
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
@@ -752,7 +752,7 @@ vendor/bin/thermal-engine|fa2e79587ba002817a933230d7381884f64b36e4
 vendor/lib64/libthermalioctl.so|cc51f7347a5c04e478b0abd2efa39c5dbe63b9a5
 -vendor/lib/libthermalclient.so|1b081ae5e464d3b9b7686221d716037fd0255824
 
-# Time services - from daisy - 9/PKQ1.180917.001/V10.0.1.0.PDLMIFJ
+# Time services - from daisy - 9/PKQ1.180917.001/V10.0.3.0.PDLMIXM
 -vendor/app/TimeService/TimeService.apk|78109530538aa8fb533ad288c9d356c57481a10e
 vendor/bin/time_daemon|d67f1c50583b5efca0f5baea00a51056a798b7f8
 vendor/lib64/libtime_genoff.so|8f4c1f9ace6af463b241b130d6872b5d39cc7b2a
