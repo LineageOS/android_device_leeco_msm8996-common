@@ -1,6 +1,5 @@
 # Block devices
 /dev/block/platform/soc/624000\.ufshc/by-name/devinfo                    u:object_r:devinfo_block_device:s0
-/dev/block/platform/soc/624000\.ufshc/by-name/persist                    u:object_r:persist_block_device:s0
 
 # data
 /data/vendor/qcam(/.*)?                                                  u:object_r:vendor_camera_data_file:s0
