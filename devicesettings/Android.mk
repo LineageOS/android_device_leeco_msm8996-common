@@ -9,6 +9,7 @@ LOCAL_PACKAGE_NAME := DeviceSettings
 LOCAL_PRIVATE_PLATFORM_APIS := true
 LOCAL_CERTIFICATE := platform
 LOCAL_PRIVILEGED_MODULE := true
+LOCAL_VENDOR_MODULE := true
 
 LOCAL_USE_AAPT2 := true
 
@@ -18,11 +19,6 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
     android-support-v7-palette \
     android-support-v7-preference \
     android-support-v7-recyclerview
-
-ifeq ($(BOARD_AOSP_BASED),)
-    LOCAL_STATIC_JAVA_LIBRARIES += \
-        org.lineageos.platform.internal
-endif
 
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 

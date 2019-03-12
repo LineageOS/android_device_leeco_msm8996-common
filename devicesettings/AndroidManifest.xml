@@ -25,8 +25,8 @@
         </receiver>
 
         <activity
-            android:name=".CameraFocusPreferenceActivity"
-            android:label="@string/camera_settings_title"
+            android:name=".LeecoPreferenceActivity"
+            android:label="@string/leeco_settings_title"
             android:theme="@style/DeviceSettings">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
@@ -36,10 +36,10 @@
                 android:value="com.android.settings.category.ia.system" />
             <meta-data
                 android:name="com.android.settings.summary"
-                android:resource="@string/camera_settings_summary" />
+                android:resource="@string/leeco_settings_summary" />
             <meta-data
                 android:name="com.android.settings.icon"
-                android:resource="@drawable/ic_camera_alt" />
+                android:resource="@drawable/ic_settings_lepref" />
         </activity>
 
     </application>
