@@ -22,5 +22,6 @@
     <string name="camera_focus_fix_title">Camera Focus Fix</string>
     <string name="camera_focus_fix_summary">Enable if you have issues with the camera not focusing</string>
     <string name="quick_charge_title">Quick Charge</string>
+    <string name="quick_charge_summary">Toggle quick charge, unplug and replug the charger after changing this setting</string>
 
 </resources>

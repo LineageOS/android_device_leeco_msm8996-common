@@ -25,6 +25,7 @@
     <SwitchPreference
         android:key="quick_charge_enable"
         android:defaultValue="true"
-        android:title="@string/quick_charge_title" />
+        android:title="@string/quick_charge_title"
+        android:summary="@string/quick_charge_summary" />
 
 </PreferenceScreen>
