@@ -16,6 +16,8 @@
 
 package org.lineageos.settings.device;
 
+import android.os.Build;
+import android.os.SystemProperties;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -34,12 +36,16 @@ public class SettingsUtils {
     public static final String TAG = "SettingsUtils";
     public static final String CAMERA_FOCUS_FIX_ENABLED =
             "CAMERA_FOCUS_FIX_ENABLED";
+    public static final String QUICK_CHARGE_ENABLED = "QUICK_CHARGE_ENABLED";
 
     public static final String CAMERA_FOCUS_FIX_SYSFS =
             "/sys/module/msm_actuator/parameters/use_focus_fix";
+    public static final String QUICK_CHARGE_SYSFS =
+            "/sys/class/power_supply/le_ab/le_quick_charge_mode";
+
+    private static final String QC_SYSTEM_PROPERTY = "persist.sys.le_fast_chrg_enable";
 
     public static final String PREFERENCES = "SettingsUtilsPreferences";
-    public static final String SETTINGS_CLASS = "lineageos.providers.LineageSettings$System";
 
     public static void writeCameraFocusFixSysfs(boolean enabled) {
         try {
@@ -54,51 +60,39 @@ public class SettingsUtils {
         }
     }
 
+    public static void writeQuickChargeProp(boolean enabled) {
+        SystemProperties.set(QC_SYSTEM_PROPERTY, enabled ? "1" : "0");
+    }
+
+    public static boolean supportsCameraFocusFix() {
+        File focusFixPath = new File(CAMERA_FOCUS_FIX_SYSFS);
+        return focusFixPath.exists();
+    }
+
+    public static boolean supportsQuickChargeSwitch() {
+        File QCPath = new File(QUICK_CHARGE_SYSFS);
+        return QCPath.exists();
+    }
+
     public static boolean setCameraFocusFixEnabled(Context context, boolean enabled) {
-        return putIntSystem(context, context.getContentResolver(), CAMERA_FOCUS_FIX_ENABLED, enabled ? 1 : 0);
+        return putInt(context, CAMERA_FOCUS_FIX_ENABLED, enabled ? 1 : 0);
     }
 
     public static boolean getCameraFocusFixEnabled(Context context) {
-        return getIntSystem(context, context.getContentResolver(), CAMERA_FOCUS_FIX_ENABLED, 0) == 1;
+        return getInt(context, CAMERA_FOCUS_FIX_ENABLED, 0) == 1;
     }
 
-    public static int getIntSystem(Context context, ContentResolver cr, String name, int def) {
-        int ret;
+    public static boolean setQuickChargeEnabled(Context context, boolean enabled) {
+        return putInt(context, QUICK_CHARGE_ENABLED, enabled ? 1 : 0);
+    }
 
-        try {
-            Class systemSettings = Class.forName(SETTINGS_CLASS);
-            Method getInt = systemSettings.getMethod("getInt", ContentResolver.class,
-                    String.class, int.class);
-            String sdkName = (String)systemSettings.getDeclaredField(name).get(null);
-            ret = (int)getInt.invoke(systemSettings, cr, sdkName, def);
-        } catch (Exception e) {
-            Log.i(TAG, "CMSettings not found. Using application settings for getInt");
-            ret = getInt(context, name, def);
-        }
-
-        return ret;
+    public static boolean getQuickChargeEnabled(Context context) {
+        return getInt(context, QUICK_CHARGE_ENABLED, 1) == 1;
     }
 
     public static int getInt(Context context, String name, int def) {
         SharedPreferences settings = context.getSharedPreferences(PREFERENCES, 0);
         return settings.getInt(name, def);
-    }
-
-    public static boolean putIntSystem(Context context, ContentResolver cr, String name, int value) {
-        boolean ret;
-
-        try {
-            Class systemSettings = Class.forName(SETTINGS_CLASS);
-            Method putInt = systemSettings.getMethod("putInt", ContentResolver.class,
-                    String.class, int.class);
-            String sdkName = (String)systemSettings.getDeclaredField(name).get(null);
-            ret = (boolean)putInt.invoke(systemSettings, cr, sdkName, value);
-        } catch (Exception e) {
-            Log.i(TAG, "CMSettings not found. Using application settings for putInt");
-            ret = putInt(context, name, value);
-        }
-
-        return ret;
     }
 
     public static boolean putInt(Context context, String name, int value) {

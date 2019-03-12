@@ -16,22 +16,17 @@
 
 package org.lineageos.settings.device;
 
-import android.content.BroadcastReceiver;
-import android.content.ComponentName;
-import android.content.Context;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.util.Log;
+import android.os.Bundle;
 
-public class BootCompletedReceiver extends BroadcastReceiver {
+import com.android.settingslib.drawer.SettingsDrawerActivity;
 
-    private static final boolean DEBUG = false;
-    private static final String TAG = "SettingsDevice";
+public class LeecoPreferenceActivity extends SettingsDrawerActivity {
 
     @Override
-    public void onReceive(final Context context, Intent intent) {
-        if (DEBUG) Log.d(TAG, "Boot Receiver");
-        SettingsUtils.writeCameraFocusFixSysfs(
-            SettingsUtils.getCameraFocusFixEnabled(context));
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        getFragmentManager().beginTransaction()
+                .replace(R.id.content_frame, new LeecoPreferenceFragment())
+                .commit();
     }
 }
