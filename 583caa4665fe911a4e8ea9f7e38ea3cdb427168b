@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "59e25245_26c111d3",
+        "filename": "devicesettings/res/drawable/ic_settings_lepref.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2019-03-26T23:14:52Z",
+      "side": 1,
+      "message": "we should remove this tab",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 1
+      },
+      "revId": "583caa4665fe911a4e8ea9f7e38ea3cdb427168b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
