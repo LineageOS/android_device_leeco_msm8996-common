@@ -1,2 +1,0 @@
-com.quicinc.cne.api::IApiService                             u:object_r:hal_dataservice_hwservice:s0
-com.quicinc.cne.server::IServer                              u:object_r:hal_dataservice_hwservice:s0

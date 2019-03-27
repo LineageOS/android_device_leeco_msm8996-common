@@ -1,1 +1,0 @@
-allow dataservice_app hal_dataservice_hwservice:hwservice_manager find;

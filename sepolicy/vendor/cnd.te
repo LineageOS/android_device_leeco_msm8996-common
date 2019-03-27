@@ -1,5 +1,3 @@
-add_hwservice(cnd, hal_dataservice_hwservice)
-
 allow cnd self:capability { chown fsetid net_raw };
 
 set_prop(cnd, debug_prop)
