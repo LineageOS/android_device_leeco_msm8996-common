@@ -70,6 +70,10 @@ function blob_fixup() {
 	vendor/lib/libaudcal.so | vendor/lib64/libaudcal.so)
 		sed -i -e 's|\/data\/vendor\/misc\/audio\/acdbdata\/delta\/|\/data\/vendor\/audio\/acdbdata\/delta\/\x00\x00\x00\x00\x00|g' "${2}"
 		;;
+
+	# use /sbin instead of /system/bin for TWRP
+	recovery/root/sbin/qseecomd)
+		sed -i 's|/system/bin/linker64|/sbin/linker64\x0\x0\x0\x0\x0\x0|g' "${2}"
 	esac
 }
 
@@ -77,7 +81,12 @@ function blob_fixup() {
 setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${LINEAGE_ROOT}" true "${CLEAN_VENDOR}"
 
 extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
-        "${KANG}" --section "${SECTION}"
+	"${KANG}" --section "${SECTION}"
+
+if [ -s "${MY_DIR}/proprietary-files-twrp.txt" ]; then
+	extract "${MY_DIR}/proprietary-files-twrp.txt" "${SRC}" \
+		"${KANG}" --section "${SECTION}"
+fi
 
 if [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
     # Reinitialize the helper for device
