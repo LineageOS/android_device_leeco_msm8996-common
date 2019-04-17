@@ -66,11 +66,6 @@ function blob_fixup() {
 		sed -i -e 's|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-java|g' "${2}"
 		;;
 
-	# Hax libaudcal.so to store acdbdata in new path
-	vendor/lib/libaudcal.so | vendor/lib64/libaudcal.so)
-		sed -i -e 's|\/data\/vendor\/misc\/audio\/acdbdata\/delta\/|\/data\/vendor\/audio\/acdbdata\/delta\/\x00\x00\x00\x00\x00|g' "${2}"
-		;;
-
 	# use /sbin instead of /system/bin for TWRP
 	recovery/root/sbin/qseecomd)
 		sed -i 's|/system/bin/linker64|/sbin/linker64\x0\x0\x0\x0\x0\x0|g' "${2}"
