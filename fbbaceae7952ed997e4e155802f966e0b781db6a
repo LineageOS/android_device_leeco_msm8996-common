@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "35ba92ef_97846ef0",
+        "filename": "prebuilt/vendor/ueventd.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 9737
+      },
+      "writtenOn": "2019-04-17T09:34:09Z",
+      "side": 1,
+      "message": "This should be set to 0666 to make third part IR pacth zip works",
+      "revId": "fbbaceae7952ed997e4e155802f966e0b781db6a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
