@@ -1,17 +1,15 @@
-# ADSP - from OnePlus3
-lib/libadsprpc.so|0246c6a5a2d95255857b31f03d22cbe586a5ac54
-lib64/libadsprpc.so|481ed28bc44a85d05327b32461642f67200240b4
-vendor/bin/adsprpcd|a8e947d46be6ad97ed6b41c5aeb80c6c1c8e3654
-vendor/lib/libadsp_default_listener.so|b5bd382d217d887db727b9ae61ce64619306e0ae
-vendor/lib/libadsp_hvx_callback_skel.so|f40b5175070fea40de2e1f95f9a16309e8a4cc07
-vendor/lib/libadsp_hvx_stub.so|54a71d1dc6f0fd86fd60776ce823e48b73e1360f
-vendor/lib/libadsprpc.so|0246c6a5a2d95255857b31f03d22cbe586a5ac54
-vendor/lib/libfastcvadsp_stub.so|d30060f942dbe3ee59054ddff5f1bce0653d7e80
-vendor/lib/libfastcvopt.so|0a584a6326171d580c349a0f001173bfea93e5a6
-vendor/lib64/libadsp_default_listener.so|c88b356ff24c66a640ddaa41798ceddf97a483f1
-vendor/lib64/libadsprpc.so|481ed28bc44a85d05327b32461642f67200240b4
-vendor/lib64/libfastcvadsp_stub.so|247eb7f36c178503b0e8f539d74d1ae1d686329a
-vendor/lib64/libfastcvopt.so|1ed21c3e3eccd423483fe6b99d653142e43f748d
+# ADSP - from oneplus3 - 9/PKQ1.181203.001/1903310200
+vendor/bin/adsprpcd|ef200e3bce4429fd9461c74330a003f069ffd5b3
+vendor/lib/libadsp_default_listener.so|d9de89d55eba2d35a7583584b51335a663705fa7
+vendor/lib/libadsp_hvx_callback_skel.so|b7e47d8d0c011caea30daf974de81eb01bb90268
+vendor/lib/libadsp_hvx_stub.so|5842e47b5929e15c8b63f1aa4795ca3432debebb
+vendor/lib/libadsprpc.so|76cf6bd3975e933f1bec55499da3c3e7a17a9e6d
+vendor/lib/libfastcvadsp_stub.so|6b50fd7d53811b51e06fedd87c12a794d0c2f645
+vendor/lib/libfastcvopt.so|797b9843ccc1f650d66831d645db2bc96b89c299
+vendor/lib64/libadsp_default_listener.so|e1d57433c5af24e3227b679367c133dde1014714
+vendor/lib64/libadsprpc.so|bc7504a5c64c73748927404be5ccfe4015146d25
+vendor/lib64/libfastcvadsp_stub.so|e25929713605e70417dee54b362b98d04a860f47
+vendor/lib64/libfastcvopt.so|28fa9dc4b44e86a9c1e722e5705adf047dd35d50
 
 # ADSP (modules) - from zl1
 vendor/lib/rfsa/adsp/libadsp_fd_skel.so|5607a78451b621bb6399878ab58ba896c72797ab
@@ -44,40 +42,19 @@ lib/com.qualcomm.qti.ant@1.0.so|fcd6a7130c480bfe4e4d9cc00702ed8444cddc82
 vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
 vendor/lib64/com.qualcomm.qti.ant@1.0_vendor.so
 
-# Audio - Gemini 8.0.0/OPR1.170623.032/8.9.13
-etc/permissions/audiosphere.xml
-framework/audiosphere.jar
-vendor/lib/libacdb-fts.so
-vendor/lib/libacdbmapper.so
-vendor/lib/libacdbrtac.so
-vendor/lib/libadiertac.so
-vendor/lib/libadm.so
-vendor/lib/libaudcal.so
-vendor/lib/libaudioalsa.so
-vendor/lib/libmdsprpc.so
-vendor/lib/libqtigef.so
-vendor/lib/soundfx/libasphere.so
-vendor/lib/soundfx/libqcbassboost.so
-vendor/lib/soundfx/libqcreverb.so
-vendor/lib/soundfx/libqcvirt.so
-vendor/lib/soundfx/libshoebox.so
-vendor/lib64/libacdb-fts.so
-vendor/lib64/libacdbmapper.so
-vendor/lib64/libacdbrtac.so
-vendor/lib64/libadiertac.so
-vendor/lib64/libaudcal.so
-vendor/lib64/libaudioalsa.so
-vendor/lib64/libmdsprpc.so
-vendor/lib64/libqtigef.so
-vendor/lib64/soundfx/libasphere.so
-vendor/lib64/soundfx/libqcbassboost.so
-vendor/lib64/soundfx/libqcreverb.so
-vendor/lib64/soundfx/libqcvirt.so
-vendor/lib64/soundfx/libshoebox.so
+# Audio - from oneplus3 - 9/PKQ1.181203.001/1903310200
+vendor/lib/libacdb-fts.so|100e698279595c86656d5c1fa1773863b4cd05f3
+vendor/lib/libacdbrtac.so|25ea2d51f215c1e5e06b298d7c93097e93db7a63
+vendor/lib/libadiertac.so|e5231cdfc829b673702c4661751854bc44f7c72b
+vendor/lib/libadm.so|355bbe01f7117f3e16435224ce0c75b111a0f5b8
+vendor/lib/libaudcal.so|4508cee149c22b8e35e8f4423f38a8e8a9b5d130
+vendor/lib/libqtigef.so|9cd393596185026a68959b75cc7ac3b9342326a5
+vendor/lib/soundfx/libqcbassboost.so|572d03f4566f3e08aeac948b9ef92817af243a39
+vendor/lib/soundfx/libqcreverb.so|a9ae6d150aae44358783e6b0c4cfb0b3fec27f6b
+vendor/lib/soundfx/libqcvirt.so|4181edde0747774830930f66f20a756fec95118d
 
 # Audio (acdbloader) - from zl1
 vendor/lib/libacdbloader.so|034a5cf03cccfb22e415832c7d6a043dc52d98c0
-vendor/lib64/libacdbloader.so|33b45951c3098715b33bc1ab3ca606aa99fc2248
 
 # Bluetooth - from daisy - 9/PKQ1.180917.001/V10.0.3.0.PDLMIXM
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|9178856dc8651b499d1b155825b6115a486ee05e
@@ -87,7 +64,7 @@ vendor/lib64/libbtnv.so|136dc47f7d16a841e9c6ad909753e96a41392534
 vendor/lib64/libbt-hidlclient.so|0b0b69ef9787e3cd5409f0050cad03698dd6ce26
 vendor/lib64/vendor.qti.hardware.fm@1.0.so|dc576dfcb0bf390a106b5ed8861e7f547110cbf1
 
-# Bluetooth (aptX) - from OnePlus3
+# Bluetooth (aptX) - from oneplus3 - 9/PKQ1.181203.001/1903310200
 lib64/libaptX_encoder.so|0cebad28afcf29f931bdc2d24fce2730dc882ecf
 lib64/libaptXHD_encoder.so|90f47f10af28b3ead143200cb4370b847c513127
 
@@ -506,13 +483,10 @@ vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
 # Keystore - from oneplus3 - 9/PKQ1.181203.001/1903310200
 vendor/lib64/hw/keystore.msm8996.so|d7222a060d20e7df3cabbfe7125385e85821246e
 
-# Listen - from OnePlus3
-vendor/lib/hw/sound_trigger.primary.msm8996.so|48674459b8e5dcec0231a9345c8824a248d8f537
-vendor/lib/libadpcmdec.so|cce776b6e1edac56705b155444c3f28362055442
-vendor/lib/libsmwrapper.so|2abf623b1f919e0747bfe70bc3d988521c02d14e
-vendor/lib/vendor.qti.voiceprint@1.0.so|a706a35926dde53af240cafea640ab9e607f0cf1
-vendor/lib64/hw/sound_trigger.primary.msm8996.so|d35bc552da96d2f0de10cebf39c9bb0dc0bf6ab0
-vendor/lib64/vendor.qti.voiceprint@1.0.so|e68fb38066c46a7f2b5be0f9a11300e01ec74dee
+# Listen - from oneplus3 - 9/PKQ1.181203.001/1903310200
+vendor/lib/hw/sound_trigger.primary.msm8996.so|5b0c3a18e806e7441256211e5861add9cdce3309
+vendor/lib/libadpcmdec.so|eeaef8dd6cad3da613860bb263f192cda56c60b6
+vendor/lib/libsmwrapper.so|0548ecf3d34f134d14f6ef176af71bf6fcc36186
 
 # Media - from daisy - 9/PKQ1.180917.001/V10.0.3.0.PDLMIXM
 lib/extractors/libmmparser.so|4bca55f03b1b21c7dfbf528b7fdb2c84d1d61910
