@@ -527,46 +527,25 @@ vendor/bin/pm-service|ca317d7448d7f115963c3f37ccebbe47ba53fa91
 vendor/lib/libperipheral_client.so|7e54351ec6cae4a302330671e247a2487e36ff15
 vendor/lib64/libperipheral_client.so|1a8db83ca35bb8f9e973cd6d988456d5e6696888
 
-# Perf - Gemini 8.0.0/OPR1.170623.032/8.9.13
-lib64/vendor.qti.hardware.iop@1.0.so
-lib64/vendor.qti.hardware.perf@1.0.so
-lib/vendor.qti.hardware.iop@1.0.so
-lib/vendor.qti.hardware.perf@1.0.so
-vendor/bin/energy-awareness
-vendor/bin/msm_irqbalance
-vendor/bin/hw/vendor.qti.hardware.iop@1.0-service
-vendor/bin/hw/vendor.qti.hardware.perf@1.0-service
-vendor/etc/init/vendor.qti.hardware.iop@1.0-service.rc
-vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc
-vendor/etc/perf/gamedwhitelist.xml
-vendor/etc/perf/perfboostsconfig.xml|fce795f55754630cf1db2049258a4a310736826f
-vendor/etc/perf/perf-profile0.conf
-vendor/etc/perf/perf-profile1.conf
-vendor/etc/perf/perf-profile2.conf
-vendor/etc/perf/perf-profile3.conf
-vendor/etc/perf/perf-profile4.conf
-vendor/etc/perf/perf-profile5.conf
-vendor/etc/perf/perf-profile6.conf
-vendor/lib64/hw/vendor.qti.hardware.iop@1.0-impl.so
-vendor/lib64/libfeedbackhandler.so
-vendor/lib64/libperfgluelayer.so
-vendor/lib64/libqti-iopd.so
-vendor/lib64/libqti-iopd-client.so
-vendor/lib64/libqti-perfd.so
-vendor/lib64/libqti-perfd-client.so
-vendor/lib64/libqti-util.so
-vendor/lib64/vendor.qti.hardware.iop@1.0_vendor.so
-vendor/lib64/vendor.qti.hardware.perf@1.0_vendor.so
-vendor/lib/hw/vendor.qti.hardware.iop@1.0-impl.so
-vendor/lib/libfeedbackhandler.so
-vendor/lib/libperfgluelayer.so
-vendor/lib/libqti-iopd.so
-vendor/lib/libqti-iopd-client.so
-vendor/lib/libqti-perfd.so
-vendor/lib/libqti-perfd-client.so
-vendor/lib/libqti-util.so
-vendor/lib/vendor.qti.hardware.iop@1.0_vendor.so
-vendor/lib/vendor.qti.hardware.perf@1.0_vendor.so
+# Perf - from oneplus3 - 9/PKQ1.181203.001/1903190014
+vendor/bin/energy-awareness|3f1aa4d518ff361aa3ed9e41ace3e16d36cf0bbe
+vendor/bin/msm_irqbalance|e70694e0412052cd591389b8c1bf4573e5777257
+vendor/bin/hw/vendor.qti.hardware.perf@1.0-service|7a38f7ef085ddb1a5cd8731e9d2fc1540c3e85ad
+vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc|b50182aadab2e31409df61c523d0fb914a394e43
+vendor/etc/perf/commonresourceconfigs.xml|73fc37a6fa498a98758b5a91ebacb87ef0ffdcdf
+vendor/etc/perf/perfboostsconfig.xml|d8b1c7d0a08ca595c58577180227c15b7421f5a5
+vendor/etc/perf/targetconfig.xml|b2ea39d05d52364774dbd390732cb5f29ae14941
+vendor/etc/perf/targetresourceconfigs.xml|478715f7bcb07e08e62be023ac0b6302ef65bdb3
+vendor/lib/libperfgluelayer.so|3850d4ea3dbead227b622fcc47fcec29955fcc63
+vendor/lib/libqti-perfd-client.so|a4a6da47ee26fcd5116c514f7fed15b91306aea3
+vendor/lib/libqti-perfd.so|2a2077cf455d5a6b03c0bb2b6eeca554ee28a363
+vendor/lib/libqti-util.so|d65f3ef240cebea73bd1ba8b1132a7e639aa05bb
+vendor/lib/vendor.qti.hardware.perf@1.0.so|84e437b0dea2d8c1d5712a9fadf132ae5d665d46
+vendor/lib64/libperfgluelayer.so|627a324616de86ba90889a7c8dd7a05c46a30aaa
+vendor/lib64/libqti-perfd-client.so|1e84aa49a8cff0f69f0261c69dd8843534efd79e
+vendor/lib64/libqti-perfd.so|68c995a76cad4c8b0af1c4743a5157b70dad1dd1
+vendor/lib64/libqti-util.so|0c34c7cbb07197841e9f097925fe961f3226e621
+vendor/lib64/vendor.qti.hardware.perf@1.0.so|f3d180595bdfeac68d13e13ecf704f892e7a52a5
 
 # Postprocessing - from oneplus3 - 9/PKQ1.181203.001/1903190014
 vendor/bin/hw/vendor.display.color@1.0-service|2ca340c7fd7689ac8ddf36f948fd95a7cd3bfc2e
