@@ -660,20 +660,16 @@ vendor/firmware/modem_pr/mcfg_sw_sprint.mbn|587d37c5ec182e9c7c3e436bde733ddb615c
 vendor/firmware/modem_pr/mcfg_sw_tmo.mbn|39790692fa8fc5699fe6f9acf54ae8d82ddf78a6
 vendor/firmware/modem_pr/mcfg_sw_verizon.mbn|907d87fa7a4289c2fa1d6298d837f0a331c65419
 
-# Sensors - from oneplus3 - 8.0.0/OPR1.170623.032/1812060016
-vendor/bin/sensors.qcom:vendor/bin/sensors.qti|fadef46468ccbe4ee4f6a4ea3c69510c9f0ca3d4
-vendor/lib/hw/activity_recognition.msm8996.so|a93ab9aa549c2ce5b9ba5b1b8d62a192a66a6c1a
-vendor/lib/libsensor1.so|d8d2f53a261c045d814e5a70ba1194c2f0075942
-vendor/lib/libsensor_reg.so|5fb200beaf65132cfea6ba076b9d6178015bd11e
-vendor/lib/libsensor_thresh.so|aa4699127d90b7a79d895363e173ed3e48e3b954
-vendor/lib/libsensor_user_cal.so|42997390b0f1b923de07d16663090dd03b240d44
-vendor/lib/sensors.ssc.so|e30b31e6b369ad64bc3f5b93f6d3ba4c8a3a59ab
-vendor/lib64/hw/activity_recognition.msm8996.so|1760cd35fa5e786630a795d308dbbb24fccf0f4e
-vendor/lib64/libsensor1.so|989890f38e0685e15e60bc2a3d02df0bf48dd3d8
-vendor/lib64/libsensor_reg.so|5c43f48f1b59ec3855fb550862abb9e5b3ea1b47
-vendor/lib64/libsensor_thresh.so|ae030a1f5ebb4dfb6c8cd60c368887afd8595a88
-vendor/lib64/libsensor_user_cal.so|6e8f036acbb88be24ed8aa404514eb7d06bf0a4b
-vendor/lib64/sensors.ssc.so|8fdbeafe3bb461fb04b67a42ea3a788dfd94e879
+# Sensors - from oneplus3 - 9/PKQ1.181203.001/1903190014
+vendor/bin/sensors.qti|525b6d58810b795442ab49be563c649b0f06a84b
+vendor/lib/hw/activity_recognition.msm8996.so|6bec19a06f59abca3d43cd6a83c88fbe9daea7f6
+vendor/lib/libsensor_reg.so|9a3568dc423598886b7f16d91d76e53cd0220387
+vendor/lib/libsensor1.so|de27fcd2ab95788e09310c5f2cf58a0540afcfe3
+vendor/lib/sensors.ssc.so|2b7c1996cc12e6fac7d1fa09c5dfe1c93a1311d9
+vendor/lib64/hw/activity_recognition.msm8996.so|64901bc837ed32dee28bbff9a60df7d8ac5cd140
+vendor/lib64/libsensor_reg.so|8ca48358abf3f8f84f86036b02dbb210a5870742
+vendor/lib64/libsensor1.so|f8524d62d2ad52849f4a13b018baf08d0eac8180
+vendor/lib64/sensors.ssc.so|f4108878f452ff445bfee7d6f624e350353469e5
 
 # Sensors (LeEco) - from zl1
 vendor/lib/sensors.oem.so|08656a65ab1bf120ac9bb16e93faf93cc2cdda86
