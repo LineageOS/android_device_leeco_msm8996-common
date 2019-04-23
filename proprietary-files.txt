@@ -648,18 +648,6 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0_vendor.so
 vendor/lib/libmdmdetect.so
 vendor/radio/qcril_database/qcril.db
 
-# RIL (MBN) - from zl1 - 6.0.1/WAXCNFN5902012312S/letv01060151
-vendor/firmware/modem_pr/mbn_upgrade_info|46124ca9f9d67aa08607ec0a630e6682fa550b40
-vendor/firmware/modem_pr/mcfg_sw_att.mbn|87abc6c914452a0bfe84d2b80f610250c76de279
-vendor/firmware/modem_pr/mcfg_sw_cmcc.mbn|e3625f7b98b311bdc6bdf9cafe4625c4d613c6fb
-vendor/firmware/modem_pr/mcfg_sw_ct.mbn|c753ff2faefc46c509fdee80370c72d6ca4b76ca
-vendor/firmware/modem_pr/mcfg_sw_cu.mbn|1a3dc6987e3c2018719314d40975dbac1ec2ba07
-vendor/firmware/modem_pr/mcfg_sw_others.mbn|875e111202a30d3ebf1d9251591c41589f9aa8d3
-vendor/firmware/modem_pr/mcfg_sw_reliance.mbn|23288175fa5195d44befbff6f4c5b0cb71969bd3
-vendor/firmware/modem_pr/mcfg_sw_sprint.mbn|587d37c5ec182e9c7c3e436bde733ddb615c04d1
-vendor/firmware/modem_pr/mcfg_sw_tmo.mbn|39790692fa8fc5699fe6f9acf54ae8d82ddf78a6
-vendor/firmware/modem_pr/mcfg_sw_verizon.mbn|907d87fa7a4289c2fa1d6298d837f0a331c65419
-
 # Sensors - from oneplus3 - 9/PKQ1.181203.001/1903190014
 vendor/bin/sensors.qti|525b6d58810b795442ab49be563c649b0f06a84b
 vendor/lib/hw/activity_recognition.msm8996.so|6bec19a06f59abca3d43cd6a83c88fbe9daea7f6
