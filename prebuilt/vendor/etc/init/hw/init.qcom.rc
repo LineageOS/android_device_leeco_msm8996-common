@@ -70,6 +70,7 @@ on fs
     mkdir /mnt/vendor/persist/display 0770 system graphics
     mkdir /mnt/vendor/persist/qc_senseid 0700 system system
     mkdir /mnt/vendor/persist/time 0770 system system
+    exec u:r:vendor_toolbox:s0 root audio bluetooth graphics media net_raw system vendor_rfs vendor_rfs_shared -- /vendor/bin/toybox_vendor find /mnt/vendor/persist -type d -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
     restorecon_recursive /mnt/vendor/persist
 
     # for android.hardware.health@2.0-service.leeco_8996 cycle count backup
