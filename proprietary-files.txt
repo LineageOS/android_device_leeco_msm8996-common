@@ -664,11 +664,11 @@ vendor/lib/sensors.oem.so|08656a65ab1bf120ac9bb16e93faf93cc2cdda86
 vendor/lib64/sensors.hal.tof.so|eb19aa40617e50bd1efcc88cee9f5b0af34e7f11
 vendor/lib64/sensors.oem.so|08c12372d3331ee43cc0a3f48b88f21e45324f29
 
-# Thermal - from le_x10 (x850) - 7.1.1/LEXCNFN6061705181T/letv05181516
-vendor/bin/thermal-engine|fa2e79587ba002817a933230d7381884f64b36e4
--vendor/lib64/libthermalclient.so|b3ba890af98d04d4fbc334278bf976e2354a811d
-vendor/lib64/libthermalioctl.so|cc51f7347a5c04e478b0abd2efa39c5dbe63b9a5
--vendor/lib/libthermalclient.so|1b081ae5e464d3b9b7686221d716037fd0255824
+# Thermal - from oneplus3 - 9/PKQ1.181203.001/1904252148
+vendor/bin/thermal-engine|b15c9e8fa54ebb15dfeb36c7fbc834a28b4c836e
+-vendor/lib/libthermalclient.so|270ea373c617584af092dc4ea2aa1c7bf27be7f4
+-vendor/lib64/libthermalclient.so|94424d7c8f8daff8bbfd7454fe4d5f1fbf411260
+vendor/lib64/libthermalioctl.so|aa2a0abd8fb9792024efd93f648c129b6a22619e
 
 # Time services - from daisy - 9/PKQ1.180917.001/V10.0.3.0.PDLMIXM
 -vendor/app/TimeService/TimeService.apk|78109530538aa8fb533ad288c9d356c57481a10e
