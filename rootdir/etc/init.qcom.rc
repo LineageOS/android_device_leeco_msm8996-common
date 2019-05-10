@@ -250,6 +250,9 @@ on post-fs-data
     # Wifi firmware reload path
     chown wifi wifi /sys/module/wlan/parameters/fwpath
 
+    # Nfc
+    mkdir /data/vendor/nfc 0770 nfc nfc
+
     start vendor.dataqti
     start vendor.dataadpl
 
@@ -436,6 +439,10 @@ on boot
     write /sys/bus/msm_subsys/devices/subsys3/restart_level "related"
     write /sys/bus/msm_subsys/devices/subsys4/restart_level "related"
     write /sys/bus/msm_subsys/devices/subsys5/restart_level "related"
+
+    # NFC
+    chmod 0666 /dev/pn544
+    chown nfc nfc /dev/pn544
 
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed"
