@@ -1,17 +1,17 @@
-# ADSP - from OnePlus3
-lib/libadsprpc.so|0246c6a5a2d95255857b31f03d22cbe586a5ac54
-lib64/libadsprpc.so|481ed28bc44a85d05327b32461642f67200240b4
-vendor/bin/adsprpcd|a8e947d46be6ad97ed6b41c5aeb80c6c1c8e3654
-vendor/lib/libadsp_default_listener.so|b5bd382d217d887db727b9ae61ce64619306e0ae
-vendor/lib/libadsp_hvx_callback_skel.so|f40b5175070fea40de2e1f95f9a16309e8a4cc07
-vendor/lib/libadsp_hvx_stub.so|54a71d1dc6f0fd86fd60776ce823e48b73e1360f
-vendor/lib/libadsprpc.so|0246c6a5a2d95255857b31f03d22cbe586a5ac54
-vendor/lib/libfastcvadsp_stub.so|d30060f942dbe3ee59054ddff5f1bce0653d7e80
-vendor/lib/libfastcvopt.so|0a584a6326171d580c349a0f001173bfea93e5a6
-vendor/lib64/libadsp_default_listener.so|c88b356ff24c66a640ddaa41798ceddf97a483f1
-vendor/lib64/libadsprpc.so|481ed28bc44a85d05327b32461642f67200240b4
-vendor/lib64/libfastcvadsp_stub.so|247eb7f36c178503b0e8f539d74d1ae1d686329a
-vendor/lib64/libfastcvopt.so|1ed21c3e3eccd423483fe6b99d653142e43f748d
+# ADSP - from LA.UM.7.5.r1-04800-8x96.0
+vendor/bin/adsprpcd|ef200e3bce4429fd9461c74330a003f069ffd5b3
+vendor/lib64/libadsprpc.so|784c6e95270dbf2a62f481cc91493b94db8fb56c
+vendor/lib64/libadsp_default_listener.so|bddcdb6aa9efa39f12fc830fc54d42d8e45409dd
+vendor/lib64/libfastcvadsp_stub.so|e25929713605e70417dee54b362b98d04a860f47
+vendor/lib64/libfastcvopt.so|d3fde4207c495781d456a1cd10b338ce6ff790b5
+vendor/lib64/libmdsprpc.so|cb7a68fce69362b0ef5c848818516bf9f16cad8c
+vendor/lib/libadsprpc.so|336ed994eb455e7473641b3f35e0d9d2f99482c3
+vendor/lib/libadsp_default_listener.so|58d05c4794c6ceb7b59e332c909a79ab528a4f31
+vendor/lib/libadsp_hvx_callback_skel.so|b7e47d8d0c011caea30daf974de81eb01bb90268
+vendor/lib/libadsp_hvx_stub.so|5842e47b5929e15c8b63f1aa4795ca3432debebb
+vendor/lib/libfastcvadsp_stub.so|6b50fd7d53811b51e06fedd87c12a794d0c2f645
+vendor/lib/libfastcvopt.so|4954e60822bb3aad56525d5292cac3eb938169da
+vendor/lib/libmdsprpc.so|918dcaef9cf7adbda48f5dae44d037510190785f
 
 # ADSP (modules) - from zl1
 vendor/lib/rfsa/adsp/libadsp_fd_skel.so|5607a78451b621bb6399878ab58ba896c72797ab
@@ -79,17 +79,20 @@ vendor/lib64/soundfx/libshoebox.so
 vendor/lib/libacdbloader.so|034a5cf03cccfb22e415832c7d6a043dc52d98c0
 vendor/lib64/libacdbloader.so|33b45951c3098715b33bc1ab3ca606aa99fc2248
 
-# Bluetooth - from daisy - 9/PKQ1.180917.001/V10.0.3.0.PDLMIXM
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|9178856dc8651b499d1b155825b6115a486ee05e
+# Bluetooth - from LA.UM.7.5.r1-04800-8x96.0
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|70d45813c07050fc19969db8a1dcef32432ce62e
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|20e66aaca57c6ba6df8009404abdfacb608dc341
-vendor/lib64/libbtnv.so|136dc47f7d16a841e9c6ad909753e96a41392534
-vendor/lib64/libbt-hidlclient.so|0b0b69ef9787e3cd5409f0050cad03698dd6ce26
-vendor/lib64/vendor.qti.hardware.fm@1.0.so|dc576dfcb0bf390a106b5ed8861e7f547110cbf1
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|00015214071f7e8cdf5c9adcffcbd79a08799030
+vendor/lib64/libbtnv.so|b5fc1d89ca68a5e39984b375ed308eb040007c73
+vendor/lib64/libbt-hidlclient.so|56874d3b5e5981fa047a544a9ba8425de0228268
 
 # Bluetooth (aptX) - from OnePlus3
 lib64/libaptX_encoder.so|0cebad28afcf29f931bdc2d24fce2730dc882ecf
 lib64/libaptXHD_encoder.so|90f47f10af28b3ead143200cb4370b847c513127
+
+# Bluetooth (shared dependencies) - from LA.UM.7.5.r1-04800-8x96.0
+lib64/vendor.qti.hardware.fm@1.0.so|1d96a8b1f94098c73bae36d36dbaa32aad304a96
+vendor/lib64/vendor.qti.hardware.fm@1.0.so|1d96a8b1f94098c73bae36d36dbaa32aad304a96
 
 # Camera - from zl1 - 6.0.1/WAXCNFN5902012312S/letv01060151
 bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon|c36fe0c5f93cdfbc3abf83ca0e73880bd218c079
@@ -245,7 +248,7 @@ vendor/lib/libmmcamera_isp_sce40.so|c56210d76256807abb7cb31f9dc923adb78392fd
 vendor/lib/libmmcamera_isp_snr47.so|44f15661d64906cb1e87de1e028f87f0f022c928
 vendor/lib/libmmcamera_isp_sub_module.so|5fb215ead8c3eefb1c2a0f3c6730dd9d3a55365c
 
-# CNE - from daisy - 9/PKQ1.180917.001/V10.0.3.0.PDLMIXM
+# CNE - from LA.UM.7.5.r1-04800-8x96.0
 etc/permissions/cneapiclient.xml|15831adf0e80243042b90c734eea0a68eb8ae9c9
 etc/permissions/com.quicinc.cne.xml|e99e631d8b06ba4680529e9e4004d8d05baf6904
 framework/cneapiclient.jar|af7db889362e562a4c5073bb6aae32947218abf0
@@ -254,18 +257,19 @@ framework/com.quicinc.cne.api-V1.1-java.jar|6c8815af55cb424fe3936f37a72e2d5bdbfb
 framework/com.quicinc.cne.constants-V1.0-java.jar|eb2f74d281079971d6cddffba67da0f1fae1ee06
 framework/com.quicinc.cne.constants-V2.0-java.jar|6af0a0cd6246ec202d39ec2add03189cd3fa8029
 framework/com.quicinc.cne.constants-V2.1-java.jar|f4b7ec116cd4edca3423f455fca2569ed0919b4b
-framework/com.quicinc.cne.jar|ce985797730a043142c2312e30ada28cb755faef
 framework/com.quicinc.cne.server-V1.0-java.jar|a2d2f2826716e8a8000887fc3a0b0ae6d13f9263
 framework/com.quicinc.cne.server-V2.0-java.jar|6bba42f810057b8b52a73f55dbf7bf4de4dac249
 framework/com.quicinc.cne.server-V2.1-java.jar|a95528efeb0c14a0077c8b0b375e95ac433edc33
 framework/com.quicinc.cne.server-V2.2-java.jar|e1041e559afecd0d9371ba78ddb36ea1873f9f15
+framework/com.quicinc.cne.jar|56cb2e1ecb464f29c715a0a5e0a7393560ea1c8c
 framework/vendor.qti.data.factory-V1.0-java.jar|23a060c1197f21f4f3b0f77485d8ee387d740e5d
 framework/vendor.qti.hardware.data.dynamicdds-V1.0-java.jar|8ef6455540e94b25357d0ed0fb3a158ab0cf7d63
 framework/vendor.qti.hardware.data.latency-V1.0-java.jar|319c79ec3b8dffc73d19d1a515936c20762e42e0
 framework/vendor.qti.hardware.data.qmi-V1.0-java.jar|94c3e0efe3bc51358fe9145ed1ff0708c262380d
 framework/vendor.qti.latency-V2.0-java.jar|9d4912be5c77d8c9683b3a81901dcc644adb8ea7
--priv-app/CNEService/CNEService.apk|4c6ee655fcdda500f4999ca9b3e1c028af2c8a71
-vendor/bin/cnd|81c0f2beecb6f375b4d460adbfb739b8aa970a70
+lib64/com.quicinc.cne.server@2.3.so:vendor/lib64/com.quicinc.cne.server@2.3.so|4a71140030b0187ffdaffe7d2f0d08b5749c340c
+-priv-app/CNEService/CNEService.apk|c317748aca88d8acf9f611a0c11ac380c8ff622d
+vendor/bin/cnd|4c138e031025719562b10fa5e951e7a58663b6d2
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml|578f3f8f56059bfdbef926bcc68d01c15e06951f
 vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml|1fb42c672a12b6660bdce3ea94e0c43719dd9de8
 vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml|f88e13f1dd7b82388c90358f71813026370c9ed8
@@ -293,67 +297,72 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml|9b123d81c9b8991499cda33b0706810e0c
 vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml|ff91feb5060a6df07e3e4d9bc99ae58bccad7649
 vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml|f76c894f3c6d5b6ed35113a088dc3174c900501b
 vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml|14d136e7fcc682311757d3edc0b9d3eaeba11815
-vendor/lib64/com.quicinc.cne.api@1.0.so|2aae2b09112de601de10b95b8c22ec5c2a1007f5
-vendor/lib64/com.quicinc.cne.api@1.1.so|ed69d020ba913f5f7845abb5bb30fc5e0ccb782c
-vendor/lib64/com.quicinc.cne.constants@1.0.so|9d795f365368f2384413b9796b35eef8edd3a595
-vendor/lib64/com.quicinc.cne.constants@2.0.so|aa3692a9b08523dfd2495856a233e820fa3bfa01
-vendor/lib64/com.quicinc.cne.constants@2.1.so|41cab788fd2c17bce5619771431248f44317caea
-vendor/lib64/com.quicinc.cne.server@2.0.so|403dee79f2adf024a44947c5131c00e119db84e7
-vendor/lib64/com.quicinc.cne.server@2.1.so|ed78619bc3a4b54c57183c943ce2147c7aa58920
-vendor/lib64/com.quicinc.cne.server@2.2.so|3bb958c5cba5d448cfb2f52f5af31779f91fe4c5
-vendor/lib64/libcne.so|249e8cf3bd9f8e9dce7090a6850fc1d79acc7f36
-vendor/lib64/libcneapiclient.so|9e121b96ce15e33aaf9318b7b93eaa49a644b7cf
-vendor/lib64/libcneoplookup.so|86c694067e735b86efa04871fde8a9a7a81161d8
-vendor/lib64/libcneqmiutils.so|cf5b5620754c28002d081d795e89c1aa50b96032
-vendor/lib64/libwms.so|57d9f33071f4ae42ac77c98fb82f4e1fe8ac4754
-vendor/lib64/libwqe.so|47afecb9615f1dcad01e2d36f47a08229f5c43aa
-vendor/lib64/libxml.so|dba175d291e1adc004bf1463db091cde95a0d92d
-vendor/lib64/vendor.qti.data.factory@1.0.so|648517a078dcc8a3810f10fc977ca38db509aa91
-vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so|618e11074d4b2351f96e15c4c6897b0fe424cc03
-vendor/lib64/vendor.qti.hardware.data.latency@1.0.so|7204cf8f2dcf8c88b531b86b0da0e643f1de6487
-vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so|b1c83ea1046e5e356e0b0a74b99d7a3a96c7fc0b
-vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so|cbc75b554051298020506d85427a1aa70346fbd5
-vendor/lib64/vendor.qti.latency@2.0.so|15e50ce40e210993343406947dd2c959920f40c8
+vendor/lib64/com.quicinc.cne.api@1.0.so|184499ab67844a7d1766e1b363a37c742fcfd9cf
+vendor/lib64/com.quicinc.cne.api@1.1.so|08247c2ddf2b9777839cada843676a52aea73ab3
+vendor/lib64/com.quicinc.cne.constants@1.0.so|ab5a63b57145ddd9e0f28426d5a36216507b6102
+vendor/lib64/com.quicinc.cne.constants@2.0.so|84ab9c8b4ace589241778d33a1a10c1e10680e72
+vendor/lib64/com.quicinc.cne.constants@2.1.so|c35e3ec7868d132ccb280a52cd4b7563e2352d4c
+vendor/lib64/com.quicinc.cne.server@2.0.so|b1591c3bee3efaf6d8a09a9f7c8723c0b95c7725
+vendor/lib64/com.quicinc.cne.server@2.1.so|84e5c79002738f8332858cdd302d3e88489cd29f
+vendor/lib64/com.quicinc.cne.server@2.2.so|01444476d0c4c3a7f452b5fa098ae90c560b29a7
+vendor/lib64/libcne.so|452d73805d5d0c53f4e21ed5ab5e291bee5f938d
+vendor/lib64/libcneapiclient.so|da3b19e832640b7a098cf593e7506b58cc12bff8
+vendor/lib64/libcneoplookup.so|dc76eafe9ec313c3ad6c8bc37de40a0c852658ec
+vendor/lib64/libcneqmiutils.so|16cc18075de4e094ab516e3325d42cf40c1b4f9c
+vendor/lib64/libwms.so|8d82b29dc93990bc68f9d95750bea3477bfd807d
+vendor/lib64/libwqe.so|89db8b2508ee8f35fd750dace8a2efc7e4503175
+vendor/lib64/libxml.so|134df83cce4b26f4889b2ef54b47c1bee5c13414
+vendor/lib64/vendor.qti.data.factory@1.0.so|25a085b8f38a495d83c8ae1724434874379d813d
+vendor/lib64/vendor.qti.data.factory@1.1.so|b638ad9730a1a57d3beff92b55b9f3d0f90ddc90
+vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so|5492111a0294b8da87cb3a0bf2ee40aace2cdd95
+vendor/lib64/vendor.qti.hardware.data.latency@1.0.so|affd987291376e9743c62405132485b2d24f8f3d
+vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so|300b3a95de6c38e1eb19886fd15ed460166e5ce6
+vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so|776501883a6bf1b3e8fd33c0da5ec1eb742ae10f
+vendor/lib64/vendor.qti.latency@2.0.so|17cd91a0ba9408f76821da45154fe9aabf6ab80a
 
-# DPM - from daisy - 9/PKQ1.180917.001/V10.0.3.0.PDLMIXM
-bin/dpmd|1b38829a7faf33d5cbdc195d703f99384c20c9f4
-etc/dpm/dpm.conf|5f19d3984b5291ac956552bda2a84c10c535df0a
+# DPM - from LA.UM.7.5.r1-04800-8x96.0
+bin/dpmd|b21c674c4e4b1d41d4540721d451c54caf3b0555
+etc/dpm/dpm.conf|fec89edb6cff81424a6c3a730fed92efa3613f72
 etc/init/dpmd.rc|52ca6ad920a1804e4ff608113cece063730f5e0c
 etc/permissions/com.qti.dpmframework.xml|36b94c9338069e434b83359a92cdc7ff62b822df
 etc/permissions/dpmapi.xml|ded29f9befaef20a7ccee0c75427fda1d1d04890
 framework/com.qti.dpmframework.jar|2a6ff555ebff148a508fc7ea2fbeaee4b9a2dff6
-framework/dpmapi.jar|66a30e2752b058f6f522721ef6b5efb4c747f7ed
-framework/tcmclient.jar|5f3878f0fe312a429d3a69a2119b34100818292e
-lib64/com.qualcomm.qti.dpm.api@1.0.so|2af88934e4039edaac842576a1861cbdfe39838b
-lib64/libdpmctmgr.so|595449eff197e8c3bc6f7a4f0242188abe82418f
-lib64/libdpmfdmgr.so|f03869f7bee601182c545e892523d23529439e16
-lib64/libdpmframework.so|9dc137606c1cb73e3ec5a97c954df93e750dd459
-lib64/libdpmtcm.so|1f85ced85f541146756df0b4597a4c51300be63a
--priv-app/dpmserviceapp/dpmserviceapp.apk|a642336052f3e5d70580700e2aebba230a5f663f
-vendor/bin/dpmQmiMgr|31e019a02d25a959a2edfe2c9a04ab958562bb67
-vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|2af88934e4039edaac842576a1861cbdfe39838b
-vendor/lib64/libdpmqmihal.so|4254cc9f10f6f3d990958c17f4e43d8e9e09c382
+framework/dpmapi.jar|89ddc5bf0c4c88a3f341169edc4d89f9e834337b
+framework/tcmclient.jar|91b415288494fa208b5f5ec9fafa33c47e569c96
+lib64/com.qualcomm.qti.dpm.api@1.0.so|6116551078509865fc0424eaf38d2dbfd001238d
+lib64/libdpmctmgr.so|3144ff45eaef260b7930974acf0e2fde5051c7e6
+lib64/libdpmfdmgr.so|520b37cf33b87f2db2a708e2aba429d233d7fbdf
+lib64/libdpmframework.so|cbcbf2a79ca58aa6b681f8517481adde3ddd9890
+lib64/libdpmtcm.so|b91034e12f1a59b05c6c251acdbf1c7c78ffb0aa
+-priv-app/dpmserviceapp/dpmserviceapp.apk|8f153185721c3383f8f5858aee3b0bb73220526c
+vendor/bin/dpmQmiMgr|ab14413bb5ddd7a4a279f4a332e2d621c7c50d63
+vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|6116551078509865fc0424eaf38d2dbfd001238d
+vendor/lib64/libdpmqmihal.so|ac1f40e3fa18ae56b1842d98d0f44579063b7fd3
 
-# DRM and SEE - from oneplus3 - 8.0.0/OPR1.170623.032/1812060016
-vendor/bin/qseecomd|afd6f74e091e0ba21a4f84b4a69b5db8c755afb0
-vendor/lib64/libGPreqcancel.so|1f00e7a539f5851a2a8fb55a5cedd806a12472aa
-vendor/lib64/libGPreqcancel_svc.so|7e36ee7225ff30e74fa00132ba8e5dfc9dc8bb2b
-vendor/lib64/libQSEEComAPI.so|4c7e40896d8b92cac02f457dce605b7eeff139e6
-vendor/lib64/libdrmfs.so|caaa4442b3bd3b2be345d3cddf86b0b4d6e7cbe5
-vendor/lib64/libdrmtime.so|0d8c67f8bd42906d9dde3131b690051cfc33e29c
-vendor/lib64/libqisl.so|83eb6617d7f0a11593df45adb9d09e485abe14b6
-vendor/lib64/librpmb.so|1be8d44919ad1d457b73fdc987335f4ec2620842
-vendor/lib64/libssd.so|2a07064578f0b8dde52d755b44227f354af15c77
-vendor/lib/libQSEEComAPI.so|7062cdfb83a986d44190d6fd9762da43d508e10a
+# DRM and SEE - from LA.UM.7.5.r1-04800-8x96.0
+vendor/bin/qseecomd|191536bdf3d72238ea7b3ca54b4289b7a09b4bcd
+vendor/lib64/libGPreqcancel.so|db98eea9ef308792e3b9d48b933b5a5debf1af9e
+vendor/lib64/libGPreqcancel_svc.so|1059a83dda327cae9abc10bda0b8a8c526b9760d
+vendor/lib64/libQSEEComAPI.so|c2562b6f2b6e9e2a30c72f0638ae0c16365c0022
+vendor/lib64/libSecureUILib.so|5c9a1e16311a475ff79a1ae541b73216c7096d55
+vendor/lib64/libStDrvInt.so|768602d8b0c04ff8d09ebcf010c19ccb589dc4a7
+vendor/lib64/libdrmfs.so|87526b8b660fc8c27f0c07f1ac2d0d36544ae624
+vendor/lib64/libdrmtime.so|110b8a263128288b056183ba064b0ab2f6343fab
+vendor/lib64/libqisl.so|1f1523c03daffa9e1cd45d96d212d2fa8c1b5790
+vendor/lib64/librpmb.so|9f88e88cd8155b69a085548a60a15c5b5be70f48
+vendor/lib64/libsecureui.so|faebf24607e983faa09d27df36408dab2db2217e
+vendor/lib64/libsecureui_svcsock.so|52dcb894e9061438522dd22fa2e3d7efc708fade
+vendor/lib64/libssd.so|a3b4f5c81b96966f8d2a1a2f8518522f223e73fb
+vendor/lib/libQSEEComAPI.so|ca74ebd4225afbb8fd02ea72cd0c04303da9c2f2
 
 # DRM Widevine - from marlin - PPR2.181005.003
 vendor/bin/hw/android.hardware.drm@1.1-service.widevine|2c2455a218eb8d5368f1ccd39bea51be8364a0f3
 vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc|5a01d337c1d375ee24a6c8992ba91f54afb7637e
 vendor/lib/libwvhidl.so|37333d17980282275805807bc648bf8516fd4143
 
-# Gatekeeper - from oneplus3 - 8.0.0/OPR1.170623.032/1812060016
-vendor/lib64/hw/gatekeeper.msm8996.so|3c5dacdbbba914a048ce69d7f6693a9c8505990b
-vendor/lib/hw/gatekeeper.msm8996.so|3ac31ca2b07444125c8f11de5460125b29fa86f1
+# Gatekeeper - from LA.UM.7.5.r1-04800-8x96.0
+vendor/lib64/hw/gatekeeper.msm8996.so|d324fd57026ac20409c474cfc4e15595aa9d4738
+vendor/lib/hw/gatekeeper.msm8996.so|a1e3756cb6e42f869ae1997028eaa9159478525b
 
 # GPS - from daisy - 9/PKQ1.180917.001/V10.0.3.0.PDLMIXM
 lib/vendor.qti.gnss@1.0.so|eddf81581610bdad45674d31e9b88eb8a9d08784
@@ -401,65 +410,65 @@ vendor/lib64/vendor.qti.gnss@1.1.so|1edcf36fc3afbc465e53e3b74f99fde1e952f718
 vendor/lib64/vendor.qti.gnss@1.2.so|fc002fdced5768ed97936fde007476c1e9eaabb2
 vendor/lib64/vendor.qti.gnss@2.0.so|58e69a003eb530cf59bbe204251b9652d28a4b89
 
-# Graphics - from LA.UM.7.5.r1-03700-8x96.0
-vendor/lib64/egl/eglSubDriverAndroid.so|dc9cda8392b4305c46e9b21e38d4bf079ce639b7
-vendor/lib64/egl/libEGL_adreno.so|53c3e1d19d354f33dad4eb880ec4d82703272053
-vendor/lib64/egl/libGLESv1_CM_adreno.so|fa838b4a397022b539f95fb6cd4e12fab65a8aae
-vendor/lib64/egl/libGLESv2_adreno.so|3dd121d0d3072c936f8b7f13aa5294742bfb695a
-vendor/lib64/egl/libq3dtools_adreno.so|a7c5f6d3b795572a51d3697a3a97b14a8f1e6e90
-vendor/lib64/egl/libQTapGLES.so|0f9d9a1b67e574c41af1c62928c2db0783727912
-vendor/lib64/libadreno_utils.so|22c8a10873d1659b3aa8431223416dca4ba572cb
+# Graphics - from LA.UM.7.5.r1-04800-8x96.0
+vendor/lib64/egl/eglSubDriverAndroid.so|74d486294baa0258bd066de78a4f953a396da1d7
+vendor/lib64/egl/libEGL_adreno.so|86a36a629fd8f8f9b99019f5931d78c0f91dd1c4
+vendor/lib64/egl/libGLESv1_CM_adreno.so|8ab2e8691b6b27feafbce3dfd8088e1f608d9d31
+vendor/lib64/egl/libGLESv2_adreno.so|b6294ddc0809fd2bf4c9bfab0f61b70bccc8a746
+vendor/lib64/egl/libq3dtools_adreno.so|f7230c023194b0008ac936c344564494705de40e
+vendor/lib64/egl/libQTapGLES.so|046038e44760b669608dd57274d8d37fdbab7aea
+vendor/lib64/libadreno_utils.so|3d3c7fec8366dfe34373dad0b6aaa1f462e23eaf
 vendor/lib64/libbccQTI.so|bfe2c3f1f184881011628927ec41a2ed1bf8d8f4
-vendor/lib64/libC2D2.so|ed4059076daac6819f985746ddf733d07596203c
-vendor/lib64/libc2d30_bltlib.so|ddc38db624d4aeaa6ce569490815298fef5b4b44
-vendor/lib64/libCB.so|63e7762bd5b41f4b535aa01e0032e57e2481d7d4
-vendor/lib64/libgsl.so|f62be91c4fbc11fd30aca550e19ae51825abb759
-vendor/lib64/libllvm-glnext.so|61f5cf2bef64e6f90d9706aa18d4e1f5ad97bc2e
-vendor/lib64/libllvm-qcom.so|c3a7184ab872ed3089309d030fc9c77004348a80
-vendor/lib64/libOpenCL.so|59820114c38b67126df7b8459c4524616ca4e9d1
-vendor/lib64/librs_adreno_sha1.so|dd12bede187282c29ab61ff4e31b04cd0f802827
-vendor/lib64/librs_adreno.so|3669aa82d7684e799eae5b5c4df6a742bba90821
+vendor/lib64/libC2D2.so|712c67b801650c1a78b1622fc81bf0cb3d6176a8
+vendor/lib64/libc2d30_bltlib.so|520ea6933132fe0d9473e473f3e2936606d70fff
+vendor/lib64/libCB.so|10642cb6675184a04a1610a16cd996c4b47556ab
+vendor/lib64/libgsl.so|a673e4d52ce6db90d269f53e9256fd2fa05bb0a6
+vendor/lib64/libllvm-glnext.so|266716df6eff86ac0e85a6b499d2f6f2a6b5801d
+vendor/lib64/libllvm-qcom.so|2cd92fac3d99fcb5e95ea6481f416cd736a6af7d
+vendor/lib64/libOpenCL.so|9c4e5887ff8faf778b7afdcf2bf5223212ca537d
+vendor/lib64/librs_adreno_sha1.so|ad32940380238011703f02b59a8f34c6f83facfc
+vendor/lib64/librs_adreno.so|716dc99175d4e605d869dd8a6abdcc5e572f9a59
 vendor/lib64/libRSDriver_adreno.so|5ffd4aa3a89ded70475b848609720dfa68514136
-vendor/lib/egl/eglSubDriverAndroid.so|8468cd8e90386a102d202a48b0c69045fed4af21
-vendor/lib/egl/libEGL_adreno.so|6b996ad062d337edd07a3409f34605815a75bf80
+vendor/lib/egl/eglSubDriverAndroid.so|77e41334a15522732be5bcc6b43103147d40589b
+vendor/lib/egl/libEGL_adreno.so|3e1eb3897e6b8b840ca9931aa3eb82192288bb09
 vendor/lib/egl/libGLESv1_CM_adreno.so|f2670d6c7ef0f989f161a0e5b9b42b09873d936c
-vendor/lib/egl/libGLESv2_adreno.so|4ed05066754590651f1c63cfb3e98a5b3df0e26f
+vendor/lib/egl/libGLESv2_adreno.so|9c36559254b54accd437f41e4748f044601263c3
 vendor/lib/egl/libq3dtools_adreno.so|9f28306f1e31962eceb478bb7198c63e858ae331
 vendor/lib/egl/libQTapGLES.so|46cd5ac004facb42bd3d6398d29e9bfe7b046de0
 vendor/lib/libadreno_utils.so|bdf956793cdbfd7c672de756f66acdf9143d429a
 vendor/lib/libbccQTI.so|2876950b59585cf4ed60141c87b5f42bc84184aa
 vendor/lib/libC2D2.so|1a555aae15adb00b0cc0b43e14136956c0cd2c87
 vendor/lib/libc2d30_bltlib.so|55f4a13ce639973c9acf6cda4f682b531766b11b
-vendor/lib/libCB.so|e286a4c07f50c0b0eae4ee8ced70003dc5d68017
+vendor/lib/libCB.so|8d01b329865e2a854b8831bfcea703f9dfa6f845
 vendor/lib/libgsl.so|b9e2b05df65e005aa2670f096f15bbb530d4ef24
-vendor/lib/libllvm-glnext.so|13a9f136953c265491c6c85eafcd0641d7f58851
-vendor/lib/libllvm-qcom.so|f026e9e113ab6516ca0c3b8092e7d4d062fc9f32
+vendor/lib/libllvm-glnext.so|b55859e58c01dd14a09d9d5e135d230eda252f4c
+vendor/lib/libllvm-qcom.so|89dad3f3a208e55a58eee7ad500618f9c6b822c6
 vendor/lib/libOpenCL.so|74840ef50111c3232a7fcef79bf78e7fa516a237
-vendor/lib/librs_adreno_sha1.so|594eafccbc1de121c7333c90f08cc80e62bef87f
+vendor/lib/librs_adreno_sha1.so|45ba50a93fc5157a1d23b60613b21407d3620bc1
 vendor/lib/librs_adreno.so|37722cd580823a183446f50d3d12e820648b67cc
 vendor/lib/libRSDriver_adreno.so|c89086f8cd9b9afb7725741e6653bcf7c5efcc75
 
-# Graphics (HDR) - from LA.UM.7.5.r1-03700-8x96.0
+# Graphics (HDR) - from LA.UM.7.5.r1-04800-8x96.0
 vendor/lib64/libhdr_tm.so|7a05d56d8305c8df87392b93929949178c336b83
 vendor/lib/libhdr_tm.so|37381160c5f44f3974af22fb09f394c0fd1fd3bd
 
-# Graphics (SDM) - from LA.UM.7.5.r1-03700-8x96.0
+# Graphics (SDM) - from LA.UM.7.5.r1-04800-8x96.0
 vendor/lib/libscalar.so|cad128a6e71195b4ad38494bc0382bf80e1fb0b2
 vendor/lib/libsdm-color.so|b13ab5f965f5bb8f40207879415cb1adbb55da42
 vendor/lib/libsdm-diag.so|e2e3a0fba39190c58bafa0568e8cd51b391b71b6
--vendor/lib/libsdm-disp-vndapis.so|6c4233ea3676643bc9658c25cfad7edd45c49362
-vendor/lib/libsdmextension.so|a8659e7e0df5f1e20266ede1331da0660e0fe260
-vendor/lib/libtinyxml2_1.so|3882fddae942997be6ad6af789cf209fa45e61b3
+-vendor/lib/libsdm-disp-vndapis.so|f42c2e4de66ac4c2563e726f1546c5c676a7a70f
+vendor/lib/libsdmextension.so|f63c8f501cd55d52dac76b1ed88b1636e28bdeef
+vendor/lib/libtinyxml2_1.so|d23d9b5b480e4facd088a9eb5b117059cb5a8cf6
 vendor/lib64/libscalar.so|490cc7447863b3279771ad99e92a5625525db055
 vendor/lib64/libsdm-color.so|9bb3f5147c277eae08c7f918e7de3bd2fccf1f74
 vendor/lib64/libsdm-diag.so|7ab5d2a980029ac9bd20fe68656823b21e483e11
--vendor/lib64/libsdm-disp-vndapis.so|6ae24866bbd413ed112778650c8fd7a2631cb1a9
-vendor/lib64/libsdmextension.so|e91aaf852df780e42bb083c3089f5b42c87c49f7
-vendor/lib64/libtinyxml2_1.so|b743b93bbb47bb2d80322fcfb985b7b8c696fa1b
+-vendor/lib64/libsdm-disp-vndapis.so|a811438edc19947d4f30a6abb18c7ee26a73c0a7
+vendor/lib64/libsdmextension.so|6271fd02ce27e74224948367c3f45b74860b0cf3
+vendor/lib64/libtinyxml2_1.so|b0bf8ca186357a302e1bebdd2d5a6e852e0e6a53
 
-# Graphics (Vulkan) - from LA.UM.7.5.r1-03700-8x96.0
-vendor/lib/hw/vulkan.msm8996.so|c06133816c003d037b0aaf6102bffc871f805fc9
-vendor/lib64/hw/vulkan.msm8996.so|5636f14b156b5ee2cb986961bd1b2ea002e97f83
+# Graphics (Vulkan) - from LA.UM.7.5.r1-04800-8x96.0
+vendor/lib/hw/vulkan.msm8996.so|0587001fd1d45f601c91b1bdc468560b08a9c1c0
+vendor/lib64/hw/vulkan.msm8996.so|53960198808cf3744629fdcd629774d4313a6e94
 
 # Graphics firmware
 vendor/firmware/a530_gpmu.fw2
@@ -508,129 +517,97 @@ vendor/lib64/lib-uceservice.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
 
-# Keystore - from oneplus3 - 8.0.0/OPR1.170623.032/1812060016
-vendor/lib64/hw/keystore.msm8996.so|66a7203806db48f1087bfa29b2a2017727d633b0
-vendor/lib/hw/keystore.msm8996.so|012e1f5bcf93b5f254a6f0b6f0dc2656ee19f804
+# Keystore - from LA.UM.7.5.r1-04800-8x96.0
+vendor/lib64/hw/keystore.msm8996.so|e4139ac911fd0aafa73bd2901ab273c04c99ccc9
+vendor/lib/hw/keystore.msm8996.so|89131975b593a2d3551808f950905c3b83bb6d73
 
-# Listen - from OnePlus3
-vendor/lib/hw/sound_trigger.primary.msm8996.so|48674459b8e5dcec0231a9345c8824a248d8f537
-vendor/lib/libadpcmdec.so|cce776b6e1edac56705b155444c3f28362055442
-vendor/lib/libsmwrapper.so|2abf623b1f919e0747bfe70bc3d988521c02d14e
-vendor/lib/vendor.qti.voiceprint@1.0.so|a706a35926dde53af240cafea640ab9e607f0cf1
-vendor/lib64/hw/sound_trigger.primary.msm8996.so|d35bc552da96d2f0de10cebf39c9bb0dc0bf6ab0
-vendor/lib64/vendor.qti.voiceprint@1.0.so|e68fb38066c46a7f2b5be0f9a11300e01ec74dee
-
-# Media - from daisy - 9/PKQ1.180917.001/V10.0.3.0.PDLMIXM
-lib/extractors/libmmparser.so|00f2cf35e169f7877d6e2e7ede730e8e5af94adf
-lib/libFileMux.so|5961dd16c9c6808e8321abf4b0266a9926ef327b
-lib/libmmosal.so|37719ae5647ef6ec826d06b93e34e0b53c565529
-lib/libmmparser_lite.so|db9e6dafd466fd0aa3b2d7b387fda38ee9838a08
-lib/libOmxMux.so|6aff8e6e81331f3d5d3a8d46d342e5b5efc237f3
-lib/vendor.qti.hardware.vpp@1.1.so|040738576bf1e8b5c11aaeec11871b393f5a3c60
-lib64/libmmosal.so|3d50c7ea56db9c3676be9d6e36e1030386ecdb02
-lib64/vendor.qti.hardware.vpp@1.1.so|8e39a979aac1aa7002ef4e50c74878177ee755f7
--vendor/lib/libgpustats.so|83d8856717923ab389aecf17445e33fc21b90afc
-vendor/lib/libI420colorconvert.so|eed42cd41b14f8921d668eca1a798aae76cfebe1
-vendor/lib/libmm-color-convertor.so|37baa4587bbbc8b83ee1b1aa94e8818ccfaaf3a0
-vendor/lib/libmmosal_proprietary.so|dfa0b9751df0a52ffd69e00af463ad65f54c01e5
-vendor/lib/libOmxAacDec.so|364628180f938a005c6c9bc9db56d2a9e414f263
-vendor/lib/libOmxAlacDec.so|6a7a88d3f107cd2823b728967158c541a9426cef
-vendor/lib/libOmxAlacDecSw.so|3b4ef8fd510e91df8c440447c03a8a42bac23752
-vendor/lib/libOmxAmrDec.so|8850553394cc9f2b001e0fcd84621c59d022e8cf
-vendor/lib/libOmxAmrwbplusDec.so|35f1e304ddba210a833a29c56e9e5579c89249e8
-vendor/lib/libOmxApeDec.so|60ae5d351b511ea25912ed8d95230893d51376da
-vendor/lib/libOmxApeDecSw.so|5a8bbc06b9cf680f1c5012660c82f37331559f77
-vendor/lib/libOmxEvrcDec.so|6a50e069ae8b769c7c97bf0398557112d105b183
-vendor/lib/libOmxQcelp13Dec.so|c094a365bd872d93e553d50fd65dc3d93ef1f486
-vendor/lib/libOmxVideoDSMode.so|e553e97cd36c23549d74231758fa061ea3bbd74b
-vendor/lib/libOmxVpp.so|48ef129f20bd75e060ad66feef8f4ebf4a1c899f
-vendor/lib/libOmxWmaDec.so|3fd1e369ccc027535eb5bc2be1f5fbea50049758
-vendor/lib/libvpplibrary.so|bb818a5b8d62c236963fc094d0c2627bc78c00ef
+# Media - from LA.UM.7.5.r1-04800-8x96.0
+vendor/lib64/libgpustats.so|1a091475fb4a744f091bec101a51044fb8854a15
+vendor/lib/libgpustats.so|83d8856717923ab389aecf17445e33fc21b90afc
+vendor/lib/libI420colorconvert.so|6c280c2b27c0d3e482ee3b7b6fa966f6fbb8d9bb
+vendor/lib/libmm-color-convertor.so|01a87ba3433679bde836d6ac8c8f44efcc24bf10
+vendor/lib/libOmxAacDec.so|3dde533badadb6894b5b9ab795534e73feb26cc6
+vendor/lib/libOmxAlacDec.so|dee5a9df5a0b8e12254813ac7b246b2d62ba4786
+vendor/lib/libOmxAlacDecSw.so|111e096e79b2b0c5cc48a88643bc3ebbf1975814
+vendor/lib/libOmxAmrDec.so|335caff5c76f3e7a4a86871841fca1e7477a89a9
+vendor/lib/libOmxAmrwbplusDec.so|d154263b6cfaf092336c5b52b36fff117e6f09c0
+vendor/lib/libOmxApeDec.so|a556029e9bd0c062f7ffeceeeb370d248a33eb0f
+vendor/lib/libOmxApeDecSw.so|0f411fda1ac0305f592963cc2a6d801ed0c394ab
+vendor/lib/libOmxEvrcDec.so|088df3c77446f325a535418dd86dc8cae41e69e2
+vendor/lib/libOmxQcelp13Dec.so|5388cb90be81f05cfadd553b6c2ec46243fc58fc
+vendor/lib/libOmxVideoDSMode.so|dee5e9df19cad66c33789c4dfd5d2127bdb083d9
+vendor/lib/libOmxVpp.so|ed523655cadc889cebe8edb50e24e946bae50cd5
+vendor/lib/libOmxWmaDec.so|02899d3cdbc7a0b39456eec57a51d2ba07765efb
+vendor/lib/libvpplibrary.so|9dd0fc6eaf467974e99fb1de519303d051694d06
+vendor/lib/libvpphvx.so|f9e3229d44ad22e808ee7ed4d8d1c529195ed6a9
 vendor/lib/libvqzip.so|0b906db131e99cd5460b8a72d05e86721243de95
--vendor/lib64/libgpustats.so|35eaab728b21fe7cd33b821bf5cf13ea1117cd90
-vendor/lib64/libI420colorconvert.so|4982dcf4d7f431a128bff170d868b433e0d69d03
-vendor/lib64/libmm-color-convertor.so|cae7366bd9ef8e677e55dd67be3ebac78aa151d9
-vendor/lib64/libOmxAacDec.so|352316df87ac5d1948689a482b0ded4ad88b82ea
-vendor/lib64/libOmxAlacDec.so|bc2e0ec3c2eb44bffcdf432d7c283344f803cf23
-vendor/lib64/libOmxAlacDecSw.so|f4fe8d8a2e9b62766fb5edf29afcfb4b4ceeecd2
-vendor/lib64/libOmxAmrDec.so|cef0b431cbc89198f13d143f7e130acbe9a20e1e
-vendor/lib64/libOmxAmrwbplusDec.so|3677e4f5d2d8a02ac35efbf0230cd2545a90e87e
-vendor/lib64/libOmxApeDec.so|2f5b4e20359c1b415b0013a0ff2bbed661a1811a
-vendor/lib64/libOmxApeDecSw.so|16985653f8063d70a3d076c724f780be5b08fe83
-vendor/lib64/libOmxEvrcDec.so|2804ae226bdbfb37f33123c2ef75d8d38496f22d
-vendor/lib64/libOmxQcelp13Dec.so|0e8d0a06a73a46b8d57c3fa1d93f26400f1d03dc
-vendor/lib64/libOmxVpp.so|1ed21ba8236c4cb6264d2474ad495ebe5df6ed1d
-vendor/lib64/libOmxWmaDec.so|b8251245e3f5109be57c12309c05336a17725076
-vendor/lib64/libvpplibrary.so|ce0466b9973660981c908aa77e98daf7822ce4e4
 
 # Offline charger - from x2
 vendor/bin/charger|0a3861fd5b997337a40926e7ddb2829461cfded8
 
-# Peripheral manager - from OnePlus3
-vendor/bin/pm-proxy|e2354a71c979c3d961f198d3c8f3e2e27d8ab85b
-vendor/bin/pm-service|ca317d7448d7f115963c3f37ccebbe47ba53fa91
-vendor/lib/libperipheral_client.so|7e54351ec6cae4a302330671e247a2487e36ff15
-vendor/lib64/libperipheral_client.so|1a8db83ca35bb8f9e973cd6d988456d5e6696888
+# Perf - from LA.UM.7.5.r1-04800-8x96.0
+vendor/bin/energy-awareness|3f1aa4d518ff361aa3ed9e41ace3e16d36cf0bbe
+vendor/bin/hw/vendor.qti.hardware.perf@1.0-service|4c5e9acdf807f883843dd2dc7f075ca93e49e1aa
+vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc|b50182aadab2e31409df61c523d0fb914a394e43
+vendor/etc/perf/commonresourceconfigs.xml|7bf6b442875ec6244db05ffcc2ebb85a1c370863
+vendor/etc/perf/perf-profile0.conf|02204355bf29ceb0460cd53e6716552bb9d9b05f
+vendor/etc/perf/perf-profile1.conf|58c8333b58183fe2412061e5ff22c218b7da305c
+vendor/etc/perf/perf-profile2.conf|66ac3877bf0030b72c99107f665bb392538d0237
+vendor/etc/perf/perf-profile3.conf|3a1edfaeaf087effcadba7c652737ab6dd2d87b5
+vendor/etc/perf/perf-profile4.conf|0bc4779472306b1b225e9fc9be40af54e14e2266
+vendor/etc/perf/perf-profile5.conf|5bc85ed4a0f3cedd57e1e046416f423a83dc4f63
+vendor/etc/perf/perf-profile6.conf|910a193b8425bbe0080f746d6788e66986b2e762
+vendor/etc/perf/perfboostsconfig.xml|57ab3e5177690fdb32908ff217853bb459b73a1e
+vendor/etc/perf/targetconfig.xml|b2ea39d05d52364774dbd390732cb5f29ae14941
+vendor/etc/perf/targetresourceconfigs.xml|478715f7bcb07e08e62be023ac0b6302ef65bdb3
+vendor/lib64/libperfgluelayer.so|4dec1bd5b511e5c6e1d87bb92a0f02944897bb73
+vendor/lib64/libqti-perfd.so|b603dfa41e8ff6c82181a38ad62a034373e987e1
+vendor/lib64/libqti-perfd-client.so|1e84aa49a8cff0f69f0261c69dd8843534efd79e
+vendor/lib64/libqti-util.so|2c0a832c63c3b2c16c7c65589ba447be64761ee9
+vendor/lib64/vendor.qti.hardware.perf@1.0.so|e7b864c6abef798a4b8413e7582c63f73be3ef58
+vendor/lib/libperfgluelayer.so|a8d4caf986552a685ee2976e6c5bfff869db7b49
+vendor/lib/libqti-perfd.so|b5d401463f9723232488317a03477b021e3d9d3d
+vendor/lib/libqti-perfd-client.so|a4a6da47ee26fcd5116c514f7fed15b91306aea3
+vendor/lib/libqti-util.so|d65f3ef240cebea73bd1ba8b1132a7e639aa05bb
+vendor/lib/vendor.qti.hardware.perf@1.0.so|656f7b00934d05ce82ba7ae25024740fdba9fa00
 
-# Perf - Gemini 8.0.0/OPR1.170623.032/8.9.13
-lib64/vendor.qti.hardware.iop@1.0.so
-lib64/vendor.qti.hardware.perf@1.0.so
-lib/vendor.qti.hardware.iop@1.0.so
-lib/vendor.qti.hardware.perf@1.0.so
-vendor/bin/energy-awareness
-vendor/bin/msm_irqbalance
-vendor/bin/hw/vendor.qti.hardware.iop@1.0-service
-vendor/bin/hw/vendor.qti.hardware.perf@1.0-service
-vendor/etc/init/vendor.qti.hardware.iop@1.0-service.rc
-vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc
-vendor/etc/perf/gamedwhitelist.xml
-vendor/etc/perf/perfboostsconfig.xml|fce795f55754630cf1db2049258a4a310736826f
-vendor/etc/perf/perf-profile0.conf
-vendor/etc/perf/perf-profile1.conf
-vendor/etc/perf/perf-profile2.conf
-vendor/etc/perf/perf-profile3.conf
-vendor/etc/perf/perf-profile4.conf
-vendor/etc/perf/perf-profile5.conf
-vendor/etc/perf/perf-profile6.conf
-vendor/lib64/hw/vendor.qti.hardware.iop@1.0-impl.so
-vendor/lib64/libfeedbackhandler.so
-vendor/lib64/libperfgluelayer.so
-vendor/lib64/libqti-iopd.so
-vendor/lib64/libqti-iopd-client.so
-vendor/lib64/libqti-perfd.so
-vendor/lib64/libqti-perfd-client.so
-vendor/lib64/libqti-util.so
-vendor/lib64/vendor.qti.hardware.iop@1.0_vendor.so
-vendor/lib64/vendor.qti.hardware.perf@1.0_vendor.so
-vendor/lib/hw/vendor.qti.hardware.iop@1.0-impl.so
-vendor/lib/libfeedbackhandler.so
-vendor/lib/libperfgluelayer.so
-vendor/lib/libqti-iopd.so
-vendor/lib/libqti-iopd-client.so
-vendor/lib/libqti-perfd.so
-vendor/lib/libqti-perfd-client.so
-vendor/lib/libqti-util.so
-vendor/lib/vendor.qti.hardware.iop@1.0_vendor.so
-vendor/lib/vendor.qti.hardware.perf@1.0_vendor.so
+# Peripheral manager - from LA.UM.7.5.r1-04800-8x96.0
+vendor/bin/pm-proxy|83c3adde4167fe4d5874dc49312c3e7ffdea31a5
+vendor/bin/pm-service|51d704ebc824f2d10f18e257b6ef38ea25aecc82
+vendor/lib64/libperipheral_client.so|6b3bd89a1adb37670ed61e0102b2f566cd947ece
+vendor/lib/libperipheral_client.so|21768d817ef624ab9437ab7524e2f81bad2eb859
 
-# Postprocessing - from daisy - 9/PKQ1.180917.001/V10.0.3.0.PDLMIXM
-vendor/bin/hw/vendor.display.color@1.0-service|2dbbb46a62ac5cf8d3a084c8350457442f5741eb
-vendor/bin/mm-pp-dpps|c281ee28274eeff6273091ae07aa1856a0c160db
+# Postprocessing - from LA.UM.7.5.r1-04800-8x96.0
+lib64/vendor.display.color@1.0.so|65364d3ee561ae6a88e6911edff6a7f1b5be6fec
+lib64/vendor.display.postproc@1.0.so|f8f690bd050551a46bd7608f033fdc7b86fbaeb9
+lib64/vendor.qti.hardware.qdutils_disp@1.0.so|c7ba29e6d31c20e8f64f4ead43fa47b43d337500
+lib/vendor.display.color@1.0.so|1e774f2b0792bd044447484b55c54ed3467616cb
+lib/vendor.display.postproc@1.0.so|c797553c2311a20f48b3d5f8acc8bcf46a273a18
+lib/vendor.qti.hardware.qdutils_disp@1.0.so|670131f49b9a4ad1c327ff074ce105ae31976b1a
+vendor/bin/hw/vendor.display.color@1.0-service|2ca340c7fd7689ac8ddf36f948fd95a7cd3bfc2e
+vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti|0c9c3a05e7a1bc1da704f7d0111e1285d478a7c9
+vendor/bin/mm-pp-dpps|d5690eec17705da04742aee5fd5b82fa8542a923
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
-vendor/lib64/libdisp-aba.so|2b9a85de013e956f1adfaf00146a865efb7077c4
-vendor/lib64/vendor.display.color@1.0.so|ec75654927c63b74c7f8d0760fa463f0e8287f25
-vendor/lib64/vendor.display.color@1.1.so|28dd1ef69ea74f5623746bbac5c483a3f3b46990
-vendor/lib64/vendor.display.color@1.2.so|2c61fe34f1b7548b258812c85920aa82f6b3a8db
-vendor/lib64/vendor.display.postproc@1.0.so|b95e9f990a207d5c62db4d66f5aaf088adc02ba8
+vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc|69d9cbc54f8ac0a0fb010f92bfa7de5981d643cf
+vendor/lib64/libdisp-aba.so|95cafbc303cbf3017c7f10276454ef908b258b1c
+vendor/lib64/vendor.display.color@1.0.so|65364d3ee561ae6a88e6911edff6a7f1b5be6fec
+vendor/lib64/vendor.display.color@1.1.so|b1b1ea87858ec41e705c0ca80099ecd1c7c68e7d
+vendor/lib64/vendor.display.color@1.2.so|8bc1b67e94bbba11eb9050a3e6a56203337d86a3
+vendor/lib64/vendor.display.postproc@1.0.so|f8f690bd050551a46bd7608f033fdc7b86fbaeb9
+vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|c7ba29e6d31c20e8f64f4ead43fa47b43d337500
+vendor/lib/vendor.display.color@1.0.so|1e774f2b0792bd044447484b55c54ed3467616cb
+vendor/lib/vendor.display.color@1.1.so|4eae68bff355279fb1745a5d015c7e6253e1e0a0
+vendor/lib/vendor.display.color@1.2.so|32bbc4e528c86810204ae369fb67d86fe177ed2d
+vendor/lib/vendor.display.postproc@1.0.so|c797553c2311a20f48b3d5f8acc8bcf46a273a18
+vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so|670131f49b9a4ad1c327ff074ce105ae31976b1a
 
-# Power-off alarm - from daisy - 9/PKQ1.180917.001/V10.0.3.0.PDLMIXM
--vendor/app/PowerOffAlarm/PowerOffAlarm.apk|3fbc64ee84b17eaaf5f9002b58f4615216de0389
-vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|b7f648c81773214202aaa3620863d048c90713c7
-vendor/bin/power_off_alarm|459ccd83df3fcc076bb82bff60f47d14ad69ad6e
+# Power-off alarm - from LA.UM.7.5.r1-04800-8x96.0
+framework/vendor.qti.hardware.alarm-V1.0-java.jar|ca5bf830ebb4fbf8fc1994200ec6e03dc83c274b
+-vendor/app/PowerOffAlarm/PowerOffAlarm.apk|de40207cdeab8720307e875e95181f32066e36fd
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|59742824ee9658016c962adf0c2a247d729a4115
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|c9877b6cae0353d5fdea5bc23dba77101b3d6980
-framework/vendor.qti.hardware.alarm-V1.0-java.jar:vendor/framework/vendor.qti.hardware.alarm-V1.0-java.jar|ca5bf830ebb4fbf8fc1994200ec6e03dc83c274b
-vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|df138b77fb116a1a786a70c9c76b69d61b5c04d2
-vendor/lib64/vendor.qti.hardware.alarm@1.0.so|5761eae471e8dcd94ce139e831a1aa5b23f133c6
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|5560d703f7c1ac628ba3b90832e546b59c491c62
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so|22cf6eb891f33147d0c5318d5a335c6eb70c4c21
 
 # QMI - Gemini 8.0.0/OPR1.170623.032/8.5.24
 etc/permissions/qti_libpermissions.xml:vendor/etc/permissions/qti_libpermissions.xml
@@ -726,75 +703,85 @@ vendor/firmware/modem_pr/mcfg_sw_sprint.mbn|587d37c5ec182e9c7c3e436bde733ddb615c
 vendor/firmware/modem_pr/mcfg_sw_tmo.mbn|39790692fa8fc5699fe6f9acf54ae8d82ddf78a6
 vendor/firmware/modem_pr/mcfg_sw_verizon.mbn|907d87fa7a4289c2fa1d6298d837f0a331c65419
 
-# Sensors - from oneplus3 - 8.0.0/OPR1.170623.032/1812060016
-vendor/bin/sensors.qcom:vendor/bin/sensors.qti|fadef46468ccbe4ee4f6a4ea3c69510c9f0ca3d4
-vendor/lib/hw/activity_recognition.msm8996.so|a93ab9aa549c2ce5b9ba5b1b8d62a192a66a6c1a
-vendor/lib/libsensor1.so|d8d2f53a261c045d814e5a70ba1194c2f0075942
-vendor/lib/libsensor_reg.so|5fb200beaf65132cfea6ba076b9d6178015bd11e
-vendor/lib/libsensor_thresh.so|aa4699127d90b7a79d895363e173ed3e48e3b954
-vendor/lib/libsensor_user_cal.so|42997390b0f1b923de07d16663090dd03b240d44
-vendor/lib/sensors.ssc.so|e30b31e6b369ad64bc3f5b93f6d3ba4c8a3a59ab
-vendor/lib64/hw/activity_recognition.msm8996.so|1760cd35fa5e786630a795d308dbbb24fccf0f4e
-vendor/lib64/libsensor1.so|989890f38e0685e15e60bc2a3d02df0bf48dd3d8
-vendor/lib64/libsensor_reg.so|5c43f48f1b59ec3855fb550862abb9e5b3ea1b47
-vendor/lib64/libsensor_thresh.so|ae030a1f5ebb4dfb6c8cd60c368887afd8595a88
-vendor/lib64/libsensor_user_cal.so|6e8f036acbb88be24ed8aa404514eb7d06bf0a4b
-vendor/lib64/sensors.ssc.so|8fdbeafe3bb461fb04b67a42ea3a788dfd94e879
+# Sensors - from LA.UM.7.5.r1-04800-8x96.0
+vendor/bin/sensors.qti|18011d46135a2635bcfdc34e8b4d3fdaff7a76fb
+vendor/lib64/hw/activity_recognition.msm8996.so|c29a0dfff27824dac39a21f56a92bf319acb051b
+vendor/lib64/libsensor1.so|1934268e2f28ee9d705d5ff060544d06e42afcc3
+vendor/lib64/libsensor_reg.so|942fbf9ef1cfc87596f850e7ff1a86e7a9ddc846
+vendor/lib64/sensors.ssc.so|e49e3c585da09b323948e1c1201118d426f3d558
+vendor/lib/hw/activity_recognition.msm8996.so|58878fbcf8e98a8f053c3d1fbaa1beb4d7776d12
+vendor/lib/libsensor1.so|d73573eca4e1eaf52f09f9cc7292cdc6d9d69c70
+vendor/lib/libsensor_reg.so|2d95cea1df93dcaae0f067157f6932c1381dec53
+vendor/lib/sensors.ssc.so|96a37b515969d72875debd9ee0a505406d75bd3c
 
 # Sensors (LeEco) - from zl1
 vendor/lib/sensors.oem.so|08656a65ab1bf120ac9bb16e93faf93cc2cdda86
 vendor/lib64/sensors.hal.tof.so|eb19aa40617e50bd1efcc88cee9f5b0af34e7f11
 vendor/lib64/sensors.oem.so|08c12372d3331ee43cc0a3f48b88f21e45324f29
 
-# Thermal - from le_x10 (x850) - 7.1.1/LEXCNFN6061705181T/letv05181516
-vendor/bin/thermal-engine|fa2e79587ba002817a933230d7381884f64b36e4
--vendor/lib64/libthermalclient.so|b3ba890af98d04d4fbc334278bf976e2354a811d
-vendor/lib64/libthermalioctl.so|cc51f7347a5c04e478b0abd2efa39c5dbe63b9a5
--vendor/lib/libthermalclient.so|1b081ae5e464d3b9b7686221d716037fd0255824
+# Thermal - from LA.UM.7.5.r1-04800-8x96.0
+vendor/bin/thermal-engine|e55d69e197f993a04ead228b42f28fd1d7b1294b
+-vendor/lib64/libthermalclient.so|0ce3a04917e936777182e8c6eaaf5b2a308d92cf
+vendor/lib64/libthermalioctl.so|e1597b961c1bee480f018dd7d2cc4e9fc2bb252b
+-vendor/lib/libthermalclient.so|7c3e567459a872a29611fc1b270fb7318b8a4d37
 
-# Time services - from daisy - 9/PKQ1.180917.001/V10.0.3.0.PDLMIXM
--vendor/app/TimeService/TimeService.apk|78109530538aa8fb533ad288c9d356c57481a10e
-vendor/bin/time_daemon|d67f1c50583b5efca0f5baea00a51056a798b7f8
-vendor/lib64/libtime_genoff.so|8f4c1f9ace6af463b241b130d6872b5d39cc7b2a
+# Time services - from LA.UM.7.5.r1-04800-8x96.0
+-vendor/app/TimeService/TimeService.apk|693a68e35a2cbc40d23b291fcc836c8567f90b14
+vendor/bin/time_daemon|385c449770ee3f1d15bf7c5994e8c2fde9b91ba3
+vendor/lib/libtime_genoff.so|95a43a2a19f57d5bd8821f80f51061c7305faeb5
+vendor/lib64/libtime_genoff.so|d0fc4808b859d36b4b545a0219c8fb8d1ea3203a
 
-# Wi-Fi Display - from daisy - 9/PKQ1.180917.001/V10.0.3.0.PDLMIXM
+# TUI - from LA.UM.7.5.r1-04800-8x96.0
+lib/vendor.qti.hardware.tui_comm@1.0.so|df42c8c69f67adeecd682a3035bf8d2b5834cd25
+lib64/vendor.qti.hardware.tui_comm@1.0.so|5a794cd2180fc27d7a03d990e852f6600daf4b7f
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|924a815c5d1be0d821af10b9b11093a517f5e72f
+vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
+vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|df42c8c69f67adeecd682a3035bf8d2b5834cd25
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|5a794cd2180fc27d7a03d990e852f6600daf4b7f
+# WiFi Display - from LA.UM.7.5.r1-04800-8x96.0
 bin/wfdservice|edeb291221024401cbae69c2fa4e58733b7efc4c
 etc/init/wfdservice.rc|311bfdd1675e56499662f39455536b75b78477bb
 etc/wfdconfig.xml|60a210d323f3f65dd1424cfd517295c522824b7b
-etc/wfdconfigsink.xml|f180a45f69fa2ff01dbaf98c905cff1e9eba903e
--framework/WfdCommon.jar|3291ce29c033fb9482011767ebebc52c6cf8c265
+etc/wfdconfigsink.xml|134a86f74d9c374ce9081bff92c02515712a7f12
+-framework/WfdCommon.jar|7b925c98d811b342e55549521af5c0a244e44025
 lib/com.qualcomm.qti.wifidisplayhal@1.0.so|93487a83a35f0fa3fe37445edd3ff22fcc52e4fc
+lib/com.qualcomm.qti.wifidisplayhal@1.0.so:vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0.so|93487a83a35f0fa3fe37445edd3ff22fcc52e4fc
+lib/libFileMux.so|5961dd16c9c6808e8321abf4b0266a9926ef327b
+lib/libmmosal.so|ca8714ad8bd64ae9d23222df6098fbb949e75d96
+lib/libmmparser_lite.so|4507219959c21bf05d53a0398d1282f2225bc759
 lib/libmmrtpdecoder.so|adb55936e63ff087a9e3458070515e1ab7dbe178
 lib/libmmrtpencoder.so|9a85d450a8633207f7a499962c5821d1a3fec2b8
+lib/libOmxMux.so|e9a5a682aec61b572817457b1d42caf7a3a27d6f
 lib/libwfdavenhancements.so|56e9d0050d3840bb3b27ce00425bfd67daac01c0
 lib/libwfdclient.so|d5b207da4797e536e1666edb0f790500d1c20074
-lib/libwfdcodecv4l2.so|b3a3fb10c2d3a8709badb9b3f6c02d0b961136ab
-lib/libwfdcommonutils.so|4672af5a1537df38149b37671f75f9d53e51cfb5
-lib/libwfdconfigutils.so|70b0ddab92a1dcaa4f0d182c9b4d554eb9c65764
-lib/libwfdmminterface.so|caf012b833585121fed196342c35d24f58940138
-lib/libwfdmmsink.so|83df22a52492696af2943534f31bf12cfb63be8d
-lib/libwfdmmsrc.so|bacc30868f165adf59d483207974cbf945ccb8fa
-lib/libwfdnative.so|66774d0946ab2694e5bc09a089869608cd9c43d1
-lib/libwfdrtsp.so|35d56a25e9fe0ec7756c8b10183491c00cfb5879
-lib/libwfdservice.so|55459dbfe15058871070f9c47a95f1c69c25c468
-lib/libwfdsm.so|cde4e7f9dd29449eb518dd6fb888bb41c2e6e8cc
-lib/libwfduibcinterface.so|334a422ec1520da8488a9c14ae9a721142fe12c4
-lib/libwfduibcsinkinterface.so|f8c191d35178f865777dad9874692a26fae90851
-lib/libwfduibcsink.so|989ed94f8c0047d85db60acc7b76eb9fb0014270
-lib/libwfduibcsrcinterface.so|3ce31a3bde36bd5c7dac31ccc1fda8043f482f86
+lib/libwfdcodecv4l2.so|28e07d3ce69f17e27a9b496c4bbe33fe1295eb97
+lib/libwfdcommonutils.so|3cafdec0bd44420ce7a3f8690ffb4766c0dbdcc6
+lib/libwfdconfigutils.so|8d8ec02706c885b21f61f8e317d4655919866414
+lib/libwfdmminterface.so|3ed15fd4bbb865722399bba446302bd61ab023fd
+lib/libwfdmmsink.so|e0e392f6665febcf187c73f8659eaac3bf83e97d
+lib/libwfdmmsrc.so|eddd40adac497a07dfbcc968cff0a3f8c27996e9
+lib/libwfdnative.so|601636d628f9ccde270932a490a77108252aaeb8
+lib/libwfdrtsp.so|5ee03a541fc3c2d5437b6caf48702ea99e704db4
+lib/libwfdservice.so|cbe0438601fcb240340ddc5c1935d157af5a71d3
+lib/libwfdsm.so|ef466f2ca42f376ddead7d3992c61422d194aca0
+lib/libwfduibcinterface.so|85faeea87b41e321de9a6fc0c4106978abf2ca92
+lib/libwfduibcsinkinterface.so|25235e58eb13e84f0e9bbc06592fdf85369d7529
+lib/libwfduibcsink.so|2573a8b30d8c774d415ddfa788d4a5b8b12f4c1b
+lib/libwfduibcsrcinterface.so|cb1ce08a89654236a29d940b6988309b670bf98d
 lib/libwfduibcsrc.so|78bc3258deb8f818c3392d5accdf8e7aac729fdc
-lib64/libwfdclient.so|c69712162493bdaa8833b5aae342ee4f9b0c2408
-lib64/libwfdnative.so|559148bbb82e1a37883be0926d2d90efe3bf18b8
--priv-app/WfdService/WfdService.apk|faf7643790e30775a05d36176ce2aaabe3e7b199
+lib64/libmmosal.so|69955ea76049f726337bd4575f077cf49211f0d4
+lib64/libwfdclient.so|b743f944d041ce7f4746bc0d4beeedb6286287f7
+lib64/libwfdnative.so|870af2c48885bf258a0677ae0f69a36e27b3bcf9
+-priv-app/WfdService/WfdService.apk|192e164466db20e5bde60c7ced8580512380a9ed
 vendor/bin/wifidisplayhalservice|959c9f4c35f3967d6ebf9d3c5cb5728ce5e4752f
-vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc|f3add191d48d9285eb1b69433c36bb3edbaf86fe
+vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc|04e463342cbba4c0e9c311a18238f95dec9359fd
 vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so|d4426bb8bb6016c932f9cbcafcb1ff8b7121cb10
-vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0.so|93487a83a35f0fa3fe37445edd3ff22fcc52e4fc
-vendor/lib/libwfdcommonutils_proprietary.so|d190dd29efbb601933a32dbc0f1f1df00384f077
-vendor/lib/libwfdhaldsmanager.so|0d4207c8c43640ea3c3ab6ecdb82afa528c2fd25
-vendor/lib/libwfdhdcpcp.so|ab6368f49c6acbc8a27aefd50282f267d16addac
-vendor/lib/libwfdmmservice.so|a99c38be9f6a6ce4a2767fb066191c2017fcb341
-vendor/lib/libwfdmodulehdcpsession.so|89fc62ee8f41bde6b2dcc9bcde3e52954ae5253d
+vendor/lib/libmmosal_proprietary.so|7b4070890dbc94bf59821f88abe617f8f208bd94
+vendor/lib/libwfdcommonutils_proprietary.so|af88a57a0b33d077fc27e4c3b8f30e43c8b974ef
+vendor/lib/libwfdhaldsmanager.so|35da424420ce754a95400910fb7642a8d6da444d
+vendor/lib/libwfdhdcpcp.so|fdc871821a96c2768b880a7eb7f611632756f10c
+vendor/lib/libwfdmmservice.so|a41f27cbc0cb857d47eb967b1889783d3c85b7f3
+vendor/lib/libwfdmodulehdcpsession.so|0817a7dc5d116d7cf936090141fab09c7788e886
 
 # Wi-Fi - Gemini 8.0.0/OPR1.170623.032/8.5.24
 vendor/bin/cnss-daemon
