@@ -1,2 +1,1 @@
-# FIXME
-dontaudit hal_perf_default self:capability { dac_override };
+set_prop(hal_perf_default, vendor_mpctl_prop)
