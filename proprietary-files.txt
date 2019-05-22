@@ -345,26 +345,21 @@ vendor/lib64/libsecureui_svcsock.so|52dcb894e9061438522dd22fa2e3d7efc708fade
 vendor/lib64/libssd.so|a3b4f5c81b96966f8d2a1a2f8518522f223e73fb
 vendor/lib/libQSEEComAPI.so|ca74ebd4225afbb8fd02ea72cd0c04303da9c2f2
 
-# DRM Widevine - from marlin - PPR2.181005.003
-vendor/bin/hw/android.hardware.drm@1.1-service.widevine|2c2455a218eb8d5368f1ccd39bea51be8364a0f3
-vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc|5a01d337c1d375ee24a6c8992ba91f54afb7637e
-vendor/lib/libwvhidl.so|37333d17980282275805807bc648bf8516fd4143
+# DRM (Widevine) - from daisy 9/PKQ1.180917.001/V10.0.7.0.PDLMIXM
+vendor/bin/hw/android.hardware.drm@1.1-service.widevine|9743c4ecd0fb8773795bcbfbb406f25616c04129
+vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc|458dd241f5f8536eccb57f012b3eba0061736e8e
+vendor/lib64/libwvhidl.so|2ddd2b76f1f16fd1a885fd6ee41c970928f25c3e
 
 # Gatekeeper - from LA.UM.7.5.r1-04800-8x96.0
 vendor/lib64/hw/gatekeeper.msm8996.so|d324fd57026ac20409c474cfc4e15595aa9d4738
 vendor/lib/hw/gatekeeper.msm8996.so|a1e3756cb6e42f869ae1997028eaa9159478525b
 
-# GPS - from daisy - 9/PKQ1.180917.001/V10.0.3.0.PDLMIXM
-lib/vendor.qti.gnss@1.0.so|eddf81581610bdad45674d31e9b88eb8a9d08784
-lib/vendor.qti.gnss@1.1.so|fea7124d30c04636974dfdbe1a348ff249d897fe
-lib/vendor.qti.gnss@1.2.so|818c951a47baa82f72da4266e61e41cfef16a67c
-lib/vendor.qti.gnss@2.0.so|a559459c08f995fc9b1c92a63777058f8f1c0070
-lib/vendor.qti.gnss@2.1.so|a3554a924e9e20c02d9411a5221c19fba3374a84
-lib64/vendor.qti.gnss@1.0.so|90b465adc4542f16fbdd935d0592df73d778909b
-lib64/vendor.qti.gnss@1.1.so|1edcf36fc3afbc465e53e3b74f99fde1e952f718
-lib64/vendor.qti.gnss@1.2.so|fc002fdced5768ed97936fde007476c1e9eaabb2
-lib64/vendor.qti.gnss@2.0.so|58e69a003eb530cf59bbe204251b9652d28a4b89
-lib64/vendor.qti.gnss@2.1.so|e7d80a2a46bcda7445d21701ba94983a43ab46af
+# GPS - from daisy 9/PKQ1.180917.001/V10.0.7.0.PDLMIXM
+lib64/vendor.qti.gnss@1.0.so|4dfa66f66b406c1aff3d32bb44382898beaaa39a
+lib64/vendor.qti.gnss@1.1.so|a622c409e1d20d2799904e47d8fb07753e830d7a
+lib64/vendor.qti.gnss@1.2.so|104f245c358ab202a57211f99898406cd5ad8e0e
+lib64/vendor.qti.gnss@2.0.so|b3f7ae76d4db00edce0c4f5a7084d7abeac0180a
+lib64/vendor.qti.gnss@2.1.so|eb908fd65d8b9d1f9cac629815f7adfb48361d16
 vendor/bin/hw/vendor.qti.gnss@1.0-service|049201d8e22064b87eb52df208d8cda7066d140a
 vendor/bin/loc_launcher|23a4470552c0c418662a7d91fa7f593bee767459
 vendor/bin/lowi-server|f83f6ab9b978c618c87d2b5c66854533d0e3a66f
@@ -373,7 +368,7 @@ vendor/bin/xtra-daemon|f4fdd2d7fc56472066b05899340eb19ff67d54b4
 vendor/etc/cacert_location.pem|6a05f324e7d9ff584811e62aabeb6d89a5239bbe
 vendor/etc/init/vendor.qti.gnss@1.0-service.rc|98655e2adc2158a052b0ecf06b065535f0a2aac7
 vendor/etc/xtra_root_cert.pem|f55a31ec4d9cf8ce2724acadecf00c779f8767db
-vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so|27375e1ff018f7fb65b87ee0ff06e3e39c2c13fc
+vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so|78aebfe0d1e551b183c4e2beada0d1264e0fb9d4
 vendor/lib64/libdataitems.so|60f312e84762cd2493a6ac4aa2f8cd715fca7099
 vendor/lib64/libdrplugin_client.so|ba6de3e6a872ec53d7b4e11bd5b9371428a26909
 vendor/lib64/libDRPlugin.so|d60dffb3751b5095ead2747610c6d022d052a560
@@ -395,10 +390,10 @@ vendor/lib64/libslimclient.so|e92942e916eb8863e1689106dd5d7932c9dcda70
 vendor/lib64/libulp2.so|3456c76c42681ec40f6d158f8d516158bb43c5b1
 vendor/lib64/libxtadapter.so|d404e8c5c6e14a556926ba772ca99aa51cbd6a36
 vendor/lib64/libxtwifi_ulp_adaptor.so|58b20fbdbb500add11784acce0808c7198c96c34
-vendor/lib64/vendor.qti.gnss@1.0.so|90b465adc4542f16fbdd935d0592df73d778909b
-vendor/lib64/vendor.qti.gnss@1.1.so|1edcf36fc3afbc465e53e3b74f99fde1e952f718
-vendor/lib64/vendor.qti.gnss@1.2.so|fc002fdced5768ed97936fde007476c1e9eaabb2
-vendor/lib64/vendor.qti.gnss@2.0.so|58e69a003eb530cf59bbe204251b9652d28a4b89
+vendor/lib64/vendor.qti.gnss@1.0.so|4dfa66f66b406c1aff3d32bb44382898beaaa39a
+vendor/lib64/vendor.qti.gnss@1.1.so|a622c409e1d20d2799904e47d8fb07753e830d7a
+vendor/lib64/vendor.qti.gnss@1.2.so|104f245c358ab202a57211f99898406cd5ad8e0e
+vendor/lib64/vendor.qti.gnss@2.0.so|b3f7ae76d4db00edce0c4f5a7084d7abeac0180a
 
 # Graphics - from LA.UM.7.5.r1-04800-8x96.0
 vendor/lib64/egl/eglSubDriverAndroid.so|74d486294baa0258bd066de78a4f953a396da1d7
