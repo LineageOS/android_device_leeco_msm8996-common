@@ -372,15 +372,19 @@ typedef uint64_t GpsLocationExtendedFlags;
 /** GpsLocationExtended has Clock drift*/
 #define GPS_LOCATION_EXTENDED_HAS_CLOCK_DRIFT   0x20000000
 /** GpsLocationExtended has Clock drift std deviation**/
-#define GPS_LOCATION_EXTENDED_HAS_CLOCK_DRIFT_STD_DEV   0x40000000
+#define GPS_LOCATION_EXTENDED_HAS_CLOCK_DRIFT_STD_DEV    0x40000000
 /** GpsLocationExtended has leap seconds **/
-#define GPS_LOCATION_EXTENDED_HAS_LEAP_SECONDS   0x80000000
+#define GPS_LOCATION_EXTENDED_HAS_LEAP_SECONDS           0x80000000
 /** GpsLocationExtended has time uncertainty **/
-#define GPS_LOCATION_EXTENDED_HAS_TIME_UNC   0x100000000
+#define GPS_LOCATION_EXTENDED_HAS_TIME_UNC               0x100000000
 /** GpsLocationExtended has heading rate  **/
-#define GPS_LOCATION_EXTENDED_HAS_HEADING_RATE 0x200000000
+#define GPS_LOCATION_EXTENDED_HAS_HEADING_RATE           0x200000000
 /** GpsLocationExtended has multiband signals  **/
-#define GPS_LOCATION_EXTENDED_HAS_MULTIBAND 0x400000000
+#define GPS_LOCATION_EXTENDED_HAS_MULTIBAND              0x400000000
+/** GpsLocationExtended has sensor calibration confidence */
+#define GPS_LOCATION_EXTENDED_HAS_CALIBRATION_CONFIDENCE 0x800000000
+/** GpsLocationExtended has sensor calibration status */
+#define GPS_LOCATION_EXTENDED_HAS_CALIBRATION_STATUS     0x1000000000
 
 typedef uint32_t LocNavSolutionMask;
 /* Bitmask to specify whether SBAS ionospheric correction is used  */
@@ -397,6 +401,8 @@ typedef uint32_t LocNavSolutionMask;
 #define LOC_NAV_MASK_RTK_CORRECTION ((LocNavSolutionMask)0x0020)
 /**<  Bitmask to specify whether Position Report is PPP corrected   */
 #define LOC_NAV_MASK_PPP_CORRECTION ((LocNavSolutionMask)0x0040)
+/**<  Bitmask to specify whether Position Report is RTK fixed corrected   */
+#define LOC_NAV_MASK_RTK_FIXED_CORRECTION ((LocNavSolutionMask)0x0080)
 
 typedef uint32_t LocPosDataMask;
 /* Bitmask to specify whether Navigation data has Forward Acceleration  */
@@ -792,6 +798,9 @@ typedef struct {
         Range: 0 to 359.999. 946
         Unit: Degrees per Seconds */
     float headingRateDeg;
+    /** Sensor calibration confidence percent. Range: 0 - 100 */
+    uint8_t calibrationConfidence;
+    DrCalibrationStatusMask calibrationStatus;
 } GpsLocationExtended;
 
 enum loc_sess_status {
@@ -1384,16 +1393,15 @@ typedef uint64_t GpsSvMeasHeaderFlags;
 #define GNSS_SV_MEAS_HEADER_HAS_GAL_SYSTEM_TIME_EXT          0x00008000
 #define GNSS_SV_MEAS_HEADER_HAS_BDS_SYSTEM_TIME_EXT          0x00010000
 #define GNSS_SV_MEAS_HEADER_HAS_QZSS_SYSTEM_TIME_EXT         0x00020000
-#define GNSS_SV_MEAS_HEADER_HAS_GPSL1L5_TIME_BIAS            0x00040000
-#define GNSS_SV_MEAS_HEADER_HAS_GALE1E5A_TIME_BIAS           0x00080000
-#define GNSS_SV_MEAS_HEADER_HAS_GPS_NAVIC_INTER_SYSTEM_BIAS  0x00100000
-#define GNSS_SV_MEAS_HEADER_HAS_GAL_NAVIC_INTER_SYSTEM_BIAS  0x00200000
-#define GNSS_SV_MEAS_HEADER_HAS_GLO_NAVIC_INTER_SYSTEM_BIAS  0x00400000
-#define GNSS_SV_MEAS_HEADER_HAS_BDS_NAVIC_INTER_SYSTEM_BIAS  0x00800000
-#define GNSS_SV_MEAS_HEADER_HAS_NAVIC_SYSTEM_TIME            0x01000000
-#define GNSS_SV_MEAS_HEADER_HAS_NAVIC_SYSTEM_TIME_EXT        0x02000000
-
-
+#define GNSS_SV_MEAS_HEADER_HAS_GLO_SYSTEM_TIME_EXT          0x00040000
+#define GNSS_SV_MEAS_HEADER_HAS_GPSL1L5_TIME_BIAS            0x00080000
+#define GNSS_SV_MEAS_HEADER_HAS_GALE1E5A_TIME_BIAS           0x00100000
+#define GNSS_SV_MEAS_HEADER_HAS_GPS_NAVIC_INTER_SYSTEM_BIAS  0x00200000
+#define GNSS_SV_MEAS_HEADER_HAS_GAL_NAVIC_INTER_SYSTEM_BIAS  0x00400000
+#define GNSS_SV_MEAS_HEADER_HAS_GLO_NAVIC_INTER_SYSTEM_BIAS  0x00800000
+#define GNSS_SV_MEAS_HEADER_HAS_BDS_NAVIC_INTER_SYSTEM_BIAS  0x01000000
+#define GNSS_SV_MEAS_HEADER_HAS_NAVIC_SYSTEM_TIME            0x02000000
+#define GNSS_SV_MEAS_HEADER_HAS_NAVIC_SYSTEM_TIME_EXT        0x04000000
 
 typedef struct
 {
@@ -1435,9 +1443,10 @@ typedef struct
     Gnss_LocGnssTimeExtStructType               bdsSystemTimeExt;
     /** QZSS system RTC time information. */
     Gnss_LocGnssTimeExtStructType               qzssSystemTimeExt;
+    /** GLONASS system RTC time information. */
+    Gnss_LocGnssTimeExtStructType               gloSystemTimeExt;
     /** NAVIC system RTC time information. */
     Gnss_LocGnssTimeExtStructType               navicSystemTimeExt;
-
 } GnssSvMeasurementHeader;
 
 typedef struct {
