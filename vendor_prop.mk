@@ -52,6 +52,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.llnoise=1 \
     vendor.camera.hal1.packagelist=com.facebook.katana,com.facebook.orca,com.instagram.android,com.viber.voip
 
+# Charger
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.charger.enable_suspend=true
+
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.cne.feature=1

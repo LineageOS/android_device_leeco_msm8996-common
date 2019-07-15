@@ -102,7 +102,6 @@ TARGET_USES_QTI_CAMERA_DEVICE := true
 BOARD_QTI_CAMERA_32BIT_ONLY := true
 
 # Charger
-BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 BOARD_HEALTHD_CUSTOM_CHARGER_RES := $(PLATFORM_PATH)/charger/images
 # Before enabling lineage charger you have to fix it!
