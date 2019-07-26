@@ -6,6 +6,7 @@ ifndef BOARD_VNDK_VERSION
 
 VNDK_SP_LIBRARIES := \
     libdexfile \
+    libdexfile_support \
     libartbase \
     libunwind \
     libunwindstack \
