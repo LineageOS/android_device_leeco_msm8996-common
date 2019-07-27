@@ -16,6 +16,24 @@
       "revId": "32f4b938a04334d14ab8bef474f9b724aca0dcc4",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "238ca73f_9da25c9b",
+        "filename": "msm8996.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 16002
+      },
+      "writtenOn": "2019-07-27T04:06:10Z",
+      "side": 1,
+      "message": "fixed",
+      "parentUuid": "351d70b3_6c27827d",
+      "revId": "32f4b938a04334d14ab8bef474f9b724aca0dcc4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
