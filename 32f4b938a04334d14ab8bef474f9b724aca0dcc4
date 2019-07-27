@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "351d70b3_6c27827d",
+        "filename": "msm8996.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2019-07-27T01:51:41Z",
+      "side": 1,
+      "message": "We should rename this service to leeco_8996 like our other ones and to prevent any potential build conflicts",
+      "revId": "32f4b938a04334d14ab8bef474f9b724aca0dcc4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
