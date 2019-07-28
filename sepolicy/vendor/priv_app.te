@@ -1,0 +1,1 @@
+allow priv_app sysfs_batteryinfo:file read;

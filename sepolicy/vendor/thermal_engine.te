@@ -12,3 +12,5 @@ allow thermal-engine sysfs_leds:file { rw_file_perms };
 type_transition thermal-engine socket_device:sock_file thermal_socket "thermal-send-client";
 type_transition thermal-engine socket_device:sock_file thermal_socket "thermal-recv-client";
 type_transition thermal-engine socket_device:sock_file thermal_socket "thermal-recv-passive-client";
+
+allow thermal-engine sysfs_batteryinfo:dir search;
