@@ -1,0 +1,11 @@
+# Decryption blobs
+lib64/libicuuc.so:recovery/root/sbin/libicuuc.so
+lib64/libxml2.so:recovery/root/sbin/libxml2.so
+vendor/bin/qseecomd:recovery/root/sbin/qseecomd
+vendor/lib64/hw/keystore.msm8996.so:recovery/root/vendor/lib64/hw/keystore.msm8996.so
+vendor/lib64/libQSEEComAPI.so:recovery/root/vendor/lib64/libQSEEComAPI.so
+vendor/lib64/libdiag.so:recovery/root/vendor/lib64/libdiag.so
+vendor/lib64/libdrmfs.so:recovery/root/vendor/lib64/libdrmfs.so
+vendor/lib64/libdrmtime.so:recovery/root/vendor/lib64/libdrmtime.so
+vendor/lib64/librpmb.so:recovery/root/vendor/lib64/librpmb.so
+vendor/lib64/libssd.so:recovery/root/vendor/lib64/libssd.so
