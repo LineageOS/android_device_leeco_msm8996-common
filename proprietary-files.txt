@@ -331,19 +331,11 @@ vendor/lib64/libdpmqmihal.so|ac1f40e3fa18ae56b1842d98d0f44579063b7fd3
 
 # DRM and SEE - from LA.UM.7.5.r1-04800-8x96.0
 vendor/bin/qseecomd|191536bdf3d72238ea7b3ca54b4289b7a09b4bcd
-vendor/lib64/libGPreqcancel.so|db98eea9ef308792e3b9d48b933b5a5debf1af9e
-vendor/lib64/libGPreqcancel_svc.so|1059a83dda327cae9abc10bda0b8a8c526b9760d
 vendor/lib64/libQSEEComAPI.so|c2562b6f2b6e9e2a30c72f0638ae0c16365c0022
-vendor/lib64/libSecureUILib.so|5c9a1e16311a475ff79a1ae541b73216c7096d55
-vendor/lib64/libStDrvInt.so|768602d8b0c04ff8d09ebcf010c19ccb589dc4a7
 vendor/lib64/libdrmfs.so|87526b8b660fc8c27f0c07f1ac2d0d36544ae624
 vendor/lib64/libdrmtime.so|110b8a263128288b056183ba064b0ab2f6343fab
-vendor/lib64/libqisl.so|1f1523c03daffa9e1cd45d96d212d2fa8c1b5790
 vendor/lib64/librpmb.so|9f88e88cd8155b69a085548a60a15c5b5be70f48
-vendor/lib64/libsecureui.so|faebf24607e983faa09d27df36408dab2db2217e
-vendor/lib64/libsecureui_svcsock.so|52dcb894e9061438522dd22fa2e3d7efc708fade
 vendor/lib64/libssd.so|a3b4f5c81b96966f8d2a1a2f8518522f223e73fb
-vendor/lib/libQSEEComAPI.so|ca74ebd4225afbb8fd02ea72cd0c04303da9c2f2
 
 # DRM (Widevine) - from daisy 9/PKQ1.180917.001/V10.0.7.0.PDLMIXM
 vendor/bin/hw/android.hardware.drm@1.1-service.widevine|9743c4ecd0fb8773795bcbfbb406f25616c04129
@@ -352,7 +344,6 @@ vendor/lib64/libwvhidl.so|2ddd2b76f1f16fd1a885fd6ee41c970928f25c3e
 
 # Gatekeeper - from LA.UM.7.5.r1-04800-8x96.0
 vendor/lib64/hw/gatekeeper.msm8996.so|d324fd57026ac20409c474cfc4e15595aa9d4738
-vendor/lib/hw/gatekeeper.msm8996.so|a1e3756cb6e42f869ae1997028eaa9159478525b
 
 # GPS - from daisy 9/PKQ1.180917.001/V10.0.7.0.PDLMIXM
 lib64/vendor.qti.gnss@1.0.so|4dfa66f66b406c1aff3d32bb44382898beaaa39a
@@ -504,7 +495,6 @@ vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
 
 # Keystore - from LA.UM.7.5.r1-04800-8x96.0
 vendor/lib64/hw/keystore.msm8996.so|e4139ac911fd0aafa73bd2901ab273c04c99ccc9
-vendor/lib/hw/keystore.msm8996.so|89131975b593a2d3551808f950905c3b83bb6d73
 
 # Media - from LA.UM.7.5.r1-04800-8x96.0
 vendor/lib64/libgpustats.so|1a091475fb4a744f091bec101a51044fb8854a15
@@ -706,13 +696,6 @@ vendor/bin/time_daemon|385c449770ee3f1d15bf7c5994e8c2fde9b91ba3
 vendor/lib/libtime_genoff.so|95a43a2a19f57d5bd8821f80f51061c7305faeb5
 vendor/lib64/libtime_genoff.so|d0fc4808b859d36b4b545a0219c8fb8d1ea3203a
 
-# TUI - from LA.UM.7.5.r1-04800-8x96.0
-lib/vendor.qti.hardware.tui_comm@1.0.so|df42c8c69f67adeecd682a3035bf8d2b5834cd25
-lib64/vendor.qti.hardware.tui_comm@1.0.so|5a794cd2180fc27d7a03d990e852f6600daf4b7f
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|924a815c5d1be0d821af10b9b11093a517f5e72f
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
-vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|df42c8c69f67adeecd682a3035bf8d2b5834cd25
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|5a794cd2180fc27d7a03d990e852f6600daf4b7f
 # WiFi Display - from LA.UM.7.5.r1-04800-8x96.0
 bin/wfdservice|edeb291221024401cbae69c2fa4e58733b7efc4c
 etc/init/wfdservice.rc|311bfdd1675e56499662f39455536b75b78477bb
