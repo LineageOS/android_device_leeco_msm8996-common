@@ -7,7 +7,7 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-# http://www.apache.org/licenses/LICENSE-2.0
+#      http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -26,36 +26,35 @@ LINEAGE_ROOT="${MY_DIR}"/../../..
 
 HELPER="${LINEAGE_ROOT}/vendor/lineage/build/tools/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
-	echo "Unable to find helper script at $HELPER"
-	exit 1
+    echo "Unable to find helper script at ${HELPER}"
+    exit 1
 fi
 source "${HELPER}"
 
 # Default to sanitizing the vendor folder before extraction
 CLEAN_VENDOR=true
-KANG=
 
-while [ "$#" -gt 0 ]; do
-	case "$1" in
-	-n|--no-cleanup)
-		CLEAN_VENDOR=false
-		;;
-	-k|--kang)
-		KANG="--kang"
-		;;
-	-s|--section)
-		SECTION="$2"; shift
-		CLEAN_VENDOR=false
-		;;
-	*)
-		SRC="$1"
-		;;
-	esac
-	shift
+while [ "${#}" -gt 0 ]; do
+    case "${1}" in
+        -n | --no-cleanup )
+                CLEAN_VENDOR=false
+                ;;
+        -k | --kang )
+                KANG="--kang"
+                ;;
+        -s | --section )
+                SECTION="${2}"; shift
+                CLEAN_VENDOR=false
+                ;;
+        * )
+                SRC="${1}"
+                ;;
+    esac
+    shift
 done
 
-if [ -z "$SRC" ]; then
-	SRC=adb
+if [ -z "${SRC}" ]; then
+    SRC="adb"
 fi
 
 function blob_fixup() {
@@ -88,4 +87,4 @@ if [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
             "${KANG}" --section "${SECTION}"
 fi
 
-source "${MY_DIR}/setup-makefiles.sh"
+"${MY_DIR}/setup-makefiles.sh"
