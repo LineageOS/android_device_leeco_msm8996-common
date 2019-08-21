@@ -401,7 +401,7 @@ void LocApiBase::sendNfwNotification(GnssNfwNotification& notification)
 void LocApiBase::reportSv(GnssSvNotification& svNotify)
 {
     const char* constellationString[] = { "Unknown", "GPS", "SBAS", "GLONASS",
-        "QZSS", "BEIDOU", "GALILEO" };
+        "QZSS", "BEIDOU", "GALILEO", "NAVIC" };
 
     // print the SV info before delivering
     LOC_LOGV("num sv: %u\n"
@@ -514,10 +514,14 @@ void LocApiBase::releaseATL(int connHandle)
     TO_1ST_HANDLING_LOCADAPTERS(mLocAdapters[i]->releaseATL(connHandle));
 }
 
-void LocApiBase::requestNiNotify(GnssNiNotification &notify, const void* data)
+void LocApiBase::requestNiNotify(GnssNiNotification &notify, const void* data,
+                                 const LocInEmergency emergencyState)
 {
     // loop through adapters, and deliver to the first handling adapter.
-    TO_1ST_HANDLING_LOCADAPTERS(mLocAdapters[i]->requestNiNotifyEvent(notify, data));
+    TO_1ST_HANDLING_LOCADAPTERS(
+            mLocAdapters[i]->requestNiNotifyEvent(notify,
+                                                  data,
+                                                  emergencyState));
 }
 
 void* LocApiBase :: getSibling()
