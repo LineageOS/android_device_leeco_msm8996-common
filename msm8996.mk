@@ -327,6 +327,10 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2
 
+# Soong
+PRODUCT_SOONG_NAMESPACES += \
+    device/leeco/msm8996-common
+
 PRODUCT_PACKAGES += \
     ims-ext-common \
     telephony-ext
