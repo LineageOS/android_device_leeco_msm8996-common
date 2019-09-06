@@ -287,7 +287,7 @@ on early-boot
     write /sys/kernel/boot_slpi/boot 1
     chown root audio /sys/kernel/boot_adsp/boot
 
-    exec u:r:qti_init_shell:s0 -- /vendor/bin/init.qcom.early_boot.sh
+    exec -- /vendor/bin/init.qcom.early_boot.sh
 
 on boot
     # Secure touch
