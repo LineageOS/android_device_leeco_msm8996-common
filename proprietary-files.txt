@@ -451,7 +451,6 @@ lib64/libimscamera_jni.so
 lib64/libimsmedia_jni.so
 lib64/librcc.so
 lib64/vendor.qti.imsrtpservice@1.0.so
--priv-app/ims/ims.apk|54464ad55ece9aa27bedca09f5af0ca49f17620b
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
@@ -475,6 +474,9 @@ vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
 vendor/bin/imsrcsd|afeb8ba71b688dec5ca8f0c47ded9bf8b675dbf8
 vendor/lib/lib-imsrcs.so|e5d66f60b8c4d3eae7fce3d57a004c774acd78ab
 vendor/lib64/lib-imsrcs.so|dc5ca0274b6e7eef47ac4979ef5774de22fe095e
+
+#IMS - Mata QP1A.190711.107
+-priv-app/ims/ims.apk|0f1e907bb3a0c2631f54310860711aa955710bfc
 
 # Keystore - from LA.UM.7.5.r1-04800-8x96.0
 vendor/lib64/hw/keystore.msm8996.so|e4139ac911fd0aafa73bd2901ab273c04c99ccc9
