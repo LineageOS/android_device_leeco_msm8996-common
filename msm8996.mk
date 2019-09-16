@@ -342,10 +342,11 @@ PRODUCT_SOONG_NAMESPACES += \
     device/leeco/msm8996-common
 
 PRODUCT_PACKAGES += \
-    ims-ext-common \
+    ims-ext-common_system \
     telephony-ext
 
 PRODUCT_BOOT_JARS += \
+    ims-ext-common_system \
     telephony-ext
 
 # Seccomp policy
