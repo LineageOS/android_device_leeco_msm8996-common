@@ -133,8 +133,8 @@ PRODUCT_PACKAGES += \
     Snap
 
 # Connectivity Engine support (CNE)
-PRODUCT_PACKAGES += \
-    libcnefeatureconfig
+#PRODUCT_PACKAGES += \
+#    libcnefeatureconfig
 
 # Device settings
 PRODUCT_PACKAGES += \
@@ -417,8 +417,8 @@ PRODUCT_PACKAGES += \
     libaacwrapper \
     libnl
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
+#PRODUCT_BOOT_JARS += \
+#    WfdCommon
 
 # Model is set via init library
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
