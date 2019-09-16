@@ -3,3 +3,8 @@ allow init devinfo_block_device:blk_file { r_file_perms };
 allow init servicemanager:binder { call };
 
 allow init sysfs_leds:lnk_file { r_file_perms };
+
+allow init sysfs_scsi_devices_0000:dir { relabelfrom };
+allow init sysfs_scsi_devices_0000:file { relabelfrom };
+allow init sysfs_scsi_devices_other:dir { relabelfrom };
+allow init sysfs_scsi_devices_other:file { relabelfrom };
