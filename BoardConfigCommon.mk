@@ -49,10 +49,14 @@ BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=32M@0-0xffffffff
 BOARD_KERNEL_CMDLINE += androidboot.configfs=true
 BOARD_KERNEL_CMDLINE += loop.max_part=7
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/leeco/msm8996
+
+TEMPORARY_DISABLE_PATH_RESTRICTIONS=true
+
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 TARGET_COMPILE_WITH_MSM_KERNEL := true
@@ -216,10 +220,12 @@ TARGET_RIL_VARIANT := caf
 VENDOR_SECURITY_PATCH := 2016-10-01
 
 # SELinux
-include device/qcom/sepolicy/sepolicy.mk
+#include device/qcom/sepolicy/sepolicy.mk
 
-BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/vendor
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(PLATFORM_PATH)/sepolicy/private
+#BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/vendor
+#BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(PLATFORM_PATH)/sepolicy/private
+
+BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy_base
 
 # System as root
 BOARD_ROOT_EXTRA_FOLDERS := persist
@@ -240,6 +246,7 @@ BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 BOARD_HOSTAPD_DRIVER := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 HOSTAPD_VERSION := VER_0_8_X
+TARGET_USES_AOSP_FOR_WLAN := true
 WIFI_DRIVER_FW_PATH_AP := "ap"
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WIFI_DRIVER_FW_PATH_P2P := "p2p"
