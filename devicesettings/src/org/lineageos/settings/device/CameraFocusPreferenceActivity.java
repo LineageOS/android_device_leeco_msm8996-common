@@ -17,16 +17,15 @@
 package org.lineageos.settings.device;
 
 import android.os.Bundle;
+import android.preference.PreferenceActivity;
 
-import com.android.settingslib.drawer.SettingsDrawerActivity;
-
-public class CameraFocusPreferenceActivity extends SettingsDrawerActivity {
+public class CameraFocusPreferenceActivity extends PreferenceActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getFragmentManager().beginTransaction()
-                .replace(R.id.content_frame, new CameraFocusPreferenceFragment())
+                .replace(android.R.id.content, new CameraFocusPreferenceFragment())
                 .commit();
     }
 }
