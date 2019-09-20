@@ -48,6 +48,7 @@ public class SettingsUtils {
     public static final String PREFERENCES = "SettingsUtilsPreferences";
 
     public static void writeCameraFocusFixSysfs(boolean enabled) {
+        if (!supportsCameraFocusFix()) return;
         try {
             FileOutputStream out = new FileOutputStream(new File(CAMERA_FOCUS_FIX_SYSFS));
             OutputStreamWriter writer = new OutputStreamWriter(out);
