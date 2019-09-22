@@ -11,7 +11,7 @@ allow vendor_charger input_device:dir { r_dir_perms };
 allow vendor_charger input_device:chr_file { r_file_perms };
 allow vendor_charger proc_stat:file { r_file_perms };
 allow vendor_charger proc_sysrq:dir { search };
-allow vendor_charger proc_sysrq:file { r_file_perms };
+allow vendor_charger proc_sysrq:file { rw_file_perms };
 allow vendor_charger properties_device:dir { r_dir_perms };
 
 # required to read /res/images/charger/
