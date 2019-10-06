@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aca28143_4fca6ebc",
+        "filename": "config.fs",
+        "patchSetId": 2
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2019-10-06T15:54:38Z",
+      "side": 1,
+      "message": "I would not recommend doing this. persist is the legacy mount point that required the changes, not mnt/vendor/persist. Kind of like the errors we had before with cnss-daemon https://github.com/LineageOS/android_device_leeco_msm8996-common/commit/b531e83745ece9a3d137244257469667158421b1#diff-42093a6732b496e5669e16c7cf365289",
+      "revId": "f9095fbd17141902952115dff681c9bd7540480e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
