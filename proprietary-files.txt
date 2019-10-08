@@ -475,26 +475,32 @@ vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
 # Keystore - from LA.UM.7.5.r1-04800-8x96.0
 vendor/lib64/hw/keystore.msm8996.so|e4139ac911fd0aafa73bd2901ab273c04c99ccc9
 
-# Media - from LA.UM.7.5.r1-04800-8x96.0
-vendor/lib64/libgpustats.so|1a091475fb4a744f091bec101a51044fb8854a15
-vendor/lib/libgpustats.so|83d8856717923ab389aecf17445e33fc21b90afc
-vendor/lib/libI420colorconvert.so|6c280c2b27c0d3e482ee3b7b6fa966f6fbb8d9bb
-vendor/lib/libmm-color-convertor.so|01a87ba3433679bde836d6ac8c8f44efcc24bf10
-vendor/lib/libOmxAacDec.so|3dde533badadb6894b5b9ab795534e73feb26cc6
-vendor/lib/libOmxAlacDec.so|dee5a9df5a0b8e12254813ac7b246b2d62ba4786
-vendor/lib/libOmxAlacDecSw.so|111e096e79b2b0c5cc48a88643bc3ebbf1975814
-vendor/lib/libOmxAmrDec.so|335caff5c76f3e7a4a86871841fca1e7477a89a9
-vendor/lib/libOmxAmrwbplusDec.so|d154263b6cfaf092336c5b52b36fff117e6f09c0
-vendor/lib/libOmxApeDec.so|a556029e9bd0c062f7ffeceeeb370d248a33eb0f
-vendor/lib/libOmxApeDecSw.so|0f411fda1ac0305f592963cc2a6d801ed0c394ab
-vendor/lib/libOmxEvrcDec.so|088df3c77446f325a535418dd86dc8cae41e69e2
-vendor/lib/libOmxQcelp13Dec.so|5388cb90be81f05cfadd553b6c2ec46243fc58fc
-vendor/lib/libOmxVideoDSMode.so|dee5e9df19cad66c33789c4dfd5d2127bdb083d9
-vendor/lib/libOmxVpp.so|ed523655cadc889cebe8edb50e24e946bae50cd5
-vendor/lib/libOmxWmaDec.so|02899d3cdbc7a0b39456eec57a51d2ba07765efb
-vendor/lib/libvpplibrary.so|9dd0fc6eaf467974e99fb1de519303d051694d06
-vendor/lib/libvpphvx.so|f9e3229d44ad22e808ee7ed4d8d1c529195ed6a9
-vendor/lib/libvqzip.so|0b906db131e99cd5460b8a72d05e86721243de95
+# Media - from LA.UM.8.6.r1-01900-89xx.0
+lib/extractors/libmmparserextractor.so|41d5ee2c7f76f21f7566956ad0a490f6927c2f95
+lib/libFileMux.so|79661e6dffc90234ad446641264fd0fa1a3fe6ab
+lib/libmmosal.so|9464733295e192301b2577f52fab720e72c0d152
+lib/libmmparser_lite.so|b1b4161b7097f5feeff0f043e8b94cd94553e4ad
+lib/libOmxMux.so|2803ebee03e8372844a278f8ee637c6226e33139
+lib64/libmmosal.so|9ceff2581e86d32bc2795dffb96ebe4bdc88f2f7
+-vendor/lib/libgpustats.so|e1ffdfcdd7c03b9fb9de7b95e76541780ec34a1e
+vendor/lib/libI420colorconvert.so|309927237aa3e17ae4294a5012df293a03f93121
+vendor/lib/libmm-color-convertor.so|4191173950988206b70d14c4e25f911a1bd6abd9
+vendor/lib/libmmosal_proprietary.so|4b0788590e1ecfccd3b20b3181a4add528acb2b6
+vendor/lib/libOmxAacDec.so|8e10de2b6ce36f611268dcb2b3f0ee9f6e4862e6
+vendor/lib/libOmxAlacDec.so|dc149a80c341aeccfc908f2d90d3f3f0eb2194e8
+vendor/lib/libOmxAlacDecSw.so|e2e9c926434e1a34b82b92831d231b203b68c10a
+vendor/lib/libOmxAmrDec.so|e8991419794c7a1d75e41761f768cb83e0afc26c
+vendor/lib/libOmxAmrwbplusDec.so|aa55931f0a5b6265c83ab92172ae57881ddb0b4f
+vendor/lib/libOmxApeDec.so|0ab0a081606c73e6b5fa5ac59e25b7cfc81d7c82
+vendor/lib/libOmxApeDecSw.so|a780d0080b6f9e180070393838882e164fc1efe8
+vendor/lib/libOmxDsdDec.so|9a6a3621e2e07db7881712536cc4ef0433515199
+vendor/lib/libOmxEvrcDec.so|7ac2ca1c4f6aa5c31b1e54be9f82b6128bcc6c50
+vendor/lib/libOmxG711Dec.so|dde0ae7ee761e7faddba9c6e7fcf536ac523add5
+vendor/lib/libOmxQcelp13Dec.so|c19e3495cf9c300ffd802c5270cb88adf2ddba7d
+vendor/lib/libOmxVideoDSMode.so|f3f96d9ba16ebda2d3e9d5a726010d9356d3d0ac
+vendor/lib/libOmxWmaDec.so|c1d071accf3eacd7c69e6d07765e14494754ff60
+vendor/lib/libvqzip.so|9cb3212b118b6626918850abc907c41d1b819ac4
+-vendor/lib64/libgpustats.so|7f884a3e4ddc6f7016120ab9aed952f1261e210f
 
 # Perf - from LA.UM.7.5.r1-04800-8x96.0
 vendor/bin/energy-awareness|3f1aa4d518ff361aa3ed9e41ace3e16d36cf0bbe
