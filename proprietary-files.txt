@@ -656,11 +656,10 @@ vendor/bin/thermal-engine|e55d69e197f993a04ead228b42f28fd1d7b1294b
 vendor/lib64/libthermalioctl.so|e1597b961c1bee480f018dd7d2cc4e9fc2bb252b
 -vendor/lib/libthermalclient.so|7c3e567459a872a29611fc1b270fb7318b8a4d37
 
-# Time services - from LA.UM.7.5.r1-04800-8x96.0
--vendor/app/TimeService/TimeService.apk|693a68e35a2cbc40d23b291fcc836c8567f90b14
-vendor/bin/time_daemon|385c449770ee3f1d15bf7c5994e8c2fde9b91ba3
-vendor/lib/libtime_genoff.so|95a43a2a19f57d5bd8821f80f51061c7305faeb5
-vendor/lib64/libtime_genoff.so|d0fc4808b859d36b4b545a0219c8fb8d1ea3203a
+# Time services - from LA.UM.8.6.r1-01900-89xx.0
+-vendor/app/TimeService/TimeService.apk|4a37afd1395758d946580af184a738e3c657b1e2
+vendor/bin/time_daemon|fa1b87481313fc039d969c1ac7c06c77422ff38e
+vendor/lib64/libtime_genoff.so|06df52867790cdbbcc674a3a28d7ad7c8cc161ac
 
 # WiFi Display - from LA.UM.8.6.r1-01900-89xx.0
 bin/wfdservice|d9cccfd6ca14a1d83117533296d6cac2c139c310
