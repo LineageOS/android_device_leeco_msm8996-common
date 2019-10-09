@@ -439,10 +439,10 @@ lib64/libimsmedia_jni.so
 lib64/librcc.so
 lib64/vendor.qti.imsrtpservice@1.0.so
 -priv-app/ims/ims.apk|426be1b83d6f608107d6dcf587080551abeab3e2
-vendor/bin/ims_rtp_daemon
-vendor/bin/imsdatadaemon
-vendor/bin/imsqmidaemon
-vendor/bin/imsrcsd
+#vendor/bin/ims_rtp_daemon
+#vendor/bin/imsdatadaemon
+#vendor/bin/imsqmidaemon
+#vendor/bin/imsrcsd
 vendor/framework/qti-vzw-ims-internal.jar
 vendor/lib64/com.qualcomm.qti.imscmservice@1.0_vendor.so
 vendor/lib64/lib-dplmedia.so
