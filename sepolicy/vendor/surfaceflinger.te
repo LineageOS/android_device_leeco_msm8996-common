@@ -1,2 +1,4 @@
 allow surfaceflinger hal_perf_hwservice:hwservice_manager find;
 allow surfaceflinger hal_perf_default:binder { call };
+
+allow surfaceflinger sysfs_kgsl:lnk_file { r_file_perms };
