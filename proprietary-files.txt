@@ -451,9 +451,9 @@ lib64/libimscamera_jni.so
 lib64/libimsmedia_jni.so
 lib64/librcc.so
 lib64/vendor.qti.imsrtpservice@1.0.so
-vendor/bin/ims_rtp_daemon
-vendor/bin/imsdatadaemon
-vendor/bin/imsqmidaemon
+#vendor/bin/ims_rtp_daemon
+#vendor/bin/imsdatadaemon
+#vendor/bin/imsqmidaemon
 vendor/framework/qti-vzw-ims-internal.jar
 vendor/lib64/com.qualcomm.qti.imscmservice@1.0_vendor.so
 vendor/lib64/lib-dplmedia.so
@@ -471,7 +471,7 @@ vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
 
 #IMS - Taimen QPP6.190730.005
-vendor/bin/imsrcsd|afeb8ba71b688dec5ca8f0c47ded9bf8b675dbf8
+#vendor/bin/imsrcsd|afeb8ba71b688dec5ca8f0c47ded9bf8b675dbf8
 vendor/lib/lib-imsrcs.so|e5d66f60b8c4d3eae7fce3d57a004c774acd78ab
 vendor/lib64/lib-imsrcs.so|dc5ca0274b6e7eef47ac4979ef5774de22fe095e
 
