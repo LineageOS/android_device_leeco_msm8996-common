@@ -1,10 +1,17 @@
-allow init devinfo_block_device:blk_file { r_file_perms };
+allow init devinfo_block_device:blk_file r_file_perms;
 
-allow init servicemanager:binder { call };
+allow init bt_firmware_file:filesystem getattr;
+allow init diag_device:chr_file rw_file_perms;
+allow init firmware_file:filesystem getattr;
+allow init self:netlink_route_socket { bind create nlmsg_read read write };
+allow init self:rawip_socket { create getopt setopt };
+allow init netutils_wrapper_exec:file { execute r_file_perms };
 
-allow init sysfs_leds:lnk_file { r_file_perms };
+allow init servicemanager:binder call;
 
-allow init sysfs_scsi_devices_0000:dir { relabelfrom };
-allow init sysfs_scsi_devices_0000:file { relabelfrom };
-allow init sysfs_scsi_devices_other:dir { relabelfrom };
-allow init sysfs_scsi_devices_other:file { relabelfrom };
+allow init sysfs_leds:lnk_file r_file_perms;
+
+allow init sysfs_scsi_devices_0000:dir relabelfrom;
+allow init sysfs_scsi_devices_0000:file relabelfrom;
+allow init sysfs_scsi_devices_other:dir relabelfrom;
+allow init sysfs_scsi_devices_other:file relabelfrom;
