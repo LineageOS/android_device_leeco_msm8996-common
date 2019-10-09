@@ -13,3 +13,7 @@ sys.fake_bs_flag0                  u:object_r:system_radio_prop:s0
 # perf
 ro.min_freq_0                      u:object_r:freq_prop:s0
 ro.min_freq_4                      u:object_r:freq_prop:s0
+
+# WiFi
+wifi.active.interface               u:object_r:wifi_prop:s0
+persist.vendor.wigig.npt.enable     u:object_r:vendor_default_prop:s0
