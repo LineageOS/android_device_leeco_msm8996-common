@@ -1,1 +1,3 @@
 set_prop(dpmd, diag_prop)
+
+allow dpmd same_process_hal_file:file rx_file_perms;

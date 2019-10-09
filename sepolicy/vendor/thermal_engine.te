@@ -1,16 +1,22 @@
-allow thermal-engine sysfs_uio:dir { r_dir_perms };
-allow thermal-engine sysfs_uio:lnk_file { r_file_perms };
+allow thermal-engine sysfs_uio:dir r_dir_perms;
+allow thermal-engine sysfs_uio:lnk_file r_file_perms;
 
-allow thermal-engine sysfs_uio_file:dir { r_dir_perms };
-allow thermal-engine sysfs_uio_file:file { r_file_perms };
+allow thermal-engine sysfs_batteryinfo:file rw_file_perms;
+allow thermal-engine sysfs_batteryinfo:dir search;
+
+r_dir_file(thermal-engine, sysfs_uio_file)
+r_dir_file(thermal-engine, sysfs)
 
 typeattribute thermal-engine data_between_core_and_vendor_violators;
 allow thermal-engine system_data_file:dir { w_dir_perms };
 
-allow thermal-engine sysfs_leds:file { rw_file_perms };
+allow thermal-engine sysfs_leds:file rw_file_perms;
 
 type_transition thermal-engine socket_device:sock_file thermal_socket "thermal-send-client";
 type_transition thermal-engine socket_device:sock_file thermal_socket "thermal-recv-client";
 type_transition thermal-engine socket_device:sock_file thermal_socket "thermal-recv-passive-client";
 
-allow thermal-engine sysfs_batteryinfo:dir search;
+# Rule for thermal-engine to access init process
+unix_socket_connect(thermal-engine, property, init);
+
+set_prop(thermal-engine, thermal_normal_prop)
