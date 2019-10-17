@@ -442,7 +442,7 @@ lib64/vendor.qti.imsrtpservice@1.0.so
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
-vendor/bin/imsrcsd
+vendor/bin/imsrcsd|6960bad6fe189e7cc525862b93fc761962d4f386
 vendor/framework/qti-vzw-ims-internal.jar
 vendor/lib64/com.qualcomm.qti.imscmservice@1.0_vendor.so
 vendor/lib64/lib-dplmedia.so
@@ -455,7 +455,7 @@ vendor/lib64/lib-rtpcommon.so
 vendor/lib64/lib-rtpcore.so
 vendor/lib64/lib-rtpdaemoninterface.so
 vendor/lib64/lib-rtpsl.so
-vendor/lib64/lib-uceservice.so
+vendor/lib64/lib-uceservice.so|a64f436c271d6a02be5ec41a6088e9296a7aeee6
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
 
@@ -721,3 +721,6 @@ vendor/lib/libwfdhaldsmanager.so|6036d200d0a9aed7df3f49513ffd027822b6195c
 vendor/lib/libwfdhdcpcp.so|e459d08d32b9d93f498413172625861d3cc08c5c
 vendor/lib/libwfdmmservice.so|f4fcd4b9af63d5c4f352240fd040dcabb74ec22f
 vendor/lib/libwfdmodulehdcpsession.so|b252efdbd4669ed6e8db7d5f77999c9bb5b0b9c4
+
+# Haxx
+vendor/lib64/libbase-hax.so|0bdae22ed6c050b13358c91dd332c9ef0c836ae7
