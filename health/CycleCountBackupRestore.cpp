@@ -22,7 +22,7 @@ namespace leeco_8996 {
 namespace health {
 
 static constexpr char kCycCntFile[] = "sys/class/power_supply/bms/device/cycle_counts_bins";
-static constexpr char kSysPersistFile[] = "/persist/battery/qcom_cycle_counts_bins";
+static constexpr char kSysPersistFile[] = "/mnt/vendor/persist/battery/qcom_cycle_counts_bins";
 static constexpr int kBuffSize = 256;
 
 CycleCountBackupRestore::CycleCountBackupRestore() { }
