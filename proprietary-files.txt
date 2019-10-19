@@ -496,9 +496,6 @@ vendor/lib/libvpplibrary.so|9dd0fc6eaf467974e99fb1de519303d051694d06
 vendor/lib/libvpphvx.so|f9e3229d44ad22e808ee7ed4d8d1c529195ed6a9
 vendor/lib/libvqzip.so|0b906db131e99cd5460b8a72d05e86721243de95
 
-# Offline charger - from x2
-vendor/bin/charger|0a3861fd5b997337a40926e7ddb2829461cfded8
-
 # Perf - from LA.UM.7.5.r1-04800-8x96.0
 vendor/bin/energy-awareness|3f1aa4d518ff361aa3ed9e41ace3e16d36cf0bbe
 vendor/bin/msm_irqbalance|e70694e0412052cd591389b8c1bf4573e5777257
