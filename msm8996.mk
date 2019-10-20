@@ -364,6 +364,7 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
+    libbase_shim \
     libcamshim
 
 # Telephony
