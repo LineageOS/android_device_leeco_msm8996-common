@@ -50,12 +50,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.bluetooth.emb_wp_mode=true \
     vendor.qcom.bluetooth.soc=rome
 
-# Property for vendor specific library
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.gt_library=libqti-gt.so \
-    ro.vendor.at_library=libqti-at.so \
-    sys.games.gt.prof=1
-
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.HAL3.enabled=1 \
@@ -134,8 +128,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
-   ro.vendor.extension_library=libqti-perfd-client.so \
-   ro.vendor.qti.sys.fw.bg_apps_limit=60
+   ro.vendor.extension_library=libqti-perfd-client.so
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
