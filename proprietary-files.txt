@@ -640,6 +640,9 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0_vendor.so
 vendor/lib/libmdmdetect.so
 vendor/radio/qcril_database/qcril.db
 
+# RIL - from LA.UM.8.6.r1-01900-89xx.0
+vendor/bin/adpl|b364d9c77e80619a8315e9608a01f76b50fb2e46
+
 # Sensors - from LA.UM.7.5.r1-04800-8x96.0
 vendor/bin/sensors.qti|18011d46135a2635bcfdc34e8b4d3fdaff7a76fb
 vendor/lib64/hw/activity_recognition.msm8996.so|c29a0dfff27824dac39a21f56a92bf319acb051b
