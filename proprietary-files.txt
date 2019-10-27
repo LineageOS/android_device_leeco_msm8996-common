@@ -535,7 +535,6 @@ vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|656009a5cc2b3bc52a7706579a
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so|78f8db9acff8b3461d6d37c747b1bdb59e547bb5
 
 # QMI - Gemini 8.0.0/OPR1.170623.032/8.5.24
-etc/permissions/qti_libpermissions.xml:vendor/etc/permissions/qti_libpermissions.xml
 etc/permissions/qti_permissions.xml:vendor/etc/permissions/qti_permissions.xml
 vendor/bin/irsc_util
 vendor/lib64/libdiag.so

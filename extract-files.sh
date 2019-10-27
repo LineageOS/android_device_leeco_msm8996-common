@@ -67,11 +67,6 @@ fi
 function blob_fixup() {
     case "${1}" in
 
-    # Correct android.hidl.manager@1.0-java jar name
-    vendor/etc/permissions/qti_libpermissions.xml)
-        sed -i -e 's|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-java|g' "${2}"
-        ;;
-
     # kang vulkan from LA.UM.8.6.r1-01900-89xx.0
     vendor/lib/hw/vulkan.msm8996.so | vendor/lib64/hw/vulkan.msm8996.so)
         sed -i -e 's|vulkan.msm8953.so|vulkan.msm8996.so|g' "${2}"
