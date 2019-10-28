@@ -553,14 +553,14 @@ vendor/lib/vendor.display.color@1.2.so|004bb5003fd2ea5bed857207e7d18a2f15aaef9d
 vendor/lib/vendor.display.postproc@1.0.so|1b639b19726ab56630202adeacb8f1206f39852c
 vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so|9b5cfa3a94415ad76ce2e1e770ef6c59b963e35b
 
-# Power-off alarm - from daisy 9/PKQ1.180917.001/V10.0.7.0.PDLMIXM
-framework/vendor.qti.hardware.alarm-V1.0-java.jar|ca5bf830ebb4fbf8fc1994200ec6e03dc83c274b
--vendor/app/PowerOffAlarm/PowerOffAlarm.apk|3fbc64ee84b17eaaf5f9002b58f4615216de0389
-vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|b7f648c81773214202aaa3620863d048c90713c7
-vendor/bin/power_off_alarm|459ccd83df3fcc076bb82bff60f47d14ad69ad6e
+# Power-off alarm - from LA.UM.8.6.r1-01900-89xx.0
+product/framework/vendor.qti.hardware.alarm-V1.0-java.jar|69dedc62181ae26bb2fac4eaacb1f2c38eb21c31
+-product/app/PowerOffAlarm/PowerOffAlarm.apk|2399da8803ff7229476611f371fc435f48138881
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|28c768324a36e12a8c4a1a968caa25ad94a160fe
+vendor/bin/power_off_alarm|a98e375328492c0405d1712722bca0effa8cf2bb
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|c9877b6cae0353d5fdea5bc23dba77101b3d6980
-vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|df138b77fb116a1a786a70c9c76b69d61b5c04d2
-vendor/lib64/vendor.qti.hardware.alarm@1.0.so|6f28bd9425af72d48266ff88b728c61f827571a8
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|656009a5cc2b3bc52a7706579a192a1f3328f37c
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so|00b41ba2e3737041c536d7a3fe87739edbd09516
 
 # QMI - Gemini 8.0.0/OPR1.170623.032/8.5.24
 etc/permissions/qti_libpermissions.xml:vendor/etc/permissions/qti_libpermissions.xml
@@ -666,11 +666,11 @@ vendor/bin/thermal-engine|e55d69e197f993a04ead228b42f28fd1d7b1294b
 vendor/lib64/libthermalioctl.so|e1597b961c1bee480f018dd7d2cc4e9fc2bb252b
 -vendor/lib/libthermalclient.so|7c3e567459a872a29611fc1b270fb7318b8a4d37
 
-# Time services - from LA.UM.7.5.r1-04800-8x96.0
--vendor/app/TimeService/TimeService.apk|693a68e35a2cbc40d23b291fcc836c8567f90b14
-vendor/bin/time_daemon|385c449770ee3f1d15bf7c5994e8c2fde9b91ba3
-vendor/lib/libtime_genoff.so|95a43a2a19f57d5bd8821f80f51061c7305faeb5
-vendor/lib64/libtime_genoff.so|d0fc4808b859d36b4b545a0219c8fb8d1ea3203a
+# Time services - from LA.UM.8.6.r1-01900-89xx.0
+-vendor/app/TimeService/TimeService.apk|4a37afd1395758d946580af184a738e3c657b1e2
+vendor/bin/time_daemon|fa1b87481313fc039d969c1ac7c06c77422ff38e
+vendor/lib/libtime_genoff.so|a574d287e7e73649685b702f4fe497eb7c6ba727
+vendor/lib64/libtime_genoff.so|06df52867790cdbbcc674a3a28d7ad7c8cc161ac
 
 # Wi-Fi - Gemini 8.0.0/OPR1.170623.032/8.5.24
 vendor/bin/cnss-daemon
