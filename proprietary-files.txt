@@ -521,11 +521,11 @@ vendor/etc/perf/perfboostsconfig.xml|03995c6cb20440b8af226b0930d542b3a4257947
 vendor/etc/perf/targetconfig.xml|b2ea39d05d52364774dbd390732cb5f29ae14941
 vendor/etc/perf/targetresourceconfigs.xml|478715f7bcb07e08e62be023ac0b6302ef65bdb3
 
-# Peripheral manager - from LA.UM.7.5.r1-04800-8x96.0
-vendor/bin/pm-proxy|83c3adde4167fe4d5874dc49312c3e7ffdea31a5
-vendor/bin/pm-service|51d704ebc824f2d10f18e257b6ef38ea25aecc82
-vendor/lib64/libperipheral_client.so|6b3bd89a1adb37670ed61e0102b2f566cd947ece
-vendor/lib/libperipheral_client.so|21768d817ef624ab9437ab7524e2f81bad2eb859
+# Peripheral manager - from LA.UM.8.6.r1-01900-89xx.0
+vendor/bin/pm-proxy|bae613f75568a6f0b47c86b878c25e4dd76e9054
+vendor/bin/pm-service|a5f14c84fed091bb66d160f2e45a6e373d3d19ab
+vendor/lib64/libperipheral_client.so|f9899d69f25aafb7bc95dd44d8848c86eab5a4bd
+vendor/lib/libperipheral_client.so|033dd6f669530e7fe28a07f2b4fe9dee609dbae2
 
 # Postprocessing - from LA.UM.8.6.r1-01900-89xx.0
 vendor/bin/hw/vendor.display.color@1.0-service|633a0a4bed08202ef3799275f06920eb4382db31
