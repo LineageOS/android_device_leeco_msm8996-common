@@ -284,7 +284,6 @@ vendor/lib64/vendor.qti.data.factory@1.1.so|b638ad9730a1a57d3beff92b55b9f3d0f90d
 vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so|5492111a0294b8da87cb3a0bf2ee40aace2cdd95
 vendor/lib64/vendor.qti.hardware.data.latency@1.0.so|affd987291376e9743c62405132485b2d24f8f3d
 vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so|300b3a95de6c38e1eb19886fd15ed460166e5ce6
-vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so|776501883a6bf1b3e8fd33c0da5ec1eb742ae10f
 vendor/lib64/vendor.qti.latency@2.0.so|17cd91a0ba9408f76821da45154fe9aabf6ab80a
 
 # DPM - from LA.UM.7.5.r1-04800-8x96.0
@@ -468,6 +467,9 @@ vendor/lib64/lib-rtpsl.so
 vendor/lib64/lib-uceservice.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
+
+# IMS - from LA.UM.7.5.r1-04800-8x96.0
+vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so|776501883a6bf1b3e8fd33c0da5ec1eb742ae10f
 
 # Keystore - from LA.UM.7.5.r1-04800-8x96.0
 vendor/lib64/hw/keystore.msm8996.so|e4139ac911fd0aafa73bd2901ab273c04c99ccc9
