@@ -495,21 +495,24 @@ vendor/lib/libOmxWmaDec.so|c1d071accf3eacd7c69e6d07765e14494754ff60
 vendor/lib/libvqzip.so|9cb3212b118b6626918850abc907c41d1b819ac4
 -vendor/lib64/libgpustats.so|7f884a3e4ddc6f7016120ab9aed952f1261e210f
 
-# Perf - from LA.UM.7.5.r1-04800-8x96.0
-vendor/bin/energy-awareness|3f1aa4d518ff361aa3ed9e41ace3e16d36cf0bbe
-vendor/bin/msm_irqbalance|e70694e0412052cd591389b8c1bf4573e5777257
-vendor/bin/hw/vendor.qti.hardware.perf@1.0-service|4c5e9acdf807f883843dd2dc7f075ca93e49e1aa
-vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc|b50182aadab2e31409df61c523d0fb914a394e43
-vendor/lib64/libperfgluelayer.so|4dec1bd5b511e5c6e1d87bb92a0f02944897bb73
-vendor/lib64/libqti-perfd.so|b603dfa41e8ff6c82181a38ad62a034373e987e1
-vendor/lib64/libqti-perfd-client.so|1e84aa49a8cff0f69f0261c69dd8843534efd79e
-vendor/lib64/libqti-util.so|2c0a832c63c3b2c16c7c65589ba447be64761ee9
-vendor/lib64/vendor.qti.hardware.perf@1.0.so|e7b864c6abef798a4b8413e7582c63f73be3ef58
-vendor/lib/libperfgluelayer.so|a8d4caf986552a685ee2976e6c5bfff869db7b49
-vendor/lib/libqti-perfd.so|b5d401463f9723232488317a03477b021e3d9d3d
-vendor/lib/libqti-perfd-client.so|a4a6da47ee26fcd5116c514f7fed15b91306aea3
-vendor/lib/libqti-util.so|d65f3ef240cebea73bd1ba8b1132a7e639aa05bb
-vendor/lib/vendor.qti.hardware.perf@1.0.so|656f7b00934d05ce82ba7ae25024740fdba9fa00
+# Perf - from LA.UM.8.6.r1-01900-89xx.0
+vendor/bin/energy-awareness|d9124bd669e2e3a1e2d40e96518ba18f15f21af6
+vendor/bin/hw/vendor.qti.hardware.perf@2.0-service|69186f92b781f1e296c99bb274c419591e1347cf
+vendor/etc/init/vendor.qti.hardware.perf@2.0-service.rc|cc8658db5e19f8e5e575fb986e7d38147e675f8d
+vendor/lib64/libperfconfig.so|bd0ec5a97a4bfada47f97ee81287483847fd41e1
+vendor/lib64/libperfgluelayer.so|56f9a84b8f6f11aec1ff4917f14dd80a6fe9ac92
+vendor/lib64/libqti-perfd.so|e9c153b810feb151491dd4ba702918fdd373d282
+vendor/lib64/libqti-perfd-client.so|94ab278009a42e75c1d62f6dfc41d85b0cc1f412
+vendor/lib64/libqti-util.so|e37c5fd07710a25edc9883507a14f83306d83d28
+vendor/lib64/vendor.qti.hardware.perf@1.0.so|54f1b2223cbd44e5f50440c29af0c782943be3c3
+vendor/lib64/vendor.qti.hardware.perf@2.0.so|df0788c7777b1906cd4a83bb6a722cc425377f17
+vendor/lib/libperfconfig.so|e4e05181077427bbe80570d46c8cb6f7fa9d6779
+vendor/lib/libperfgluelayer.so|65370303ba1097c5d29f93910f9e2e1514fcd4b2
+vendor/lib/libqti-perfd.so|78ab50abc7ae3704e7645dd3363c5fb057832c6b
+vendor/lib/libqti-perfd-client.so|a6ddd909d581fbb5d8caa2f1f489ec5c2c5789c1
+vendor/lib/libqti-util.so|293284848723e0065f1097d363cd76772a795b8c
+vendor/lib/vendor.qti.hardware.perf@1.0.so|13eb868906a7f9fa328d272488201141c64a79bd
+vendor/lib/vendor.qti.hardware.perf@2.0.so|592ca48b30ac1b8c42b21710bd6a41ebaa99e15f
 
 # Perf (configs) - from LA.UM.7.5.r1-04800-8x96.0
 vendor/etc/perf/commonresourceconfigs.xml|7bf6b442875ec6244db05ffcc2ebb85a1c370863
@@ -661,11 +664,11 @@ vendor/lib/sensors.oem.so|08656a65ab1bf120ac9bb16e93faf93cc2cdda86
 vendor/lib64/sensors.hal.tof.so|eb19aa40617e50bd1efcc88cee9f5b0af34e7f11
 vendor/lib64/sensors.oem.so|08c12372d3331ee43cc0a3f48b88f21e45324f29
 
-# Thermal - from LA.UM.7.5.r1-04800-8x96.0
-vendor/bin/thermal-engine|e55d69e197f993a04ead228b42f28fd1d7b1294b
--vendor/lib64/libthermalclient.so|0ce3a04917e936777182e8c6eaaf5b2a308d92cf
-vendor/lib64/libthermalioctl.so|e1597b961c1bee480f018dd7d2cc4e9fc2bb252b
--vendor/lib/libthermalclient.so|7c3e567459a872a29611fc1b270fb7318b8a4d37
+# Thermal - from LA.UM.8.6.r1-01900-89xx.0
+vendor/bin/thermal-engine|2d14a781f9738708a1b8cee4ddf833218ed97e23
+-vendor/lib64/libthermalclient.so|61a8dfc6132836e7ed27b044ddc8a078b5c7299e
+vendor/lib64/libthermalioctl.so|3f0b6e48f673ce9f40140ba23ed227f9d1e2420b
+-vendor/lib/libthermalclient.so|28fde51ddd79ebd811efe27fc93cb054e60339e4
 
 # Time services - from LA.UM.8.6.r1-01900-89xx.0
 -vendor/app/TimeService/TimeService.apk|4a37afd1395758d946580af184a738e3c657b1e2
