@@ -782,6 +782,10 @@ service vendor.charger /vendor/bin/charger
     seclabel u:r:vendor_charger:s0
     writepid /dev/cpuset/system-background/tasks
 
+on property:vendor.sys.listeners.registered=*
+    setprop sys.keymaster.loaded ${vendor.sys.listeners.registered}
+    setprop vendor.sys.keymaster.loaded ${vendor.sys.listeners.registered}
+
 on property:ro.vendor.ril.mbn_copy_completed=1
     write /data/vendor/radio/copy_complete 1
 
