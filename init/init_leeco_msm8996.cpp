@@ -160,6 +160,18 @@ void init_target_properties()
 }
 
 void vendor_load_properties() {
+    struct stat buffer;
+    unsigned int iter = 0;
+
+    while(stat (DEVINFO_FILE, &buffer) != 0) {
+        if (iter >= 10) {
+            LOG(ERROR) << "File " << DEVINFO_FILE << " not available";
+            break;
+        }
+        usleep(200000); // 200ms
+        iter++;
+    }
+
     LOG(INFO) << "Loading vendor specific properties";
     init_target_properties();
 }
