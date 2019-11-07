@@ -160,7 +160,7 @@ void init_target_properties()
     }
 }
 
-void vendor_load_properties() {
+void vendor_load_persist_properties() {
     LOG(INFO) << "Loading vendor specific properties";
     init_target_properties();
 }
