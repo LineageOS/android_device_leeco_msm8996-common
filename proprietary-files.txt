@@ -324,21 +324,6 @@ vendor/lib64/libwvhidl.so
 vendor/lib64/hw/gatekeeper.msm8996.so|d324fd57026ac20409c474cfc4e15595aa9d4738
 
 # GPS
-product/lib64/vendor.qti.gnss@1.0.so
-product/lib64/vendor.qti.gnss@1.1.so
-product/lib64/vendor.qti.gnss@1.2.so
-product/lib64/vendor.qti.gnss@2.0.so
-product/lib64/vendor.qti.gnss@2.1.so
-product/lib64/vendor.qti.gnss@3.0.so
-system/etc/permissions/com.qti.location.sdk.xml
-system/etc/permissions/com.qualcomm.location.xml
-system/etc/permissions/izat.xt.srv.xml
-system/etc/permissions/privapp-permissions-com.qualcomm.location.xml
-system/framework/com.qti.location.sdk.jar
-system/framework/izat.xt.srv.jar
-system/lib64/liblocationservice_jni.so
-system/lib64/libxt_native.so
--system/priv-app/com.qualcomm.location/com.qualcomm.location.apk
 vendor/bin/loc_launcher
 vendor/bin/lowi-server
 vendor/bin/slim_daemon
