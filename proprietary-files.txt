@@ -666,16 +666,16 @@ vendor/etc/init/dataqti.rc|6abfd1a850d782adbbb6f42c9d8ca870036b2ad1
 vendor/etc/init/netmgrd.rc|fd3457c69a9fab11b87d0d1b494188fe089684cd
 vendor/etc/init/port-bridge.rc|e52d61a0de5e8a3b21bfbfca929e862422645377
 
-# Sensors - from LA.UM.7.5.r1-04800-8x96.0
-vendor/bin/sensors.qti|18011d46135a2635bcfdc34e8b4d3fdaff7a76fb
-vendor/lib64/hw/activity_recognition.msm8996.so|c29a0dfff27824dac39a21f56a92bf319acb051b
-vendor/lib64/libsensor1.so|1934268e2f28ee9d705d5ff060544d06e42afcc3
-vendor/lib64/libsensor_reg.so|942fbf9ef1cfc87596f850e7ff1a86e7a9ddc846
-vendor/lib64/sensors.ssc.so|e49e3c585da09b323948e1c1201118d426f3d558
-vendor/lib/hw/activity_recognition.msm8996.so|58878fbcf8e98a8f053c3d1fbaa1beb4d7776d12
-vendor/lib/libsensor1.so|d73573eca4e1eaf52f09f9cc7292cdc6d9d69c70
-vendor/lib/libsensor_reg.so|2d95cea1df93dcaae0f067157f6932c1381dec53
-vendor/lib/sensors.ssc.so|96a37b515969d72875debd9ee0a505406d75bd3c
+# Sensors - from LA.UM.8.6.r1-01900-89xx.0
+vendor/bin/sensors.qti|f6432493270d5576395d8608964cb348e2731bd8
+vendor/lib64/hw/activity_recognition.msm8953.so:vendor/lib64/hw/activity_recognition.msm8996.so|73681bb8116bd3cd3d1ef0d8bf5fed8d209b2db4
+vendor/lib64/libsensor1.so|f483115f42c555f1ea9a403a92c3ca761bd13a1a
+vendor/lib64/libsensor_reg.so|68b2d4856ea0f173c3be3efe8fc1fb1a5c59a512
+vendor/lib64/sensors.ssc.so|2a96aedb8719e1acd9405bb320da28179b2668e6
+vendor/lib/hw/activity_recognition.msm8953.so:vendor/lib/hw/activity_recognition.msm8996.so|086404d0cdb5c9690c83be7a5827b91b114677e6
+vendor/lib/libsensor1.so|680f4444b6fcbcfb2ecb8556db84b48ad853bc24
+vendor/lib/libsensor_reg.so|4e0bcb9918fa034852327f8986acb44d8a92f3f7
+vendor/lib/sensors.ssc.so|94a98847a1a5f7793c27a83e4efae8230394bf09
 
 # Sensors (LeEco) - from zl1
 vendor/lib/sensors.oem.so|08656a65ab1bf120ac9bb16e93faf93cc2cdda86

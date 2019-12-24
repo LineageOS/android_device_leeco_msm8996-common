@@ -75,6 +75,11 @@ function blob_fixup() {
 		sed -i -e 's|keystore.msm8953.so|keystore.msm8996.so|g' "${2}"
 		;;
 
+	# kang Sensors from LA.UM.8.6.r1-01900-89xx.0
+	vendor/lib/hw/activity_recognition.msm8996.so | vendor/lib64/hw/activity_recognition.msm8996.so)
+		sed -i -e 's|activity_recognition.msm8953.so|activity_recognition.msm8996.so|g' "${2}"
+		;;
+
 	# kang vulkan from LA.UM.8.6.r1-01900-89xx.0
 	vendor/lib/hw/vulkan.msm8996.so | vendor/lib64/hw/vulkan.msm8996.so)
 		sed -i -e 's|vulkan.msm8953.so|vulkan.msm8996.so|g' "${2}"
