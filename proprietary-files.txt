@@ -314,21 +314,21 @@ vendor/etc/init/dpmQmiMgr.rc|67569302d3a8828a9118c835e5b69c51b0c8ac68
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|a763bb1bbeecb84723bff6f547a3b23fab68dee3
 vendor/lib64/libdpmqmihal.so|4c24c2cff6c95e8bbb1aebc654db75479965abda
 
-# DRM and SEE - from LA.UM.7.5.r1-04800-8x96.0
-vendor/bin/qseecomd|191536bdf3d72238ea7b3ca54b4289b7a09b4bcd
-vendor/lib64/libQSEEComAPI.so|c2562b6f2b6e9e2a30c72f0638ae0c16365c0022
-vendor/lib64/libdrmfs.so|87526b8b660fc8c27f0c07f1ac2d0d36544ae624
-vendor/lib64/libdrmtime.so|110b8a263128288b056183ba064b0ab2f6343fab
-vendor/lib64/librpmb.so|9f88e88cd8155b69a085548a60a15c5b5be70f48
-vendor/lib64/libssd.so|a3b4f5c81b96966f8d2a1a2f8518522f223e73fb
+# DRM and SEE - from LA.UM.8.6.r1-01900-89xx.0
+vendor/bin/qseecomd|9fd6fd27fb7a20372ddae358e4992beb1e299b13
+vendor/lib64/libQSEEComAPI.so|337f3a4095e28450f0902a32c9ad160cd34ec3e2
+vendor/lib64/libdrmfs.so|1a24a26ba9813bc543782eb0965555e3332607f8
+vendor/lib64/libdrmtime.so|e22560c6e877a043d10b8b330c11557137b73fff
+vendor/lib64/librpmb.so|3882af3405b08355cf2d790fd7601fd1e7758ece
+vendor/lib64/libssd.so|b5debfb6b71fb8f17f4b53200af49c345e1ab4a7
 
 # DRM (Widevine) - from daisy 9/PKQ1.180917.001/V10.0.7.0.PDLMIXM
 vendor/bin/hw/android.hardware.drm@1.1-service.widevine|9743c4ecd0fb8773795bcbfbb406f25616c04129
 vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc|458dd241f5f8536eccb57f012b3eba0061736e8e
 vendor/lib64/libwvhidl.so|2ddd2b76f1f16fd1a885fd6ee41c970928f25c3e
 
-# Gatekeeper - from LA.UM.7.5.r1-04800-8x96.0
-vendor/lib64/hw/gatekeeper.msm8996.so|d324fd57026ac20409c474cfc4e15595aa9d4738
+# Gatekeeper - from LA.UM.8.6.r1-01900-89xx.0
+vendor/lib64/hw/gatekeeper.msm8953.so:vendor/lib64/hw/gatekeeper.msm8996.so|61dd08348422df1a7a88aa6011e300ccd4af7b80
 
 # GPS - from daisy 9/PKQ1.180917.001/V10.0.7.0.PDLMIXM
 lib64/vendor.qti.gnss@1.0.so|4dfa66f66b406c1aff3d32bb44382898beaaa39a
@@ -481,8 +481,8 @@ vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
 # IMS - from LA.UM.7.5.r1-04800-8x96.0
 vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so|776501883a6bf1b3e8fd33c0da5ec1eb742ae10f
 
-# Keystore - from LA.UM.7.5.r1-04800-8x96.0
-vendor/lib64/hw/keystore.msm8996.so|e4139ac911fd0aafa73bd2901ab273c04c99ccc9
+# Keystore - from LA.UM.8.6.r1-01900-89xx.0
+vendor/lib64/hw/keystore.msm8953.so:vendor/lib64/hw/keystore.msm8996.so|7402307396bd9b999c08814b06e4c29dcaae5047
 
 # Media - from LA.UM.8.6.r1-01900-89xx.0
 -vendor/lib/libgpustats.so|e1ffdfcdd7c03b9fb9de7b95e76541780ec34a1e

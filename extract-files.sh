@@ -65,6 +65,16 @@ function blob_fixup() {
 		sed -i -e 's|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-java|g' "${2}"
 		;;
 
+	# kang Gatekeeper from LA.UM.8.6.r1-01900-89xx.0
+	vendor/lib64/hw/gatekeeper.msm8996.so)
+		sed -i -e 's|gatekeeper.msm8953.so|gatekeeper.msm8996.so|g' "${2}"
+		;;
+
+	# kang Keystore from LA.UM.8.6.r1-01900-89xx.0
+	vendor/lib64/hw/keystore.msm8996.so)
+		sed -i -e 's|keystore.msm8953.so|keystore.msm8996.so|g' "${2}"
+		;;
+
 	# kang vulkan from LA.UM.8.6.r1-01900-89xx.0
 	vendor/lib/hw/vulkan.msm8996.so | vendor/lib64/hw/vulkan.msm8996.so)
 		sed -i -e 's|vulkan.msm8953.so|vulkan.msm8996.so|g' "${2}"
