@@ -36,17 +36,17 @@ vendor/lib/rfsa/adsp/libvpp_frc.so|d0e36fe8d0bafa4848823fd0186212e58f88084c
 vendor/lib/rfsa/adsp/libvpp_svc_skel.so|c2852313b59cc4b2a002acf6081feaa1f6435154
 vendor/lib/rfsa/adsp/us-syncproximity.so|136ec0bae527f7fc81a18f8bf42526219b1bd480
 
-# Audio - from LA.UM.7.5.r1-04800-8x96.0
-vendor/lib/libacdb-fts.so|4f86d94582dd5134dbcf7b23e3963a5f3e0a680a
-vendor/lib/libacdbloader.so|ef0eff0ed0ee84183a19872a7780230b5f0a7d9b
-vendor/lib/libacdbrtac.so|4ca5d96caf61eb2b4967d1dd3dfde78a19bfbf21
-vendor/lib/libadiertac.so|ec9424b67a596c05286419b9c6e6d7d45d04049b
-vendor/lib/libadm.so|bd574dd1f10937386df3626e2ed9d4de7d5d8ba3
-vendor/lib/libaudcal.so|f8c246cf6247583386ce51f37ee9ed071a93f311
-vendor/lib/libqtigef.so|55712edf0c48a7d0d75e26f46bf61b7e5c6d80d5
-vendor/lib/soundfx/libqcbassboost.so|7c5077685b55a57d9e73e919226186111a54ee25
-vendor/lib/soundfx/libqcreverb.so|1214ae277219a471e2f2d9cc5420ee56ff15a139
-vendor/lib/soundfx/libqcvirt.so|f484f70f34edfe8b304e85a842521841f02738ee
+# Audio - from LA.UM.8.6.r1-01900-89xx.0
+vendor/lib/libacdb-fts.so|37f2ed46f4e386496e8c29de5db6b2e96ad4ae1b
+vendor/lib/libacdbloader.so|bcd1b6fc6a4353ecedff1805909281f5ce932d74
+vendor/lib/libacdbrtac.so|79be427f50f58c407ec76082d944206a16416381
+vendor/lib/libadiertac.so|5de8ba4103860d31a3376e60ef2c1ccbe0e3376c
+vendor/lib/libadm.so|d366f5a1b9ce38b26b8c32f80ce8134fe329df87
+vendor/lib/libaudcal.so|2ccdb42e8508bd3334c33f270bb62cba094cdf7e
+vendor/lib/libqtigef.so|fbedb509c61ff1a7d6e9c4a099af346ca781430a
+vendor/lib/soundfx/libqcbassboost.so|44ee8ad2499b7b3166cb01d305af5ce6736698fe
+vendor/lib/soundfx/libqcreverb.so|4f7e396ce91494dec429b63f95f70c6872ab8ce5
+vendor/lib/soundfx/libqcvirt.so|ece284ce6981d3fcc37a30fc16295400c22b5c0d
 
 # Bluetooth - from LA.UM.8.6.2.r1-03700-89xx.0
 -lib/libbtconfigstore.so|c88af75a5c8e62c75d505a89c574117feefc11c6
