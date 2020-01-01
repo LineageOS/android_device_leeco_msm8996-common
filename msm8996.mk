@@ -313,6 +313,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librecovery_updater_leeco
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/root/init.recovery.qcom.rc:root/init.recovery.qcom.rc
+
 # Releasetools
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/bin/toybox:install/bin/toybox \
