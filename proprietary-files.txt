@@ -689,7 +689,7 @@ vendor/lib64/libthermalioctl.so|3f0b6e48f673ce9f40140ba23ed227f9d1e2420b
 -vendor/lib/libthermalclient.so|28fde51ddd79ebd811efe27fc93cb054e60339e4
 
 # Time services - from LA.UM.8.6.r1-01900-89xx.0
--vendor/app/TimeService/TimeService.apk|4a37afd1395758d946580af184a738e3c657b1e2
+-vendor/app/TimeService/TimeService.apk;:timeservice_app_cert-legacy-um|4a37afd1395758d946580af184a738e3c657b1e2
 vendor/bin/time_daemon|fa1b87481313fc039d969c1ac7c06c77422ff38e
 vendor/lib/libtime_genoff.so|a574d287e7e73649685b702f4fe497eb7c6ba727
 vendor/lib64/libtime_genoff.so|06df52867790cdbbcc674a3a28d7ad7c8cc161ac
