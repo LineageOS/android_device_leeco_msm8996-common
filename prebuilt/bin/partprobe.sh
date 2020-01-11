@@ -1,5 +1,5 @@
 #!/sbin/sh
-# Copyright (c) 2018, The LineageOS Project
+# Copyright (c) 2018-2020, The LineageOS Project
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -29,7 +29,16 @@
 # Ask the kernel to re-read the partition table on the specified block device.
 
 BLOCKDEV=$1
-/tmp/toybox partprobe $BLOCKDEV
+
+# Check if this is Lineage Recovery
+LOSRECOVERY=/sbin/toybox_static
+
+if test -f "$LOSRECOVERY"; then
+    toybox_static partprobe $BLOCKDEV
+else
+    /tmp/toybox partprobe $BLOCKDEV
+fi
+
 sleep 2
 
 exit 0
