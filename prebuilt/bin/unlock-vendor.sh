@@ -1,5 +1,5 @@
 #!/sbin/sh
-# Copyright (c) 2018, The LineageOS Project
+# Copyright (c) 2018-2020, The LineageOS Project
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -42,17 +42,28 @@ safeRunCommand() {
    fi
 }
 
-# Check for /vendor existence in partition table.
-VENDOR=`/tmp/sgdisk --pretend --print $BLOCKDEV | /tmp/toybox grep -c vendor`
+# Check if this is Lineage Recovery
+LOSRECOVERY=/sbin/toybox_static
 
+if test -f "$LOSRECOVERY"; then
+    echo "setting vendor partition commands for Lineage Recovery"
+    VENDOR=`sgdisk --pretend --print $BLOCKDEV | toybox_static grep -c vendor`
+    command1="sgdisk --typecode=34:8300 $BLOCKDEV"
+    command2="sgdisk --change-name=34:vendor $BLOCKDEV"
+else
+    echo "setting vendor partition commands for TWRP"
+    VENDOR=`/tmp/sgdisk --pretend --print $BLOCKDEV | /tmp/toybox grep -c vendor`
+    command1="/tmp/sgdisk --typecode=34:8300 $BLOCKDEV"
+    command2="/tmp/sgdisk --change-name=34:vendor $BLOCKDEV"
+fi
+
+# Check for /vendor existence in partition table.
 if [ $VENDOR -eq 0 ]; then
     # Change partition typecode to '8300 Linux filesystem'
-    command="/tmp/sgdisk --typecode=34:8300 $BLOCKDEV"
-    safeRunCommand $command
+    safeRunCommand $command1
 
     # Change partition name to 'vendor'
-    command="/tmp/sgdisk --change-name=34:vendor $BLOCKDEV"
-    safeRunCommand $command
+    safeRunCommand $command2
 fi
 
 exit 0
