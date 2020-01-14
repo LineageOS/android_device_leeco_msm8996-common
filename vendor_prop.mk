@@ -157,7 +157,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.redir_party_num=1 \
     persist.vendor.radio.mt_sms_ack=20 \
     persist.vendor.radio.sib16_support=1 \
-    telephony.lteOnCdmaDevice=1
+    telephony.lteOnCdmaDevice=1 \
+    ro.telephony.use_old_mnc_mcc_format=true
 
 # Surfaceflinger
 PRODUCT_PROPERTY_OVERRIDES += \
