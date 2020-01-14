@@ -157,6 +157,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ril.subscription.types=NV,RUIM \
     rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
     ro.telephony.call_ring.multiple=false \
+    ro.telephony.use_old_mnc_mcc_format=true \
     telephony.lteOnCdmaDevice=1
 
 # Surfaceflinger
