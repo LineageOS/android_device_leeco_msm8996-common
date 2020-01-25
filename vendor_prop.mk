@@ -68,6 +68,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.netmgrd.qos.enable=true \
     ro.vendor.use_data_netmgrd=true
 
+# Devinfo for init
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.leeco.devinfo=NULL
+
 # Display (Qualcomm Assertive Display)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qcom.ad=1 \

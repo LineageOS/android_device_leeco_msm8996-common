@@ -329,6 +329,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/bin/toybox:install/bin/toybox \
     $(LOCAL_PATH)/prebuilt/bin/deunify.sh:install/bin/deunify.sh \
+    $(LOCAL_PATH)/prebuilt/bin/devinfo.sh:install/bin/devinfo.sh \
     $(LOCAL_PATH)/prebuilt/bin/sgdisk:install/bin/sgdisk \
     $(LOCAL_PATH)/prebuilt/bin/unlock-vendor.sh:install/bin/unlock-vendor.sh \
     $(LOCAL_PATH)/prebuilt/bin/partprobe.sh:install/bin/partprobe.sh \
