@@ -49,8 +49,10 @@ def IncrementalOTA_InstallBegin(info):
   return
 
 def IncrementalOTA_InstallEnd(info):
+  info.script.Mount("/system")
   info.script.Mount("/vendor")
   RunCustomScript(info, "deunify.sh", "")
+  info.script.Unmount("/system")
   info.script.Unmount("/vendor")
   return
 
