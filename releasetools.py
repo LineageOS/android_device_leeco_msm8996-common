@@ -1,6 +1,6 @@
 # Copyright (C) 2009 The Android Open Source Project
 # Copyright (c) 2011, The Linux Foundation. All rights reserved.
-# Copyright (C) 2017-2019 The LineageOS Project
+# Copyright (C) 2017-2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -49,8 +49,10 @@ def IncrementalOTA_InstallBegin(info):
   return
 
 def IncrementalOTA_InstallEnd(info):
+  info.script.Mount("/system")
   info.script.Mount("/vendor")
   RunCustomScript(info, "deunify.sh", "")
+  info.script.Unmount("/system")
   info.script.Unmount("/vendor")
   return
 
