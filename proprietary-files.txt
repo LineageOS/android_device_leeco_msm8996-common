@@ -225,9 +225,6 @@ vendor/lib/libmmcamera_isp_sce40.so|c56210d76256807abb7cb31f9dc923adb78392fd
 vendor/lib/libmmcamera_isp_snr47.so|44f15661d64906cb1e87de1e028f87f0f022c928
 vendor/lib/libmmcamera_isp_sub_module.so|5fb215ead8c3eefb1c2a0f3c6730dd9d3a55365c
 
-# Camera vndk hax - from Lineage 16.0 build
-vendor/lib/libfui.so|21d012ec9dabe6e62e023780eac1e3a476eb298e
-
 # CNE - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.2.0.QDLMIXM
 etc/cne/Nexus/ATT/ATT_profiles.xml|33e568627fd3f94dc45bca1c01ad10e6d8fb5b52
 etc/cne/Nexus/ROW/ROW_profiles.xml|238e785e9674b27c4b2365958d127533d7293132
