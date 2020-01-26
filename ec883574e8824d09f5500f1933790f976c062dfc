@@ -22,6 +22,30 @@
       "revId": "ec883574e8824d09f5500f1933790f976c062dfc",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fb23b3ea_29756f0d",
+        "filename": "init/init_leeco_msm8996.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2020-01-26T22:17:07Z",
+      "side": 0,
+      "message": "Done. Good idea Łukasz, I\u0027ve made that change.",
+      "parentUuid": "221b4db7_dd2d7bec",
+      "range": {
+        "startLine": 86,
+        "startChar": 8,
+        "endLine": 86,
+        "endChar": 66
+      },
+      "revId": "ec883574e8824d09f5500f1933790f976c062dfc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
