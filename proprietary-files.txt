@@ -8,12 +8,14 @@ vendor/lib64/libfastcvopt.so|7adca688648f0e6fb6875aabdb56ef933c0c69c8
 vendor/lib64/libmdsprpc.so|45011dd515c41129063e091abd253861673d7a42
 vendor/lib/libadsprpc.so|8d5463f75395bd571aee5a55baca3a10efbb3dc0
 vendor/lib/libadsp_default_listener.so|48741bb1effb38b9bcbf6392e90779d75de98b57
-vendor/lib/libadsp_hvx_callback_skel.so|b7e47d8d0c011caea30daf974de81eb01bb90268
-vendor/lib/libadsp_hvx_stub.so|5842e47b5929e15c8b63f1aa4795ca3432debebb
 vendor/lib/libcdsprpc.so|430defc8c3aa6338708533b77c97bf9807453002
 vendor/lib/libfastcvadsp_stub.so|0382c53e0882ae5463e1a04522b5de7e506b0c59
 vendor/lib/libfastcvopt.so|057708e620ffe928a834ac230d89cd2ce65ea5da
 vendor/lib/libmdsprpc.so|812b190cce2acad81bef60f1ce691fda9607ddf0
+
+# ADSP - from LA.UM.7.5.r1-04800-8x96.0
+vendor/lib/libadsp_hvx_callback_skel.so|b7e47d8d0c011caea30daf974de81eb01bb90268
+vendor/lib/libadsp_hvx_stub.so|5842e47b5929e15c8b63f1aa4795ca3432debebb
 
 # ADSP (modules) - from zl1
 vendor/lib/rfsa/adsp/libadsp_fd_skel.so|5607a78451b621bb6399878ab58ba896c72797ab
