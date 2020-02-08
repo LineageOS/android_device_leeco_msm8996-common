@@ -72,30 +72,30 @@ vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 
 # Camera - from zl1 - 6.0.1/WAXCNFN5902012312S/letv01060151
-bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon|c36fe0c5f93cdfbc3abf83ca0e73880bd218c079
-etc/camera/ov8865_chromatix.xml:vendor/etc/camera/ov8865_chromatix.xml|4f52dfce8729b78c494f3e80721d4ff63831ffcf
-etc/camera/ov8865_ofilm_chromatix.xml:vendor/etc/camera/ov8865_ofilm_chromatix.xml|bda41d8d499e6df7f029fd75c5456cd7786f51c1
-lib/libLetvCameraImageSDK.so:vendor/lib/libLetvCameraImageSDK.so|df370f3bb9a61727c15f35a3f406b7bae0cb33d3
-lib/libamipengine.so:vendor/lib/libamipengine.so|74aa821aa923d3ad4d618b15bf1b9538771760a2
-lib/libarcsoft_antishaking.so:vendor/lib/libarcsoft_antishaking.so|15c2389297cb9e02ebe6bd8430f135db32020160
-lib/libarcsoft_beautyshot.so:vendor/lib/libarcsoft_beautyshot.so|06361821b4083fdf9de413cae9ab0a3bb5356378
-lib/libarcsoft_beautyshot_image_algorithm.so:vendor/lib/libarcsoft_beautyshot_image_algorithm.so|ff5f29a3d86e5d1d02ef9aea8aff0c1b94a77239
-lib/libarcsoft_beautyshot_video_algorithm.so:vendor/lib/libarcsoft_beautyshot_video_algorithm.so|386a8eab71964d5cc073715377cb085c86ac2708
-lib/libarcsoft_hdr.so:vendor/lib/libarcsoft_hdr.so|370da45efd9cef3a316c6c679c4165dda2c5ba02
-lib/libarcsoft_hdr_detection.so:vendor/lib/libarcsoft_hdr_detection.so|460dc14545522cb30eb087d37cb7777752db0800
-lib/libarcsoft_night_shot.so:vendor/lib/libarcsoft_night_shot.so|a92b7ce5796c9db533b9cb5d5d345a4ae910ec09
-lib/libarcsoft_nighthawk.so:vendor/lib/libarcsoft_nighthawk.so|73635b4a1cae768acc6d64f1b601b38506a05c5e
-lib/libarcsoft_panorama_burstcapture.so:vendor/lib/libarcsoft_panorama_burstcapture.so|32ad2a070d623cb4ee3503f0cd085d365092d47b
-lib/libarcsoft_smart_denoise.so:vendor/lib/libarcsoft_smart_denoise.so|cc5513ec4b11b6846842aaaa9e1c6b01aa73dc46
-lib/libcamera_letv_algo.so:vendor/lib/libcamera_letv_algo.so|50773d418ac049fca986e1a0fc5fcc1a40e11751
-lib/libletv_algo_jni.so:vendor/lib/libletv_algo_jni.so|f1a7d31df90a10bfa555c075f196807fa7e48743
-lib/libmm-qcamera.so:vendor/lib/libmm-qcamera.so|deb158c1f08234912526c3eaa1b9db9806e1c4b7
-lib/libmpbase.so:vendor/lib/libmpbase.so|f6f0a3ad248aa3caf17b5f90fa26fe529476cf7f
-lib/libmpkernel.so:vendor/lib/libmpkernel.so|4a7ca7a6b169ddd0c7f81fe4153852616da55013
-lib/libmpstream.so:vendor/lib/libmpstream.so|8624e671cd4dcefe6f92ba769865284066490ee5
-lib/libmputility.so:vendor/lib/libmputility.so|e1a55cdbc6753ab3718da297808ca635300240e8
-lib/libqrDec.so:vendor/lib/libqrDec.so|bf012d6eb2afc9ff3460eb1747a07ca9fe12325f
-lib/libzeusisCameraAlgoSceneDetection.so:vendor/lib/libzeusisCameraAlgoSceneDetection.so|0bcc0d99a8bc8b5d28f6551d9c91dd7b7647c6f1
+system/bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon|c36fe0c5f93cdfbc3abf83ca0e73880bd218c079
+system/etc/camera/ov8865_chromatix.xml:vendor/etc/camera/ov8865_chromatix.xml|4f52dfce8729b78c494f3e80721d4ff63831ffcf
+system/etc/camera/ov8865_ofilm_chromatix.xml:vendor/etc/camera/ov8865_ofilm_chromatix.xml|bda41d8d499e6df7f029fd75c5456cd7786f51c1
+system/lib/libLetvCameraImageSDK.so:vendor/lib/libLetvCameraImageSDK.so|df370f3bb9a61727c15f35a3f406b7bae0cb33d3
+system/lib/libamipengine.so:vendor/lib/libamipengine.so|74aa821aa923d3ad4d618b15bf1b9538771760a2
+system/lib/libarcsoft_antishaking.so:vendor/lib/libarcsoft_antishaking.so|15c2389297cb9e02ebe6bd8430f135db32020160
+system/lib/libarcsoft_beautyshot.so:vendor/lib/libarcsoft_beautyshot.so|06361821b4083fdf9de413cae9ab0a3bb5356378
+system/lib/libarcsoft_beautyshot_image_algorithm.so:vendor/lib/libarcsoft_beautyshot_image_algorithm.so|ff5f29a3d86e5d1d02ef9aea8aff0c1b94a77239
+system/lib/libarcsoft_beautyshot_video_algorithm.so:vendor/lib/libarcsoft_beautyshot_video_algorithm.so|386a8eab71964d5cc073715377cb085c86ac2708
+system/lib/libarcsoft_hdr.so:vendor/lib/libarcsoft_hdr.so|370da45efd9cef3a316c6c679c4165dda2c5ba02
+system/lib/libarcsoft_hdr_detection.so:vendor/lib/libarcsoft_hdr_detection.so|460dc14545522cb30eb087d37cb7777752db0800
+system/lib/libarcsoft_night_shot.so:vendor/lib/libarcsoft_night_shot.so|a92b7ce5796c9db533b9cb5d5d345a4ae910ec09
+system/lib/libarcsoft_nighthawk.so:vendor/lib/libarcsoft_nighthawk.so|73635b4a1cae768acc6d64f1b601b38506a05c5e
+system/lib/libarcsoft_panorama_burstcapture.so:vendor/lib/libarcsoft_panorama_burstcapture.so|32ad2a070d623cb4ee3503f0cd085d365092d47b
+system/lib/libarcsoft_smart_denoise.so:vendor/lib/libarcsoft_smart_denoise.so|cc5513ec4b11b6846842aaaa9e1c6b01aa73dc46
+system/lib/libcamera_letv_algo.so:vendor/lib/libcamera_letv_algo.so|50773d418ac049fca986e1a0fc5fcc1a40e11751
+system/lib/libletv_algo_jni.so:vendor/lib/libletv_algo_jni.so|f1a7d31df90a10bfa555c075f196807fa7e48743
+system/lib/libmm-qcamera.so:vendor/lib/libmm-qcamera.so|deb158c1f08234912526c3eaa1b9db9806e1c4b7
+system/lib/libmpbase.so:vendor/lib/libmpbase.so|f6f0a3ad248aa3caf17b5f90fa26fe529476cf7f
+system/lib/libmpkernel.so:vendor/lib/libmpkernel.so|4a7ca7a6b169ddd0c7f81fe4153852616da55013
+system/lib/libmpstream.so:vendor/lib/libmpstream.so|8624e671cd4dcefe6f92ba769865284066490ee5
+system/lib/libmputility.so:vendor/lib/libmputility.so|e1a55cdbc6753ab3718da297808ca635300240e8
+system/lib/libqrDec.so:vendor/lib/libqrDec.so|bf012d6eb2afc9ff3460eb1747a07ca9fe12325f
+system/lib/libzeusisCameraAlgoSceneDetection.so:vendor/lib/libzeusisCameraAlgoSceneDetection.so|0bcc0d99a8bc8b5d28f6551d9c91dd7b7647c6f1
 vendor/lib/libjpegdhw.so|1e1d87cf6b85978482000c1bc4f07d2f18a83a21
 vendor/lib/libjpegdmahw.so|9e31748ccf64aab1862c77dd41d28d64eb860738
 vendor/lib/libjpegehw.so|86fd4c529a431f207b1a1dd0de8bddb80a6373a0
@@ -225,14 +225,14 @@ vendor/lib/libmmcamera_isp_snr47.so|44f15661d64906cb1e87de1e028f87f0f022c928
 vendor/lib/libmmcamera_isp_sub_module.so|5fb215ead8c3eefb1c2a0f3c6730dd9d3a55365c
 
 # CNE
-etc/cne/Nexus/ATT/ATT_profiles.xml
-etc/cne/Nexus/ROW/ROW_profiles.xml
-etc/cne/Nexus/VZW/VZW_profiles.xml
 product/lib64/com.quicinc.cne.api@1.0.so
 product/lib64/com.quicinc.cne.api@1.1.so
 product/lib64/com.quicinc.cne.constants@1.0.so
 product/lib64/com.quicinc.cne.constants@2.0.so
 product/lib64/com.quicinc.cne.constants@2.1.so
+system/etc/cne/Nexus/ATT/ATT_profiles.xml
+system/etc/cne/Nexus/ROW/ROW_profiles.xml
+system/etc/cne/Nexus/VZW/VZW_profiles.xml
 -vendor/app/CneApp/CneApp.apk
 -vendor/app/IWlanService/IWlanService.apk
 vendor/bin/cnd
@@ -286,7 +286,7 @@ vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so
 vendor/lib64/vendor.qti.latency@2.0.so
 
 # consumerir - from le_x10 (x850) - 7.1.1/LEXCNFN6061705181T/letv05181516
--app/UEIQuicksetSDKLeTV/UEIQuicksetSDKLeTV.apk|b9b4a53a6465dbd9e1d1b6f1a8393313f5e72f64
+-system/app/UEIQuicksetSDKLeTV/UEIQuicksetSDKLeTV.apk|b9b4a53a6465dbd9e1d1b6f1a8393313f5e72f64
 
 # DPM
 product/bin/dpmd
@@ -324,21 +324,21 @@ vendor/lib64/libwvhidl.so
 vendor/lib64/hw/gatekeeper.msm8996.so|d324fd57026ac20409c474cfc4e15595aa9d4738
 
 # GPS
-etc/permissions/com.qti.location.sdk.xml
-etc/permissions/com.qualcomm.location.xml
-etc/permissions/izat.xt.srv.xml
-etc/permissions/privapp-permissions-com.qualcomm.location.xml
-framework/com.qti.location.sdk.jar
-framework/izat.xt.srv.jar
-lib64/liblocationservice_jni.so
-lib64/libxt_native.so
--priv-app/com.qualcomm.location/com.qualcomm.location.apk
 product/lib64/vendor.qti.gnss@1.0.so
 product/lib64/vendor.qti.gnss@1.1.so
 product/lib64/vendor.qti.gnss@1.2.so
 product/lib64/vendor.qti.gnss@2.0.so
 product/lib64/vendor.qti.gnss@2.1.so
 product/lib64/vendor.qti.gnss@3.0.so
+system/etc/permissions/com.qti.location.sdk.xml
+system/etc/permissions/com.qualcomm.location.xml
+system/etc/permissions/izat.xt.srv.xml
+system/etc/permissions/privapp-permissions-com.qualcomm.location.xml
+system/framework/com.qti.location.sdk.jar
+system/framework/izat.xt.srv.jar
+system/lib64/liblocationservice_jni.so
+system/lib64/libxt_native.so
+-system/priv-app/com.qualcomm.location/com.qualcomm.location.apk
 vendor/bin/loc_launcher
 vendor/bin/lowi-server
 vendor/bin/slim_daemon
@@ -534,7 +534,7 @@ vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
 # QMI - from Gemini - Xiaomi/gemini/gemini:8.0.0/OPR1.170623.032/V10.2.2.0.OAAMIXM
-etc/permissions/qti_permissions.xml:vendor/etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad9924410a0
+system/etc/permissions/qti_permissions.xml:vendor/etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad9924410a0
 vendor/bin/irsc_util|a4a7a5f3b655ca25e817ec40876f3b8e25c67cd6
 vendor/lib64/libdiag.so|0321c8078dc349cd67926a70707912260896e6e8
 vendor/lib64/libdsi_netctrl.so|38a5d4dc20323d7d9d2726bac5b4eda62f6d7867
@@ -578,9 +578,9 @@ vendor/lib/libqmi_cci.so
 vendor/bin/hvdcp_opti|316e3b0643981b502f58f2f48e4058b06a98706d
 
 # RIL - from Gemini - Xiaomi/gemini/gemini:8.0.0/OPR1.170623.032/V10.2.2.0.OAAMIXM
--app/QtiTelephonyService/QtiTelephonyService.apk:product/app/QtiTelephonyService/QtiTelephonyService.apk|7d7104c26c7c1e9487d9c41d48f0e0348135cb61
-framework/QtiTelephonyServicelibrary.jar:product/framework/QtiTelephonyServicelibrary.jar|7e6810bf7747778dc8b88da8e4357531ba9ed815
-framework/qcrilhook.jar:product/framework/qcrilhook.jar|8a1d0edd6fb61b84d5f26140498e5d9a685e99c8
+-system/app/QtiTelephonyService/QtiTelephonyService.apk:product/app/QtiTelephonyService/QtiTelephonyService.apk|7d7104c26c7c1e9487d9c41d48f0e0348135cb61
+system/framework/QtiTelephonyServicelibrary.jar:product/framework/QtiTelephonyServicelibrary.jar|7e6810bf7747778dc8b88da8e4357531ba9ed815
+system/framework/qcrilhook.jar:product/framework/qcrilhook.jar|8a1d0edd6fb61b84d5f26140498e5d9a685e99c8
 vendor/bin/ATFWD-daemon|f8a855d8d6c4f191551d06c4833cd75745eca37f
 vendor/bin/netmgrd|73017e3099f3550f72a68c7aa0012c62e500f324
 vendor/bin/port-bridge|a50b3351a59e0413e5537294550ddfca1b026d48
@@ -612,7 +612,7 @@ vendor/lib/libmdmdetect.so|6993fbc8f8db7874c89c750263089ac741f62575
 vendor/radio/qcril_database/qcril.db|4df6c832d5c99d2760b7602d100dd2d3ac9954e6
 
 # RIL - from mata - essential/mata/mata:10/QP1A.190711.122/420
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk:product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|956a4017d0ba7f68e6d225e57b40d3b2bcbb4837
+-system/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk:product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|956a4017d0ba7f68e6d225e57b40d3b2bcbb4837
 
 # RIL - from daisy - xiaomi/daisy/daisy_sprout:9/PKQ1.180917.001/V10.0.1.0.PDLMIFJ
 vendor/bin/rmt_storage|346ef281e829109ba11af912509309e520351ef9
@@ -639,19 +639,19 @@ vendor/etc/init/vendor.qti.rmt_storage.rc|bc212c6353c2ded44ae4d759605fbbe55aa4fa
 vendor/etc/init/vendor.qti.tftp.rc|091915c28a3bc574d39189688748cc922d9e65e4
 
 # RIL (IMS) - from Gemini - Xiaomi/gemini/gemini:8.0.0/OPR1.170623.032/V10.2.2.0.OAAMIXM
--app/uceShimService/uceShimService.apk:product/app/uceShimService/uceShimService.apk|6e148658d03ffbfa6cbbebf18a85dba65799e1cf
-etc/permissions/com.qualcomm.qti.imscmservice.xml:product/etc/permissions/com.qualcomm.qti.imscmservice.xml|13422499f02326afd01eefbd13d22c935af8ac77
-etc/permissions/qti-vzw-ims-internal.xml:vendor/etc/permissions/qti-vzw-ims-internal.xml|89409c5f355acbd65a45b13f12e1baafb13baf46
-framework/com.qualcomm.qti.imscmservice@1.0-java.jar:product/framework/com.qualcomm.qti.imscmservice@1.0-java.jar|67d16abab246f84fb2f0ba7efd58cd0f5a8a3290
-lib64/com.qualcomm.qti.imscmservice@1.0.so:product/lib64/com.qualcomm.qti.imscmservice@1.0.so|db1f7abf26dfe1d13f7a7697ef5c7674bfea55d4
-lib64/lib-imscamera.so:product/lib64/lib-imscamera.so|644cd3e65e35fa7931fd6bd1eaf1f0c9a815c775
-lib64/lib-imsvideocodec.so:product/lib64/lib-imsvideocodec.so|f49373b405d73645a6b9b4ce5734993275a88d25
-lib64/lib-imsvt.so:product/lib64/lib-imsvt.so|e06c778bdd9bc69f416381b29edd82cd7b7ee018
-lib64/lib-imsvtextutils.so:product/lib64/lib-imsvtextutils.so|f272d94b74f9ef15ef55c83477862beaec58f20a
-lib64/lib-imsvtutils.so:product/lib64/lib-imsvtutils.so|70cea60a3f3819ed49640d6870b04e865ec527ba
-lib64/libdiag_system.so:product/lib64/libdiag_system.so|1fd5243b460587e5eb34b2e34544a5ca35bb0d66
-lib64/librcc.so:product/lib64/librcc.so|342313a3e12ae14e10a091ebfec3579655ff97ab
-lib64/vendor.qti.imsrtpservice@1.0.so:product/lib64/vendor.qti.imsrtpservice@1.0.so|40d91dc845fbf48fdf894c11aa14346f7786cd73
+-system/app/uceShimService/uceShimService.apk:product/app/uceShimService/uceShimService.apk|6e148658d03ffbfa6cbbebf18a85dba65799e1cf
+system/etc/permissions/com.qualcomm.qti.imscmservice.xml:product/etc/permissions/com.qualcomm.qti.imscmservice.xml|13422499f02326afd01eefbd13d22c935af8ac77
+system/etc/permissions/qti-vzw-ims-internal.xml:vendor/etc/permissions/qti-vzw-ims-internal.xml|89409c5f355acbd65a45b13f12e1baafb13baf46
+system/framework/com.qualcomm.qti.imscmservice@1.0-java.jar:product/framework/com.qualcomm.qti.imscmservice@1.0-java.jar|67d16abab246f84fb2f0ba7efd58cd0f5a8a3290
+system/lib64/com.qualcomm.qti.imscmservice@1.0.so:product/lib64/com.qualcomm.qti.imscmservice@1.0.so|db1f7abf26dfe1d13f7a7697ef5c7674bfea55d4
+system/lib64/lib-imscamera.so:product/lib64/lib-imscamera.so|644cd3e65e35fa7931fd6bd1eaf1f0c9a815c775
+system/lib64/lib-imsvideocodec.so:product/lib64/lib-imsvideocodec.so|f49373b405d73645a6b9b4ce5734993275a88d25
+system/lib64/lib-imsvt.so:product/lib64/lib-imsvt.so|e06c778bdd9bc69f416381b29edd82cd7b7ee018
+system/lib64/lib-imsvtextutils.so:product/lib64/lib-imsvtextutils.so|f272d94b74f9ef15ef55c83477862beaec58f20a
+system/lib64/lib-imsvtutils.so:product/lib64/lib-imsvtutils.so|70cea60a3f3819ed49640d6870b04e865ec527ba
+system/lib64/libdiag_system.so:product/lib64/libdiag_system.so|1fd5243b460587e5eb34b2e34544a5ca35bb0d66
+system/lib64/librcc.so:product/lib64/librcc.so|342313a3e12ae14e10a091ebfec3579655ff97ab
+system/lib64/vendor.qti.imsrtpservice@1.0.so:product/lib64/vendor.qti.imsrtpservice@1.0.so|40d91dc845fbf48fdf894c11aa14346f7786cd73
 vendor/bin/ims_rtp_daemon|08556e7da3872ca6deea33494bac5f86e9024891
 vendor/bin/imsdatadaemon|58592523c85e798f77a0df6eab9505f386b8e291
 vendor/bin/imsqmidaemon|3a34c4c7c85fc41826a44bd904a48fd5754d02f3
@@ -714,43 +714,43 @@ vendor/lib/libtime_genoff.so
 vendor/bin/cnss-daemon|608267c5ff979a1b102c46547be37ce1d2631324
 
 # Wi-Fi Display
-bin/wfdservice
-etc/init/wfdservice.rc
-etc/wfdconfig.xml
-etc/wfdconfigsink.xml
--framework/WfdCommon.jar
-lib64/libmmosal.so
-lib64/libwfdclient.so
-lib64/libwfdnative.so
-lib/com.qualcomm.qti.wifidisplayhal@1.0.so
-lib/libFileMux.so
-lib/libmmosal.so
-lib/libmmparser_lite.so
-lib/libmmrtpdecoder.so
-lib/libmmrtpencoder.so
-lib/libOmxMux.so
-lib/libwfdavenhancements.so
-lib/libwfdclient.so
-lib/libwfdcodecv4l2.so
-lib/libwfdcommonutils.so
-lib/libwfdconfigutils.so
-lib/libwfdmminterface.so
-lib/libwfdmmsink.so
-lib/libwfdmmsrc.so
-lib/libwfdnative.so
-lib/libwfdrtsp.so
-lib/libwfdservice.so
-lib/libwfdsm.so
-lib/libwfduibcinterface.so
-lib/libwfduibcsinkinterface.so
-lib/libwfduibcsink.so
-lib/libwfduibcsrcinterface.so
-lib/libwfduibcsrc.so
--priv-app/WfdService/WfdService.apk
+system/bin/wfdservice
+system/etc/init/wfdservice.rc
+system/etc/wfdconfig.xml
+system/etc/wfdconfigsink.xml
+-system/framework/WfdCommon.jar
+system/lib64/libmmosal.so
+system/lib64/libwfdclient.so
+system/lib64/libwfdnative.so
+system/lib/com.qualcomm.qti.wifidisplayhal@1.0.so
+system/lib/libFileMux.so
+system/lib/libmmosal.so
+system/lib/libmmparser_lite.so
+system/lib/libmmrtpdecoder.so
+system/lib/libmmrtpencoder.so
+system/lib/libOmxMux.so
+system/lib/libwfdavenhancements.so
+system/lib/libwfdclient.so
+system/lib/libwfdcodecv4l2.so
+system/lib/libwfdcommonutils.so
+system/lib/libwfdconfigutils.so
+system/lib/libwfdmminterface.so
+system/lib/libwfdmmsink.so
+system/lib/libwfdmmsrc.so
+system/lib/libwfdnative.so
+system/lib/libwfdrtsp.so
+system/lib/libwfdservice.so
+system/lib/libwfdsm.so
+system/lib/libwfduibcinterface.so
+system/lib/libwfduibcsinkinterface.so
+system/lib/libwfduibcsink.so
+system/lib/libwfduibcsrcinterface.so
+system/lib/libwfduibcsrc.so
+-system/priv-app/WfdService/WfdService.apk
 vendor/bin/wifidisplayhalservice
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
 vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so
-lib/com.qualcomm.qti.wifidisplayhal@1.0.so:vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0.so
+system/lib/com.qualcomm.qti.wifidisplayhal@1.0.so:vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0.so
 vendor/lib/libmmosal_proprietary.so
 vendor/lib/libwfdcommonutils_proprietary.so
 vendor/lib/libwfdhaldsmanager.so
