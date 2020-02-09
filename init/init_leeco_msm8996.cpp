@@ -72,7 +72,7 @@ void vendor_load_properties()
     LOG(INFO) << "DEVINFO: " << device;
     bool unknownDevice = true;
 
-    if (device == "le_zl0_whole_netcom") {
+    if (!strncmp(device.c_str(), "le_zl0", 6)) {
         // This is LEX722
         property_overrride_triple("ro.product.device", "ro.product.system.device", "ro.vendor.product.device", "le_zl0");
         property_overrride_triple("ro.product.model", "ro.product.system.model", "ro.vendor.product.model", "LEX722");
@@ -84,7 +84,7 @@ void vendor_load_properties()
         property_set("ro.power_profile.override", "power_profile_zl0");
         unknownDevice = false;
     }
-    else if (device == "le_zl1_oversea") {
+    else if (!strncmp(device.c_str(), "le_zl1_oversea", 14)) {
         // This is LEX727
         property_overrride_triple("ro.product.device", "ro.product.system.device", "ro.vendor.product.device", "le_zl1");
         property_overrride_triple("ro.product.model", "ro.product.system.model", "ro.vendor.product.model", "LEX727");
@@ -97,7 +97,7 @@ void vendor_load_properties()
         property_set("persist.nfc.smartcard.config", "SIM1,eSE1");
         unknownDevice = false;
     }
-    else if (device == "le_zl1_whole_netcom") {
+    else if (!strncmp(device.c_str(), "le_zl1", 6)) {
         // This is LEX720
         property_overrride_triple("ro.product.device", "ro.product.system.device", "ro.vendor.product.device", "le_zl1");
         property_overrride_triple("ro.product.model", "ro.product.system.model", "ro.vendor.product.model", "LEX720");
@@ -109,7 +109,7 @@ void vendor_load_properties()
         property_set("persist.nfc.smartcard.config", "SIM1,SIM2,eSE1");
         unknownDevice = false;
     }
-    else if (device == "le_x2_na_oversea") {
+    else if (!strncmp(device.c_str(), "le_x2_na_oversea", 16)) {
         // This is LEX829
         property_overrride_triple("ro.product.device", "ro.product.system.device", "ro.vendor.product.device", "le_x2");
         property_overrride_triple("ro.product.model", "ro.product.system.model", "ro.product.vendor.model", "LEX829");
@@ -119,7 +119,7 @@ void vendor_load_properties()
         property_set("ro.telephony.default_network", "10,10");
         unknownDevice = false;
     }
-    else if (device == "le_x2_india") {
+    else if (!strncmp(device.c_str(), "le_x2_india", 11)) {
         // This is LEX821
         property_overrride_triple("ro.product.device", "ro.product.system.device", "ro.vendor.product.device", "le_x2");
         property_overrride_triple("ro.product.model", "ro.product.system.model", "ro.vendor.product.model", "LEX821");
@@ -129,7 +129,7 @@ void vendor_load_properties()
         property_set("ro.telephony.default_network", "10,10");
         unknownDevice = false;
     }
-    else if (device == "le_x2_whole_netcom") {
+    else if (!strncmp(device.c_str(), "le_x2", 5)) {
         // This is LEX820
         property_overrride_triple("ro.product.device", "ro.product.system.device", "ro.vendor.product.device", "le_x2");
         property_overrride_triple("ro.product.model", "ro.product.system.model", "ro.vendor.product.model", "LEX820");
