@@ -28,7 +28,7 @@
 
 # copy devinfo partition info to a vendor prop
 
-DEVINFO=$(cat /dev/block/sde21)
+DEVINFO=$(strings /dev/block/sde21 | head -n 1)
 
 echo "DEVINFO: ${DEVINFO}"
 
