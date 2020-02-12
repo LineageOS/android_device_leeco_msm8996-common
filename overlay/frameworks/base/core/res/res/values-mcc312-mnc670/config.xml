@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
-** Copyright 2016, The Android Open Source Project
+** Copyright 2019, The Android Open Source Project
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
 ** you may not use this file except in compliance with the License.
@@ -20,8 +20,16 @@
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds. -->
 <resources>
-    <!-- Values for GPS configuration (Reliance) -->
-    <string-array translatable="false" name="config_gpsParameters">
-        <item>LPP_PROFILE=2</item>
+    <!-- Entitlement APP provisioning for Tethering -->
+    <string-array translatable="false" name="config_mobile_hotspot_provision_app">
+        <item>com.google.android.tetheringentitlement</item>
+        <item>com.google.android.tetheringentitlement.CarrierEntitlementActivity</item>
     </string-array>
+    <string translatable="false" name="config_mobile_hotspot_provision_app_no_ui">
+         com.google.android.carrierentitlement.SILENT_ENTITLEMENT_CHECK
+    </string>
+    <string translatable="false" name="config_mobile_hotspot_provision_response">
+         com.google.android.carrierentitlement.SILENT_ENTITLEMENT_CHECK_RESULT
+    </string>
+
 </resources>
