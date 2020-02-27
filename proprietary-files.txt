@@ -608,8 +608,8 @@ vendor/lib/libqmi.so
 vendor/lib/libqmiservices.so
 vendor/lib/libsmemlog.so
 
-# QMI - from daisy 9/PKQ1.180917.001/V10.0.7.0.PDLMIXM
-vendor/lib64/libpdmapper.so|049201d8e22064b87eb52df208d8cda7066d140a
+# QMI - from LA.UM.7.5.r1-04800-8x96.0
+vendor/lib64/libpdmapper.so|8b028ea4fdf5572a4ec9c5e7982e546616b5823a
 
 # QMI - from LA.UM.8.6.r1-01900-89xx.0
 vendor/lib/libqmi_cci.so|5a48201e565516a2fdff11c228162d2eda733fe5
