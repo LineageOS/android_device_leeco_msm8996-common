@@ -5,6 +5,7 @@
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
     af.fast_track_multiplier=1 \
+    audio.deep_buffer.media=true \
     audio.heap.size.multiplier=7 \
     audio.offload.video=true \
     persist.audio.ssr.3mic=false \
@@ -161,20 +162,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.early_gl_app_phase_offset_ns=15000000 \
     debug.sf.early_gl_phase_offset_ns=3000000 \
     debug.sf.early_phase_offset_ns=1500000
-
-# System props for the MM modules
-PRODUCT_PROPERTY_OVERRIDES += \
-    audio.deep_buffer.media=true \
-    media.stagefright.enable-aac=true \
-    media.stagefright.enable-fma2dp=true \
-    media.stagefright.enable-http=true \
-    media.stagefright.enable-player=true \
-    media.stagefright.enable-qcp=true \
-    media.stagefright.enable-scan=true \
-    mmp.enable.3g2=true \
-    mm.enable.qcom_parser=4194303 \
-    mm.enable.smoothstreaming=true \
-    persist.mm.enable.prefetch=true
 
 # Timeservice
 PRODUCT_PROPERTY_OVERRIDES += \
