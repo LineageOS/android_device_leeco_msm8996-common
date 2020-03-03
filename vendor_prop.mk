@@ -35,8 +35,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     bt.max.hfpclient.connections=1 \
-    ro.bluetooth.emb_wp_mode=true \
-    ro.bluetooth.wipower=true \
+    ro.bluetooth.dun=true \
+    ro.bluetooth.hfp.ver=1.7 \
+    ro.bluetooth.sap=true \
+    ro.btconfig.chip=QCA6164 \
+    ro.btconfig.dev=/dev/ttyHS0 \
+    ro.btconfig.if=uart \
+    ro.btconfig.vendor=qcom \
     vendor.qcom.bluetooth.soc=rome
 
 # Camera
