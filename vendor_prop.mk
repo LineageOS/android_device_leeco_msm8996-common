@@ -21,7 +21,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.dolby.ds2.enabled=false \
     vendor.audio.dolby.ds2.hardbypass=false \
     vendor.audio.flac.sw.decoder.24bit=true \
-    vendor.audio_hal.period_size=192 \
     vendor.audio.hw.aac.encoder=true \
     vendor.audio.offload.buffer.size.kb=64 \
     vendor.audio.offload.gapless.enabled=true \
@@ -37,6 +36,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.tunnel.encode=false \
     vendor.audio.use.sw.alac.decoder=true \
     vendor.audio.use.sw.ape.decoder=true \
+    vendor.audio_hal.period_size=192 \
     vendor.voice.path.for.pcm.voip=true
 
 # Audio (AAC 5.1 output)
@@ -46,8 +46,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     bt.max.hfpclient.connections=1 \
-    ro.bluetooth.wipower=true \
     ro.bluetooth.emb_wp_mode=true \
+    ro.bluetooth.wipower=true \
     vendor.qcom.bluetooth.soc=rome
 
 # Camera
@@ -137,9 +137,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
     DEVICE_PROVISIONED=1 \
-    rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
-    ril.subscription.types=NV,RUIM \
-    ro.telephony.call_ring.multiple=false \
     persist.data.qmi.adb_logmask=0 \
     persist.net.doxlat=true \
     persist.radio.apm_sim_not_pwdn=1 \
@@ -153,31 +150,34 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.facnotsup_as_nonw=1 \
     persist.vendor.radio.force_on_dc=true \
     persist.vendor.radio.ignore_dom_time=5 \
+    persist.vendor.radio.mt_sms_ack=20 \
     persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.redir_party_num=1 \
-    persist.vendor.radio.mt_sms_ack=20 \
     persist.vendor.radio.sib16_support=1 \
+    ril.subscription.types=NV,RUIM \
+    rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
+    ro.telephony.call_ring.multiple=false \
     telephony.lteOnCdmaDevice=1
 
 # Surfaceflinger
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.early_phase_offset_ns=1500000 \
     debug.sf.early_app_phase_offset_ns=1500000 \
+    debug.sf.early_gl_app_phase_offset_ns=15000000 \
     debug.sf.early_gl_phase_offset_ns=3000000 \
-    debug.sf.early_gl_app_phase_offset_ns=15000000
+    debug.sf.early_phase_offset_ns=1500000
 
 # System props for the MM modules
 PRODUCT_PROPERTY_OVERRIDES += \
     audio.deep_buffer.media=true \
-    media.stagefright.enable-player=true \
-    media.stagefright.enable-http=true \
     media.stagefright.enable-aac=true \
-    media.stagefright.enable-qcp=true \
     media.stagefright.enable-fma2dp=true \
+    media.stagefright.enable-http=true \
+    media.stagefright.enable-player=true \
+    media.stagefright.enable-qcp=true \
     media.stagefright.enable-scan=true \
     mmp.enable.3g2=true \
-    mm.enable.smoothstreaming=true \
     mm.enable.qcom_parser=4194303 \
+    mm.enable.smoothstreaming=true \
     persist.mm.enable.prefetch=true
 
 # Timeservice
