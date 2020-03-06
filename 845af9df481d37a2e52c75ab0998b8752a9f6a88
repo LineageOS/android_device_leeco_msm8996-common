@@ -16,6 +16,24 @@
       "revId": "845af9df481d37a2e52c75ab0998b8752a9f6a88",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "63772913_215eea93",
+        "filename": "vendor_prop.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2020-03-06T17:39:27Z",
+      "side": 1,
+      "message": "Thanks for fixing it :)",
+      "parentUuid": "abe0a633_628bd1c2",
+      "revId": "845af9df481d37a2e52c75ab0998b8752a9f6a88",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
