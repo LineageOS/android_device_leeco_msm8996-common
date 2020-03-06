@@ -16,6 +16,24 @@
       "revId": "fb6e1d6b2e56792e9801cbd9aecb87deb216d4d5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "85ca5fd9_7c9080a1",
+        "filename": "vendor_prop.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 16002
+      },
+      "writtenOn": "2020-03-06T16:43:37Z",
+      "side": 1,
+      "message": "done https://review.lineageos.org/c/LineageOS/android_device_leeco_msm8996-common/+/270283",
+      "parentUuid": "313f5711_54e4c71d",
+      "revId": "fb6e1d6b2e56792e9801cbd9aecb87deb216d4d5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
