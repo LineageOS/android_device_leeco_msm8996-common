@@ -75,16 +75,6 @@ $(FIDOTAP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(FIDOTAP_SYMLINKS)
 
-GOODIXFP_IMAGES := goodixfp.b00 goodixfp.b01 goodixfp.b02 goodixfp.b03 goodixfp.b04 goodixfp.b05 goodixfp.b06 goodixfp.mdt
-GOODIXFP_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(GOODIXFP_IMAGES)))
-$(GOODIXFP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "GOODIXFP firmware link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /vendor/firmware_mnt/image/$(notdir $@) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(GOODIXFP_SYMLINKS)
-
 IMS_LIBS := libimscamera_jni.so libimsmedia_jni.so
 IMS_SYMLINKS := $(addprefix $(TARGET_OUT_APPS_PRIVILEGED)/ims/lib/arm64/,$(notdir $(IMS_LIBS)))
 $(IMS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
