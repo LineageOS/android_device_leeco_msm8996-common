@@ -70,7 +70,7 @@ on fs
     mkdir /mnt/vendor/persist/display 0770 system graphics
     mkdir /mnt/vendor/persist/qc_senseid 0700 system system
     mkdir /mnt/vendor/persist/time 0770 system system
-    restorecon_recursive /mnt/vendor/persist
+    restorecon_recursive --skip-sehash /mnt/vendor/persist
 
     # for android.hardware.health@2.0-service.leeco_8996 cycle count backup
     mkdir /mnt/vendor/persist/battery 0700 system system
