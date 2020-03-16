@@ -35,6 +35,8 @@ source "${HELPER}"
 CLEAN_VENDOR=true
 
 ONLY_COMMON=
+SECTION=
+KANG=
 
 while [ "${#}" -gt 0 ]; do
     case "${1}" in
