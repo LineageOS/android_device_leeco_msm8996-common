@@ -697,9 +697,6 @@ vendor/bin/time_daemon|fa1b87481313fc039d969c1ac7c06c77422ff38e
 vendor/lib/libtime_genoff.so|a574d287e7e73649685b702f4fe497eb7c6ba727
 vendor/lib64/libtime_genoff.so|06df52867790cdbbcc674a3a28d7ad7c8cc161ac
 
-# Wi-Fi - Gemini 8.0.0/OPR1.170623.032/8.5.24
-vendor/bin/cnss-daemon
-
 # WiFi Display - from LA.UM.8.6.r1-01900-89xx.0
 bin/wfdservice|d9cccfd6ca14a1d83117533296d6cac2c139c310
 etc/init/wfdservice.rc|311bfdd1675e56499662f39455536b75b78477bb
