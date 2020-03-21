@@ -135,6 +135,10 @@ on post-fs-data
     mkdir /dev/socket/qdma 0770 system system
     chmod 2770 /dev/socket/qdma
 
+    # Create directory for thermal engine
+    mkdir /data/vendor/thermal 0771 root system
+    mkdir /data/vendor/thermal/config 0771 root system
+
     # Create /data/vendor/tzstorage directory for SFS listener
     mkdir /data/vendor/tzstorage 0770 system system
 
