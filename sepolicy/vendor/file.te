@@ -2,6 +2,7 @@ type devinfo_block_device, dev_type;
 type ifaa_data_file, file_type, data_file_type;
 type proc_touchpanel, fs_type, sysfs_type, proc_type;
 type sysfs_torch, fs_type, sysfs_type;
+type thermal_data_file, file_type, data_file_type;
 
 # Battery health
 type sysfs_scsi_devices_0000, sysfs_type, fs_type;
@@ -16,4 +17,3 @@ type gbfirmware_file, file_type, data_file_type, core_data_file_type, mlstrusted
 type sysfs_mods_camd, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_v4l2_openmode, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_batt_mods, fs_type, sysfs_type, mlstrustedobject;
-
