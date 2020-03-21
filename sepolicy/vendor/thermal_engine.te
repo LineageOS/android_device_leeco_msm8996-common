@@ -7,8 +7,8 @@ allow thermal-engine sysfs_batteryinfo:dir search;
 r_dir_file(thermal-engine, sysfs_uio_file)
 r_dir_file(thermal-engine, sysfs)
 
-typeattribute thermal-engine data_between_core_and_vendor_violators;
-allow thermal-engine system_data_file:dir { w_dir_perms };
+allow thermal-engine thermal_data_file:dir rw_dir_perms;
+allow thermal-engine thermal_data_file:file create_file_perms;
 
 allow thermal-engine sysfs_leds:file rw_file_perms;
 
