@@ -3,6 +3,7 @@
 
 # data
 /data/vendor/qcam(/.*)?                                                  u:object_r:vendor_camera_data_file:s0
+/data/vendor/thermal(/.*)?                                               u:object_r:thermal_data_file:s0
 
 # executables
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.leeco_8996 u:object_r:hal_light_default_exec:s0
