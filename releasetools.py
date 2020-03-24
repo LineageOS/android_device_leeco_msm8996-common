@@ -23,19 +23,19 @@ def FullOTA_Assertions(info):
   return
 
 def FullOTA_InstallBegin(info):
-  info.script.Mount("/system")
+  info.script.AppendExtra('mount("ext4", "EMMC", "/dev/block/bootdevice/by-name/system", "/mnt/system");');
   UnlockVendorPartition(info)
-  info.script.Unmount("/system")
+  info.script.AppendExtra('unmount("/mnt/system");');
   AddVendorAssertion(info)
   return
 
 def FullOTA_InstallEnd(info):
-  info.script.Mount("/system")
-  info.script.Mount("/vendor")
+  info.script.AppendExtra('mount("ext4", "EMMC", "/dev/block/bootdevice/by-name/system", "/mnt/system");');
+  info.script.AppendExtra('mount("ext4", "EMMC", "/dev/block/bootdevice/by-name/vendor", "/mnt/vendor");');
   RunCustomScript(info, "deunify.sh", "")
   RunCustomScript(info, "devinfo.sh", "")
-  info.script.Unmount("/system")
-  info.script.Unmount("/vendor")
+  info.script.AppendExtra('unmount("/mnt/system");');
+  info.script.AppendExtra('unmount("/mnt/vendor");');
   return
 
 def IncrementalOTA_Assertions(info):
@@ -43,24 +43,24 @@ def IncrementalOTA_Assertions(info):
   return
 
 def IncrementalOTA_InstallBegin(info):
-  info.script.Mount("/system")
+  info.script.AppendExtra('mount("ext4", "EMMC", "/dev/block/bootdevice/by-name/system", "/mnt/system");');
   UnlockVendorPartition(info)
-  info.script.Unmount("/system")
+  info.script.AppendExtra('unmount("/mnt/system");');
   AddVendorAssertion(info)
   return
 
 def IncrementalOTA_InstallEnd(info):
-  info.script.Mount("/system")
-  info.script.Mount("/vendor")
+  info.script.AppendExtra('mount("ext4", "EMMC", "/dev/block/bootdevice/by-name/system", "/mnt/system");');
+  info.script.AppendExtra('mount("ext4", "EMMC", "/dev/block/bootdevice/by-name/vendor", "/mnt/vendor");');
   RunCustomScript(info, "deunify.sh", "")
   RunCustomScript(info, "devinfo.sh", "")
-  info.script.Unmount("/system")
-  info.script.Unmount("/vendor")
+  info.script.AppendExtra('unmount("/mnt/system");');
+  info.script.AppendExtra('unmount("/mnt/vendor");');
   return
 
 def AddVendorAssertion(info):
   info.script.AppendExtra('assert(run_program("/tmp/partprobe.sh", "/dev/block/sde") == "0");');
-  info.script.AppendExtra('ifelse(is_mounted("/vendor"), unmount("/vendor"));');
+  info.script.AppendExtra('ifelse(is_mounted("/mnt/vendor"), unmount("/mnt/vendor"));');
   cmd = 'assert(leeco.file_exists("/dev/block/bootdevice/by-name/vendor") == "1" || \
 abort("Error: Vendor partition doesn\'t exist! Please reboot to recovery and flash again!"););'
   info.script.AppendExtra(cmd)

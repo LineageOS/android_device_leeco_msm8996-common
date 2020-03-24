@@ -43,11 +43,11 @@ safeRunCommand() {
 }
 
 # Check if this is Lineage Recovery
-LOSRECOVERY=/sbin/toybox_static
+LOSRECOVERY=/sbin/sgdisk
 
 if test -f "$LOSRECOVERY"; then
     echo "setting vendor partition commands for Lineage Recovery"
-    VENDOR=`sgdisk --pretend --print $BLOCKDEV | toybox_static grep -c vendor`
+    VENDOR=`sgdisk --pretend --print $BLOCKDEV | toybox grep -c vendor`
     command1="sgdisk --typecode=34:8300 $BLOCKDEV"
     command2="sgdisk --change-name=34:vendor $BLOCKDEV"
 else
