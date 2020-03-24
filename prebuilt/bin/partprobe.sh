@@ -31,10 +31,10 @@
 BLOCKDEV=$1
 
 # Check if this is Lineage Recovery
-LOSRECOVERY=/sbin/toybox_static
+LOSRECOVERY=/sbin/toybox
 
 if test -f "$LOSRECOVERY"; then
-    toybox_static partprobe $BLOCKDEV
+    toybox partprobe $BLOCKDEV
 else
     /tmp/toybox partprobe $BLOCKDEV
 fi
