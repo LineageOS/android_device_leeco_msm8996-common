@@ -32,6 +32,6 @@ DEVINFO=$(strings /dev/block/sde21 | head -n 1)
 
 echo "DEVINFO: ${DEVINFO}"
 
-sed -i "s/ro.leeco.devinfo=NULL/ro.leeco.devinfo=$DEVINFO/g" "/vendor/build.prop"
+sed -i "s/ro.leeco.devinfo=NULL/ro.leeco.devinfo=$DEVINFO/g" "/mnt/vendor/build.prop"
 
 exit 0
