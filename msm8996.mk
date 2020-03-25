@@ -316,7 +316,8 @@ PRODUCT_PACKAGES += \
     librecovery_updater_leeco
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/root/init.recovery.qcom.rc:root/init.recovery.qcom.rc
+    $(LOCAL_PATH)/recovery/root/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
+    $(LOCAL_PATH)/recovery/root/init.recovery.usb.rc:root/init.recovery.usb.rc
 
 # Releasetools
 PRODUCT_COPY_FILES += \
