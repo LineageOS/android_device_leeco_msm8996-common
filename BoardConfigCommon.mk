@@ -186,22 +186,22 @@ TARGET_USES_INTERACTION_BOOST := true
 # Recovery
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_leeco
 
-#RECOVERY_VARIANT := twrp
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/prebuilt/vendor/etc/fstab.qcom
 
+#RECOVERY_VARIANT := twrp
 ifeq ($(RECOVERY_VARIANT),twrp)
 BOARD_HAS_NO_REAL_SDCARD := true
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/soc/6a00000.ssusb/6a00000.dwc3/gadget/lun0/file
-TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
-TW_DEFAULT_BRIGHTNESS := "160"
-TW_INPUT_BLACKLIST := "hbtp_vm"
+TW_DEFAULT_BRIGHTNESS := 102
+TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_EXTRA_LANGUAGES := true
 TW_INCLUDE_CRYPTO := true
+TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_INCLUDE_NTFS_3G := true
-#TWRP_EVENT_LOGGING := true
+TW_THEME := portrait_hdpi
+TW_USE_TOOLBOX := true
 endif
 
 # Releasetools
