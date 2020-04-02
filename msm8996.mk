@@ -112,7 +112,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_tuning_mixer_tasha.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer_tasha.txt \
     $(LOCAL_PATH)/audio/listen_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/listen_platform_info.xml \
     $(LOCAL_PATH)/audio/sound_trigger_mixer_paths_wcd9330.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths_wcd9330.xml \
-    $(LOCAL_PATH)/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml \
+    $(LOCAL_PATH)/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
@@ -159,7 +159,7 @@ PRODUCT_PACKAGES += \
     libdisplayconfig \
     liboverlay \
     libqdMetaData.system \
-    libtinyxml \
+    libtinyxml
 
 # Doze mode
 PRODUCT_PACKAGES += \
@@ -321,12 +321,12 @@ PRODUCT_COPY_FILES += \
 
 # Releasetools
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/bin/toybox:install/bin/toybox \
     $(LOCAL_PATH)/prebuilt/bin/deunify.sh:install/bin/deunify.sh \
     $(LOCAL_PATH)/prebuilt/bin/devinfo.sh:install/bin/devinfo.sh \
-    $(LOCAL_PATH)/prebuilt/bin/sgdisk:install/bin/sgdisk \
-    $(LOCAL_PATH)/prebuilt/bin/unlock-vendor.sh:install/bin/unlock-vendor.sh \
     $(LOCAL_PATH)/prebuilt/bin/partprobe.sh:install/bin/partprobe.sh \
+    $(LOCAL_PATH)/prebuilt/bin/sgdisk:install/bin/sgdisk \
+    $(LOCAL_PATH)/prebuilt/bin/toybox:install/bin/toybox \
+    $(LOCAL_PATH)/prebuilt/bin/unlock-vendor.sh:install/bin/unlock-vendor.sh
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
