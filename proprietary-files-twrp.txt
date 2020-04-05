@@ -1,11 +1,13 @@
-# Decryption blobs
-lib64/libicuuc.so:recovery/root/sbin/libicuuc.so
-lib64/libxml2.so:recovery/root/sbin/libxml2.so
-vendor/bin/qseecomd:recovery/root/sbin/qseecomd
-vendor/lib64/hw/keystore.msm8996.so:recovery/root/vendor/lib64/hw/keystore.msm8996.so
-vendor/lib64/libQSEEComAPI.so:recovery/root/vendor/lib64/libQSEEComAPI.so
-vendor/lib64/libdiag.so:recovery/root/vendor/lib64/libdiag.so
-vendor/lib64/libdrmfs.so:recovery/root/vendor/lib64/libdrmfs.so
-vendor/lib64/libdrmtime.so:recovery/root/vendor/lib64/libdrmtime.so
-vendor/lib64/librpmb.so:recovery/root/vendor/lib64/librpmb.so
-vendor/lib64/libssd.so:recovery/root/vendor/lib64/libssd.so
+# Decryption blobs - from oneplus3t - OnePlus/OnePlus3/OnePlus3T:9/PKQ1.181203.001/1911042108 - OOS 9.0.6
+vendor/bin/qseecomd:recovery/root/sbin/qseecomd|ed99f2e39f6dcc333b92c0e27944f2a157239bf7
+vendor/lib64/hw/keystore.msm8996.so:recovery/root/vendor/lib64/hw/keystore.msm8996.so|d7222a060d20e7df3cabbfe7125385e85821246e
+vendor/lib64/libQSEEComAPI.so:recovery/root/vendor/lib64/libQSEEComAPI.so|c2562b6f2b6e9e2a30c72f0638ae0c16365c0022
+vendor/lib64/libdiag.so:recovery/root/vendor/lib64/libdiag.so|0321c8078dc349cd67926a70707912260896e6e8
+vendor/lib64/libdrmfs.so:recovery/root/vendor/lib64/libdrmfs.so|4aabf209af08449a1867e7a852ce2b48725040e8
+vendor/lib64/libdrmtime.so:recovery/root/vendor/lib64/libdrmtime.so|110b8a263128288b056183ba064b0ab2f6343fab
+vendor/lib64/librpmb.so:recovery/root/vendor/lib64/librpmb.so|2cca61072c29c2bc82dc71d529fd288c0d796ae8
+vendor/lib64/libssd.so:recovery/root/vendor/lib64/libssd.so|a3b4f5c81b96966f8d2a1a2f8518522f223e73fb
+
+# Dependencies - from LineageOS 16.0
+lib64/libicuuc.so:recovery/root/sbin/libicuuc.so|f225bee2dfbe7e5402134cf1276e1ef07f637358
+lib64/libxml2.so:recovery/root/sbin/libxml2.so|817dad327958d55d4e16dcc1da0757c404dee2ab

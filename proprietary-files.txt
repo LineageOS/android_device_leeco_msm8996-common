@@ -15,7 +15,7 @@ vendor/lib/libfastcvopt.so|2df00c3827fe1db322084cb3935241f17d1532f4
 vendor/lib/libmdsprpc.so|642f74bfec1098397c7ee025e0744badbf14fc39
 vendor/lib/libsdsprpc.so|2963c73745b8b1ccab64260ce93e3679c7c66113
 
-# ADSP - from LA.UM.7.5.r1-04800-8x96.0
+# ADSP - from oneplus3t - OnePlus/OnePlus3/OnePlus3T:9/PKQ1.181203.001/1911042108 - OOS 9.0.6
 vendor/lib/libadsp_hvx_callback_skel.so|b7e47d8d0c011caea30daf974de81eb01bb90268
 vendor/lib/libadsp_hvx_stub.so|5842e47b5929e15c8b63f1aa4795ca3432debebb
 
@@ -304,12 +304,12 @@ vendor/etc/init/dpmQmiMgr.rc|67569302d3a8828a9118c835e5b69c51b0c8ac68
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|a70cfc1be3e06cde6318d6969e114429fe1950bb
 vendor/lib64/libdpmqmihal.so|25d74c0e867f023b71a7c599ab6d213c7de2725d
 
-# DRM and SEE - from LA.UM.7.5.r1-04800-8x96.0
-vendor/bin/qseecomd|191536bdf3d72238ea7b3ca54b4289b7a09b4bcd
+# DRM and SEE - from oneplus3t - OnePlus/OnePlus3/OnePlus3T:9/PKQ1.181203.001/1911042108 - OOS 9.0.6
+vendor/bin/qseecomd|9430354d64d97daa75491178a561c04ba0f5dcc9
 vendor/lib64/libQSEEComAPI.so|c2562b6f2b6e9e2a30c72f0638ae0c16365c0022
-vendor/lib64/libdrmfs.so|87526b8b660fc8c27f0c07f1ac2d0d36544ae624
+vendor/lib64/libdrmfs.so|4aabf209af08449a1867e7a852ce2b48725040e8
 vendor/lib64/libdrmtime.so|110b8a263128288b056183ba064b0ab2f6343fab
-vendor/lib64/librpmb.so|9f88e88cd8155b69a085548a60a15c5b5be70f48
+vendor/lib64/librpmb.so|2cca61072c29c2bc82dc71d529fd288c0d796ae8
 vendor/lib64/libssd.so|a3b4f5c81b96966f8d2a1a2f8518522f223e73fb
 
 # DRM (Widevine) - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.2.0.QDLMIXM
@@ -317,7 +317,7 @@ vendor/bin/hw/android.hardware.drm@1.2-service.widevine|e130b8f1c8d46d8a185b00cb
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|68767969f86126ada017fc09af151e299db651d5
 vendor/lib64/libwvhidl.so|d02a20d8e95e64c391e0af86a32dad869ceeb3b4
 
-# Gatekeeper - from LA.UM.7.5.r1-04800-8x96.0
+# Gatekeeper - from oneplus3t - OnePlus/OnePlus3/OnePlus3T:9/PKQ1.181203.001/1911042108 - OOS 9.0.6
 vendor/lib64/hw/gatekeeper.msm8996.so|d324fd57026ac20409c474cfc4e15595aa9d4738
 
 # GPS - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.2.0.QDLMIXM
@@ -466,11 +466,11 @@ vendor/lib64/lib-uceservice.so|a64f436c271d6a02be5ec41a6088e9296a7aeee6
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
 
-# IMS - from LA.UM.7.5.r1-04800-8x96.0
-vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so|776501883a6bf1b3e8fd33c0da5ec1eb742ae10f
+# IMS - from oneplus3t - OnePlus/OnePlus3/OnePlus3T:9/PKQ1.181203.001/1911042108 - OOS 9.0.6
+vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so|447d205fca7ea674f7f3f072e7d26ae0a0a9b4b4
 
-# Keystore - from LA.UM.7.5.r1-04800-8x96.0
-vendor/lib64/hw/keystore.msm8996.so|e4139ac911fd0aafa73bd2901ab273c04c99ccc9
+# Keystore - from oneplus3t - OnePlus/OnePlus3/OnePlus3T:9/PKQ1.181203.001/1911042108 - OOS 9.0.6
+vendor/lib64/hw/keystore.msm8996.so|d7222a060d20e7df3cabbfe7125385e85821246e
 
 # Media - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.2.0.QDLMIXM
 -vendor/lib/libgpustats.so|75fc8f58b071f3c27d708010e1b40eafba091a14
@@ -512,8 +512,8 @@ vendor/lib/libqti-util.so|f1a4d655ee827d791447f303e59197e7271fafb5
 vendor/lib/vendor.qti.hardware.perf@1.0.so|d04786a723d766b9d22c88e8aec5f8036d1ac53e
 vendor/lib/vendor.qti.hardware.perf@2.0.so|0a08551185ac8626b832068ecb77997800050233
 
-# Perf (configs) - from LA.UM.7.5.r1-04800-8x96.0
-vendor/etc/perf/commonresourceconfigs.xml|7bf6b442875ec6244db05ffcc2ebb85a1c370863
+# Perf (configs) - from oneplus3t - OnePlus/OnePlus3/OnePlus3T:9/PKQ1.181203.001/1911042108 - OOS 9.0.6
+vendor/etc/perf/commonresourceconfigs.xml|73fc37a6fa498a98758b5a91ebacb87ef0ffdcdf
 vendor/etc/perf/perf-profile0.conf|02204355bf29ceb0460cd53e6716552bb9d9b05f
 vendor/etc/perf/perf-profile1.conf|58c8333b58183fe2412061e5ff22c218b7da305c
 vendor/etc/perf/perf-profile2.conf|66ac3877bf0030b72c99107f665bb392538d0237
@@ -599,8 +599,8 @@ vendor/lib/libqmi.so
 vendor/lib/libqmiservices.so
 vendor/lib/libsmemlog.so
 
-# QMI - from LA.UM.7.5.r1-04800-8x96.0
-vendor/lib64/libpdmapper.so|8b028ea4fdf5572a4ec9c5e7982e546616b5823a
+# QMI - from oneplus3t - OnePlus/OnePlus3/OnePlus3T:9/PKQ1.181203.001/1911042108 - OOS 9.0.6
+vendor/lib64/libpdmapper.so|21990291a2d5d16c92be120bca05951596a74d4c
 
 # QMI - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.2.0.QDLMIXM
 vendor/lib/libqmi_cci.so|a921e84ec500f7cfb7fe88a4ffba149581410a44
@@ -658,16 +658,16 @@ vendor/etc/init/dataqti.rc|6abfd1a850d782adbbb6f42c9d8ca870036b2ad1
 vendor/etc/init/netmgrd.rc|fd3457c69a9fab11b87d0d1b494188fe089684cd
 vendor/etc/init/port-bridge.rc|e52d61a0de5e8a3b21bfbfca929e862422645377
 
-# Sensors - from LA.UM.7.5.r1-04800-8x96.0
-vendor/bin/sensors.qti|18011d46135a2635bcfdc34e8b4d3fdaff7a76fb
-vendor/lib64/hw/activity_recognition.msm8996.so|c29a0dfff27824dac39a21f56a92bf319acb051b
-vendor/lib64/libsensor1.so|1934268e2f28ee9d705d5ff060544d06e42afcc3
-vendor/lib64/libsensor_reg.so|942fbf9ef1cfc87596f850e7ff1a86e7a9ddc846
-vendor/lib64/sensors.ssc.so|e49e3c585da09b323948e1c1201118d426f3d558
-vendor/lib/hw/activity_recognition.msm8996.so|58878fbcf8e98a8f053c3d1fbaa1beb4d7776d12
-vendor/lib/libsensor1.so|d73573eca4e1eaf52f09f9cc7292cdc6d9d69c70
-vendor/lib/libsensor_reg.so|2d95cea1df93dcaae0f067157f6932c1381dec53
-vendor/lib/sensors.ssc.so|96a37b515969d72875debd9ee0a505406d75bd3c
+# Sensors - from oneplus3t - OnePlus/OnePlus3/OnePlus3T:9/PKQ1.181203.001/1911042108 - OOS 9.0.6
+vendor/bin/sensors.qti|c65a1300c40dffbfa4739e63181fae1b6c9cf2ac
+vendor/lib64/hw/activity_recognition.msm8996.so|64901bc837ed32dee28bbff9a60df7d8ac5cd140
+vendor/lib64/libsensor1.so|f8524d62d2ad52849f4a13b018baf08d0eac8180
+vendor/lib64/libsensor_reg.so|8ca48358abf3f8f84f86036b02dbb210a5870742
+vendor/lib64/sensors.ssc.so|f4108878f452ff445bfee7d6f624e350353469e5
+vendor/lib/hw/activity_recognition.msm8996.so|6bec19a06f59abca3d43cd6a83c88fbe9daea7f6
+vendor/lib/libsensor1.so|de27fcd2ab95788e09310c5f2cf58a0540afcfe3
+vendor/lib/libsensor_reg.so|9a3568dc423598886b7f16d91d76e53cd0220387
+vendor/lib/sensors.ssc.so|2b7c1996cc12e6fac7d1fa09c5dfe1c93a1311d9
 
 # Sensors (LeEco) - from zl1
 vendor/lib/sensors.oem.so|08656a65ab1bf120ac9bb16e93faf93cc2cdda86
