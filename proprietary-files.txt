@@ -179,7 +179,7 @@ vendor/lib/libchromatix_ov8865_zsl_video.so|7c74288934a548af75b1fbf397da72a413ff
 # Camera firmware - from zl1 - 6.0.1/WAXCNFN5902012312S/letv01060151
 vendor/firmware/cpp_firmware_v1_10_0.fw|cf9458601aa4bbe9c57acfc1c7d0f158386ace9f
 
-# Camera (libstlport) - from CAF
+# Camera (libstlport) - from LineageOS 14.1
 vendor/lib/libstlport.so|8971701a4dd5d7928d5f44245dd0c08435540ad8
 vendor/lib64/libstlport.so|6ed59e168ff6cf43fcc1a911d2b06821691b5aca
 
