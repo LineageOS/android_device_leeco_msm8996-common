@@ -347,14 +347,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     device/leeco/msm8996-common
 
-PRODUCT_PACKAGES += \
-    ims-ext-common_system \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
-    ims-ext-common_system \
-    telephony-ext
-
 # Seccomp policy
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp_policy/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
@@ -365,6 +357,15 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl:64 \
     android.hardware.sensors@1.0-service \
     libsensorndkbridge
+
+# Telephony
+PRODUCT_PACKAGES += \
+    ims-ext-common_system \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    ims-ext-common_system \
+    telephony-ext
 
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
