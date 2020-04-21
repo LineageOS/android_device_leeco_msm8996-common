@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "095672a4_7fe6fcfe",
+        "filename": "sepolicy/vendor/vendor_toolbox.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 16002
+      },
+      "writtenOn": "2020-04-21T22:36:19Z",
+      "side": 1,
+      "message": "that\u0027s x2 specific https://review.lineageos.org/c/LineageOS/android_device_leeco_x2/+/168699",
+      "revId": "f2f839ea9f2c537f06d488fbec334440ccf90b74",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
