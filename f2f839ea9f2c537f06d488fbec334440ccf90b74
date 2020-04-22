@@ -16,6 +16,24 @@
       "revId": "f2f839ea9f2c537f06d488fbec334440ccf90b74",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "eef241e7_f50e634b",
+        "filename": "sepolicy/vendor/vendor_toolbox.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2020-04-22T03:11:04Z",
+      "side": 1,
+      "message": "decommonized persist_qc_senseid_file",
+      "parentUuid": "095672a4_7fe6fcfe",
+      "revId": "f2f839ea9f2c537f06d488fbec334440ccf90b74",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
