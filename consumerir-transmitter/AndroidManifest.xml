@@ -26,7 +26,10 @@
             </intent-filter>
         </receiver>
 
-        <service android:name=".ConsumerirTransmitterService" android:permission="ConsumeriTransmitterService">
+        <service android:name=".ConsumerirTransmitterService"
+            android:permission="ConsumeriTransmitterService"
+            android:exported="true"
+            >
         </service>
 
         <activity android:name="ConsumerirTransmitter" android:label="ConsumeriTransmitter" android:excludeFromRecents="true" android:launchMode="singleInstance" android:screenOrientation="portrait" android:windowAnimationStyle="@null">
