@@ -1,0 +1,9 @@
+type hal_ir_leeco_msm8996, domain, coredomain;
+type hal_ir_leeco_msm8996_exec, exec_type, file_type, system_file_type;
+
+hal_server_domain(hal_ir_leeco_msm8996, hal_ir)
+
+init_daemon_domain(hal_ir_leeco_msm8996)
+
+# Connect unix_stream_socket
+allow hal_ir_leeco_msm8996 system_app:unix_stream_socket connectto;
