@@ -17,10 +17,10 @@
 package org.lineageos.consumerirtransmitter.utils;
 
 
-import android.util.Log;
 import org.lineageos.consumerirtransmitter.beans.IRCMDBean;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
+
 
 public class IRCMDCacheManager {
 
