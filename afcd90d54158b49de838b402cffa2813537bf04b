@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0191e4fe_29557b41",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2020-05-12T03:31:11Z",
+      "side": 1,
+      "message": "if the socket creation failed: the socket doesn\u0027t need to be closed",
+      "range": {
+        "startLine": 9,
+        "startChar": 5,
+        "endLine": 9,
+        "endChar": 61
+      },
+      "revId": "afcd90d54158b49de838b402cffa2813537bf04b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ae3f8c7d_450f871e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2020-05-12T03:31:11Z",
+      "side": 1,
+      "message": "if connecting to the server failed: the socket must be closed",
+      "range": {
+        "startLine": 10,
+        "startChar": 5,
+        "endLine": 10,
+        "endChar": 59
+      },
+      "revId": "afcd90d54158b49de838b402cffa2813537bf04b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5cd74967_53882124",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2020-05-12T03:31:11Z",
+      "side": 1,
+      "message": "if sending the socket to the server failed: the socket must be closed",
+      "range": {
+        "startLine": 11,
+        "startChar": 5,
+        "endLine": 11,
+        "endChar": 63
+      },
+      "revId": "afcd90d54158b49de838b402cffa2813537bf04b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "438eb8eb_3cf0389b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2020-05-12T03:31:11Z",
+      "side": 1,
+      "message": "if sending the socket to the server successfully: the socket must be closed",
+      "range": {
+        "startLine": 12,
+        "startChar": 5,
+        "endLine": 12,
+        "endChar": 69
+      },
+      "revId": "afcd90d54158b49de838b402cffa2813537bf04b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
