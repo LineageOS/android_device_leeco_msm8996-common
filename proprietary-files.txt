@@ -617,13 +617,13 @@ vendor/radio/qcril_database/qcril.db|5df3369d12c977720961ef80aa74b132b8088c09
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|956a4017d0ba7f68e6d225e57b40d3b2bcbb4837
 
 # RIL - from daisy - xiaomi/daisy/daisy_sprout:9/PKQ1.180917.001/V10.0.1.0.PDLMIFJ
-framework/qti-telephony-common.jar|b1953a3599255f08f1785c677d22810f65e0167b
 vendor/bin/rmt_storage|346ef281e829109ba11af912509309e520351ef9
 vendor/bin/tftp_server|05a9c0e0e691e534e703bded4a99083d25a26ebb
 vendor/lib64/libqrtr.so|83676274fde1056a0507b4100a3a5423f5af5021
 vendor/lib64/libqsocket.so|3799e723be152c31c270f93a64e2865c0d9e86c4
 
 # RIL
+product/framework/qti-telephony-common.jar
 vendor/bin/adpl
 vendor/etc/init/dataadpl.rc
 vendor/etc/init/dataqti.rc
