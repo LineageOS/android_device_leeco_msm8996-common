@@ -157,6 +157,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Settings app
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.radio.aosp_usr_pref_sel=true \
     persist.sys.fflag.override.settings_network_and_internet_v2=true
 
 # Surfaceflinger
