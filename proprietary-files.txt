@@ -623,6 +623,7 @@ vendor/lib64/libqrtr.so|83676274fde1056a0507b4100a3a5423f5af5021
 vendor/lib64/libqsocket.so|3799e723be152c31c270f93a64e2865c0d9e86c4
 
 # RIL
+product/etc/permissions/telephony_product_privapp-permissions-qti.xml
 product/framework/qti-telephony-common.jar
 vendor/bin/adpl
 vendor/etc/init/dataadpl.rc
