@@ -770,6 +770,7 @@ void QCamera2HardwareInterface::release_recording_frame(
     }
     LOGD("E camera id %d", hw->getCameraId());
 
+    /*
     //Close and delete duplicated native handle and FD's.
     if (hw->mVideoMem != NULL) {
         ret = hw->mVideoMem->closeNativeHandle(opaque,
@@ -780,7 +781,7 @@ void QCamera2HardwareInterface::release_recording_frame(
         }
     } else {
         LOGW("Possible FD leak. Release recording called after stop");
-    }
+    }*/
 
     hw->lockAPI();
     qcamera_api_result_t apiResult;
@@ -1675,7 +1676,7 @@ QCamera2HardwareInterface::QCamera2HardwareInterface(uint32_t cameraId)
       mJpegClientHandle(0),
       mJpegHandleOwner(false),
       mMetadataMem(NULL),
-      mVideoMem(NULL),
+      /*mVideoMem(NULL),*/
       mCACDoneReceived(false),
       m_bNeedRestart(false)
 {
@@ -2860,7 +2861,7 @@ QCameraMemory *QCamera2HardwareInterface::allocateStreamBuf(
             }
             videoMemory->setVideoInfo(usage, fmt);
             mem = videoMemory;
-            mVideoMem = videoMemory;
+            //mVideoMem = videoMemory;
         }
         break;
     case CAM_STREAM_TYPE_CALLBACK:
@@ -3203,7 +3204,7 @@ QCameraMemory *QCamera2HardwareInterface::allocateStreamUserBuf(
         }
         video_mem->setVideoInfo(usage, fmt);
         mem = static_cast<QCameraMemory *>(video_mem);
-        mVideoMem = video_mem;
+        //mVideoMem = video_mem;
     }
     break;
 
@@ -3653,7 +3654,7 @@ int QCamera2HardwareInterface::startRecording()
     int32_t rc = NO_ERROR;
 
     LOGI("E");
-    mVideoMem = NULL;
+    //mVideoMem = NULL;
     //link meta stream with video channel if low power mode.
     if (isLowPowerMode()) {
         // Find and try to link a metadata stream from preview channel
@@ -3753,7 +3754,7 @@ int QCamera2HardwareInterface::stopRecording()
     m_cbNotifier.flushVideoNotifications();
     // Disable power hint for video encoding
     m_perfLock.powerHint(POWER_HINT_VIDEO_ENCODE, false);
-    mVideoMem = NULL;
+    //mVideoMem = NULL;
     LOGI("X rc = %d", rc);
     return rc;
 }
@@ -3943,8 +3944,8 @@ int32_t QCamera2HardwareInterface::unconfigureAdvancedCapture()
     int32_t rc = NO_ERROR;
 
     /*Disable Quadra CFA mode*/
-    LOGH("Disabling Quadra CFA mode");
-    mParameters.setQuadraCfaMode(false, true);
+    //LOGH("Disabling Quadra CFA mode");
+    //mParameters.setQuadraCfaMode(false, true);
 
     if (mAdvancedCaptureConfigured) {
 
@@ -4017,8 +4018,8 @@ int32_t QCamera2HardwareInterface::configureAdvancedCapture()
         return rc;
     }
     /*Enable Quadra CFA mode*/
-    LOGH("Enabling Quadra CFA mode");
-    mParameters.setQuadraCfaMode(true, true);
+    //LOGH("Enabling Quadra CFA mode");
+    //mParameters.setQuadraCfaMode(true, true);
 
     setOutputImageCount(0);
     mInputCount = 0;
@@ -4919,7 +4920,7 @@ int QCamera2HardwareInterface::stopCaptureChannel(bool destroy)
     if (mParameters.isJpegPictureFormat() ||
         mParameters.isNV16PictureFormat() ||
         mParameters.isNV21PictureFormat()) {
-        mParameters.setQuadraCfaMode(false, true);
+        //mParameters.setQuadraCfaMode(false, true);
         rc = stopChannel(QCAMERA_CH_TYPE_CAPTURE);
         if (destroy && (NO_ERROR == rc)) {
             // Destroy camera channel but dont release context
@@ -6017,6 +6018,7 @@ void QCamera2HardwareInterface::camEvtHandle(uint32_t /*camera_handle*/,
                         obj->mDefCond.broadcast();
                         LOGH("broadcast mDefCond signal\n");
                     }
+                    [[clang::fallthrough]];
                 default:
                     obj->processEvt(QCAMERA_SM_EVT_EVT_NOTIFY, payload);
                     break;
@@ -7356,7 +7358,7 @@ int32_t QCamera2HardwareInterface::addCaptureChannel()
         pChannel->setStreamSyncCB(CAM_STREAM_TYPE_PREVIEW,
                 synchronous_stream_cb_routine);
     //Not adding the postview stream to the capture channel if Quadra CFA is enabled.
-    } else if (!mParameters.getQuadraCfa()) {
+    } else /*if (!mParameters.getQuadraCfa())*/ {
         rc = addStreamToChannel(pChannel, CAM_STREAM_TYPE_POSTVIEW,
                                 NULL, this);
 
@@ -7579,17 +7581,21 @@ int32_t QCamera2HardwareInterface::getPPConfig(cam_pp_feature_config_t &pp_confi
 
     //Checking what feature mask to enable
     if (curIndex == 0) {
+        /*
         if (mParameters.getQuadraCfa()) {
             feature_set = 2;
         } else {
             feature_set = 0;
-        }
+        }*/
+        feature_set = 0;
     } else if (curIndex == 1) {
+        /*
         if (mParameters.getQuadraCfa()) {
             feature_set = 0;
         } else {
             feature_set = 1;
-        }
+        }*/
+        feature_set = 1;
     }
 
     switch(feature_set) {
@@ -7719,7 +7725,7 @@ int32_t QCamera2HardwareInterface::getPPConfig(cam_pp_feature_config_t &pp_confi
 
             if ((multipass) &&
                     (m_postprocessor.getPPChannelCount() > 1)
-                    && (!mParameters.getQuadraCfa())) {
+                    /*&& (!mParameters.getQuadraCfa())*/) {
                 pp_config.feature_mask &= ~CAM_QCOM_FEATURE_PP_PASS_2;
                 pp_config.feature_mask &= ~CAM_QCOM_FEATURE_ROTATION;
                 pp_config.feature_mask &= ~CAM_QCOM_FEATURE_CDS;
@@ -7770,7 +7776,7 @@ int32_t QCamera2HardwareInterface::getPPConfig(cam_pp_feature_config_t &pp_confi
 
         case 2:
             //Setting feature for Quadra CFA
-            pp_config.feature_mask |= CAM_QCOM_FEATURE_QUADRA_CFA;
+            //pp_config.feature_mask |= CAM_QCOM_FEATURE_QUADRA_CFA;
             break;
 
     }
@@ -8149,7 +8155,7 @@ int32_t QCamera2HardwareInterface::preparePreview()
             }
         }
 
-        if (mParameters.getofflineRAW() && !mParameters.getQuadraCfa()) {
+        if (mParameters.getofflineRAW()/* && !mParameters.getQuadraCfa()*/) {
             addChannel(QCAMERA_CH_TYPE_RAW);
         }
     } else {
@@ -10286,7 +10292,7 @@ bool QCamera2HardwareInterface::isRegularCapture()
         !isLongshotEnabled() &&
         !mParameters.isHDREnabled() &&
         !mParameters.getRecordingHintValue() &&
-        !isZSLMode() && (!mParameters.getofflineRAW()|| mParameters.getQuadraCfa())) {
+        !isZSLMode() && (!mParameters.getofflineRAW()/*|| mParameters.getQuadraCfa()*/)) {
             ret = true;
     }
     return ret;
