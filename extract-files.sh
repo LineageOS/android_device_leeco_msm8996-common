@@ -110,6 +110,11 @@ function blob_fixup() {
         patchelf --remove-needed "libmedia.so" "${2}"
         ;;
 
+    # Move ims libs to product
+    product/etc/permissions/com.qualcomm.qti.imscmservice.xml)
+        sed -i -e 's|file="/system/framework/|file="/product/framework/|g' "${2}"
+        ;;
+
     esac
 }
 

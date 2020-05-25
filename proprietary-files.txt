@@ -440,21 +440,21 @@ vendor/firmware/a530v3_gpmu.fw2|0a2f6f450231673d75ba39e5d28776db3becf810
 vendor/firmware/a530v3_seq.fw2|8963a53acc689725dee4b22881a4dd4b80e5def8
 
 # IMS - Gemini 8.0.0/OPR1.170623.032/8.5.24
--app/uceShimService/uceShimService.apk
-etc/permissions/com.qualcomm.qti.imscmservice.xml
+-app/uceShimService/uceShimService.apk:product/app/uceShimService/uceShimService.apk
+etc/permissions/com.qualcomm.qti.imscmservice.xml:product/etc/permissions/com.qualcomm.qti.imscmservice.xml
 etc/permissions/qti-vzw-ims-internal.xml
-framework/com.qualcomm.qti.imscmservice@1.0-java.jar
-lib64/com.qualcomm.qti.imscmservice@1.0.so
-lib64/lib-imscamera.so
-lib64/lib-imsvideocodec.so
-lib64/lib-imsvt.so
-lib64/lib-imsvtextutils.so
-lib64/lib-imsvtutils.so
-lib64/libdiag_system.so
-lib64/libimscamera_jni.so
-lib64/libimsmedia_jni.so
-lib64/librcc.so
-lib64/vendor.qti.imsrtpservice@1.0.so
+framework/com.qualcomm.qti.imscmservice@1.0-java.jar:product/framework/com.qualcomm.qti.imscmservice@1.0-java.jar
+lib64/com.qualcomm.qti.imscmservice@1.0.so:product/lib64/com.qualcomm.qti.imscmservice@1.0.so
+lib64/lib-imscamera.so:product/lib64/lib-imscamera.so
+lib64/lib-imsvideocodec.so:product/lib64/lib-imsvideocodec.so
+lib64/lib-imsvt.so:product/lib64/lib-imsvt.so
+lib64/lib-imsvtextutils.so:product/lib64/lib-imsvtextutils.so
+lib64/lib-imsvtutils.so:product/lib64/lib-imsvtutils.so
+lib64/libdiag_system.so:product/lib64/libdiag_system.so
+lib64/libimscamera_jni.so:product/lib64/libimscamera_jni.so
+lib64/libimsmedia_jni.so:product/lib64/libimsmedia_jni.so
+lib64/librcc.so:product/lib64/librcc.so
+lib64/vendor.qti.imsrtpservice@1.0.so:product/lib64/vendor.qti.imsrtpservice@1.0.so
 -priv-app/ims/ims.apk|426be1b83d6f608107d6dcf587080551abeab3e2
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
