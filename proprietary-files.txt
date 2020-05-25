@@ -631,21 +631,21 @@ vendor/etc/init/netmgrd.rc
 vendor/etc/init/port-bridge.rc
 
 # RIL (IMS) - from Gemini - 8.0.0/OPR1.170623.032/8.5.24
--app/uceShimService/uceShimService.apk|f43b4dd2898393713415e8707c12e37cc6dbd2ba
-etc/permissions/com.qualcomm.qti.imscmservice.xml|db25ef24f1937366d58a53b4f4b8923bc9e98d2d
+-app/uceShimService/uceShimService.apk:product/app/uceShimService/uceShimService.apk|f43b4dd2898393713415e8707c12e37cc6dbd2ba
+etc/permissions/com.qualcomm.qti.imscmservice.xml:product/etc/permissions/com.qualcomm.qti.imscmservice.xml|13422499f02326afd01eefbd13d22c935af8ac77
 etc/permissions/qti-vzw-ims-internal.xml|3e41b645dd4ad8bad6775c103a34bfd7a507a4f7
-framework/com.qualcomm.qti.imscmservice@1.0-java.jar|67d16abab246f84fb2f0ba7efd58cd0f5a8a3290
-lib64/com.qualcomm.qti.imscmservice@1.0.so|db1f7abf26dfe1d13f7a7697ef5c7674bfea55d4
-lib64/lib-imscamera.so|644cd3e65e35fa7931fd6bd1eaf1f0c9a815c775
-lib64/lib-imsvideocodec.so|f49373b405d73645a6b9b4ce5734993275a88d25
-lib64/lib-imsvt.so|e06c778bdd9bc69f416381b29edd82cd7b7ee018
-lib64/lib-imsvtextutils.so|f272d94b74f9ef15ef55c83477862beaec58f20a
-lib64/lib-imsvtutils.so|70cea60a3f3819ed49640d6870b04e865ec527ba
-lib64/libdiag_system.so|1fd5243b460587e5eb34b2e34544a5ca35bb0d66
-lib64/libimscamera_jni.so|bbbad052ad9b7cfdde9a585d9aa92f9fd289967a
-lib64/libimsmedia_jni.so|3ae7d55efd1cede9f905c0644e92b459b798c461
-lib64/librcc.so|342313a3e12ae14e10a091ebfec3579655ff97ab
-lib64/vendor.qti.imsrtpservice@1.0.so|40d91dc845fbf48fdf894c11aa14346f7786cd73
+framework/com.qualcomm.qti.imscmservice@1.0-java.jar:product/framework/com.qualcomm.qti.imscmservice@1.0-java.jar|67d16abab246f84fb2f0ba7efd58cd0f5a8a3290
+lib64/com.qualcomm.qti.imscmservice@1.0.so:product/lib64/com.qualcomm.qti.imscmservice@1.0.so|db1f7abf26dfe1d13f7a7697ef5c7674bfea55d4
+lib64/lib-imscamera.so:product/lib64/lib-imscamera.so|644cd3e65e35fa7931fd6bd1eaf1f0c9a815c775
+lib64/lib-imsvideocodec.so:product/lib64/lib-imsvideocodec.so|f49373b405d73645a6b9b4ce5734993275a88d25
+lib64/lib-imsvt.so:product/lib64/lib-imsvt.so|e06c778bdd9bc69f416381b29edd82cd7b7ee018
+lib64/lib-imsvtextutils.so:product/lib64/lib-imsvtextutils.so|f272d94b74f9ef15ef55c83477862beaec58f20a
+lib64/lib-imsvtutils.so:product/lib64/lib-imsvtutils.so|70cea60a3f3819ed49640d6870b04e865ec527ba
+lib64/libdiag_system.so:product/lib64/libdiag_system.so|1fd5243b460587e5eb34b2e34544a5ca35bb0d66
+lib64/libimscamera_jni.so:product/lib64/libimscamera_jni.so|bbbad052ad9b7cfdde9a585d9aa92f9fd289967a
+lib64/libimsmedia_jni.so:product/lib64/libimsmedia_jni.so|3ae7d55efd1cede9f905c0644e92b459b798c461
+lib64/librcc.so:product/lib64/librcc.so|342313a3e12ae14e10a091ebfec3579655ff97ab
+lib64/vendor.qti.imsrtpservice@1.0.so:product/lib64/vendor.qti.imsrtpservice@1.0.so|40d91dc845fbf48fdf894c11aa14346f7786cd73
 vendor/bin/ims_rtp_daemon|08556e7da3872ca6deea33494bac5f86e9024891
 vendor/bin/imsdatadaemon|58592523c85e798f77a0df6eab9505f386b8e291
 vendor/bin/imsqmidaemon|3a34c4c7c85fc41826a44bd904a48fd5754d02f3
