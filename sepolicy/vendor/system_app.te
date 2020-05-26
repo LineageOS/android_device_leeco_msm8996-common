@@ -7,3 +7,7 @@ allow system_app sysfs_batteryinfo:dir search;
 get_prop(system_app, cnd_vendor_prop)
 
 allow system_app sysfs_ir_enable:file { rw_file_perms };
+
+#DeviceSettings.apk need to get and set camera_prop
+get_prop(system_app, camera_prop)
+set_prop(system_app, camera_prop)
