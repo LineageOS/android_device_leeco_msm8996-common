@@ -596,8 +596,7 @@ on property:vold.decrypt=trigger_restart_min_framework
     start audio-hal-2-0
 
 on property:vold.decrypt=trigger_restart_framework
-    stop camera-provider-2-4
-    start camera-provider-2-4
+    restart vendor.camera-provider-2-4
     start audio-hal-2-0
 
 on property:persist.env.fastdorm.enabled=true
@@ -657,6 +656,11 @@ service cnss-daemon /vendor/bin/cnss-daemon -n -l
 
 on property:sys.powerctl=*
     stop cnss-daemon
+
+#Switch Camera HAL Level by DeviceSettings.apk
+on property:persist.camera.HAL3.enabled=*
+    restart qcamerasvr
+    restart vendor.camera-provider-2-4
 
 service loc_launcher /vendor/bin/loc_launcher
     class late_start
