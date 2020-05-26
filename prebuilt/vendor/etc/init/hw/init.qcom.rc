@@ -657,6 +657,11 @@ service cnss-daemon /vendor/bin/cnss-daemon -n -l
 on property:sys.powerctl=*
     stop cnss-daemon
 
+#Switch Camera HAL Level by DeviceSettings.apk
+on property:persist.camera.HAL3.enabled=*
+    restart qcamerasvr
+    restart vendor.camera-provider-2-4
+
 service loc_launcher /vendor/bin/loc_launcher
     class late_start
     user gps
