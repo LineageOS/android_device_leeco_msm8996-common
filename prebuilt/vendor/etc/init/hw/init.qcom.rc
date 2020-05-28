@@ -587,18 +587,18 @@ on property:bluetooth.isEnabled=true
     write /sys/class/bluetooth/hci0/idle_timeout 7000
 
 on property:vold.decrypt=trigger_reset_main
-    stop audio-hal-2-0
+    stop vendor.audio-hal-2-0
 
 on property:vold.decrypt=trigger_shutdown_framework
-    stop audio-hal-2-0
+    stop vendor.audio-hal-2-0
 
 on property:vold.decrypt=trigger_restart_min_framework
-    start audio-hal-2-0
+    start vendor.audio-hal-2-0
 
 on property:vold.decrypt=trigger_restart_framework
     stop vendor.camera-provider-2-4
     start vendor.camera-provider-2-4
-    start audio-hal-2-0
+    start vendor.audio-hal-2-0
 
 on property:persist.env.fastdorm.enabled=true
     setprop persist.radio.data_no_toggle 1
