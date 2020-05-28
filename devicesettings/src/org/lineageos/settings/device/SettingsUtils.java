@@ -16,39 +16,37 @@
 
 package org.lineageos.settings.device;
 
-import android.os.Build;
-import android.os.SystemProperties;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.os.Build;
+import android.os.SystemProperties;
 import android.util.Log;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
-
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 public class SettingsUtils {
     public static final String TAG = "SettingsUtils";
-    public static final String CAMERA_FOCUS_FIX_ENABLED =
-            "CAMERA_FOCUS_FIX_ENABLED";
+    public static final String CAMERA_FOCUS_FIX_ENABLED = "CAMERA_FOCUS_FIX_ENABLED";
     public static final String QUICK_CHARGE_ENABLED = "QUICK_CHARGE_ENABLED";
 
     public static final String CAMERA_FOCUS_FIX_SYSFS =
-            "/sys/module/msm_actuator/parameters/use_focus_fix";
+        "/sys/module/msm_actuator/parameters/use_focus_fix";
     public static final String QUICK_CHARGE_SYSFS =
-            "/sys/class/power_supply/le_ab/le_quick_charge_mode";
+        "/sys/class/power_supply/le_ab/le_quick_charge_mode";
 
     private static final String QC_SYSTEM_PROPERTY = "persist.sys.le_fast_chrg_enable";
 
     public static final String PREFERENCES = "SettingsUtilsPreferences";
 
     public static void writeCameraFocusFixSysfs(boolean enabled) {
-        if (!supportsCameraFocusFix()) return;
+        if (!supportsCameraFocusFix())
+            return;
         try {
             FileOutputStream out = new FileOutputStream(new File(CAMERA_FOCUS_FIX_SYSFS));
             OutputStreamWriter writer = new OutputStreamWriter(out);
@@ -103,16 +101,15 @@ public class SettingsUtils {
         return editor.commit();
     }
 
-    public static void registerPreferenceChangeListener(Context context,
-            SharedPreferences.OnSharedPreferenceChangeListener preferenceListener) {
+    public static void registerPreferenceChangeListener(
+        Context context, SharedPreferences.OnSharedPreferenceChangeListener preferenceListener) {
         SharedPreferences settings = context.getSharedPreferences(PREFERENCES, 0);
         settings.registerOnSharedPreferenceChangeListener(preferenceListener);
     }
 
-    public static void unregisterPreferenceChangeListener(Context context,
-            SharedPreferences.OnSharedPreferenceChangeListener preferenceListener) {
+    public static void unregisterPreferenceChangeListener(
+        Context context, SharedPreferences.OnSharedPreferenceChangeListener preferenceListener) {
         SharedPreferences settings = context.getSharedPreferences(PREFERENCES, 0);
         settings.unregisterOnSharedPreferenceChangeListener(preferenceListener);
     }
-
 }

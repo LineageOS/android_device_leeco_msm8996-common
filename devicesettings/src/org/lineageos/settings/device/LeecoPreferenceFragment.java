@@ -18,14 +18,13 @@ package org.lineageos.settings.device;
 
 import android.os.Bundle;
 import android.provider.Settings;
-import androidx.preference.PreferenceFragment;
+import android.util.Log;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
-import android.util.Log;
 
 public class LeecoPreferenceFragment extends PreferenceFragment {
-
     private static final String KEY_CAMERA_FOCUS_FIX_ENABLE = "camera_focus_enable";
     private static final String KEY_QUICK_CHARGE_ENABLE = "quick_charge_enable";
 
@@ -68,21 +67,21 @@ public class LeecoPreferenceFragment extends PreferenceFragment {
 
     private Preference.OnPreferenceChangeListener PrefListener =
         new Preference.OnPreferenceChangeListener() {
-        @Override
-        public boolean onPreferenceChange(Preference preference, Object value) {
-            final String key = preference.getKey();
+            @Override
+            public boolean onPreferenceChange(Preference preference, Object value) {
+                final String key = preference.getKey();
 
-            if (KEY_CAMERA_FOCUS_FIX_ENABLE.equals(key)) {
-                boolean enabled = (boolean) value;
-                SettingsUtils.setCameraFocusFixEnabled(getActivity(), enabled);
-                SettingsUtils.writeCameraFocusFixSysfs(enabled);
-            } else if (KEY_QUICK_CHARGE_ENABLE.equals(key)) {
-                boolean enabled = (boolean) value;
-                SettingsUtils.setQuickChargeEnabled(getActivity(), enabled);
-                SettingsUtils.writeQuickChargeProp(enabled);
+                if (KEY_CAMERA_FOCUS_FIX_ENABLE.equals(key)) {
+                    boolean enabled = (boolean) value;
+                    SettingsUtils.setCameraFocusFixEnabled(getActivity(), enabled);
+                    SettingsUtils.writeCameraFocusFixSysfs(enabled);
+                } else if (KEY_QUICK_CHARGE_ENABLE.equals(key)) {
+                    boolean enabled = (boolean) value;
+                    SettingsUtils.setQuickChargeEnabled(getActivity(), enabled);
+                    SettingsUtils.writeQuickChargeProp(enabled);
+                }
+
+                return true;
             }
-
-            return true;
-        }
-    };
+        };
 }

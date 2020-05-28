@@ -24,14 +24,13 @@ import android.content.pm.PackageManager;
 import android.util.Log;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
-
     private static final boolean DEBUG = false;
     private static final String TAG = "SettingsDevice";
 
     @Override
     public void onReceive(final Context context, Intent intent) {
-        if (DEBUG) Log.d(TAG, "Boot Receiver");
-        SettingsUtils.writeCameraFocusFixSysfs(
-            SettingsUtils.getCameraFocusFixEnabled(context));
+        if (DEBUG)
+            Log.d(TAG, "Boot Receiver");
+        SettingsUtils.writeCameraFocusFixSysfs(SettingsUtils.getCameraFocusFixEnabled(context));
     }
 }
