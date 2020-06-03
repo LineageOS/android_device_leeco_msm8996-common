@@ -14,7 +14,7 @@ case "$DEVINFO" in
     mv -f /mnt/vendor/firmware/zl0/* /mnt/vendor/firmware/
 
     # Remove NFC configs
-    rm -f /mnt/system/etc/libnfc-nci.conf
+    rm -f /mnt/system/system/etc/libnfc-nci.conf
     rm -f /mnt/vendor/etc/libnfc-nxp_RF.conf
     rm -f /mnt/vendor/etc/libnfc-nxp.conf
 
