@@ -628,8 +628,17 @@ product/framework/qti-telephony-common.jar
 vendor/bin/adpl
 vendor/etc/init/dataadpl.rc
 vendor/etc/init/dataqti.rc
+vendor/etc/init/init.time_daemon.rc
+vendor/etc/init/ims_rtp_daemon.rc
+vendor/etc/init/imsdatadaemon.rc
+vendor/etc/init/imsqmidaemon.rc
+vendor/etc/init/imsrcsd.rc
 vendor/etc/init/netmgrd.rc
 vendor/etc/init/port-bridge.rc
+
+# RIL - from river - motorola/river_retail/river:10/QPU30.52-16-2/be43c
+vendor/etc/init/vendor.qti.rmt_storage.rc|bc212c6353c2ded44ae4d759605fbbe55aa4fa3f
+vendor/etc/init/vendor.qti.tftp.rc|091915c28a3bc574d39189688748cc922d9e65e4
 
 # RIL (IMS) - from Gemini - 8.0.0/OPR1.170623.032/8.5.24
 -app/uceShimService/uceShimService.apk:product/app/uceShimService/uceShimService.apk|f43b4dd2898393713415e8707c12e37cc6dbd2ba
