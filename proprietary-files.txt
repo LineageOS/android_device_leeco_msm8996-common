@@ -652,8 +652,6 @@ lib64/lib-imsvt.so:product/lib64/lib-imsvt.so|e06c778bdd9bc69f416381b29edd82cd7b
 lib64/lib-imsvtextutils.so:product/lib64/lib-imsvtextutils.so|f272d94b74f9ef15ef55c83477862beaec58f20a
 lib64/lib-imsvtutils.so:product/lib64/lib-imsvtutils.so|70cea60a3f3819ed49640d6870b04e865ec527ba
 lib64/libdiag_system.so:product/lib64/libdiag_system.so|1fd5243b460587e5eb34b2e34544a5ca35bb0d66
-lib64/libimscamera_jni.so:product/lib64/libimscamera_jni.so|bbbad052ad9b7cfdde9a585d9aa92f9fd289967a
-lib64/libimsmedia_jni.so:product/lib64/libimsmedia_jni.so|3ae7d55efd1cede9f905c0644e92b459b798c461
 lib64/librcc.so:product/lib64/librcc.so|342313a3e12ae14e10a091ebfec3579655ff97ab
 lib64/vendor.qti.imsrtpservice@1.0.so:product/lib64/vendor.qti.imsrtpservice@1.0.so|40d91dc845fbf48fdf894c11aa14346f7786cd73
 vendor/bin/ims_rtp_daemon|08556e7da3872ca6deea33494bac5f86e9024891
@@ -676,11 +674,13 @@ vendor/lib64/lib-uceservice.so|78dd90a3099552e49910be1baab5a17d2d6e6472
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so|745859f00d25911e5a1629eea227c492255e8fc1
 vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so|7d7044da11fa37846262772705101bbbc5ddc96b
 
-# RIL (IMS) - from mata - essential/mata/mata:10/QP1A.190711.122/420
--priv-app/ims/ims.apk|426be1b83d6f608107d6dcf587080551abeab3e2
-
 # RIL (IMS) - from oneplus3t - OnePlus/OnePlus3/OnePlus3T:9/PKQ1.181203.001/1911042108 - OOS 9.0.6
 vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so|447d205fca7ea674f7f3f072e7d26ae0a0a9b4b4
+
+# RIL (IMS)
+-product/priv-app/ims/ims.apk
+product/lib64/libimscamera_jni.so
+product/lib64/libimsmedia_jni.so
 
 # Sensors - from oneplus3t - OnePlus/OnePlus3/OnePlus3T:9/PKQ1.181203.001/1911042108 - OOS 9.0.6
 vendor/bin/sensors.qti|c65a1300c40dffbfa4739e63181fae1b6c9cf2ac
