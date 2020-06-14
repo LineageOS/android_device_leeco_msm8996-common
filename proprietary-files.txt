@@ -578,11 +578,9 @@ vendor/lib64/libqmi_cci.so
 vendor/bin/hvdcp_opti|316e3b0643981b502f58f2f48e4058b06a98706d
 
 # RIL - from Gemini - 8.0.0/OPR1.170623.032/8.5.24
--app/QtiTelephonyService/QtiTelephonyService.apk|75afa76babfb760a7de6423589139c1376326b87
-etc/permissions/qcrilhook.xml|9fc58a3d54d20ac1d53bab14608815121aefbce5
-etc/permissions/telephonyservice.xml|b297c8a27443570377d78586b00198839ce326bb
-framework/QtiTelephonyServicelibrary.jar|7e6810bf7747778dc8b88da8e4357531ba9ed815
-framework/qcrilhook.jar|8a1d0edd6fb61b84d5f26140498e5d9a685e99c8
+-app/QtiTelephonyService/QtiTelephonyService.apk:product/app/QtiTelephonyService/QtiTelephonyService.apk|75afa76babfb760a7de6423589139c1376326b87
+framework/QtiTelephonyServicelibrary.jar:product/framework/QtiTelephonyServicelibrary.jar|7e6810bf7747778dc8b88da8e4357531ba9ed815
+framework/qcrilhook.jar:product/framework/qcrilhook.jar|8a1d0edd6fb61b84d5f26140498e5d9a685e99c8
 vendor/bin/ATFWD-daemon|f8a855d8d6c4f191551d06c4833cd75745eca37f
 vendor/bin/netmgrd|73017e3099f3550f72a68c7aa0012c62e500f324
 vendor/bin/port-bridge|a50b3351a59e0413e5537294550ddfca1b026d48
@@ -614,7 +612,7 @@ vendor/lib/libmdmdetect.so|6993fbc8f8db7874c89c750263089ac741f62575
 vendor/radio/qcril_database/qcril.db|5df3369d12c977720961ef80aa74b132b8088c09
 
 # RIL - from mata - essential/mata/mata:10/QP1A.190711.122/420
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|956a4017d0ba7f68e6d225e57b40d3b2bcbb4837
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk:product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|956a4017d0ba7f68e6d225e57b40d3b2bcbb4837
 
 # RIL - from daisy - xiaomi/daisy/daisy_sprout:9/PKQ1.180917.001/V10.0.1.0.PDLMIFJ
 vendor/bin/rmt_storage|346ef281e829109ba11af912509309e520351ef9
@@ -623,7 +621,9 @@ vendor/lib64/libqrtr.so|83676274fde1056a0507b4100a3a5423f5af5021
 vendor/lib64/libqsocket.so|3799e723be152c31c270f93a64e2865c0d9e86c4
 
 # RIL
+product/etc/permissions/qcrilhook.xml
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml
+product/etc/permissions/telephonyservice.xml
 product/framework/qti-telephony-common.jar
 vendor/bin/adpl
 vendor/etc/init/dataadpl.rc
