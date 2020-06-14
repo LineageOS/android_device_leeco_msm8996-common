@@ -633,7 +633,7 @@ vendor/etc/init/port-bridge.rc
 # RIL (IMS) - from Gemini - 8.0.0/OPR1.170623.032/8.5.24
 -app/uceShimService/uceShimService.apk:product/app/uceShimService/uceShimService.apk|f43b4dd2898393713415e8707c12e37cc6dbd2ba
 etc/permissions/com.qualcomm.qti.imscmservice.xml:product/etc/permissions/com.qualcomm.qti.imscmservice.xml|13422499f02326afd01eefbd13d22c935af8ac77
-etc/permissions/qti-vzw-ims-internal.xml|3e41b645dd4ad8bad6775c103a34bfd7a507a4f7
+etc/permissions/qti-vzw-ims-internal.xml:vendor/etc/permissions/qti-vzw-ims-internal.xml|89409c5f355acbd65a45b13f12e1baafb13baf46
 framework/com.qualcomm.qti.imscmservice@1.0-java.jar:product/framework/com.qualcomm.qti.imscmservice@1.0-java.jar|67d16abab246f84fb2f0ba7efd58cd0f5a8a3290
 lib64/com.qualcomm.qti.imscmservice@1.0.so:product/lib64/com.qualcomm.qti.imscmservice@1.0.so|db1f7abf26dfe1d13f7a7697ef5c7674bfea55d4
 lib64/lib-imscamera.so:product/lib64/lib-imscamera.so|644cd3e65e35fa7931fd6bd1eaf1f0c9a815c775

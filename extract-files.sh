@@ -117,6 +117,11 @@ function blob_fixup() {
         sed -i -e 's|file="/system/framework/|file="/product/framework/|g' "${2}"
         ;;
 
+    # Move qti-vzw-ims-internal permission to vendor
+    vendor/etc/permissions/qti-vzw-ims-internal.xml)
+        sed -i -e 's|file="/system/vendor/|file="/vendor/|g' "${2}"
+        ;;
+
     esac
 }
 
