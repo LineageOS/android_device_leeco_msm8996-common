@@ -2,7 +2,7 @@
 vendor/bin/qseecomd:recovery/root/sbin/qseecomd|ed99f2e39f6dcc333b92c0e27944f2a157239bf7
 vendor/lib64/hw/keystore.msm8996.so:recovery/root/vendor/lib64/hw/keystore.msm8996.so|d7222a060d20e7df3cabbfe7125385e85821246e
 vendor/lib64/libQSEEComAPI.so:recovery/root/vendor/lib64/libQSEEComAPI.so|c2562b6f2b6e9e2a30c72f0638ae0c16365c0022
-vendor/lib64/libdiag.so:recovery/root/vendor/lib64/libdiag.so|0321c8078dc349cd67926a70707912260896e6e8
+vendor/lib64/libdiag.so:recovery/root/vendor/lib64/libdiag.so|458f66e82f879020355f83073f3a0e5119354167
 vendor/lib64/libdrmfs.so:recovery/root/vendor/lib64/libdrmfs.so|4aabf209af08449a1867e7a852ce2b48725040e8
 vendor/lib64/libdrmtime.so:recovery/root/vendor/lib64/libdrmtime.so|110b8a263128288b056183ba064b0ab2f6343fab
 vendor/lib64/librpmb.so:recovery/root/vendor/lib64/librpmb.so|2cca61072c29c2bc82dc71d529fd288c0d796ae8
