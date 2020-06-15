@@ -23,6 +23,12 @@
         android:summary="@string/camera_focus_fix_summary" />
 
     <SwitchPreference
+        android:key="key_camera_hal3_enable"
+        android:defaultValue="true"
+        android:title="@string/camera_hal3_title"
+        android:summary="@string/camera_hal3_summary" />
+
+    <SwitchPreference
         android:key="quick_charge_enable"
         android:defaultValue="true"
         android:title="@string/quick_charge_title"

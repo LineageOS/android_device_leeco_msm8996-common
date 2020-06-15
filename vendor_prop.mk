@@ -47,6 +47,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.HAL3.enabled=1 \
+    persist.camera.hal_migrating=0 \
     persist.camera.imglib.fddsp=1 \
     persist.camera.llc=1 \
     persist.camera.llnoise=1 \
