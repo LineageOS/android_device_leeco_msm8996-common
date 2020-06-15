@@ -29,6 +29,7 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import android.text.TextUtils;
 
 public class SettingsUtils {
     public static final String TAG = "SettingsUtils";
@@ -41,6 +42,9 @@ public class SettingsUtils {
         "/sys/class/power_supply/le_ab/le_quick_charge_mode";
 
     private static final String QC_SYSTEM_PROPERTY = "persist.sys.le_fast_chrg_enable";
+
+    private static final String CAMERA_HAL3_ENABLE_PROPERTY = "persist.camera.HAL3.enabled";
+    private static final String CAMERA_HAL_MIGRATE_PROPERTY = "persist.camera.hal_migrating";
 
     public static final String PREFERENCES = "SettingsUtilsPreferences";
 
@@ -63,6 +67,16 @@ public class SettingsUtils {
         SystemProperties.set(QC_SYSTEM_PROPERTY, enabled ? "1" : "0");
     }
 
+    public static void writeCameraHAL3Prop(boolean enable) {
+        SystemProperties.set(CAMERA_HAL3_ENABLE_PROPERTY, enable ? "1" : "0");
+        SystemProperties.set(CAMERA_HAL_MIGRATE_PROPERTY, "1");
+    }
+
+    public static boolean cameraHAL3Enable() {
+        String enable = SystemProperties.get(CAMERA_HAL3_ENABLE_PROPERTY, "1");
+        return "1".equals(enable);
+    }
+
     public static boolean supportsCameraFocusFix() {
         File focusFixPath = new File(CAMERA_FOCUS_FIX_SYSFS);
         return focusFixPath.exists();
@@ -71,6 +85,10 @@ public class SettingsUtils {
     public static boolean supportsQuickChargeSwitch() {
         File QCPath = new File(QUICK_CHARGE_SYSFS);
         return QCPath.exists();
+    }
+
+    public static boolean supportCamHalLevelSwitch() {
+        return true;
     }
 
     public static boolean setCameraFocusFixEnabled(Context context, boolean enabled) {

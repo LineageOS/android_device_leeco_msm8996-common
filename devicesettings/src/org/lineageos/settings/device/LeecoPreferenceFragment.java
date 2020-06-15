@@ -27,9 +27,11 @@ import androidx.preference.SwitchPreference;
 public class LeecoPreferenceFragment extends PreferenceFragment {
     private static final String KEY_CAMERA_FOCUS_FIX_ENABLE = "camera_focus_enable";
     private static final String KEY_QUICK_CHARGE_ENABLE = "quick_charge_enable";
+    private static final String KEY_CAMHAL3_ENABLE = "key_camera_hal3_enable";
 
     private SwitchPreference mCameraFocusFixEnable;
     private SwitchPreference mQuickChargeEnable;
+    private SwitchPreference mCamHal3Enable;
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -43,6 +45,14 @@ public class LeecoPreferenceFragment extends PreferenceFragment {
         final PreferenceScreen prefSet = getPreferenceScreen();
         mCameraFocusFixEnable = (SwitchPreference) findPreference(KEY_CAMERA_FOCUS_FIX_ENABLE);
         mQuickChargeEnable = (SwitchPreference) findPreference(KEY_QUICK_CHARGE_ENABLE);
+        mCamHal3Enable = (SwitchPreference) findPreference(KEY_CAMHAL3_ENABLE);
+
+        if (SettingsUtils.supportCamHalLevelSwitch()) {
+            mCamHal3Enable.setChecked(SettingsUtils.cameraHAL3Enable());
+            mCamHal3Enable.setOnPreferenceChangeListener(PrefListener);
+        } else {
+            prefSet.removePreference(mCamHal3Enable);
+        }
 
         if (SettingsUtils.supportsCameraFocusFix()) {
             mCameraFocusFixEnable.setChecked(SettingsUtils.getCameraFocusFixEnabled(getActivity()));
@@ -63,6 +73,11 @@ public class LeecoPreferenceFragment extends PreferenceFragment {
     public void onResume() {
         super.onResume();
         getListView().setPadding(0, 0, 0, 0);
+        //prop maybe modify by adb when onpause, so check from prop again
+        if (SettingsUtils.supportCamHalLevelSwitch()
+                && null != mCamHal3Enable) {
+            mCamHal3Enable.setChecked(SettingsUtils.cameraHAL3Enable());
+        }
     }
 
     private Preference.OnPreferenceChangeListener PrefListener =
@@ -79,6 +94,9 @@ public class LeecoPreferenceFragment extends PreferenceFragment {
                     boolean enabled = (boolean) value;
                     SettingsUtils.setQuickChargeEnabled(getActivity(), enabled);
                     SettingsUtils.writeQuickChargeProp(enabled);
+                } else if (KEY_CAMHAL3_ENABLE.equals(key)) {
+                    boolean enabled = (boolean) value;
+                    SettingsUtils.writeCameraHAL3Prop(enabled);
                 }
 
                 return true;
