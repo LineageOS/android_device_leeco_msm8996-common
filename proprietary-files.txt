@@ -626,6 +626,8 @@ vendor/lib/libmdmdetect.so|1433bc62549fcd9c3d14796487e9ad2f59b08da4
 vendor/radio/qcril_database/qcril.db|f25a9215fcc2445e73d1aa0b7ef9bdbd97e33f56
 
 # RIL - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.2.0.QDLMIXM
+product/etc/permissions/embms.xml|5589ed8da213acd27e2ad2109094561eb1be30a7
+product/etc/permissions/lpa.xml|cd9d14c6022ca046cd1de1157b06fe64b6e4c524
 product/etc/permissions/qcrilhook.xml|ceb890ab3c1645aa0d0044abab1ba58c4097a991
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml|68901007ba1a48ceb1b728fc3b5483dd51b5e3a0
 product/etc/permissions/telephonyservice.xml|a39eefcaf85fb8da60044fdbbcfddd95deb031c8
