@@ -72,11 +72,6 @@ function blob_fixup() {
         sed -i -e 's|vulkan.msm8953.so|vulkan.msm8996.so|g' "${2}"
         ;;
 
-    # make imsrcsd and lib-uceservice load haxxed libbase
-    vendor/lib64/lib-uceservice.so | vendor/bin/imsrcsd)
-        patchelf --replace-needed "libbase.so" "libbase-hax.so" "${2}"
-        ;;
-
     # use /sbin instead of /system/bin for TWRP
     recovery/root/sbin/qseecomd)
         sed -i -e 's|/system/bin/linker64|/sbin/linker64\x0\x0\x0\x0\x0\x0|g' "${2}"
@@ -108,16 +103,6 @@ function blob_fixup() {
     # Patch blobs for VNDK
     vendor/lib64/lib-dplmedia.so)
         patchelf --remove-needed "libmedia.so" "${2}"
-        ;;
-
-    # Move ims libs to product
-    product/etc/permissions/com.qualcomm.qti.imscmservice.xml)
-        sed -i -e 's|file="/system/framework/|file="/product/framework/|g' "${2}"
-        ;;
-
-    # Move qti-vzw-ims-internal permission to vendor
-    vendor/etc/permissions/qti-vzw-ims-internal.xml)
-        sed -i -e 's|file="/system/vendor/|file="/vendor/|g' "${2}"
         ;;
 
     esac
