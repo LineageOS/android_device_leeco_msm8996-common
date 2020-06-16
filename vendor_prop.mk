@@ -58,9 +58,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Data modules
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.data.iwlan.enable=true \
-    persist.data.mode=concurrent \
     persist.data.netmgrd.qos.enable=true \
+    persist.vendor.data.iwlan.enable=true \
+    persist.vendor.data.mode=concurrent \
     ro.vendor.use_data_netmgrd=true
 
 # Devinfo for init
@@ -134,26 +134,23 @@ PRODUCT_PROPERTY_OVERRIDES += \
     DEVICE_PROVISIONED=1 \
     persist.data.qmi.adb_logmask=0 \
     persist.net.doxlat=true \
-    persist.radio.apm_sim_not_pwdn=1 \
     persist.radio.csvt.enabled=false \
-    persist.radio.REVERSE_QMI=0 \
-    persist.radio.ROTATION_ENABLE=1 \
     persist.rcs.supported=1 \
+    persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.cs_srv_type=1 \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.data_ltd_sys_ind=1 \
-    persist.vendor.radio.facnotsup_as_nonw=1 \
-    persist.vendor.radio.force_on_dc=true \
-    persist.vendor.radio.ignore_dom_time=5 \
     persist.vendor.radio.mt_sms_ack=20 \
     persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.redir_party_num=1 \
+    persist.vendor.radio.ROTATION_ENABLE=1 \
     persist.vendor.radio.sib16_support=1 \
     ril.subscription.types=NV,RUIM \
     rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
     ro.telephony.call_ring.multiple=false \
     ro.telephony.use_old_mnc_mcc_format=true \
-    telephony.lteOnCdmaDevice=1
+    telephony.lteOnCdmaDevice=1 \
+    vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
 
 # Surfaceflinger
 PRODUCT_PROPERTY_OVERRIDES += \
