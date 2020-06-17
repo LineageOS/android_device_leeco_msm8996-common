@@ -722,8 +722,8 @@ vendor/bin/time_daemon|75b8a6a14cfb4424499ccb2bf1cad011df295d0e
 vendor/lib/libtime_genoff.so|a574d287e7e73649685b702f4fe497eb7c6ba727
 vendor/lib64/libtime_genoff.so|06df52867790cdbbcc674a3a28d7ad7c8cc161ac
 
-# Wi-Fi - Gemini 8.0.0/OPR1.170623.032/8.5.24
-vendor/bin/cnss-daemon
+# Wi-Fi - from oneplus3t - OnePlus/OnePlus3/OnePlus3T:9/PKQ1.181203.001/1911042108 - OOS 9.0.6
+vendor/bin/cnss-daemon|608267c5ff979a1b102c46547be37ce1d2631324
 
 # WiFi Display - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.2.0.QDLMIXM
 bin/wfdservice|934817e5689fe6f8b54032902de58c203b8ec2e7
