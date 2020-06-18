@@ -2,6 +2,7 @@
 <!--
 /*
 ** Copyright 2013, The Android Open Source Project
+** Copyright (C) 2020 The LineageOS Project
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
 ** you may not use this file except in compliance with the License.
@@ -406,9 +407,6 @@
     <!-- Enable overlay for all location components. -->
     <string name="config_networkLocationProviderPackageName" translatable="false">com.qualcomm.location</string>
     <string name="config_fusedLocationProviderPackageName" translatable="false">com.qualcomm.location</string>
-
-    <!-- Enable blur support -->
-    <!-- bool name="config_ui_blur_enabled">true</bool -->
 
     <!-- ImsService package name to bind to by default, if config_dynamic_bind_ims is true -->
     <string name="config_ims_package">org.codeaurora.ims</string>
