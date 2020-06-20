@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c097d547_ae6a698e",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 539,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2020-06-20T19:38:21Z",
+      "side": 1,
+      "message": "Tbh I think we can drop these libqmi_cci_system blobs",
+      "revId": "d36757d437f056cf62f0d22354566b26642ed522",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
