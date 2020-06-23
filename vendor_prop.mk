@@ -50,7 +50,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.imglib.fddsp=1 \
     persist.camera.llc=1 \
     persist.camera.llnoise=1 \
-    vendor.camera.hal1.packagelist=com.facebook.katana,com.facebook.orca,com.instagram.android,com.viber.voip,com.whatsapp
+    vendor.camera.hal1.packagelist=com.facebook.katana,com.facebook.orca,com.instagram.android,com.viber.voip
 
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
