@@ -51,7 +51,6 @@ vendor/lib/libaudioparsers.so|4b980c4392b6e800fb23213a0daaa83b35c04051
 vendor/lib/libqtigef.so|fbedb509c61ff1a7d6e9c4a099af346ca781430a
 
 # Bluetooth - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.2.0.QDLMIXM
-lib64/libbtconfigstore.so|a65efb84466346cfcb92cef590f0bfb4bd03adf5
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|378ad8ce95651b4bf81ad73aaffbdf0666c55432
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|a244ce3acd958c31865e048e0ead9bc54d1c0465
@@ -68,9 +67,7 @@ vendor/lib64/vendor.qti.hardware.fm@1.0.so|fc7ad886f82089edf36509865fadac17a7340
 
 # Bluetooth Audio - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.2.0.QDLMIXM
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so|76134fb75ff99948e0d00728db058aed8f519c3f
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|51b017a7d35d71522319d2a3d5922b53e0f18230
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|7cdd376b08b8571e51674e0e61607c6a52a5a24a
-vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so|42aa6258f3bf4e8ef72b7664f2277db49837e4da
 
 # Camera - from zl1 - 6.0.1/WAXCNFN5902012312S/letv01060151
 bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon|c36fe0c5f93cdfbc3abf83ca0e73880bd218c079
