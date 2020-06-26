@@ -70,6 +70,30 @@
       "revId": "0e18ffe4149a6c3bcae95b308fdf828a94b5f66f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "331cc698_21c7a79f",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2020-06-26T11:16:48Z",
+      "side": 0,
+      "message": "aosp bt doesn\u0027t need btconfigstore, it\u0027s safe to drop both impl and libbtconfigstore",
+      "parentUuid": "0c410e27_941be975",
+      "range": {
+        "startLine": 71,
+        "startChar": 0,
+        "endLine": 71,
+        "endChar": 61
+      },
+      "revId": "0e18ffe4149a6c3bcae95b308fdf828a94b5f66f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
