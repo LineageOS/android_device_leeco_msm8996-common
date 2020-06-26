@@ -46,6 +46,30 @@
       "revId": "0e18ffe4149a6c3bcae95b308fdf828a94b5f66f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0c410e27_941be975",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2020-06-26T07:22:38Z",
+      "side": 0,
+      "message": "If you are removing the -impl lib, does it make sense to even build libbtconfigstore?",
+      "parentUuid": "0ef78fff_80f209f7",
+      "range": {
+        "startLine": 71,
+        "startChar": 0,
+        "endLine": 71,
+        "endChar": 61
+      },
+      "revId": "0e18ffe4149a6c3bcae95b308fdf828a94b5f66f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
