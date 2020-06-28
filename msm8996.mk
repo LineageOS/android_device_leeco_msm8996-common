@@ -28,10 +28,6 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage/lineage-sdk \
     $(LOCAL_PATH)/overlay/packages/apps/Snap
 
-# Init
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,${LOCAL_PATH}/prebuilt/vendor,$(TARGET_COPY_OUT_VENDOR))
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
@@ -136,6 +132,21 @@ PRODUCT_PACKAGES += \
     camera.msm8996 \
     libfui \
     Snap
+
+# Common config scripts
+PRODUCT_PACKAGES += \
+    init.proc_touchpanel.sh
+
+# Common init scripts
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    init.qcom.early_boot.sh \
+    init.qcom.rc \
+    init.qcom.sh \
+    init.qcom.power.rc \
+    init.qcom.usb.rc \
+    init.recovery.qcom.rc \
+    ueventd.qcom.rc \
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
@@ -327,8 +338,7 @@ PRODUCT_PACKAGES += \
     librecovery_updater_leeco
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/bin/sgdisk:root/system/bin/sgdisk \
-    $(LOCAL_PATH)/recovery/root/init.recovery.qcom.rc:root/init.recovery.qcom.rc
+    $(LOCAL_PATH)/prebuilt/bin/sgdisk:root/system/bin/sgdisk
 
 # Releasetools
 PRODUCT_COPY_FILES += \

@@ -178,7 +178,7 @@ TARGET_USES_INTERACTION_BOOST := true
 # Recovery
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_leeco
 
-TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/prebuilt/vendor/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
 
 #RECOVERY_VARIANT := twrp
 ifeq ($(RECOVERY_VARIANT),twrp)
@@ -234,4 +234,3 @@ WIFI_HIDL_FEATURE_DISABLE_AP_MAC_RANDOMIZATION := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 -include vendor/leeco/msm8996-common/BoardConfigVendor.mk
-
