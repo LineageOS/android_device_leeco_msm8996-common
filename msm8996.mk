@@ -338,16 +338,16 @@ PRODUCT_PACKAGES += \
     librecovery_updater_leeco
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/bin/sgdisk:root/system/bin/sgdisk
+    $(LOCAL_PATH)/prebuilt/sgdisk:root/system/bin/sgdisk
 
 # Releasetools
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/bin/deunify.sh:install/bin/deunify.sh \
-    $(LOCAL_PATH)/prebuilt/bin/devinfo.sh:install/bin/devinfo.sh \
-    $(LOCAL_PATH)/prebuilt/bin/partprobe.sh:install/bin/partprobe.sh \
-    $(LOCAL_PATH)/prebuilt/bin/sgdisk:install/bin/sgdisk \
-    $(LOCAL_PATH)/prebuilt/bin/toybox:install/bin/toybox \
-    $(LOCAL_PATH)/prebuilt/bin/unlock-vendor.sh:install/bin/unlock-vendor.sh
+    $(LOCAL_PATH)/prebuilt/deunify.sh:install/bin/deunify.sh \
+    $(LOCAL_PATH)/prebuilt/devinfo.sh:install/bin/devinfo.sh \
+    $(LOCAL_PATH)/prebuilt/partprobe.sh:install/bin/partprobe.sh \
+    $(LOCAL_PATH)/prebuilt/sgdisk:install/bin/sgdisk \
+    $(LOCAL_PATH)/prebuilt/toybox:install/bin/toybox \
+    $(LOCAL_PATH)/prebuilt/unlock-vendor.sh:install/bin/unlock-vendor.sh
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
