@@ -109,25 +109,25 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Graphics (OpenGLES)
 PRODUCT_PROPERTY_OVERRIDES += \
-   ro.opengles.version=196610
+    ro.opengles.version=196610
 
 # IMS / VoLTE
 PRODUCT_PROPERTY_OVERRIDES += \
-   persist.dbg.volte_avail_ovr=1 \
-   persist.dbg.vt_avail_ovr=1 \
-   persist.dbg.wfc_avail_ovr=1 \
-   persist.radio.VT_ENABLE=1 \
-   persist.radio.VT_HYBRID_ENABLE=1 \
-   persist.vendor.qti.telephony.vt_cam_interface=1
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=1 \
+    persist.dbg.wfc_avail_ovr=1 \
+    persist.radio.VT_ENABLE=1 \
+    persist.radio.VT_HYBRID_ENABLE=1 \
+    persist.vendor.qti.telephony.vt_cam_interface=1
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
-   vidc.debug.perf.mode=2 \
-   vidc.enc.dcvs.extra-buff-count=2
+    vidc.debug.perf.mode=2 \
+    vidc.enc.dcvs.extra-buff-count=2
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
-   ro.vendor.extension_library=libqti-perfd-client.so
+    ro.vendor.extension_library=libqti-perfd-client.so
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
