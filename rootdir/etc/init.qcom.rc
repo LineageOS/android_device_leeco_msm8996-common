@@ -662,7 +662,6 @@ service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
     class main
     user root
     group system wakelock
-    seclabel u:r:hvdcp:s0
 
 service vendor.charger /vendor/bin/charger
     class charger
