@@ -68,7 +68,6 @@ on fs
     mkdir /mnt/vendor/persist/bms 0700 root system
     mkdir /mnt/vendor/persist/data 0700 system system
     mkdir /mnt/vendor/persist/display 0770 system graphics
-    mkdir /mnt/vendor/persist/qc_senseid 0700 system system
     mkdir /mnt/vendor/persist/time 0770 system system
     exec u:r:vendor_toolbox:s0 root audio bluetooth graphics media net_raw system vendor_rfs vendor_rfs_shared wifi -- /vendor/bin/toybox_vendor find /mnt/vendor/persist -type d -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
     restorecon_recursive /mnt/vendor/persist
@@ -432,13 +431,6 @@ on boot
 
     # bond0 used by FST Manager
     chown wifi wifi /sys/class/net/bond0/bonding/queue_id
-
-    # for fingerprint calibration
-    chown system system /mnt/vendor/persist/qc_senseid/bg_estimation/bg_basis.dat
-    chown system system /mnt/vendor/persist/qc_senseid/bg_estimation/bg_small1_basis.dat
-    chown system system /mnt/vendor/persist/qc_senseid/bg_estimation/bg_small1_off_basis.dat
-    chown system system /mnt/vendor/persist/qc_senseid/bg_estimation/bg_small2_basis.dat
-    chown system system /mnt/vendor/persist/qc_senseid/bg_estimation/bg_small2_off_basis.dat
 
     # Don't reset entire SoC on individual subsystem crash
     write /sys/bus/msm_subsys/devices/subsys0/restart_level "related"
