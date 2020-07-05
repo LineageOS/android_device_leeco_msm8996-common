@@ -100,16 +100,4 @@ public class SettingsUtils {
         editor.putInt(name, value);
         return editor.commit();
     }
-
-    public static void registerPreferenceChangeListener(
-        Context context, SharedPreferences.OnSharedPreferenceChangeListener preferenceListener) {
-        SharedPreferences settings = context.getSharedPreferences(PREFERENCES, 0);
-        settings.registerOnSharedPreferenceChangeListener(preferenceListener);
-    }
-
-    public static void unregisterPreferenceChangeListener(
-        Context context, SharedPreferences.OnSharedPreferenceChangeListener preferenceListener) {
-        SharedPreferences settings = context.getSharedPreferences(PREFERENCES, 0);
-        settings.unregisterOnSharedPreferenceChangeListener(preferenceListener);
-    }
 }
