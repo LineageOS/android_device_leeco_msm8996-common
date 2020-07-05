@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dfa4eb17_005f429a",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 2
+      },
+      "lineNbr": 462,
+      "author": {
+        "id": 24834
+      },
+      "writtenOn": "2020-07-05T20:02:37Z",
+      "side": 1,
+      "message": "How about keeping iostats disabled? afaik Android doesnt use it for any statistics",
+      "revId": "61f4ea82fe80bbe47939171aebf9c245a6631a78",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
