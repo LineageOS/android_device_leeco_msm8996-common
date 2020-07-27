@@ -139,6 +139,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.REVERSE_QMI=0 \
     persist.radio.ROTATION_ENABLE=1 \
     persist.rcs.supported=1 \
+    persist.sys.fflag.override.settings_network_and_internet_v2=true \
     persist.vendor.radio.aosp_usr_pref_sel=true \
     persist.vendor.radio.cs_srv_type=1 \
     persist.vendor.radio.custom_ecc=1 \
@@ -155,10 +156,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.call_ring.multiple=false \
     ro.telephony.use_old_mnc_mcc_format=true \
     telephony.lteOnCdmaDevice=1
-
-# Settings app
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.fflag.override.settings_network_and_internet_v2=true
 
 # Surfaceflinger
 PRODUCT_PROPERTY_OVERRIDES += \
