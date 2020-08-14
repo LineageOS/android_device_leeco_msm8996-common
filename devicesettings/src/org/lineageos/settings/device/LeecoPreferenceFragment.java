@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The LineageOS Project
+ * Copyright (C) 2020 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,6 +23,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
+import org.lineageos.settings.device.utils.SettingsProviderUtils;
 
 public class LeecoPreferenceFragment extends PreferenceFragment {
     private static final String KEY_CAMERA_FOCUS_FIX_ENABLE = "camera_focus_enable";
@@ -63,6 +64,7 @@ public class LeecoPreferenceFragment extends PreferenceFragment {
     public void onResume() {
         super.onResume();
         getListView().setPadding(0, 0, 0, 0);
+        SettingsProviderUtils.overrideItems(this.getActivity());
     }
 
     private Preference.OnPreferenceChangeListener PrefListener =
