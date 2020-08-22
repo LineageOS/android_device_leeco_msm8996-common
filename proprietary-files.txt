@@ -411,22 +411,22 @@ vendor/lib64/libhdr_tm.so
 vendor/lib/libhdr_tm.so
 
 # Graphics (SDM)
-vendor/lib/libscalar.so
-vendor/lib/libsdm-color.so
-vendor/lib/libsdm-diag.so
--vendor/lib/libsdm-disp-vndapis.so
-vendor/lib/libsdmextension.so
-vendor/lib/libtinyxml2_1.so
 vendor/lib64/libscalar.so
 vendor/lib64/libsdm-color.so
 vendor/lib64/libsdm-diag.so
 -vendor/lib64/libsdm-disp-vndapis.so
 vendor/lib64/libsdmextension.so
 vendor/lib64/libtinyxml2_1.so
+vendor/lib/libscalar.so
+vendor/lib/libsdm-color.so
+vendor/lib/libsdm-diag.so
+-vendor/lib/libsdm-disp-vndapis.so
+vendor/lib/libsdmextension.so
+vendor/lib/libtinyxml2_1.so
 
 # Graphics (Vulkan)
-vendor/lib/hw/vulkan.msm8953.so:vendor/lib/hw/vulkan.msm8996.so
 vendor/lib64/hw/vulkan.msm8953.so:vendor/lib64/hw/vulkan.msm8996.so
+vendor/lib/hw/vulkan.msm8953.so:vendor/lib/hw/vulkan.msm8996.so
 
 # Graphics (firmware)
 vendor/firmware/a530_gpmu.fw2
@@ -442,6 +442,7 @@ vendor/firmware/a530v3_seq.fw2
 vendor/lib64/hw/keystore.msm8996.so|d7222a060d20e7df3cabbfe7125385e85821246e
 
 # Media
+-vendor/lib64/libgpustats.so
 -vendor/lib/libgpustats.so
 vendor/lib/libI420colorconvert.so
 vendor/lib/libmm-color-convertor.so
@@ -459,7 +460,6 @@ vendor/lib/libOmxQcelp13Dec.so
 vendor/lib/libOmxVideoDSMode.so
 vendor/lib/libOmxWmaDec.so
 vendor/lib/libvqzip.so
--vendor/lib64/libgpustats.so
 
 # Perf
 vendor/bin/energy-awareness
@@ -525,8 +525,8 @@ vendor/lib/vendor.display.postproc@1.0.so
 vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so
 
 # Power-off alarm
-product/framework/vendor.qti.hardware.alarm-V1.0-java.jar
 -product/app/PowerOffAlarm/PowerOffAlarm.apk
+product/framework/vendor.qti.hardware.alarm-V1.0-java.jar
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
 vendor/bin/power_off_alarm
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
@@ -571,8 +571,8 @@ vendor/lib/libsmemlog.so|4ebc56050af9aa89743012889246aef536c079a1
 vendor/lib64/libpdmapper.so|21990291a2d5d16c92be120bca05951596a74d4c
 
 # QMI
-vendor/lib/libqmi_cci.so
 vendor/lib64/libqmi_cci.so
+vendor/lib/libqmi_cci.so
 
 # QuickCharge - from zl1
 vendor/bin/hvdcp_opti|316e3b0643981b502f58f2f48e4058b06a98706d
@@ -628,7 +628,6 @@ product/framework/qti-telephony-common.jar
 vendor/bin/adpl
 vendor/etc/init/dataadpl.rc
 vendor/etc/init/dataqti.rc
-vendor/etc/init/init.time_daemon.rc
 vendor/etc/init/ims_rtp_daemon.rc
 vendor/etc/init/imsdatadaemon.rc
 vendor/etc/init/imsqmidaemon.rc
@@ -694,9 +693,9 @@ vendor/lib/libsensor_reg.so|9a3568dc423598886b7f16d91d76e53cd0220387
 vendor/lib/sensors.ssc.so|2b7c1996cc12e6fac7d1fa09c5dfe1c93a1311d9
 
 # Sensors (LeEco) - from zl1
-vendor/lib/sensors.oem.so|08656a65ab1bf120ac9bb16e93faf93cc2cdda86
 vendor/lib64/sensors.hal.tof.so|eb19aa40617e50bd1efcc88cee9f5b0af34e7f11
 vendor/lib64/sensors.oem.so|08c12372d3331ee43cc0a3f48b88f21e45324f29
+vendor/lib/sensors.oem.so|08656a65ab1bf120ac9bb16e93faf93cc2cdda86
 
 # Thermal
 vendor/bin/thermal-engine
@@ -708,8 +707,9 @@ vendor/lib64/libthermalioctl.so
 # Time services
 -vendor/app/TimeService/TimeService.apk;:timeservice_app_cert-legacy-um
 vendor/bin/time_daemon
-vendor/lib/libtime_genoff.so
+vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
+vendor/lib/libtime_genoff.so
 
 # Wi-Fi - from oneplus3t - OnePlus/OnePlus3/OnePlus3T:9/PKQ1.181203.001/1911042108 - OOS 9.0.6
 vendor/bin/cnss-daemon|608267c5ff979a1b102c46547be37ce1d2631324
@@ -720,6 +720,9 @@ etc/init/wfdservice.rc
 etc/wfdconfig.xml
 etc/wfdconfigsink.xml
 -framework/WfdCommon.jar
+lib64/libmmosal.so
+lib64/libwfdclient.so
+lib64/libwfdnative.so
 lib/com.qualcomm.qti.wifidisplayhal@1.0.so
 lib/libFileMux.so
 lib/libmmosal.so
@@ -744,9 +747,6 @@ lib/libwfduibcsinkinterface.so
 lib/libwfduibcsink.so
 lib/libwfduibcsrcinterface.so
 lib/libwfduibcsrc.so
-lib64/libmmosal.so
-lib64/libwfdclient.so
-lib64/libwfdnative.so
 -priv-app/WfdService/WfdService.apk
 vendor/bin/wifidisplayhalservice
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
