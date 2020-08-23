@@ -22,6 +22,30 @@
       "revId": "30b1bdfe7365a549fb397ad1e661e7db911dfed3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "eeb51471_b3834641",
+        "filename": "init/init_leeco_msm8996.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2020-08-23T22:24:41Z",
+      "side": 1,
+      "message": "The commented line shows \"from - phone-xxhdpi-4096-dalvik-heap.mk\" which tbh I\u0027m unsure if it was a typo or if there\u0027s somewhere they got it from as I don\u0027t see it even on CAF?\n\nI know on cm-13.0 there was more Dalvik configs up to xxxhdpi but they cause bootloops on 15.x and up which is why they were dropped.\n\nI\u0027ll try and ask around if there is a xxhdpi-4096-dalvik-heap.mk though to see",
+      "parentUuid": "8219886f_a9cac5d5",
+      "range": {
+        "startLine": 93,
+        "startChar": 27,
+        "endLine": 93,
+        "endChar": 31
+      },
+      "revId": "30b1bdfe7365a549fb397ad1e661e7db911dfed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
