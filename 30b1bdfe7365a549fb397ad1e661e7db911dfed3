@@ -46,6 +46,30 @@
       "revId": "30b1bdfe7365a549fb397ad1e661e7db911dfed3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3c4b5b95_8d2c6fbc",
+        "filename": "init/init_leeco_msm8996.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2020-08-24T10:39:35Z",
+      "side": 1,
+      "message": "Switched to phone-xhdpi-4096-dalvik-heap values",
+      "parentUuid": "eeb51471_b3834641",
+      "range": {
+        "startLine": 93,
+        "startChar": 27,
+        "endLine": 93,
+        "endChar": 31
+      },
+      "revId": "30b1bdfe7365a549fb397ad1e661e7db911dfed3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
