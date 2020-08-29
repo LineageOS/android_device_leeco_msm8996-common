@@ -69,7 +69,30 @@ on fs
     mkdir /mnt/vendor/persist/data 0700 system system
     mkdir /mnt/vendor/persist/display 0770 system graphics
     mkdir /mnt/vendor/persist/time 0770 system system
-    exec u:r:vendor_toolbox:s0 root audio bluetooth graphics media net_raw system vendor_rfs vendor_rfs_shared wifi -- /vendor/bin/toybox_vendor find /mnt/vendor/persist -type d -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
+    exec u:r:vendor_toolbox:s0 system -- /vendor/bin/toybox_vendor find /mnt/vendor/persist/alarm -type d -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
+    exec u:r:vendor_toolbox:s0 system -- /vendor/bin/toybox_vendor find /mnt/vendor/persist/battery -type d -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
+    exec u:r:vendor_toolbox:s0 bluetooth -- /vendor/bin/toybox_vendor find /mnt/vendor/persist/bluetooth -type d -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
+    exec u:r:vendor_toolbox:s0 system root-- /vendor/bin/toybox_vendor find /mnt/vendor/persist/bms -type d -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
+    exec u:r:vendor_toolbox:s0 root -- /vendor/bin/toybox_vendor find /mnt/vendor/persist/coresight -type d -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
+    exec u:r:vendor_toolbox:s0 system root-- /vendor/bin/toybox_vendor find /mnt/vendor/persist/data -type d -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
+    exec u:r:vendor_toolbox:s0 system graphics -- /vendor/bin/toybox_vendor find /mnt/vendor/persist/display -type d -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
+    exec u:r:vendor_toolbox:s0 system -- /vendor/bin/toybox_vendor find /mnt/vendor/persist/drm -type d -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
+    exec u:r:vendor_toolbox:s0 vendor_rfs vendor_rfs_shared -- /vendor/bin/toybox_vendor find /mnt/vendor/persist/hlos_rfs -type d -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
+    exec u:r:vendor_toolbox:s0 root system -- /vendor/bin/toybox_vendor find /mnt/vendor/persist/hvdcp_opti -type d -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
+    exec u:r:vendor_toolbox:s0 system -- /vendor/bin/toybox_vendor find /mnt/vendor/persist/iar_db -type d -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
+    exec u:r:vendor_toolbox:s0 root -- /vendor/bin/toybox_vendor find /mnt/vendor/persist/lost+found -type d -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
+    exec u:r:vendor_toolbox:s0 radio root -- /vendor/bin/toybox_vendor find /mnt/vendor/persist/mbn_version_info -type d -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
+    exec u:r:vendor_toolbox:s0 system -- /vendor/bin/toybox_vendor find /mnt/vendor/persist/misc -type d -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
+    exec u:r:vendor_toolbox:s0 system -- /vendor/bin/toybox_vendor find /mnt/vendor/persist/properties -type d -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
+    exec u:r:vendor_toolbox:s0 system root-- /vendor/bin/toybox_vendor find /mnt/vendor/persist/qc_senseid -type d -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
+    exec u:r:vendor_toolbox:s0 vendor_rfs -- /vendor/bin/toybox_vendor find /mnt/vendor/persist/rfs -type d -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
+    exec u:r:vendor_toolbox:s0 system -- /vendor/bin/toybox_vendor find /mnt/vendor/persist/secnvm -type d -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
+    exec u:r:vendor_toolbox:s0 system -- /vendor/bin/toybox_vendor find /mnt/vendor/persist/sensors -type d -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
+    exec u:r:vendor_toolbox:s0 system net_raw -- /vendor/bin/toybox_vendor find /mnt/vendor/persist/time -type d -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
+    exec u:r:vendor_toolbox:s0 root -- /vendor/bin/toybox_vendor find /mnt/vendor/persist/usf -type d -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
+    exec u:r:vendor_toolbox:s0 media -- /vendor/bin/toybox_vendor find /mnt/vendor/persist/vpp -type d -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
+    exec u:r:vendor_toolbox:s0 wifi -- /vendor/bin/toybox_vendor find /mnt/vendor/persist/wlan_mac.bin -type d -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
+
     restorecon_recursive /mnt/vendor/persist
 
     # for android.hardware.health@2.0-service.leeco_8996 cycle count backup
