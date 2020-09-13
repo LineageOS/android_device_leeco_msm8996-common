@@ -383,7 +383,8 @@ PRODUCT_PACKAGES += \
 # Shims
 PRODUCT_PACKAGES += \
     libbase_shim \
-    libcamshim
+    libcamshim \
+    libcutils_shim
 
 # Telephony
 PRODUCT_PACKAGES += \

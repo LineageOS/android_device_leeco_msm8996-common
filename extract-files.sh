@@ -67,6 +67,10 @@ fi
 function blob_fixup() {
     case "${1}" in
 
+    product/lib64/libdpmframework.so)
+        patchelf --add-needed "libcutils_shim.so" "${2}"
+        ;;
+
     # kang vulkan from LA.UM.8.6.r1-01900-89xx.0
     vendor/lib/hw/vulkan.msm8996.so | vendor/lib64/hw/vulkan.msm8996.so)
         sed -i -e 's|vulkan.msm8953.so|vulkan.msm8996.so|g' "${2}"
