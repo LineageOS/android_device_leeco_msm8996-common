@@ -47,8 +47,6 @@ char const *heapminfree;
 char const *heapmaxfree;
 char const *heaptargetutilization;
 
-using android::init::property_set;
-
 void property_override(const std::string& name, const std::string& value)
 {
     size_t valuelen = value.size();
@@ -60,7 +58,7 @@ void property_override(const std::string& name, const std::string& value)
     else {
         int rc = __system_property_add(name.c_str(), name.size(), value.c_str(), valuelen);
         if (rc < 0) {
-            LOG(ERROR) << "property_set(\"" << name << "\", \"" << value << "\") failed: "
+            LOG(ERROR) << "property_override(\"" << name << "\", \"" << value << "\") failed: "
                        << "__system_property_add failed";
         }
     }
@@ -117,12 +115,12 @@ void vendor_load_properties()
         // This is LEX722
         property_overrride_triple("ro.product.device", "ro.product.system.device", "ro.product.vendor.device", "le_zl0");
         property_overrride_triple("ro.product.model", "ro.product.system.model", "ro.product.vendor.model", "LEX722");
-        property_set("persist.data.iwlan.enable", "false");
+        property_override("persist.data.iwlan.enable", "false");
         // Dual SIM
-        property_set("persist.radio.multisim.config", "dsds");
-        property_set("ro.telephony.default_network", "10,10");
+        property_override("persist.radio.multisim.config", "dsds");
+        property_override("ro.telephony.default_network", "10,10");
         // Power profile
-        property_set("ro.power_profile.override", "power_profile_zl0");
+        property_override("ro.power_profile.override", "power_profile_zl0");
         unknownDevice = false;
     }
     else if (device == "le_zl1_oversea") {
@@ -130,24 +128,24 @@ void vendor_load_properties()
         property_overrride_triple("ro.product.device", "ro.product.system.device", "ro.product.vendor.device", "le_zl1");
         property_overrride_triple("ro.product.model", "ro.product.system.model", "ro.product.vendor.model", "LEX727");
         property_overrride_triple("ro.product.name", "ro.product.system.name", "ro.product.vendor.name", "ZL1_NA");
-        property_set("persist.data.iwlan.enable", "true");
+        property_override("persist.data.iwlan.enable", "true");
         // Single SIM
-        property_set("persist.radio.multisim.config", "NA");
-        property_set("ro.telephony.default_network", "10");
+        property_override("persist.radio.multisim.config", "NA");
+        property_override("ro.telephony.default_network", "10");
         // NFC
-        property_set("persist.nfc.smartcard.config", "SIM1,eSE1");
+        property_override("persist.nfc.smartcard.config", "SIM1,eSE1");
         unknownDevice = false;
     }
     else if (device == "le_zl1_whole_netcom") {
         // This is LEX720
         property_overrride_triple("ro.product.device", "ro.product.system.device", "ro.product.vendor.device", "le_zl1");
         property_overrride_triple("ro.product.model", "ro.product.system.model", "ro.product.vendor.model", "LEX720");
-        property_set("persist.data.iwlan.enable", "false");
+        property_override("persist.data.iwlan.enable", "false");
         // Dual SIM
-        property_set("persist.radio.multisim.config", "dsds");
-        property_set("ro.telephony.default_network", "10,10");
+        property_override("persist.radio.multisim.config", "dsds");
+        property_override("ro.telephony.default_network", "10,10");
         // NFC
-        property_set("persist.nfc.smartcard.config", "SIM1,SIM2,eSE1");
+        property_override("persist.nfc.smartcard.config", "SIM1,SIM2,eSE1");
         unknownDevice = false;
     }
     else if (device == "le_x2_na_oversea") {
@@ -156,8 +154,8 @@ void vendor_load_properties()
         property_overrride_triple("ro.product.model", "ro.product.system.model", "ro.product.vendor.model", "LEX829");
         property_overrride_triple("ro.product.name", "ro.product.system.name", "ro.product.vendor.name", "LeMax2_WW");
         // Dual SIM
-        property_set("persist.radio.multisim.config", "dsds");
-        property_set("ro.telephony.default_network", "10,10");
+        property_override("persist.radio.multisim.config", "dsds");
+        property_override("ro.telephony.default_network", "10,10");
         unknownDevice = false;
     }
     else if (device == "le_x2_india") {
@@ -166,8 +164,8 @@ void vendor_load_properties()
         property_overrride_triple("ro.product.model", "ro.product.system.model", "ro.product.vendor.model", "LEX821");
         property_overrride_triple("ro.product.name", "ro.product.system.name", "ro.product.vendor.name", "LeMax2_WW");
         // Dual SIM
-        property_set("persist.radio.multisim.config", "dsds");
-        property_set("ro.telephony.default_network", "10,10");
+        property_override("persist.radio.multisim.config", "dsds");
+        property_override("ro.telephony.default_network", "10,10");
         unknownDevice = false;
     }
     else if (device == "le_x2_whole_netcom") {
@@ -176,8 +174,8 @@ void vendor_load_properties()
         property_overrride_triple("ro.product.model", "ro.product.system.model", "ro.product.vendor.model", "LEX820");
         property_overrride_triple("ro.product.name", "ro.product.system.name", "ro.product.vendor.name", "LeMax2_WW");
         // Dual SIM
-        property_set("persist.radio.multisim.config", "dsds");
-        property_set("ro.telephony.default_network", "10,10");
+        property_override("persist.radio.multisim.config", "dsds");
+        property_override("ro.telephony.default_network", "10,10");
         unknownDevice = false;
     }
     else {
@@ -190,10 +188,10 @@ void vendor_load_properties()
 
     check_device();
 
-    property_set("dalvik.vm.heapstartsize", heapstartsize);
-    property_set("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
-    property_set("dalvik.vm.heapsize", heapsize);
-    property_set("dalvik.vm.heaptargetutilization", heaptargetutilization);
-    property_set("dalvik.vm.heapminfree", heapminfree);
-    property_set("dalvik.vm.heapmaxfree", heapmaxfree);
+    property_override("dalvik.vm.heapstartsize", heapstartsize);
+    property_override("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
+    property_override("dalvik.vm.heapsize", heapsize);
+    property_override("dalvik.vm.heaptargetutilization", heaptargetutilization);
+    property_override("dalvik.vm.heapminfree", heapminfree);
+    property_override("dalvik.vm.heapmaxfree", heapmaxfree);
 }
