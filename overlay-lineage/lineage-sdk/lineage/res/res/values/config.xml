@@ -106,6 +106,9 @@
          config to 7. -->
     <integer name="config_deviceHardwareWakeKeys">64</integer>
 
+    <!-- Button backlight -->
+    <bool name="config_deviceHasVariableButtonBrightness">true</bool>
+
     <!-- Control the behavior when the user long presses the app switch button.
             0 - Nothing
             1 - Menu key
