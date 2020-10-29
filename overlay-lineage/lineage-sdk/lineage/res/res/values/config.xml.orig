@@ -121,6 +121,12 @@
          sdk/src/java/org/lineageos/internal/util/DeviceKeysConstants.java.
     -->
     <integer name="config_longPressOnAppSwitchBehavior">1</integer>
+<<<<<<< HEAD
+=======
+
+    <!-- Whether device needs to wait for Qualcomm MPCTL service to start
+         before setting power profiles on boot. -->
+    <bool name="config_waitForMpctlOnBoot">true</bool>
 
     <!-- Button backlight control. Possible values are:
             0 - Not supported
@@ -128,4 +134,5 @@
             2 - Supported with variable brightness control
     -->
     <integer name="config_deviceSupportsButtonBrightnessControl">2</integer>
+>>>>>>> 3c0577003... op3: overlay: Adapt to new button brightness config
 </resources>
