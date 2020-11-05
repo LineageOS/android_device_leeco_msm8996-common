@@ -79,7 +79,7 @@ function blob_fixup() {
     # Provide shim for libdpmframework.so
     system_ext/lib64/libdpmframework.so)
         for  LIBCUTILS_SHIM in $(grep -L "libcutils_shim.so" "${2}"); do
-            patchelf --add-needed "libcutils_shim.so" "$LIBCUTILS_SHIM"
+            "${PATCHELF}" --add-needed "libcutils_shim.so" "$LIBCUTILS_SHIM"
         done
         ;;
 
@@ -102,24 +102,24 @@ function blob_fixup() {
 
     # Patch blobs for VNDK
     vendor/lib/libarcsoft_hdr_detection.so | vendor/lib/libmpbase.so | vendor/lib/libarcsoft_panorama_burstcapture.so | vendor/lib/libarcsoft_smart_denoise.so | vendor/lib/libarcsoft_nighthawk.so | vendor/lib/libarcsoft_hdr.so | vendor/lib/libarcsoft_night_shot.so)
-        patchelf --remove-needed "libandroid.so" "${2}"
+        "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
         ;;
 
     # Patch blobs for VNDK
     vendor/lib/libletv_algo_jni.so)
         sed -i "s|libgui.so|libfui.so|g" "${2}"
-        patchelf --remove-needed "libandroid_runtime.so" "${2}"
+        "${PATCHELF}" --remove-needed "libandroid_runtime.so" "${2}"
         ;;
 
     # Patch blobs for VNDK
     vendor/lib64/lib-dplmedia.so)
-        patchelf --remove-needed "libmedia.so" "${2}"
+        "${PATCHELF}" --remove-needed "libmedia.so" "${2}"
         ;;
 
     # Add shim for libbase LogMessage functions
     vendor/bin/imsrcsd | vendor/lib64/lib-uceservice.so)
         for  LIBBASE_SHIM in $(grep -L "libbase_shim.so" "${2}"); do
-            patchelf --add-needed "libbase_shim.so" "$LIBBASE_SHIM"
+            "${PATCHELF}" --add-needed "libbase_shim.so" "$LIBBASE_SHIM"
         done
         ;;
 
