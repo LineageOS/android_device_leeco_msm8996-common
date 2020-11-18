@@ -28,10 +28,25 @@
 
 # copy devinfo partition info to a vendor prop
 
+# Check if this is Lineage Recovery
+LOSRECOVERY=/sbin/toybox
+
+if test -f "$LOSRECOVERY"; then
+    toybox mount /dev/block/bootdevice/by-name/vendor -t ext4 /mnt/vendor
+else
+    /tmp/toybox mount /dev/block/bootdevice/by-name/vendor -t ext4 /mnt/vendor
+fi
+
 DEVINFO=$(strings /dev/block/sde21 | head -n 1)
 
 echo "DEVINFO: ${DEVINFO}"
 
 sed -i "s/ro.leeco.devinfo=NULL/ro.leeco.devinfo=$DEVINFO/g" "/mnt/vendor/build.prop"
+
+if test -f "$LOSRECOVERY"; then
+    toybox umount /mnt/vendor
+else
+    /tmp/toybox umount /mnt/vendor
+fi
 
 exit 0

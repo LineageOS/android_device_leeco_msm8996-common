@@ -23,19 +23,13 @@ def FullOTA_Assertions(info):
   return
 
 def FullOTA_InstallBegin(info):
-  info.script.AppendExtra('mount("ext4", "EMMC", "/dev/block/bootdevice/by-name/system", "/mnt/system");');
   UnlockVendorPartition(info)
-  info.script.AppendExtra('unmount("/mnt/system");');
   AddVendorAssertion(info)
   return
 
 def FullOTA_InstallEnd(info):
-  info.script.AppendExtra('mount("ext4", "EMMC", "/dev/block/bootdevice/by-name/system", "/mnt/system");');
-  info.script.AppendExtra('mount("ext4", "EMMC", "/dev/block/bootdevice/by-name/vendor", "/mnt/vendor");');
   RunCustomScript(info, "deunify.sh", "")
   RunCustomScript(info, "devinfo.sh", "")
-  info.script.AppendExtra('unmount("/mnt/system");');
-  info.script.AppendExtra('unmount("/mnt/vendor");');
   return
 
 def IncrementalOTA_Assertions(info):
@@ -43,19 +37,13 @@ def IncrementalOTA_Assertions(info):
   return
 
 def IncrementalOTA_InstallBegin(info):
-  info.script.AppendExtra('mount("ext4", "EMMC", "/dev/block/bootdevice/by-name/system", "/mnt/system");');
   UnlockVendorPartition(info)
-  info.script.AppendExtra('unmount("/mnt/system");');
   AddVendorAssertion(info)
   return
 
 def IncrementalOTA_InstallEnd(info):
-  info.script.AppendExtra('mount("ext4", "EMMC", "/dev/block/bootdevice/by-name/system", "/mnt/system");');
-  info.script.AppendExtra('mount("ext4", "EMMC", "/dev/block/bootdevice/by-name/vendor", "/mnt/vendor");');
   RunCustomScript(info, "deunify.sh", "")
   RunCustomScript(info, "devinfo.sh", "")
-  info.script.AppendExtra('unmount("/mnt/system");');
-  info.script.AppendExtra('unmount("/mnt/vendor");');
   return
 
 def AddVendorAssertion(info):
