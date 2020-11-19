@@ -640,9 +640,6 @@ vendor/etc/init/vendor.qti.tftp.rc|091915c28a3bc574d39189688748cc922d9e65e4
 
 # RIL (IMS) - from Gemini - Xiaomi/gemini/gemini:8.0.0/OPR1.170623.032/V10.2.2.0.OAAMIXM
 -system/app/uceShimService/uceShimService.apk:product/app/uceShimService/uceShimService.apk|6e148658d03ffbfa6cbbebf18a85dba65799e1cf
-system/etc/permissions/com.qualcomm.qti.imscmservice.xml:product/etc/permissions/com.qualcomm.qti.imscmservice.xml|13422499f02326afd01eefbd13d22c935af8ac77
-system/etc/permissions/qti-vzw-ims-internal.xml:vendor/etc/permissions/qti-vzw-ims-internal.xml|89409c5f355acbd65a45b13f12e1baafb13baf46
-system/framework/com.qualcomm.qti.imscmservice@1.0-java.jar:product/framework/com.qualcomm.qti.imscmservice@1.0-java.jar|67d16abab246f84fb2f0ba7efd58cd0f5a8a3290
 system/lib64/com.qualcomm.qti.imscmservice@1.0.so:product/lib64/com.qualcomm.qti.imscmservice@1.0.so|db1f7abf26dfe1d13f7a7697ef5c7674bfea55d4
 system/lib64/lib-imscamera.so:product/lib64/lib-imscamera.so|644cd3e65e35fa7931fd6bd1eaf1f0c9a815c775
 system/lib64/lib-imsvideocodec.so:product/lib64/lib-imsvideocodec.so|f49373b405d73645a6b9b4ce5734993275a88d25
@@ -656,7 +653,6 @@ vendor/bin/ims_rtp_daemon|08556e7da3872ca6deea33494bac5f86e9024891
 vendor/bin/imsdatadaemon|58592523c85e798f77a0df6eab9505f386b8e291
 vendor/bin/imsqmidaemon|3a34c4c7c85fc41826a44bd904a48fd5754d02f3
 vendor/bin/imsrcsd|3d36b51928bb0e3190bda0a58d718456cb9b5ca4
-vendor/framework/qti-vzw-ims-internal.jar|8a9f1be184ed7a2a1fb7c4ed120eb31cddf87808
 vendor/lib64/com.qualcomm.qti.imscmservice@1.0_vendor.so|75181464f8b5daf1766728d6a78aed8e352d0b7e
 vendor/lib64/lib-dplmedia.so|dbbf196791a371f8bc6132b81a1b813bb25bb64a
 vendor/lib64/lib-imsSDP.so|dad8918bab8ee8789058ce36d4141e09afebd2df
