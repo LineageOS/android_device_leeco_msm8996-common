@@ -225,11 +225,11 @@ vendor/lib/libmmcamera_isp_snr47.so|44f15661d64906cb1e87de1e028f87f0f022c928
 vendor/lib/libmmcamera_isp_sub_module.so|5fb215ead8c3eefb1c2a0f3c6730dd9d3a55365c
 
 # CNE
-product/lib64/com.quicinc.cne.api@1.0.so
-product/lib64/com.quicinc.cne.api@1.1.so
-product/lib64/com.quicinc.cne.constants@1.0.so
-product/lib64/com.quicinc.cne.constants@2.0.so
-product/lib64/com.quicinc.cne.constants@2.1.so
+product/lib64/com.quicinc.cne.api@1.0.so:system_ext/lib64/com.quicinc.cne.api@1.0.so
+product/lib64/com.quicinc.cne.api@1.1.so:system_ext/lib64/com.quicinc.cne.api@1.1.so
+product/lib64/com.quicinc.cne.constants@1.0.so:system_ext/lib64/com.quicinc.cne.constants@1.0.so
+product/lib64/com.quicinc.cne.constants@2.0.so:system_ext/lib64/com.quicinc.cne.constants@2.0.so
+product/lib64/com.quicinc.cne.constants@2.1.so:system_ext/lib64/com.quicinc.cne.constants@2.1.so
 system/etc/cne/Nexus/ATT/ATT_profiles.xml
 system/etc/cne/Nexus/ROW/ROW_profiles.xml
 system/etc/cne/Nexus/VZW/VZW_profiles.xml
@@ -289,19 +289,19 @@ vendor/lib64/vendor.qti.latency@2.0.so
 -system/app/UEIQuicksetSDKLeTV/UEIQuicksetSDKLeTV.apk|b9b4a53a6465dbd9e1d1b6f1a8393313f5e72f64
 
 # DPM
-product/bin/dpmd
-product/etc/dpm/dpm.conf
-product/etc/init/dpmd.rc
-product/etc/permissions/com.qti.dpmframework.xml
-product/etc/permissions/dpmapi.xml
-product/framework/com.qti.dpmframework.jar
-product/framework/dpmapi.jar
-product/lib64/com.qualcomm.qti.dpm.api@1.0.so
-product/lib64/libdpmctmgr.so
-product/lib64/libdpmfdmgr.so
-product/lib64/libdpmframework.so
-product/lib64/libdpmtcm.so
--product/priv-app/dpmserviceapp/dpmserviceapp.apk
+product/bin/dpmd:system_ext/bin/dpmd
+product/etc/dpm/dpm.conf:system_ext/etc/dpm/dpm.conf
+product/etc/init/dpmd.rc:system_ext/etc/init/dpmd.rc
+product/etc/permissions/com.qti.dpmframework.xml:system_ext/etc/permissions/com.qti.dpmframework.xml
+product/etc/permissions/dpmapi.xml:system_ext/etc/permissions/dpmapi.xml
+product/framework/com.qti.dpmframework.jar:system_ext/framework/com.qti.dpmframework.jar
+product/framework/dpmapi.jar:system_ext/framework/dpmapi.jar
+product/lib64/com.qualcomm.qti.dpm.api@1.0.so:system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so
+product/lib64/libdpmctmgr.so:system_ext/lib64/libdpmctmgr.so
+product/lib64/libdpmfdmgr.so:system_ext/lib64/libdpmfdmgr.so
+product/lib64/libdpmframework.so:system_ext/lib64/libdpmframework.so
+product/lib64/libdpmtcm.so:system_ext/lib64/libdpmtcm.so
+-product/priv-app/dpmserviceapp/dpmserviceapp.apk:system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
 vendor/bin/dpmQmiMgr
 vendor/etc/init/dpmQmiMgr.rc
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
@@ -578,9 +578,9 @@ vendor/lib/libqmi_cci.so
 vendor/bin/hvdcp_opti|316e3b0643981b502f58f2f48e4058b06a98706d
 
 # RIL - from Gemini - Xiaomi/gemini/gemini:8.0.0/OPR1.170623.032/V10.2.2.0.OAAMIXM
--system/app/QtiTelephonyService/QtiTelephonyService.apk:product/app/QtiTelephonyService/QtiTelephonyService.apk|7d7104c26c7c1e9487d9c41d48f0e0348135cb61
-system/framework/QtiTelephonyServicelibrary.jar:product/framework/QtiTelephonyServicelibrary.jar|7e6810bf7747778dc8b88da8e4357531ba9ed815
-system/framework/qcrilhook.jar:product/framework/qcrilhook.jar|8a1d0edd6fb61b84d5f26140498e5d9a685e99c8
+-system/app/QtiTelephonyService/QtiTelephonyService.apk:system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|7d7104c26c7c1e9487d9c41d48f0e0348135cb61
+system/framework/QtiTelephonyServicelibrary.jar:system_ext/framework/QtiTelephonyServicelibrary.jar|7e6810bf7747778dc8b88da8e4357531ba9ed815
+system/framework/qcrilhook.jar:system_ext/framework/qcrilhook.jar|8a1d0edd6fb61b84d5f26140498e5d9a685e99c8
 vendor/bin/ATFWD-daemon|f8a855d8d6c4f191551d06c4833cd75745eca37f
 vendor/bin/netmgrd|73017e3099f3550f72a68c7aa0012c62e500f324
 vendor/bin/port-bridge|a50b3351a59e0413e5537294550ddfca1b026d48
@@ -612,7 +612,7 @@ vendor/lib/libmdmdetect.so|6993fbc8f8db7874c89c750263089ac741f62575
 vendor/radio/qcril_database/qcril.db|4df6c832d5c99d2760b7602d100dd2d3ac9954e6
 
 # RIL - from mata - essential/mata/mata:10/QP1A.190711.122/420
--system/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk:product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|956a4017d0ba7f68e6d225e57b40d3b2bcbb4837
+-system/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk:system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|956a4017d0ba7f68e6d225e57b40d3b2bcbb4837
 
 # RIL - from daisy - xiaomi/daisy/daisy_sprout:9/PKQ1.180917.001/V10.0.1.0.PDLMIFJ
 vendor/bin/rmt_storage|346ef281e829109ba11af912509309e520351ef9
@@ -621,9 +621,8 @@ vendor/lib64/libqrtr.so|83676274fde1056a0507b4100a3a5423f5af5021
 vendor/lib64/libqsocket.so|3799e723be152c31c270f93a64e2865c0d9e86c4
 
 # RIL
-product/etc/permissions/qcrilhook.xml
-product/etc/permissions/telephony_product_privapp-permissions-qti.xml
-product/etc/permissions/telephonyservice.xml
+product/etc/permissions/qcrilhook.xml:system_ext/etc/permissions/qcrilhook.xml
+product/etc/permissions/telephonyservice.xml:system_ext/etc/permissions/telephonyservice.xml
 vendor/bin/adpl
 vendor/etc/init/dataadpl.rc
 vendor/etc/init/dataqti.rc
@@ -639,16 +638,16 @@ vendor/etc/init/vendor.qti.rmt_storage.rc|bc212c6353c2ded44ae4d759605fbbe55aa4fa
 vendor/etc/init/vendor.qti.tftp.rc|091915c28a3bc574d39189688748cc922d9e65e4
 
 # RIL (IMS) - from Gemini - Xiaomi/gemini/gemini:8.0.0/OPR1.170623.032/V10.2.2.0.OAAMIXM
--system/app/uceShimService/uceShimService.apk:product/app/uceShimService/uceShimService.apk|6e148658d03ffbfa6cbbebf18a85dba65799e1cf
-system/lib64/com.qualcomm.qti.imscmservice@1.0.so:product/lib64/com.qualcomm.qti.imscmservice@1.0.so|db1f7abf26dfe1d13f7a7697ef5c7674bfea55d4
-system/lib64/lib-imscamera.so:product/lib64/lib-imscamera.so|644cd3e65e35fa7931fd6bd1eaf1f0c9a815c775
-system/lib64/lib-imsvideocodec.so:product/lib64/lib-imsvideocodec.so|f49373b405d73645a6b9b4ce5734993275a88d25
-system/lib64/lib-imsvt.so:product/lib64/lib-imsvt.so|e06c778bdd9bc69f416381b29edd82cd7b7ee018
-system/lib64/lib-imsvtextutils.so:product/lib64/lib-imsvtextutils.so|f272d94b74f9ef15ef55c83477862beaec58f20a
-system/lib64/lib-imsvtutils.so:product/lib64/lib-imsvtutils.so|70cea60a3f3819ed49640d6870b04e865ec527ba
-system/lib64/libdiag_system.so:product/lib64/libdiag_system.so|1fd5243b460587e5eb34b2e34544a5ca35bb0d66
-system/lib64/librcc.so:product/lib64/librcc.so|342313a3e12ae14e10a091ebfec3579655ff97ab
-system/lib64/vendor.qti.imsrtpservice@1.0.so:product/lib64/vendor.qti.imsrtpservice@1.0.so|40d91dc845fbf48fdf894c11aa14346f7786cd73
+-system/app/uceShimService/uceShimService.apk:system_ext/app/uceShimService/uceShimService.apk|6e148658d03ffbfa6cbbebf18a85dba65799e1cf
+system/lib64/com.qualcomm.qti.imscmservice@1.0.so:system_ext/lib64/com.qualcomm.qti.imscmservice@1.0.so|db1f7abf26dfe1d13f7a7697ef5c7674bfea55d4
+system/lib64/lib-imscamera.so:system_ext/lib64/lib-imscamera.so|644cd3e65e35fa7931fd6bd1eaf1f0c9a815c775
+system/lib64/lib-imsvideocodec.so:system_ext/lib64/lib-imsvideocodec.so|f49373b405d73645a6b9b4ce5734993275a88d25
+system/lib64/lib-imsvt.so:system_ext/lib64/lib-imsvt.so|e06c778bdd9bc69f416381b29edd82cd7b7ee018
+system/lib64/lib-imsvtextutils.so:system_ext/lib64/lib-imsvtextutils.so|f272d94b74f9ef15ef55c83477862beaec58f20a
+system/lib64/lib-imsvtutils.so:system_ext/lib64/lib-imsvtutils.so|70cea60a3f3819ed49640d6870b04e865ec527ba
+system/lib64/libdiag_system.so:system_ext/lib64/libdiag_system.so|1fd5243b460587e5eb34b2e34544a5ca35bb0d66
+system/lib64/librcc.so:system_ext/lib64/librcc.so|342313a3e12ae14e10a091ebfec3579655ff97ab
+system/lib64/vendor.qti.imsrtpservice@1.0.so:system_ext/lib64/vendor.qti.imsrtpservice@1.0.so|40d91dc845fbf48fdf894c11aa14346f7786cd73
 vendor/bin/ims_rtp_daemon|08556e7da3872ca6deea33494bac5f86e9024891
 vendor/bin/imsdatadaemon|58592523c85e798f77a0df6eab9505f386b8e291
 vendor/bin/imsqmidaemon|3a34c4c7c85fc41826a44bd904a48fd5754d02f3
@@ -672,9 +671,9 @@ vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so|7d7044da11fa3784626277270510
 vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so|447d205fca7ea674f7f3f072e7d26ae0a0a9b4b4
 
 # RIL (IMS)
--product/priv-app/ims/ims.apk
-product/lib64/libimscamera_jni.so
-product/lib64/libimsmedia_jni.so
+-product/priv-app/ims/ims.apk:system_ext/priv-app/ims/ims.apk
+product/lib64/libimscamera_jni.so:system_ext/lib64/libimscamera_jni.so
+product/lib64/libimsmedia_jni.so:system_ext/lib64/libimsmedia_jni.so
 
 # Sensors - from oneplus3t - OnePlus/OnePlus3/OnePlus3T:9/PKQ1.181203.001/1911042108 - OOS 9.0.6
 vendor/bin/sensors.qti|c65a1300c40dffbfa4739e63181fae1b6c9cf2ac
