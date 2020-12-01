@@ -23,6 +23,7 @@ allow vendor_toolbox {
     persist_bms_file
     persist_display_file
     persist_drm_file
+    persist_file
     persist_hvdcp_file
     persist_misc_file
     persist_qti_fp_file
@@ -44,6 +45,7 @@ allow vendor_toolbox {
     persist_bms_file
     persist_display_file
     persist_drm_file
+    persist_file
     persist_hvdcp_file
     persist_misc_file
     persist_qti_fp_file
