@@ -401,4 +401,7 @@
     <string-array name="config_biometric_sensors" translatable="false" >
         <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
     </string-array>
+	
+	<!-- Specify custom blanking delay of the display -->
+    <integer name="config_screen_off_delay">0</integer>
 </resources>
