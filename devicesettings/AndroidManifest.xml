@@ -7,6 +7,7 @@
 
     <uses-permission android:name="android.permission.DEVICE_POWER" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="lineageos.permission.HARDWARE_ABSTRACTION_ACCESS" />
 
     <uses-sdk
         android:minSdkVersion="26"
@@ -20,6 +21,7 @@
         <receiver android:name="org.lineageos.settings.device.BootCompletedReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="lineageos.intent.action.INITIALIZE_LINEAGE_HARDWARE" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
