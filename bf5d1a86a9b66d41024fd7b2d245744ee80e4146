@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "45007f92_ff1338a1",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 625,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2020-12-17T20:23:15Z",
+      "side": 1,
+      "message": "This is pointless... you have all the needed stuff in the device tree. Take a look: https://github.com/TheMuppets/proprietary_vendor_leeco/blob/lineage-18.0/msm8996-common/proprietary/product/etc/permissions/telephony_product_privapp-permissions-qti.xml",
+      "range": {
+        "startLine": 625,
+        "startChar": 0,
+        "endLine": 625,
+        "endChar": 142
+      },
+      "revId": "bf5d1a86a9b66d41024fd7b2d245744ee80e4146",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
