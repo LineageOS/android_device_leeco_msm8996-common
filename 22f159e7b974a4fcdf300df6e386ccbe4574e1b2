@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f272d2db_e9745889",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 626,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2020-12-17T17:01:39Z",
+      "side": 1,
+      "message": "Forgot to move these",
+      "range": {
+        "startLine": 624,
+        "startChar": 0,
+        "endLine": 626,
+        "endChar": 44
+      },
+      "revId": "22f159e7b974a4fcdf300df6e386ccbe4574e1b2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
