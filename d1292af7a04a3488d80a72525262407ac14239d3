@@ -22,6 +22,30 @@
       "revId": "d1292af7a04a3488d80a72525262407ac14239d3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "412b31d3_83be1918",
+        "filename": "rro_overlays/TetheringOverlay/res/values/config.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 16002
+      },
+      "writtenOn": "2020-12-20T15:39:37Z",
+      "side": 1,
+      "message": "fixed, thanks",
+      "parentUuid": "6d5588d9_be62adfc",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 49,
+        "endChar": 19
+      },
+      "revId": "d1292af7a04a3488d80a72525262407ac14239d3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
