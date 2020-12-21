@@ -14,6 +14,9 @@ allow vendor_toolbox vendor_toolbox_exec:file execute_no_trans;
 # Allow vendor_toolbox to read directories in rootfs
 allow vendor_toolbox rootfs:dir r_dir_perms;
 
+# Allow vendor_toolbox to read sepolicy files
+allow vendor_toolbox file_contexts_file:file r_file_perms;
+
 # Allow vendor_toolbox to remove "security.*" xattrs from /mnt/vendor/persist
 allow vendor_toolbox {
     mnt_vendor_file
