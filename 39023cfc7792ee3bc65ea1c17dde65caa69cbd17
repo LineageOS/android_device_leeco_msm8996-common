@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1723de39_65d87133",
+        "filename": "extract-files.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2021-01-03T14:58:05Z",
+      "side": 1,
+      "message": "Make it one line only.",
+      "range": {
+        "startLine": 151,
+        "startChar": 8,
+        "endLine": 152,
+        "endChar": 44
+      },
+      "revId": "39023cfc7792ee3bc65ea1c17dde65caa69cbd17",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
