@@ -43,14 +43,6 @@ write_headers "zl1 x2"
 # The standard msm8996-common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
 
-if [ -f "${MY_DIR}/proprietary-files-twrp.txt" ]; then
-	cat >> "${BOARDMK}" <<-EOF
-		ifeq (\$(WITH_TWRP),true)
-		TARGET_RECOVERY_DEVICE_DIRS += vendor/${VENDOR}/${DEVICE_COMMON}/proprietary
-		endif
-	EOF
-fi
-
 # We are done!
 write_footers
 
@@ -66,14 +58,6 @@ write_footers
 	# $2: Make treble compatible paths and put "$(TARGET_COPY_OUT_VENDOR)"
 	#     in generated makefiles
 	write_makefiles "${MY_DIR}/../${DEVICE}/proprietary-files.txt" true
-
-	if [ -f "${MY_DIR}/../${DEVICE}/proprietary-files-twrp.txt" ]; then
-		cat >> "${BOARDMK}" <<-EOF
-			ifeq (\$(WITH_TWRP),true)
-			TARGET_RECOVERY_DEVICE_DIRS += vendor/${VENDOR}/${DEVICE_COMMON}/${DEVICE}/proprietary
-			endif
-		EOF
-	fi
 
 	# We are done!
 	write_footers

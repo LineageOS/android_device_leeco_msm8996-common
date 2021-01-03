@@ -94,11 +94,6 @@ function blob_fixup() {
         sed -i -e 's|vulkan.msm8953.so|vulkan.msm8996.so|g' "${2}"
         ;;
 
-    # use /sbin instead of /system/bin for TWRP
-    recovery/root/sbin/qseecomd)
-        sed -i -e 's|/system/bin/linker64|/sbin/linker64\x0\x0\x0\x0\x0\x0|g' "${2}"
-        ;;
-
     # Patch blobs for VNDK
     vendor/lib/libmmcamera2_stats_modules.so)
         sed -i "s|libgui.so|libfui.so|g" "${2}"
@@ -153,10 +148,6 @@ setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${LINEAGE_ROOT}" true "${CLEAN_VEND
 extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
         "${KANG}" --section "${SECTION}"
 
-if [ -s "${MY_DIR}/proprietary-files-twrp.txt" ]; then
-    extract "${MY_DIR}/proprietary-files-twrp.txt" "${SRC}" \
-        "${KANG}" --section "${SECTION}"
-fi
 
 if [ -z "${ONLY_COMMON}" ] && [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
     # Reinitialize the helper for device
