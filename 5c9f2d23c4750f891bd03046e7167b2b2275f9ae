@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e65da034_c28261dc",
+        "filename": "setup-makefiles.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2021-01-06T00:12:22Z",
+      "side": 1,
+      "message": "What about indentation?",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 38,
+        "endChar": 3
+      },
+      "revId": "5c9f2d23c4750f891bd03046e7167b2b2275f9ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e126ab5a_90db5d83",
+        "filename": "setup-makefiles.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2021-01-06T00:12:22Z",
+      "side": 1,
+      "message": "Same here.",
+      "range": {
+        "startLine": 55,
+        "startChar": 0,
+        "endLine": 59,
+        "endChar": 3
+      },
+      "revId": "5c9f2d23c4750f891bd03046e7167b2b2275f9ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
