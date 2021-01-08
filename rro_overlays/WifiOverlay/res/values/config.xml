@@ -39,22 +39,9 @@
     <!-- Boolean indicating whether or not wifi should turn off when emergency call is made -->
     <bool translatable="false" name="config_wifi_turn_off_during_emergency_call">true</bool>
 
-    <!-- Configure wifi tcp buffersizes in the form:
-         rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
-    <string name="config_wifi_tcp_buffers" translatable="false">524288,2097152,8388608,262144,524288,4194304</string>
-
     <!-- Wifi driver supports IEEE80211AC for softap -->
     <bool translatable="false" name="config_wifi_softap_ieee80211ac_supported">true</bool>
 
-    <!-- Indicates that wifi link probing is supported on this device -->
-    <bool name="config_wifi_link_probing_supported">true</bool>
-
-    <!-- Indicates that a full bugreport should be triggered when wifi diagnostics detects an error on non-user (i.e debug) builds -->
-    <bool translatable="false" name="config_wifi_diagnostics_bugreport_enabled">true</bool>
-
-    <!-- Integer indicating maximum hardware supported client number of soft ap -->
-    <integer translatable="false" name="config_wifiHardwareSoftapMaxClientCount">32</integer>
-
-    <!-- Boolean indicating whether framework needs to set the tx power limit for meeting SAR requirements -->
-    <bool translatable="false" name="config_wifi_framework_enable_sar_tx_power_limit">true</bool>
+    <!-- Indicates that AP mode MAC randomization is supported on this device -->
+    <bool translatable="false" name="config_wifi_ap_mac_randomization_supported">false</bool>
 </resources>
