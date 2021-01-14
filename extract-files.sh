@@ -79,14 +79,14 @@ function blob_fixup() {
 
     # Patch blobs for VNDK
     vendor/lib/libmmcamera2_stats_modules.so)
-        sed -i "s|libgui.so|libfui.so|g" "${2}"
+        patchelf --remove-needed "libgui.so" "${2}"
         sed -i "s|/data/misc/camera|/data/vendor/qcam|g" "${2}"
         sed -i "s|libandroid.so|libcamshim.so|g" "${2}"
         ;;
 
     # Patch blobs for VNDK
     vendor/lib/libmmcamera_ppeiscore.so | vendor/lib/libcamera_letv_algo.so)
-        sed -i "s|libgui.so|libfui.so|g" "${2}"
+        patchelf --remove-needed "libgui.so" "${2}"
         ;;
 
     # Patch blobs for VNDK
@@ -96,7 +96,7 @@ function blob_fixup() {
 
     # Patch blobs for VNDK
     vendor/lib/libletv_algo_jni.so)
-        sed -i "s|libgui.so|libfui.so|g" "${2}"
+        patchelf --remove-needed "libgui.so" "${2}"
         patchelf --remove-needed "libandroid_runtime.so" "${2}"
         ;;
 
