@@ -456,15 +456,11 @@ vendor/lib64/libperfgluelayer.so
 vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-perfd-client.so
 vendor/lib64/libqti-util.so
-vendor/lib64/vendor.qti.hardware.perf@1.0.so
-vendor/lib64/vendor.qti.hardware.perf@2.0.so
 vendor/lib/libperfconfig.so
 vendor/lib/libperfgluelayer.so
 vendor/lib/libqti-perfd.so
 vendor/lib/libqti-perfd-client.so
 vendor/lib/libqti-util.so
-vendor/lib/vendor.qti.hardware.perf@1.0.so
-vendor/lib/vendor.qti.hardware.perf@2.0.so
 
 # Perf (configs) - from oneplus3t - OnePlus/OnePlus3/OnePlus3T:9/PKQ1.181203.001/1911042108 - OOS 9.0.6
 vendor/etc/perf/commonresourceconfigs.xml|73fc37a6fa498a98758b5a91ebacb87ef0ffdcdf
