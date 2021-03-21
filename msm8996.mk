@@ -383,9 +383,6 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-service \
     libsensorndkbridge
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.sensors.smd=false
-
 # Shims
 PRODUCT_PACKAGES += \
     libbase_shim \
