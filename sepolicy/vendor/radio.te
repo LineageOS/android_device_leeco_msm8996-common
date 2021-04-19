@@ -1,5 +1,5 @@
 #R-11 called from Q sepolicy legacy-um\vendor needed on enforcing builds
-get_prop(radio, qcom_ims_prop)
+get_prop(radio, vendor_qcom_ims_prop)
 allow radio cnd:binder { call };
 
 allow radio hal_datafactory_hwservice:hwservice_manager find;

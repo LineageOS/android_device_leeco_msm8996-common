@@ -1,4 +1,4 @@
-allow rild qcom_ims_prop:property_service { set };
+allow rild vendor_qcom_ims_prop:property_service { set };
 
 set_prop(rild, system_radio_prop)
 
