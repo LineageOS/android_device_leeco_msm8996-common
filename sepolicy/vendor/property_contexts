@@ -12,8 +12,8 @@ sys.fake_bs_flag0                  u:object_r:system_radio_prop:s0
 sys.fake_bs_flag1                  u:object_r:system_radio_prop:s0
 
 # perf
-ro.min_freq_0                      u:object_r:vendor_freq_prop:s0
-ro.min_freq_4                      u:object_r:vendor_freq_prop:s0
+ro.min_freq_0                      u:object_r:freq_prop:s0
+ro.min_freq_4                      u:object_r:freq_prop:s0
 
 # Thermal
 sys.thermal.                       u:object_r:thermal_normal_prop:s0
