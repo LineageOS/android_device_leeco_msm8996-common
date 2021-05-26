@@ -126,6 +126,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
+    media.aac_51_output_enabled=true \
+    media.settings.xml=/vendor/etc/media_profiles_vendor.xml \
+    mmp.enable.3g2=true \
+    persist.sys.fflag.override.settings_fuse=false \
     vidc.debug.perf.mode=2 \
     vidc.enc.dcvs.extra-buff-count=2
 
