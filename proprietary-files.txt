@@ -1,4 +1,4 @@
-# Common proprietary files - from daisy' xiaomi/daisy/daisy_sprout:10/QKQ1.191002.002/V11.0.7.0.QDLMIXM, unless pinned
+# Common proprietary files - from daisy's xiaomi/daisy/daisy_sprout:10/QKQ1.191002.002/V11.0.19.0.QDLMIXM, unless pinned
 
 # ADSP
 vendor/bin/adsprpcd
