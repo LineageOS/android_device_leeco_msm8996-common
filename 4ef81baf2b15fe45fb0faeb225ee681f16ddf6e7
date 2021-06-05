@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aff0c73b_7382138e",
+        "filename": "configs/media_codecs.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2021-06-05T23:25:49Z",
+      "side": 0,
+      "message": "I believe we should be keeping OMX.qcom.video.decoder.vp8 as dpl_sprout Android 11 has this entry still. OMX.qcom.video.decoder.vp9 and OMX.qcom.video.decoder.vp9.secure are nuked though",
+      "revId": "4ef81baf2b15fe45fb0faeb225ee681f16ddf6e7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
