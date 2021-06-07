@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "832bd0b3_c8a90fa7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2021-06-07T12:20:34Z",
+      "side": 1,
+      "message": "Not an AIDL, it\u0027s a mock HIDL",
+      "range": {
+        "startLine": 7,
+        "startChar": 22,
+        "endLine": 7,
+        "endChar": 26
+      },
+      "revId": "f13a117861ed08f2ca13e89b8b0ee9304efa3fe3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
