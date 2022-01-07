@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2beb7ab2_89d1e270",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2022-01-07T03:04:15Z",
+      "side": 1,
+      "message": "much better to nuke the logspam than give quickset SDK access to this since LeEco might be trying to use it for data mining anyways",
+      "revId": "4ebc539ec46bac5cc0cb84f12978320b91e63006",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
